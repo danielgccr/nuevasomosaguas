@@ -151,21 +151,14 @@ blockquote {
 }
 
 /* Mermaid.
-   Quarto inyecta un themeCSS dentro del SVG que reescribe la fuente de las
-   etiquetas a --mermaid-font-family (Lato, la del tema flatly). Mermaid ya ha
-   medido el texto para entonces, y lo mide con su propia fuente por defecto,
-   asi que las cajas salen mas estrechas que el texto y este se corta. Igualar
-   la variable a la fuente con la que mermaid mide deja medida y dibujo en la
-   misma tipografia. */
+   Quarto injects a themeCSS inside the SVG that rewrites label fonts to
+   --mermaid-font-family (Lato, from the flatly theme). By then mermaid has
+   already measured the text, and it measures in its own default font, so the
+   boxes come out narrower than the text and the labels get clipped. Matching
+   this variable to the font mermaid measures with keeps measurement and
+   painting in the same typeface. */
 :root {
   --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
-}
-
-/* Escalar el diagrama al ancho de la columna, siempre de forma proporcional. */
-.cell-output-display svg[id^="mermaid"] {
-  width: 100%;
-  max-width: 100% !important;
-  height: auto;
 }
 
 /* Card headings in the landing grid are links, not prose headings:

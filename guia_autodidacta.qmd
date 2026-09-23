@@ -35,7 +35,7 @@ El autodidacta de la Nueva Somosaguas no busca la acreditación burocrática ni 
 %%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 12, "useMaxWidth": true}}}%%
 flowchart TD
     F0["Fase 0 · La terminal y la herramienta<br/>Semanas 1-4<br/>Unix shell · Git · Markdown · RStudio/VSCode"]
-    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Axler · R y Python"]
+    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Axler · Strang · R y Python"]
     F2["Fase 2 · Mecanismos, genética y causalidad<br/>Meses 6-12<br/>Plomin · Reich · Hedström (DBO) · Pearl (DAGs)"]
     F3["Fase 3 · Alta competición y modelado<br/>Año 2 en adelante<br/>Binmore · Epstein (ABM) · Smil y Turchin"]
 
@@ -72,9 +72,10 @@ Las ciencias sociales analíticas se expresan en el lenguaje de la matemática y
 1. **Probabilidad y estadística:**
    * **Joseph K. Blitzstein:** *Statistics 110: Probability* (Harvard University - Disponible gratis en YouTube y edX).
    * **Bradley Efron & Trevor Hastie:** *Computer Age Statistical Inference* (Capítulos 1-5).
-2. **Álgebra lineal e intuición geométrica:**
+2. **Álgebra lineal, cálculo e intuición geométrica:**
    * **Sheldon Axler:** *Linear Algebra Done Right* (Capítulos 1-3).
    * **3Blue1Brown:** Serie de vídeos *Essence of Linear Algebra* y *Essence of Calculus*.
+   * **Gilbert Strang:** *Calculus* (MIT OpenCourseWare). El puente formal entre la intuición geométrica del vídeo y las ecuaciones diferenciales del modelado: derivadas e integrales como operadores del cambio, no como catálogo de trucos algebraicos.
 3. **Programación cuantitativa políglota:**
    * **Hadley Wickham:** *ggplot2: Elegant Graphics for Data Analysis* (R).
    * **Joel Grus:** *Data Science from Scratch* (Python).

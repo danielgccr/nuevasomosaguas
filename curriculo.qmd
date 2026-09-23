@@ -41,6 +41,7 @@ En el primer año se desintoxica al estudiante del lenguaje vago y la sociologí
 * **Objetivo:** Comprender las tasas de cambio, la optimización y las ecuaciones diferenciales aplicadas a la evolución de poblaciones.
 * **Bibliografía principal:**
   * 3Blue1Brown — *The Essence of Calculus*.
+  * Gilbert Strang — *Calculus* (MIT OpenCourseWare).
   * Joshua M. Epstein — *Nonlinear Dynamics, Mathematical Biology, and Social Science*.
 * **Laboratorio:** Integración numérica y sistemas dinámicos continuos en **Python (SciPy)**.
 

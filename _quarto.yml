@@ -6,9 +6,17 @@ project:
     browser: false
     watch-inputs: true
 
-# El editor visual de RStudio reserializa el Markdown al guardar:
-# aplasta listas en parrafos y alarga las vallas ::: de los divs.
+# RStudio's visual editor re-serializes the Markdown on save: it flattens
+# lists into paragraphs and keeps growing the ::: fences of the divs.
 editor: source
+
+# Whole interface in Spanish: table of contents, figures, search, navigation.
+lang: es
+
+language:
+  toc-title-website: "Índice"
+  # Quarto renders "Toggle navigation" as "Navegación de palanca" (a lever).
+  toggle-navigation: "Abrir el menú"
 
 website:
   title: "Nueva Somosaguas"

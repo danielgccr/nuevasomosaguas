@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
@@ -99,17 +99,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -319,8 +319,8 @@ window.Quarto = {
     <span class="navbar-title">Nueva Somosaguas</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Abrir el menú" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -364,7 +364,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -375,7 +375,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Índice</h2>
    
   <ul>
   <li><a href="#inferencia-causal-identificación-y-control-en-dags-python" id="toc-inferencia-causal-identificación-y-control-en-dags-python" class="nav-link active" data-scroll-target="#inferencia-causal-identificación-y-control-en-dags-python">1. Inferencia causal: identificación y control en DAGs (Python)</a></li>
@@ -393,7 +393,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Laboratorio computacional y scripts políglotas</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Laboratorio computacional y scripts políglotas</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
 <p class="subtitle lead">Ejemplos de código ejecutable en R, Python y SQL para ciencias sociales analíticas</p>
 </div>
 
@@ -417,7 +417,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Principio de transparencia algorítmica
+<span class="screen-reader-only">Nota</span>Principio de transparencia algorítmica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -432,26 +432,26 @@ window.Quarto = {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fijar semilla para reproducibilidad</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix the seed for reproducibility</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10000</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Variables exógenas (Talento y Belleza) verdaderamente independientes</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Exogenous variables (talent and beauty), genuinely independent</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>belleza <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># En la población general, la correlación entre talento y belleza es 0</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. El éxito en Hollywood (Colisionador) depende de AMBAS variables</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># In the general population the correlation between talent and beauty is 0</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Success in Hollywood (the collider) depends on BOTH variables</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>prob_exito <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(<span class="fl">0.8</span> <span class="op">*</span> talento <span class="op">+</span> <span class="fl">0.8</span> <span class="op">*</span> belleza)))</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>exito_hollywood <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span>prob_exito)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'talento'</span>: talento, <span class="st">'belleza'</span>: belleza, <span class="st">'exito'</span>: exito_hollywood})</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regresión en la POBLACIÓN GENERAL (Modelo Correcto)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regression on the GENERAL POPULATION (the correct model)</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> sm.add_constant(df[<span class="st">'belleza'</span>])</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>model_poblacion <span class="op">=</span> sm.OLS(df[<span class="st">'talento'</span>], X1).fit()</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regresión CONDICIONADA AL ÉXITO (Muestra Filtrada / Colisionador)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>df_hollywood <span class="op">=</span> df[df[<span class="st">'exito'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> sm.add_constant(df_hollywood[<span class="st">'belleza'</span>])</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>model_hollywood <span class="op">=</span> sm.OLS(df_hollywood[<span class="st">'talento'</span>], X2).fit()</span>
@@ -460,30 +460,30 @@ window.Quarto = {
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- REGRESIÓN EN Hollywood (Condicionado al Colisionador) ---"</span>)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explicación analítica:</strong> En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (<em>éxito en Hollywood</em>), aparece una <strong>correlación negativa artificial</strong> (<span class="math inline">\(r &lt; 0, p &lt; 0.001\)</span>). Condicionar por una variable causada por ambas genera una falsa causa.</p>
 <hr>
 </section>
 <section id="inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110" class="level2">
 <h2 class="anchored" data-anchor-id="inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110">2. Inferencia bayesiana: actualización de <em>priors</em> en R (Harvard Stat 110)</h2>
 <p>Ejemplo en <strong>R</strong> para derivar la distribución <em>a posteriori</em> de una tasa poblacional (p.&nbsp;ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Definir los Priors (Beta(alpha, beta))</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Un Prior débilmente informativo centrado en 0.20</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define the priors, Beta(alpha, beta)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A weakly informative prior centred on 0.20</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>alpha_prior <span class="ot">&lt;-</span> <span class="dv">2</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>beta_prior  <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid de valores theta (proporción real en la población)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid of theta values (the true proportion in the population)</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Datos Observados (N = 50 personas, k = 18 éxitos)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Observed data (N = 50 people, k = 18 successes)</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">50</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>k_obs <span class="ot">&lt;-</span> <span class="dv">18</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Cálculo de Likelihood y Posterior analítico</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Likelihood and analytic posterior</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>prior_density     <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior, beta_prior)</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>posterior_density <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Resumen de estimaciones: media, moda (MAP) e intervalo de credibilidad</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Summary estimates: mean, mode (MAP) and credible interval</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>prior_mean <span class="ot">&lt;-</span> alpha_prior <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>post_mean  <span class="ot">&lt;-</span> (alpha_prior <span class="sc">+</span> k_obs) <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior <span class="sc">+</span> n_obs)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>prior_map  <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(prior_density)]</span>
@@ -492,7 +492,7 @@ window.Quarto = {
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a priori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, prior_mean, prior_map))</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a posteriori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, post_mean, post_map))</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Intervalo de credibilidad al 95%%: [%.3f, %.3f]</span><span class="sc">\n</span><span class="st">"</span>, ic_95[<span class="dv">1</span>], ic_95[<span class="dv">2</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Intervalo de credibilidad al 95%%: [%.3f, %.3f]</span><span class="sc">\n</span><span class="st">"</span>, ic_95[<span class="dv">1</span>], ic_95[<span class="dv">2</span>]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explicación analítica:</strong> El modelo pasa de un <em>prior</em> vago (<span class="math inline">\(E[\theta] = 0.20\)</span>) a una estimación <em>a posteriori</em> (<span class="math inline">\(E[\theta \mid D] = 0.333\)</span>) ponderando la masa de probabilidad según el tamaño muestral.</p>
 <hr>
 </section>
@@ -502,21 +502,21 @@ window.Quarto = {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prop_vecinos_iguales(grid, r, c):</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Proporción de vecinos ocupados que pertenecen al mismo grupo (Moore)."""</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Share of occupied neighbours belonging to the same group (Moore)."""</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    gs <span class="op">=</span> <span class="bu">len</span>(grid)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    r0, r1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, r <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, r <span class="op">+</span> <span class="dv">2</span>)</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    c0, c1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, c <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, c <span class="op">+</span> <span class="dv">2</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    bloque <span class="op">=</span> grid[r0:r1, c0:c1].copy()</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># un agente no es vecino de sí mismo</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># an agent is not its own neighbour</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> bloque.flatten()</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># excluir celdas vacías</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># drop empty cells</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(vecinos) <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(vecinos <span class="op">==</span> grid[r, c]) <span class="op">/</span> <span class="bu">len</span>(vecinos)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice_segregacion(grid):</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Media de la proporción de vecinos iguales sobre todos los agentes."""</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Mean share of same-group neighbours across every agent."""</span></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> [prop_vecinos_iguales(grid, r, c)</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid)) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid))</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>             <span class="cf">if</span> grid[r, c] <span class="op">!=</span> <span class="dv">0</span>]</span>
@@ -525,7 +525,7 @@ window.Quarto = {
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">50</span>, pct_vacantes<span class="op">=</span><span class="fl">0.1</span>, pct_tipo1<span class="op">=</span><span class="fl">0.45</span>,</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                      umbral_tolerancia<span class="op">=</span><span class="fl">0.33</span>, pasos<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: Vacío, 1: Grupo A, 2: Grupo B</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: empty, 1: group A, 2: group B</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>], size<span class="op">=</span>(grid_size, grid_size),</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>                            p<span class="op">=</span>[pct_vacantes, (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>pct_tipo1,</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>                               (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>pct_tipo1)])</span>
@@ -558,17 +558,17 @@ window.Quarto = {
 <span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grid</span>
 <span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecución de prueba</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Test run</span></span>
 <span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
 <span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>grid_final <span class="op">=</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">40</span>, pasos<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Índice de segregación final:   </span><span class="sc">{</span>indice_segregacion(grid_final)<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Índice de segregación final:   </span><span class="sc">{</span>indice_segregacion(grid_final)<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explicación analítica:</strong> Este es el clásico ejemplo de <strong>emergencia generativa</strong> (Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de <span class="math inline">\(0.501\)</span> —el valor esperado de una distribución aleatoria— a <span class="math inline">\(0.767\)</span> en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.</p>
 <hr>
 </section>
 <section id="consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite" class="level2">
 <h2 class="anchored" data-anchor-id="consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite">4. Consultas relacionales SQL para eventos de vida y demografía (PostgreSQL / SQLite)</h2>
 <p>Modelado de bases de datos relacionales para calcular la <strong>tasa de fecundidad específica por edad (ASFR)</strong> por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Consulta SQL Relacional: Tasa de Fecundidad Específica por Edad (ASFR)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Relational SQL query: age-specific fertility rate (ASFR)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nacimientos_por_grupo <span class="kw">AS</span> (</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">CASE</span> </span>
@@ -584,7 +584,7 @@ window.Quarto = {
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> madres m</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">JOIN</span> nacimientos n <span class="kw">ON</span> m.id_madre <span class="op">=</span> n.id_madre</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> n.año_nacimiento <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- descartar partos fuera del rango reproductivo</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- drop births outside the reproductive age range</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>),</span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>poblacion_femenina <span class="kw">AS</span> (</span>
@@ -602,7 +602,7 @@ window.Quarto = {
 <span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ROUND</span>((<span class="fu">CAST</span>(f.total_nacimientos <span class="kw">AS</span> <span class="dt">REAL</span>) <span class="op">/</span> p.personas_año) <span class="op">*</span> <span class="dv">1000</span>, <span class="dv">2</span>) <span class="kw">AS</span> asfr_por_1000</span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> nacimientos_por_grupo f</span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> poblacion_femenina p <span class="kw">ON</span> f.grupo_edad <span class="op">=</span> p.grupo_edad</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> f.grupo_edad;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> f.grupo_edad;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explicación analítica:</strong> La consulta calcula la tasa de nacimientos por cada 1.000 años-persona de exposición femenina por cohorte quinquenal, constituyendo la entrada base para construir tablas de vida y matrices de Leslie.</p>
 <hr>
 </section>
@@ -611,33 +611,33 @@ window.Quarto = {
 <p>Script para estimar el intervalo de confianza del <strong>índice de Gini</strong> sin asumir normalidad en la distribución del error.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir la función del estadístico (Coeficiente de Gini)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the statistic to bootstrap (the Gini coefficient)</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>calc_gini <span class="ot">&lt;-</span> <span class="cf">function</span>(data, indices) {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Muestreo con reemplazo</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Resampling with replacement</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">sort</span>(d)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span>n <span class="sc">*</span> d) <span class="sc">/</span> (n <span class="sc">*</span> <span class="fu">sum</span>(d)) <span class="sc">-</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> n</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generar distribución de ingresos sintética (Lognormal)</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a synthetic income distribution (lognormal)</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ingresos <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">meanlog =</span> <span class="fl">2.5</span>, <span class="at">sdlog =</span> <span class="fl">0.8</span>)</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrapping con R = 2000 réplicas</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap with R = 2000 replicates</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>resultados_boot <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data =</span> ingresos, <span class="at">statistic =</span> calc_gini, <span class="at">R =</span> <span class="dv">2000</span>)</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervalo de confianza BCa (Bias-Corrected and Accelerated)</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># BCa confidence interval (bias-corrected and accelerated)</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ci_gini <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(resultados_boot, <span class="at">type =</span> <span class="st">"bca"</span>)</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Gini Estimado Muestral:"</span>, resultados_boot<span class="sc">$</span>t0, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ci_gini)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ci_gini)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explicación analítica:</strong> El Gini muestral es <span class="math inline">\(0.409\)</span> y el intervalo BCa al 95% resulta <span class="math inline">\([0.388,\ 0.434]\)</span>, que cubre el valor poblacional exacto de la lognormal simulada, <span class="math inline">\(2\Phi(\sigma/\sqrt{2}) - 1 = 0.428\)</span>. El <em>bootstrap</em> recupera la incertidumbre de un estadístico cuya distribución muestral no tiene forma cerrada, sin postular normalidad en ningún punto.</p>
 <hr>
 </section>
 <section id="repositorio-completo-en-github" class="level2">
 <h2 class="anchored" data-anchor-id="repositorio-completo-en-github">Repositorio completo en GitHub</h2>
 <p>Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos <code>.Rmd</code> y esquemas SQL están disponibles en nuestro repositorio oficial:</p>
-<p>📂 <strong><a href="https://github.com/nuevasomosaguas">github.com/nuevasomosaguas/laboratorios-cuantitativos</a></strong></p>
+<p><strong><a href="https://github.com/nuevasomosaguas">github.com/nuevasomosaguas/laboratorios-cuantitativos</a></strong></p>
 
 
 <!-- -->
@@ -683,12 +683,12 @@ window.Quarto = {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1108,7 +1108,7 @@ window.Quarto = {
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Laboratorio computacional y scripts políglotas"</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Ejemplos de código ejecutable en R, Python y SQL para ciencias sociales analíticas"</span></span>
@@ -1136,26 +1136,26 @@ window.Quarto = {
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Fijar semilla para reproducibilidad</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix the seed for reproducibility</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10000</span></span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Variables exógenas (Talento y Belleza) verdaderamente independientes</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Exogenous variables (talent and beauty), genuinely independent</span></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>belleza <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># En la población general, la correlación entre talento y belleza es 0</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. El éxito en Hollywood (Colisionador) depende de AMBAS variables</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># In the general population the correlation between talent and beauty is 0</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Success in Hollywood (the collider) depends on BOTH variables</span></span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>prob_exito <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(<span class="fl">0.8</span> <span class="op">*</span> talento <span class="op">+</span> <span class="fl">0.8</span> <span class="op">*</span> belleza)))</span>
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>exito_hollywood <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span>prob_exito)</span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'talento'</span>: talento, <span class="st">'belleza'</span>: belleza, <span class="st">'exito'</span>: exito_hollywood})</span>
 <span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regresión en la POBLACIÓN GENERAL (Modelo Correcto)</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regression on the GENERAL POPULATION (the correct model)</span></span>
 <span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> sm.add_constant(df[<span class="st">'belleza'</span>])</span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>model_poblacion <span class="op">=</span> sm.OLS(df[<span class="st">'talento'</span>], X1).fit()</span>
 <span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regresión CONDICIONADA AL ÉXITO (Muestra Filtrada / Colisionador)</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)</span></span>
 <span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>df_hollywood <span class="op">=</span> df[df[<span class="st">'exito'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
 <span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> sm.add_constant(df_hollywood[<span class="st">'belleza'</span>])</span>
 <span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>model_hollywood <span class="op">=</span> sm.OLS(df_hollywood[<span class="st">'talento'</span>], X2).fit()</span>
@@ -1176,23 +1176,23 @@ window.Quarto = {
 <span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>Ejemplo en **R** para derivar la distribución *a posteriori* de una tasa poblacional (p. ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.</span>
 <span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Definir los Priors (Beta(alpha, beta))</span></span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Un Prior débilmente informativo centrado en 0.20</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define the priors, Beta(alpha, beta)</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="co"># A weakly informative prior centred on 0.20</span></span>
 <span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>alpha_prior <span class="ot">&lt;-</span> <span class="dv">2</span></span>
 <span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>beta_prior  <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid de valores theta (proporción real en la población)</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid of theta values (the true proportion in the population)</span></span>
 <span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
 <span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Datos Observados (N = 50 personas, k = 18 éxitos)</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Observed data (N = 50 people, k = 18 successes)</span></span>
 <span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">50</span></span>
 <span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>k_obs <span class="ot">&lt;-</span> <span class="dv">18</span></span>
 <span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Cálculo de Likelihood y Posterior analítico</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Likelihood and analytic posterior</span></span>
 <span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>prior_density     <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior, beta_prior)</span>
 <span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>posterior_density <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
 <span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Resumen de estimaciones: media, moda (MAP) e intervalo de credibilidad</span></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Summary estimates: mean, mode (MAP) and credible interval</span></span>
 <span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>prior_mean <span class="ot">&lt;-</span> alpha_prior <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior)</span>
 <span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>post_mean  <span class="ot">&lt;-</span> (alpha_prior <span class="sc">+</span> k_obs) <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior <span class="sc">+</span> n_obs)</span>
 <span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>prior_map  <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(prior_density)]</span>
@@ -1216,21 +1216,21 @@ window.Quarto = {
 <span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prop_vecinos_iguales(grid, r, c):</span>
-<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Proporción de vecinos ocupados que pertenecen al mismo grupo (Moore)."""</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Share of occupied neighbours belonging to the same group (Moore)."""</span></span>
 <span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>    gs <span class="op">=</span> <span class="bu">len</span>(grid)</span>
 <span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>    r0, r1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, r <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, r <span class="op">+</span> <span class="dv">2</span>)</span>
 <span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>    c0, c1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, c <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, c <span class="op">+</span> <span class="dv">2</span>)</span>
 <span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>    bloque <span class="op">=</span> grid[r0:r1, c0:c1].copy()</span>
-<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># un agente no es vecino de sí mismo</span></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># an agent is not its own neighbour</span></span>
 <span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> bloque.flatten()</span>
-<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># excluir celdas vacías</span></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># drop empty cells</span></span>
 <span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(vecinos) <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
 <span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(vecinos <span class="op">==</span> grid[r, c]) <span class="op">/</span> <span class="bu">len</span>(vecinos)</span>
 <span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice_segregacion(grid):</span>
-<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Media de la proporción de vecinos iguales sobre todos los agentes."""</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Mean share of same-group neighbours across every agent."""</span></span>
 <span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> [prop_vecinos_iguales(grid, r, c)</span>
 <span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid)) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid))</span>
 <span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>             <span class="cf">if</span> grid[r, c] <span class="op">!=</span> <span class="dv">0</span>]</span>
@@ -1239,7 +1239,7 @@ window.Quarto = {
 <span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">50</span>, pct_vacantes<span class="op">=</span><span class="fl">0.1</span>, pct_tipo1<span class="op">=</span><span class="fl">0.45</span>,</span>
 <span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>                      umbral_tolerancia<span class="op">=</span><span class="fl">0.33</span>, pasos<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: Vacío, 1: Grupo A, 2: Grupo B</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: empty, 1: group A, 2: group B</span></span>
 <span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>], size<span class="op">=</span>(grid_size, grid_size),</span>
 <span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>                            p<span class="op">=</span>[pct_vacantes, (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>pct_tipo1,</span>
 <span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>                               (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>pct_tipo1)])</span>
@@ -1272,7 +1272,7 @@ window.Quarto = {
 <span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grid</span>
 <span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecución de prueba</span></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="co"># Test run</span></span>
 <span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
 <span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>grid_final <span class="op">=</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">40</span>, pasos<span class="op">=</span><span class="dv">50</span>)</span>
 <span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Índice de segregación final:   </span><span class="sc">{</span>indice_segregacion(grid_final)<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
@@ -1287,7 +1287,7 @@ window.Quarto = {
 <span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>Modelado de bases de datos relacionales para calcular la **tasa de fecundidad específica por edad (ASFR)** por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.</span>
 <span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
-<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="co">-- Consulta SQL Relacional: Tasa de Fecundidad Específica por Edad (ASFR)</span></span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="co">-- Relational SQL query: age-specific fertility rate (ASFR)</span></span>
 <span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nacimientos_por_grupo <span class="kw">AS</span> (</span>
 <span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
 <span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a>        <span class="cf">CASE</span> </span>
@@ -1303,7 +1303,7 @@ window.Quarto = {
 <span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> madres m</span>
 <span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>    <span class="kw">JOIN</span> nacimientos n <span class="kw">ON</span> m<span class="ch">.</span>id_madre <span class="op">=</span> n<span class="ch">.</span>id_madre</span>
 <span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> n<span class="ch">.</span>año_nacimiento <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- descartar partos fuera del rango reproductivo</span></span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- drop births outside the reproductive age range</span></span>
 <span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
 <span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>),</span>
 <span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>poblacion_femenina <span class="kw">AS</span> (</span>
@@ -1335,22 +1335,22 @@ window.Quarto = {
 <span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
 <span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
 <span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir la función del estadístico (Coeficiente de Gini)</span></span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the statistic to bootstrap (the Gini coefficient)</span></span>
 <span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a>calc_gini <span class="ot">&lt;-</span> <span class="cf">function</span>(data, indices) {</span>
-<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Muestreo con reemplazo</span></span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Resampling with replacement</span></span>
 <span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
 <span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">sort</span>(d)</span>
 <span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span>n <span class="sc">*</span> d) <span class="sc">/</span> (n <span class="sc">*</span> <span class="fu">sum</span>(d)) <span class="sc">-</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> n</span>
 <span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Generar distribución de ingresos sintética (Lognormal)</span></span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a synthetic income distribution (lognormal)</span></span>
 <span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
 <span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a>ingresos <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">meanlog =</span> <span class="fl">2.5</span>, <span class="at">sdlog =</span> <span class="fl">0.8</span>)</span>
 <span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrapping con R = 2000 réplicas</span></span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap with R = 2000 replicates</span></span>
 <span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a>resultados_boot <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data =</span> ingresos, <span class="at">statistic =</span> calc_gini, <span class="at">R =</span> <span class="dv">2000</span>)</span>
 <span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervalo de confianza BCa (Bias-Corrected and Accelerated)</span></span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a><span class="co"># BCa confidence interval (bias-corrected and accelerated)</span></span>
 <span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>ci_gini <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(resultados_boot, <span class="at">type =</span> <span class="st">"bca"</span>)</span>
 <span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Gini Estimado Muestral:"</span>, resultados_boot<span class="sc">$</span>t0, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
@@ -1365,7 +1365,7 @@ window.Quarto = {
 <span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos <span class="in">`.Rmd`</span> y esquemas SQL están disponibles en nuestro repositorio oficial:</span>
 <span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>📂 **[github.com/nuevasomosaguas/laboratorios-cuantitativos](https://github.com/nuevasomosaguas)**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>**[github.com/nuevasomosaguas/laboratorios-cuantitativos](https://github.com/nuevasomosaguas)**</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

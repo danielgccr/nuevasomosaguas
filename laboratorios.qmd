@@ -25,26 +25,26 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-# Fijar semilla para reproducibilidad
+# Fix the seed for reproducibility
 np.random.seed(42)
 N = 10000
 
-# 1. Variables exógenas (Talento y Belleza) verdaderamente independientes
+# 1. Exogenous variables (talent and beauty), genuinely independent
 talento = np.random.normal(loc=0, scale=1, size=N)
 belleza = np.random.normal(loc=0, scale=1, size=N)
 
-# En la población general, la correlación entre talento y belleza es 0
-# 2. El éxito en Hollywood (Colisionador) depende de AMBAS variables
+# In the general population the correlation between talent and beauty is 0
+# 2. Success in Hollywood (the collider) depends on BOTH variables
 prob_exito = 1 / (1 + np.exp(-(0.8 * talento + 0.8 * belleza)))
 exito_hollywood = np.random.binomial(n=1, p=prob_exito)
 
 df = pd.DataFrame({'talento': talento, 'belleza': belleza, 'exito': exito_hollywood})
 
-# A. Regresión en la POBLACIÓN GENERAL (Modelo Correcto)
+# A. Regression on the GENERAL POPULATION (the correct model)
 X1 = sm.add_constant(df['belleza'])
 model_poblacion = sm.OLS(df['talento'], X1).fit()
 
-# B. Regresión CONDICIONADA AL ÉXITO (Muestra Filtrada / Colisionador)
+# B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)
 df_hollywood = df[df['exito'] == 1]
 X2 = sm.add_constant(df_hollywood['belleza'])
 model_hollywood = sm.OLS(df_hollywood['talento'], X2).fit()
@@ -65,23 +65,23 @@ print(f"Coeficiente Belleza -> Talento: {model_hollywood.params['belleza']:.4f} 
 Ejemplo en **R** para derivar la distribución *a posteriori* de una tasa poblacional (p. ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.
 
 ```r
-# 1. Definir los Priors (Beta(alpha, beta))
-# Un Prior débilmente informativo centrado en 0.20
+# 1. Define the priors, Beta(alpha, beta)
+# A weakly informative prior centred on 0.20
 alpha_prior <- 2
 beta_prior  <- 8
 
-# Grid de valores theta (proporción real en la población)
+# Grid of theta values (the true proportion in the population)
 theta <- seq(0, 1, length.out = 1000)
 
-# 2. Datos Observados (N = 50 personas, k = 18 éxitos)
+# 2. Observed data (N = 50 people, k = 18 successes)
 n_obs <- 50
 k_obs <- 18
 
-# 3. Cálculo de Likelihood y Posterior analítico
+# 3. Likelihood and analytic posterior
 prior_density     <- dbeta(theta, alpha_prior, beta_prior)
 posterior_density <- dbeta(theta, alpha_prior + k_obs, beta_prior + (n_obs - k_obs))
 
-# 4. Resumen de estimaciones: media, moda (MAP) e intervalo de credibilidad
+# 4. Summary estimates: mean, mode (MAP) and credible interval
 prior_mean <- alpha_prior / (alpha_prior + beta_prior)
 post_mean  <- (alpha_prior + k_obs) / (alpha_prior + beta_prior + n_obs)
 prior_map  <- theta[which.max(prior_density)]
@@ -105,21 +105,21 @@ Simulación en Python que demuestra cómo un micro-motivo de tolerancia moderada
 import numpy as np
 
 def prop_vecinos_iguales(grid, r, c):
-    """Proporción de vecinos ocupados que pertenecen al mismo grupo (Moore)."""
+    """Share of occupied neighbours belonging to the same group (Moore)."""
     gs = len(grid)
     r0, r1 = max(0, r - 1), min(gs, r + 2)
     c0, c1 = max(0, c - 1), min(gs, c + 2)
     bloque = grid[r0:r1, c0:c1].copy()
-    bloque[r - r0, c - c0] = 0       # un agente no es vecino de sí mismo
+    bloque[r - r0, c - c0] = 0       # an agent is not its own neighbour
     vecinos = bloque.flatten()
-    vecinos = vecinos[vecinos != 0]  # excluir celdas vacías
+    vecinos = vecinos[vecinos != 0]  # drop empty cells
     if len(vecinos) == 0:
         return None
     return np.sum(vecinos == grid[r, c]) / len(vecinos)
 
 
 def indice_segregacion(grid):
-    """Media de la proporción de vecinos iguales sobre todos los agentes."""
+    """Mean share of same-group neighbours across every agent."""
     props = [prop_vecinos_iguales(grid, r, c)
              for r in range(len(grid)) for c in range(len(grid))
              if grid[r, c] != 0]
@@ -128,7 +128,7 @@ def indice_segregacion(grid):
 
 def simular_schelling(grid_size=50, pct_vacantes=0.1, pct_tipo1=0.45,
                       umbral_tolerancia=0.33, pasos=100):
-    # 0: Vacío, 1: Grupo A, 2: Grupo B
+    # 0: empty, 1: group A, 2: group B
     grid = np.random.choice([0, 1, 2], size=(grid_size, grid_size),
                             p=[pct_vacantes, (1-pct_vacantes)*pct_tipo1,
                                (1-pct_vacantes)*(1-pct_tipo1)])
@@ -161,7 +161,7 @@ def simular_schelling(grid_size=50, pct_vacantes=0.1, pct_tipo1=0.45,
 
     return grid
 
-# Ejecución de prueba
+# Test run
 np.random.seed(7)
 grid_final = simular_schelling(grid_size=40, pasos=50)
 print(f"Índice de segregación final:   {indice_segregacion(grid_final):.3f}")
@@ -176,7 +176,7 @@ print(f"Índice de segregación final:   {indice_segregacion(grid_final):.3f}")
 Modelado de bases de datos relacionales para calcular la **tasa de fecundidad específica por edad (ASFR)** por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.
 
 ```sql
--- Consulta SQL Relacional: Tasa de Fecundidad Específica por Edad (ASFR)
+-- Relational SQL query: age-specific fertility rate (ASFR)
 WITH nacimientos_por_grupo AS (
     SELECT 
         CASE 
@@ -192,7 +192,7 @@ WITH nacimientos_por_grupo AS (
     FROM madres m
     JOIN nacimientos n ON m.id_madre = n.id_madre
     WHERE n.año_nacimiento = 2025
-      AND m.edad_al_parto BETWEEN 15 AND 49  -- descartar partos fuera del rango reproductivo
+      AND m.edad_al_parto BETWEEN 15 AND 49  -- drop births outside the reproductive age range
     GROUP BY grupo_edad
 ),
 poblacion_femenina AS (
@@ -224,22 +224,22 @@ Script para estimar el intervalo de confianza del **índice de Gini** sin asumir
 ```r
 library(boot)
 
-# Definir la función del estadístico (Coeficiente de Gini)
+# Define the statistic to bootstrap (the Gini coefficient)
 calc_gini <- function(data, indices) {
-  d <- data[indices] # Muestreo con reemplazo
+  d <- data[indices] # Resampling with replacement
   n <- length(d)
   d <- sort(d)
   2 * sum(1:n * d) / (n * sum(d)) - (n + 1) / n
 }
 
-# Generar distribución de ingresos sintética (Lognormal)
+# Generate a synthetic income distribution (lognormal)
 set.seed(101)
 ingresos <- rlnorm(n = 500, meanlog = 2.5, sdlog = 0.8)
 
-# Bootstrapping con R = 2000 réplicas
+# Bootstrap with R = 2000 replicates
 resultados_boot <- boot(data = ingresos, statistic = calc_gini, R = 2000)
 
-# Intervalo de confianza BCa (Bias-Corrected and Accelerated)
+# BCa confidence interval (bias-corrected and accelerated)
 ci_gini <- boot.ci(resultados_boot, type = "bca")
 
 cat("Gini Estimado Muestral:", resultados_boot$t0, "\n")
@@ -254,4 +254,4 @@ print(ci_gini)
 
 Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos `.Rmd` y esquemas SQL están disponibles en nuestro repositorio oficial:
 
-📂 **[github.com/nuevasomosaguas/laboratorios-cuantitativos](https://github.com/nuevasomosaguas)**
+**[github.com/nuevasomosaguas/laboratorios-cuantitativos](https://github.com/nuevasomosaguas)**

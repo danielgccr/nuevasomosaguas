@@ -23,6 +23,7 @@ Obras dedicadas al adiestramiento del razonamiento cuantitativo de primer orden,
 
 * **Blitzstein, Joseph K. & Hwang, Jessica** (2019). *Introduction to Probability* (Harvard Stat 110). Chapman and Hall/CRC. `[Nivel 1 | Probabilidad]`
 * **Axler, Sheldon** (2024). *Linear Algebra Done Right* (4th Edition). Springer. `[Nivel 1 | Álgebra Lineal]`
+* **Strang, Gilbert** (1991). *Calculus* (MIT OpenCourseWare). Wellesley-Cambridge Press. `[Nivel 1 | Cálculo]`
 * **Casella, George & Berger, Roger L.** (2024). *Statistical Inference* (2nd Edition). Chapman and Hall/CRC. `[Nivel 2 | Inferencia Formal]`
 * **Efron, Bradley & Hastie, Trevor** (2016). *Computer Age Statistical Inference: Algorithms, Evidence, and Data Science*. Cambridge University Press. `[Nivel 3 | Inferencia Computacional]`
 * **Efron, Bradley** (2026). *To Think Like A Statistician*. Princeton University Press. `[Nivel 2 | Filosofía Estadística]`
