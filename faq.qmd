@@ -23,7 +23,7 @@ Esta guía de Preguntas Frecuentes responde a las dudas más comunes formuladas 
 
 El primer año de la carrera está diseñado precisamente como una rampa de aceleración:
 
-* Arranca con el *bootcamp de verano* y la asignatura **101. Álgebra lineal y probabilidad**, utilizando *Harvard Stat 110* (Blitzstein) y *Linear Algebra Done Right* (Axler), enseñando la matemática desde la intuición geométrica y la simulación en código.
+* Arranca con el *bootcamp propedéutico* y las asignaturas **1.2, Álgebra lineal computacional**, y **1.3, Probabilidad axiomática**, con Strang y Blitzstein, enseñando la matemática desde la geometría y la implementación directa en Julia.
 * La exigencia no reside en memorizar fórmulas, sino en aprender a pensar con la precisión sintáctica de un científico.
 
 ------------------------------------------------------------------------
@@ -105,6 +105,6 @@ Frente al graduado tradicional en ciencias humanas —frecuentemente abocado a l
 Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este sitio web. Sigue el camino trazado en cuatro fases:
 
 1. Empieza por la terminal Bash y el manual de Allesina & Wilmes (*Computing Skills for Biologists*).
-2. Domina la probabilidad con *Harvard Stat 110* y el álgebra lineal con *Axler*.
+2. Domina la probabilidad con *Harvard Stat 110* y el álgebra lineal con *Strang*.
 3. Desglosa los textos fundamentales de Plomin (*Blueprint*), Pearl (*Causality*) y Hedström (*Dissecting the Social*).
 4. Configura tu LLM local con el protocolo socrático que proporcionamos y ejecuta los laboratorios prácticos en Julia, R y Python.

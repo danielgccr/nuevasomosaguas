@@ -40,7 +40,7 @@ flowchart LR
     NS --> P3["3. La interacción estratégica"]
     NS --> P4["4. La síntesis generativa"]
 
-    P1 --> R1["Stat 110 · Blitzstein<br/>Álgebra lineal · Axler<br/>Julia / R / SQL"]
+    P1 --> R1["Stat 110 · Blitzstein<br/>Álgebra lineal · Strang<br/>Julia / R / SQL"]
     P2 --> R2["Puntuaciones poligénicas · Plomin<br/>Paleogenómica · Reich<br/>Genética cuantitativa · Falconer"]
     P3 --> R3["Mecanismos DBO · Hedström<br/>Grafos causales · Pearl<br/>Teoría de juegos · Binmore"]
     P4 --> R4["Agent_Zero · Joshua Epstein<br/>Ciclos seculares · Turchin<br/>Energía y civilización · Smil"]
@@ -56,7 +56,7 @@ flowchart LR
 
 ### 1. Cimientos formales e inferencia rigurosa
 
-El lenguaje de la naturaleza social es matemático. Desde el primer semestre, el estudiante domina la probabilidad bayesiana (*Harvard Stat 110* / *Jaynes*), el álgebra lineal sin coordenadas (*Axler*), el cálculo de variaciones y la infraestructura computacional políglota en **Julia, R y SQL**.
+El lenguaje de la naturaleza social es matemático. Desde el primer semestre, el estudiante domina la probabilidad bayesiana (*Harvard Stat 110* / *Jaynes*), el álgebra lineal matricial y sus descomposiciones (*Strang*), el cálculo de variaciones y la infraestructura computacional políglota en **Julia, R y SQL**.
 
 ### 2. Biología evolutiva y genética cuantitativa
 
@@ -86,7 +86,7 @@ Consulte el plan de estudios de 4 años (19 asignaturas): de los fundamentos for
 ::: {.g-col-12 .g-col-md-6}
 ### [Bootcamp de verano](bootcamp.qmd)
 
-Doce semanas de nivelación antes del primer semestre: del álgebra vectorial y el cálculo continuo a los DAGs, las redes y la simulación de agentes, siempre sobre código.
+Doce semanas de nivelación antes del primer curso, en tres fases: geometría matricial y consola de Unix, cálculo multivariante y probabilidad axiomática, y replicación demográfica en Julia.
 :::
 
 ::: {.g-col-12 .g-col-md-6}
