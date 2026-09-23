@@ -58,7 +58,7 @@ flowchart TB
 * **El entorno, en paralelo:** consola de Unix, `git` y Julia desde el primer día. *Textos:* William Shotts — *The Linux Command Line*; Brian W. Kernighan & Rob Pike — *The Practice of Programming*.
 
 ::: {.callout-important}
-**Gate de validación I.** Descargar microdatos censales o de mortalidad en bruto, construir el ciclo de vida actuarial completo desde primeros principios y calcular la tasa intrínseca de crecimiento $r$, con un script auditable y un informe reproducible en Typst.
+**Fase de validación I.** Descargar microdatos censales o de mortalidad en bruto, construir el ciclo de vida actuarial completo desde primeros principios y calcular la tasa intrínseca de crecimiento $r$, con un script auditable y un informe reproducible en Typst.
 :::
 
 ### Hito II: restricciones biológicas e identificación causal (~700 horas netas)
@@ -70,7 +70,7 @@ flowchart TB
 * **Psicología evolutiva y etología:** regla de Hamilton, reciprocidad y jerarquías adaptativas. *Textos:* Christopher Boehm — *Hierarchy in the Forest*; Robert Plomin — *Blueprint*.
 
 ::: {.callout-important}
-**Gate de validación II.** Replicar un artículo empírico controvertido sobre movilidad social, aislando la estructura de confusión con un DAG explícito y corrigiendo el sesgo de selección con microdatos de panel.
+**Fase de validación II.** Replicar un artículo empírico controvertido sobre movilidad social, aislando la estructura de confusión con un DAG explícito y corrigiendo el sesgo de selección con microdatos de panel.
 :::
 
 ### Hito III: mecanismos micro y teoría estratégica (~600 horas netas)
@@ -82,7 +82,7 @@ flowchart TB
 * **Teoría de redes sociales:** homofilia, centralidad, difusión y modelos de umbrales. *Texto:* Matthew O. Jackson — *Social and Economic Networks*.
 
 ::: {.callout-important}
-**Gate de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas.
+**Fase de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas.
 :::
 
 ### Hito IV: dinámicas macro y cliodinámica (~500 horas netas)
@@ -94,7 +94,7 @@ flowchart TB
 * **Elección pública:** búsqueda de rentas e incentivos del decisor burocrático. *Texto:* James M. Buchanan & Gordon Tullock — *The Calculus of Consent*.
 
 ::: {.callout-important}
-**Gate de validación IV, la tesis autodidacta.** Publicar un repositorio con un modelo dinámico calibrado sobre series históricas, auditado de punta a punta y documentado en texto plano.
+**Fase de validación IV, la tesis autodidacta.** Publicar un repositorio con un modelo dinámico calibrado sobre series históricas, auditado de punta a punta y documentado en texto plano.
 :::
 
 ---
