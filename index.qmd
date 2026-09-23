@@ -98,7 +98,7 @@ Cuatro hitos para recorrer el pensum en solitario, con su presupuesto de horas d
 ::: {.g-col-12 .g-col-md-6}
 ### [Laboratorios](laboratorios.qmd)
 
-Cinco laboratorios ejecutables en R, Python y SQL: sesgo de colisionador, actualización bayesiana, segregación de Schelling, demografía relacional e intervalos por *bootstrap*.
+Cinco laboratorios ejecutables en Julia y SQL, sin librerías de caja negra: paradoja de Berkson, actualización conjugada, segregación de Schelling, tabla de mortalidad e intervalos por *bootstrap*.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Laboratorio computacional y scripts políglotas – Nueva Somosaguas</title>
+<title>Laboratorios computacionales – Nueva Somosaguas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -382,12 +382,12 @@ window.Quarto = {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#inferencia-causal-identificación-y-control-en-dags-python" id="toc-inferencia-causal-identificación-y-control-en-dags-python" class="nav-link active" data-scroll-target="#inferencia-causal-identificación-y-control-en-dags-python">1. Inferencia causal: identificación y control en DAGs (Python)</a></li>
-  <li><a href="#inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110" id="toc-inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110" class="nav-link" data-scroll-target="#inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110">2. Inferencia bayesiana: actualización de <em>priors</em> en R (Harvard Stat 110)</a></li>
-  <li><a href="#modelo-de-segregación-espacial-de-schelling-python" id="toc-modelo-de-segregación-espacial-de-schelling-python" class="nav-link" data-scroll-target="#modelo-de-segregación-espacial-de-schelling-python">3. Modelo de segregación espacial de Schelling (Python)</a></li>
-  <li><a href="#consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite" id="toc-consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite" class="nav-link" data-scroll-target="#consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite">4. Consultas relacionales SQL para eventos de vida y demografía (PostgreSQL / SQLite)</a></li>
-  <li><a href="#estimación-no-paramétrica-de-parámetros-complejos-por-bootstrap-r" id="toc-estimación-no-paramétrica-de-parámetros-complejos-por-bootstrap-r" class="nav-link" data-scroll-target="#estimación-no-paramétrica-de-parámetros-complejos-por-bootstrap-r">5. Estimación no paramétrica de parámetros complejos por bootstrap (R)</a></li>
-  <li><a href="#repositorio-completo-en-github" id="toc-repositorio-completo-en-github" class="nav-link" data-scroll-target="#repositorio-completo-en-github">Repositorio completo en GitHub</a></li>
+  <li><a href="#el-sesgo-de-colisionador-la-paradoja-de-berkson" id="toc-el-sesgo-de-colisionador-la-paradoja-de-berkson" class="nav-link active" data-scroll-target="#el-sesgo-de-colisionador-la-paradoja-de-berkson">1. El sesgo de colisionador: la paradoja de Berkson</a></li>
+  <li><a href="#actualización-conjugada-beta-binomial" id="toc-actualización-conjugada-beta-binomial" class="nav-link" data-scroll-target="#actualización-conjugada-beta-binomial">2. Actualización conjugada Beta-Binomial</a></li>
+  <li><a href="#el-modelo-de-segregación-espacial-de-schelling" id="toc-el-modelo-de-segregación-espacial-de-schelling" class="nav-link" data-scroll-target="#el-modelo-de-segregación-espacial-de-schelling">3. El modelo de segregación espacial de Schelling</a></li>
+  <li><a href="#tabla-de-mortalidad-en-sql-relacional" id="toc-tabla-de-mortalidad-en-sql-relacional" class="nav-link" data-scroll-target="#tabla-de-mortalidad-en-sql-relacional">4. Tabla de mortalidad en SQL relacional</a></li>
+  <li><a href="#intervalos-de-confianza-por-bootstrap" id="toc-intervalos-de-confianza-por-bootstrap" class="nav-link" data-scroll-target="#intervalos-de-confianza-por-bootstrap">5. Intervalos de confianza por bootstrap</a></li>
+  <li><a href="#repositorio" id="toc-repositorio" class="nav-link" data-scroll-target="#repositorio">Repositorio</a></li>
   </ul>
 </nav>
     </div>
@@ -397,8 +397,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Laboratorio computacional y scripts políglotas</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
-<p class="subtitle lead">Ejemplos de código ejecutable en R, Python y SQL para ciencias sociales analíticas</p>
+<div class="quarto-title-block"><div><h1 class="title">Laboratorios computacionales</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<p class="subtitle lead">Cuadernos de experimentación: el algoritmo frente al hecho social</p>
 </div>
 
 
@@ -421,226 +421,207 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Principio de transparencia algorítmica
+<span class="screen-reader-only">Nota</span>El código como microscopio social
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La teoría social sin código ejecutable es simple literatura especulativa. En la <strong>Nueva Somosaguas</strong>, cada modelo causal, simulación de agentes o análisis demográfico se entrega acompañado de su script de réplica en <strong>R</strong>, <strong>Python</strong> o <strong>SQL</strong>. Esta sección ofrece a las mentes más técnicas una muestra directa de la carpintería computacional que sostiene nuestro plan de estudios.</p>
+<p>En la sociología escolástica las hipótesis se defienden con adjetivos; aquí se someten a la prueba del compilador. Un mecanismo generativo no se comprende hasta que se deriva desde primeros principios y se ejecuta sobre datos.</p>
+<p>Los cinco laboratorios siguientes están escritos en <strong>Julia</strong> —modelado dinámico, inferencia y simulación— y <strong>SQL relacional puro</strong>, sin librerías de caja negra: la mecánica algorítmica queda a la vista, que es justamente lo que se quiere enseñar. Cualquiera puede pegarlos en un REPL de Julia o en un cliente SQLite y verificarlos en segundos.</p>
 </div>
 </div>
 <hr>
-<section id="inferencia-causal-identificación-y-control-en-dags-python" class="level2">
-<h2 class="anchored" data-anchor-id="inferencia-causal-identificación-y-control-en-dags-python">1. Inferencia causal: identificación y control en DAGs (Python)</h2>
-<p>El siguiente script en Python utiliza grafos acíclicos dirigidos (DAGs) para simular una estructura donde existe un <strong>sesgo de colisionador (<em>collider bias</em>)</strong> y demostrar numéricamente cómo controlar por la variable incorrecta introduce una causa fantasma.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix the seed for reproducibility</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Exogenous variables (talent and beauty), genuinely independent</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>belleza <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
+<section id="el-sesgo-de-colisionador-la-paradoja-de-berkson" class="level2">
+<h2 class="anchored" data-anchor-id="el-sesgo-de-colisionador-la-paradoja-de-berkson">1. El sesgo de colisionador: la paradoja de Berkson</h2>
+<p>Sean dos rasgos independientes en la población general: el talento analítico (<span class="math inline">\(T\)</span>) y la diligencia (<span class="math inline">\(D\)</span>). Un comité de admisiones selecciona solo a quienes superan cierto umbral de rendimiento combinado (<span class="math inline">\(S = 1\)</span>). Al condicionar el análisis a la muestra seleccionada se bloquea el colisionador <span class="math inline">\(S\)</span>, y talento y diligencia exhiben una correlación negativa que no existe en la población: entre los admitidos, quien no destaca en talento ha tenido que compensarlo con un esfuerzo desmedido.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">42</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="fl">100_000</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Orthogonal, independent variables in the general population</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> <span class="fu">randn</span>(N)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>diligencia <span class="op">=</span> <span class="fu">randn</span>(N)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>r_pob <span class="op">=</span> <span class="fu">cor</span>(talento, diligencia)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Correlación poblacional verdadera: "</span>, <span class="fu">round</span>(r_pob, digits <span class="op">=</span> <span class="fl">4</span>))</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># In the general population the correlation between talent and beauty is 0</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Success in Hollywood (the collider) depends on BOTH variables</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>prob_exito <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(<span class="fl">0.8</span> <span class="op">*</span> talento <span class="op">+</span> <span class="fl">0.8</span> <span class="op">*</span> belleza)))</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>exito_hollywood <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span>prob_exito)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'talento'</span>: talento, <span class="st">'belleza'</span>: belleza, <span class="st">'exito'</span>: exito_hollywood})</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regression on the GENERAL POPULATION (the correct model)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> sm.add_constant(df[<span class="st">'belleza'</span>])</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>model_poblacion <span class="op">=</span> sm.OLS(df[<span class="st">'talento'</span>], X1).fit()</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>df_hollywood <span class="op">=</span> df[df[<span class="st">'exito'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> sm.add_constant(df_hollywood[<span class="st">'belleza'</span>])</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>model_hollywood <span class="op">=</span> sm.OLS(df_hollywood[<span class="st">'talento'</span>], X2).fit()</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- REGRESIÓN EN POBLACIÓN GENERAL ---"</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- REGRESIÓN EN Hollywood (Condicionado al Colisionador) ---"</span>)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explicación analítica:</strong> En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (<em>éxito en Hollywood</em>), aparece una <strong>correlación negativa artificial</strong> (<span class="math inline">\(r &lt; 0, p &lt; 0.001\)</span>). Condicionar por una variable causada por ambas genera una falsa causa.</p>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Selection mechanism: S is a collider on both traits.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#    Entry to the elite stratum requires the top decile of the combined score.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>puntuacion <span class="op">=</span> talento <span class="op">.+</span> diligencia</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>umbral <span class="op">=</span> <span class="fu">quantile</span>(puntuacion, <span class="fl">0.90</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>seleccionados <span class="op">=</span> puntuacion <span class="op">.&gt;=</span> umbral</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Conditioning on S == 1 induces a spurious dependence</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>r_muestra <span class="op">=</span> <span class="fu">cor</span>(talento[seleccionados], diligencia[seleccionados])</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Correlación en la muestra condicionada: "</span>, <span class="fu">round</span>(r_muestra, digits <span class="op">=</span> <span class="fl">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explicación analítica:</strong> la correlación poblacional es nula, como corresponde a dos variables generadas de forma independiente. Al restringir la muestra al decil superior aparece una correlación de <span class="math inline">\(r \approx -0.70\)</span>. Nada causal ha ocurrido entre <span class="math inline">\(T\)</span> y <span class="math inline">\(D\)</span>: el sesgo lo introduce el propio acto de seleccionar por una variable que ambas causan.</p>
 <hr>
 </section>
-<section id="inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110" class="level2">
-<h2 class="anchored" data-anchor-id="inferencia-bayesiana-actualización-de-priors-en-r-harvard-stat-110">2. Inferencia bayesiana: actualización de <em>priors</em> en R (Harvard Stat 110)</h2>
-<p>Ejemplo en <strong>R</strong> para derivar la distribución <em>a posteriori</em> de una tasa poblacional (p.&nbsp;ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define the priors, Beta(alpha, beta)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A weakly informative prior centred on 0.20</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>alpha_prior <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>beta_prior  <span class="ot">&lt;-</span> <span class="dv">8</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid of theta values (the true proportion in the population)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Observed data (N = 50 people, k = 18 successes)</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>k_obs <span class="ot">&lt;-</span> <span class="dv">18</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Likelihood and analytic posterior</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>prior_density     <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior, beta_prior)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>posterior_density <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
+<section id="actualización-conjugada-beta-binomial" class="level2">
+<h2 class="anchored" data-anchor-id="actualización-conjugada-beta-binomial">2. Actualización conjugada Beta-Binomial</h2>
+<p>Frente al ritual del valor <span class="math inline">\(p\)</span>, el análisis bayesiano actualiza probabilidades conforme llega la evidencia. Si la creencia previa sobre la probabilidad de cooperación <span class="math inline">\(\theta\)</span> se parametriza como <span class="math inline">\(\text{Beta}(\alpha, \beta)\)</span>, observar <span class="math inline">\(k\)</span> éxitos en <span class="math inline">\(n\)</span> interacciones actualiza la posterior a <span class="math inline">\(\text{Beta}(\alpha + k,\ \beta + n - k)\)</span> de forma analítica y exacta, sin muestreo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prior: a weak belief centred on 0.5</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>α_0, β_0 <span class="op">=</span> <span class="fl">2</span>, <span class="fl">2</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Observed data: 14 cooperative moves in 20 rounds</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>k, n <span class="op">=</span> <span class="fl">14</span>, <span class="fl">20</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Conjugate update</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>α_post <span class="op">=</span> α_0 <span class="op">+</span> k</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>β_post <span class="op">=</span> β_0 <span class="op">+</span> (n <span class="op">-</span> k)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>media_prior <span class="op">=</span> α_0 <span class="op">/</span> (α_0 <span class="op">+</span> β_0)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>media_post  <span class="op">=</span> α_post <span class="op">/</span> (α_post <span class="op">+</span> β_post)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Media a priori de cooperación: "</span>, <span class="fu">round</span>(media_prior, digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Media a posteriori actualizada: "</span>, <span class="fu">round</span>(media_post, digits <span class="op">=</span> <span class="fl">3</span>))</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Summary estimates: mean, mode (MAP) and credible interval</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>prior_mean <span class="ot">&lt;-</span> alpha_prior <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>post_mean  <span class="ot">&lt;-</span> (alpha_prior <span class="sc">+</span> k_obs) <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior <span class="sc">+</span> n_obs)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>prior_map  <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(prior_density)]</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>post_map   <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(posterior_density)]</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ic_95      <span class="ot">&lt;-</span> <span class="fu">qbeta</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a priori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, prior_mean, prior_map))</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a posteriori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, post_mean, post_map))</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Intervalo de credibilidad al 95%%: [%.3f, %.3f]</span><span class="sc">\n</span><span class="st">"</span>, ic_95[<span class="dv">1</span>], ic_95[<span class="dv">2</span>]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explicación analítica:</strong> El modelo pasa de un <em>prior</em> vago (<span class="math inline">\(E[\theta] = 0.20\)</span>) a una estimación <em>a posteriori</em> (<span class="math inline">\(E[\theta \mid D] = 0.333\)</span>) ponderando la masa de probabilidad según el tamaño muestral.</p>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Beta density written out in full. For integer parameters the normalising</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># constant needs no gamma function: 1/B(a,b) = (a+b-1) * binomial(a+b-2, a-1).</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf_beta</span>(θ, a, b) <span class="op">=</span> θ<span class="op">^</span>(a <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> (<span class="fl">1</span> <span class="op">-</span> θ)<span class="op">^</span>(b <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> (a <span class="op">+</span> b <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> <span class="fu">binomial</span>(a <span class="op">+</span> b <span class="op">-</span> <span class="fl">2</span>, a <span class="op">-</span> <span class="fl">1</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Densidad posterior en θ=0.65: "</span>, <span class="fu">round</span>(<span class="fu">pdf_beta</span>(<span class="fl">0.65</span>, α_post, β_post), digits <span class="op">=</span> <span class="fl">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explicación analítica:</strong> la media pasa de <span class="math inline">\(0.5\)</span> a <span class="math inline">\(16/24 = 0.667\)</span>. La conjugación Beta-Binomial permite escribir la posterior en forma cerrada, de modo que el resultado no depende de ningún muestreador ni de su convergencia.</p>
 <hr>
 </section>
-<section id="modelo-de-segregación-espacial-de-schelling-python" class="level2">
-<h2 class="anchored" data-anchor-id="modelo-de-segregación-espacial-de-schelling-python">3. Modelo de segregación espacial de Schelling (Python)</h2>
-<p>Simulación en Python que demuestra cómo un micro-motivo de tolerancia moderada (<span class="math inline">\(33\%\)</span> de vecinos similares) genera espontáneamente una macro-segregación residencial extrema.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<section id="el-modelo-de-segregación-espacial-de-schelling" class="level2">
+<h2 class="anchored" data-anchor-id="el-modelo-de-segregación-espacial-de-schelling">3. El modelo de segregación espacial de Schelling</h2>
+<p>Ningún agente desea vivir en un gueto homogéneo: solo prefiere no ser una minoría extrema en su vecindario inmediato. Basta con esa microtolerancia para que la reubicación sucesiva de los insatisfechos desencadene una cascada de externalidades que convierte una mezcla aleatoria en una segregación casi total.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prop_vecinos_iguales(grid, r, c):</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Share of occupied neighbours belonging to the same group (Moore)."""</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    gs <span class="op">=</span> <span class="bu">len</span>(grid)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    r0, r1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, r <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, r <span class="op">+</span> <span class="dv">2</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    c0, c1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, c <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, c <span class="op">+</span> <span class="dv">2</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    bloque <span class="op">=</span> grid[r0:r1, c0:c1].copy()</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># an agent is not its own neighbour</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> bloque.flatten()</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># drop empty cells</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(vecinos) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(vecinos <span class="op">==</span> grid[r, c]) <span class="op">/</span> <span class="bu">len</span>(vecinos)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice_segregacion(grid):</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Mean share of same-group neighbours across every agent."""</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> [prop_vecinos_iguales(grid, r, c)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid)) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid))</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>             <span class="cf">if</span> grid[r, c] <span class="op">!=</span> <span class="dv">0</span>]</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean([p <span class="cf">for</span> p <span class="kw">in</span> props <span class="cf">if</span> p <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>])</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">50</span>, pct_vacantes<span class="op">=</span><span class="fl">0.1</span>, pct_tipo1<span class="op">=</span><span class="fl">0.45</span>,</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                      umbral_tolerancia<span class="op">=</span><span class="fl">0.33</span>, pasos<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: empty, 1: group A, 2: group B</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>], size<span class="op">=</span>(grid_size, grid_size),</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>                            p<span class="op">=</span>[pct_vacantes, (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>pct_tipo1,</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>                               (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>pct_tipo1)])</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Índice de segregación inicial: </span><span class="sc">{</span>indice_segregacion(grid)<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> paso <span class="kw">in</span> <span class="bu">range</span>(pasos):</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        insatisfechos <span class="op">=</span> []</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        vacantes <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">*</span>np.where(grid <span class="op">==</span> <span class="dv">0</span>)))</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(grid_size):</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(grid_size):</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> grid[r, c] <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">continue</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>                prop <span class="op">=</span> prop_vecinos_iguales(grid, r, c)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> prop <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> prop <span class="op">&lt;</span> umbral_tolerancia:</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>                    insatisfechos.append((r, c))</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> insatisfechos:</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Equilibrio alcanzado en el paso </span><span class="sc">{</span>paso<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        np.random.shuffle(insatisfechos)</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r, c <span class="kw">in</span> insatisfechos:</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> vacantes:</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>            nueva_r, nueva_c <span class="op">=</span> vacantes.pop(np.random.randint(<span class="bu">len</span>(vacantes)))</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>            grid[nueva_r, nueva_c] <span class="op">=</span> grid[r, c]</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>            grid[r, c] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>            vacantes.append((r, c))</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grid</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Test run</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>grid_final <span class="op">=</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">40</span>, pasos<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Índice de segregación final:   </span><span class="sc">{</span>indice_segregacion(grid_final)<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explicación analítica:</strong> Este es el clásico ejemplo de <strong>emergencia generativa</strong> (Joshua Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de <span class="math inline">\(0.501\)</span> —el valor esperado de una distribución aleatoria— a <span class="math inline">\(0.767\)</span> en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.</p>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">"""Share of occupied Moore neighbours that belong to the agent's own group."""</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">prop_vecinos_iguales</span>(tablero, r, c)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    dim <span class="op">=</span> <span class="fu">size</span>(tablero, <span class="fl">1</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    agente <span class="op">=</span> tablero[r, c]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    iguales <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ocupados <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fu">max</span>(<span class="fl">1</span>, r <span class="op">-</span> <span class="fl">1</span>)<span class="op">:</span><span class="fu">min</span>(dim, r <span class="op">+</span> <span class="fl">1</span>), j <span class="kw">in</span> <span class="fu">max</span>(<span class="fl">1</span>, c <span class="op">-</span> <span class="fl">1</span>)<span class="op">:</span><span class="fu">min</span>(dim, c <span class="op">+</span> <span class="fl">1</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        (i <span class="op">==</span> r <span class="op">&amp;&amp;</span> j <span class="op">==</span> c) <span class="op">&amp;&amp;</span> <span class="cf">continue</span>      <span class="co"># an agent is not its own neighbour</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        tablero[i, j] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span>      <span class="co"># skip empty cells</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        ocupados <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        tablero[i, j] <span class="op">==</span> agente <span class="op">&amp;&amp;</span> (iguales <span class="op">+=</span> <span class="fl">1</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ocupados <span class="op">==</span> <span class="fl">0</span> ? <span class="cn">nothing</span> <span class="op">:</span> iguales <span class="op">/</span> ocupados</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="st">"""Mean share of same-group neighbours across every agent on the board."""</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">indice_segregacion</span>(tablero)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ci <span class="kw">in</span> <span class="fu">CartesianIndices</span>(tablero)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        tablero[ci] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> <span class="fu">prop_vecinos_iguales</span>(tablero, <span class="fu">Tuple</span>(ci)<span class="op">...</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        p <span class="op">===</span> <span class="cn">nothing</span> <span class="op">||</span> <span class="fu">push!</span>(props, p)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">mean</span>(props)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">simular_schelling</span>(dim <span class="op">=</span> <span class="fl">40</span>; vacios <span class="op">=</span> <span class="fl">0.1</span>, umbral <span class="op">=</span> <span class="fl">0.30</span>, max_iter <span class="op">=</span> <span class="fl">50</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># States: 0 = empty, 1 = group A, 2 = group B</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    n_celdas <span class="op">=</span> dim <span class="op">*</span> dim</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    tablero <span class="op">=</span> <span class="fu">rand</span>([<span class="fl">1</span>, <span class="fl">2</span>], dim, dim)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    tablero[<span class="fu">randperm</span>(n_celdas)[<span class="fl">1</span><span class="op">:</span><span class="fu">round</span>(<span class="dt">Int</span>, vacios <span class="op">*</span> n_celdas)]] <span class="op">.=</span> <span class="fl">0</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Índice de segregación inicial: "</span>, <span class="fu">round</span>(<span class="fu">indice_segregacion</span>(tablero), digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> paso <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>max_iter</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        movimientos <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        celdas_vacias <span class="op">=</span> <span class="fu">findall</span>(<span class="op">==</span>(<span class="fl">0</span>), tablero)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ci <span class="kw">in</span> <span class="fu">CartesianIndices</span>(tablero)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>            tablero[ci] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>            <span class="fu">isempty</span>(celdas_vacias) <span class="op">&amp;&amp;</span> <span class="cf">break</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>            p <span class="op">=</span> <span class="fu">prop_vecinos_iguales</span>(tablero, <span class="fu">Tuple</span>(ci)<span class="op">...</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> p <span class="op">!==</span> <span class="cn">nothing</span> <span class="op">&amp;&amp;</span> p <span class="op">&lt;</span> umbral</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>                destino <span class="op">=</span> <span class="fu">popat!</span>(celdas_vacias, <span class="fu">rand</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(celdas_vacias)))</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>                tablero[destino] <span class="op">=</span> tablero[ci]</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>                tablero[ci] <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>                <span class="fu">push!</span>(celdas_vacias, ci)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>                movimientos <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> movimientos <span class="op">==</span> <span class="fl">0</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>            <span class="fu">println</span>(<span class="st">"Convergencia alcanzada en la iteración "</span>, paso)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tablero</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">7</span>)</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>tablero_final <span class="op">=</span> <span class="fu">simular_schelling</span>()</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Índice de segregación final:   "</span>, <span class="fu">round</span>(<span class="fu">indice_segregacion</span>(tablero_final), digits <span class="op">=</span> <span class="fl">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explicación analítica:</strong> el umbral es del 30%, es decir, cada agente acepta ser minoría en una proporción de dos a uno. Aun así el índice de segregación —la proporción media de vecinos afines— pasa de <span class="math inline">\(0.504\)</span>, el valor esperado en una distribución aleatoria, a <span class="math inline">\(0.753\)</span> en nueve iteraciones. Nadie ha buscado el gueto; lo produce la agregación de decisiones locales, que es exactamente la tesis generativa de Schelling y Joshua Epstein.</p>
 <hr>
 </section>
-<section id="consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite" class="level2">
-<h2 class="anchored" data-anchor-id="consultas-relacionales-sql-para-eventos-de-vida-y-demografía-postgresql-sqlite">4. Consultas relacionales SQL para eventos de vida y demografía (PostgreSQL / SQLite)</h2>
-<p>Modelado de bases de datos relacionales para calcular la <strong>tasa de fecundidad específica por edad (ASFR)</strong> por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Relational SQL query: age-specific fertility rate (ASFR)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nacimientos_por_grupo <span class="kw">AS</span> (</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">CASE</span> </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">19</span> <span class="cf">THEN</span> <span class="st">'15-19'</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">20</span> <span class="kw">AND</span> <span class="dv">24</span> <span class="cf">THEN</span> <span class="st">'20-24'</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">25</span> <span class="kw">AND</span> <span class="dv">29</span> <span class="cf">THEN</span> <span class="st">'25-29'</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">30</span> <span class="kw">AND</span> <span class="dv">34</span> <span class="cf">THEN</span> <span class="st">'30-34'</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">35</span> <span class="kw">AND</span> <span class="dv">39</span> <span class="cf">THEN</span> <span class="st">'35-39'</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">40</span> <span class="kw">AND</span> <span class="dv">44</span> <span class="cf">THEN</span> <span class="st">'40-44'</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">45</span> <span class="kw">AND</span> <span class="dv">49</span> <span class="cf">THEN</span> <span class="st">'45-49'</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">END</span> <span class="kw">AS</span> grupo_edad,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">COUNT</span>(n.id_nacimiento) <span class="kw">AS</span> total_nacimientos</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> madres m</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">JOIN</span> nacimientos n <span class="kw">ON</span> m.id_madre <span class="op">=</span> n.id_madre</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> n.año_nacimiento <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m.edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- drop births outside the reproductive age range</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>),</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>poblacion_femenina <span class="kw">AS</span> (</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        grupo_edad,</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(poblacion_expuesta) <span class="kw">AS</span> personas_año</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> censo_mujeres_expuestas</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> año <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    f.grupo_edad,</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    f.total_nacimientos,</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    p.personas_año,</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ROUND</span>((<span class="fu">CAST</span>(f.total_nacimientos <span class="kw">AS</span> <span class="dt">REAL</span>) <span class="op">/</span> p.personas_año) <span class="op">*</span> <span class="dv">1000</span>, <span class="dv">2</span>) <span class="kw">AS</span> asfr_por_1000</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> nacimientos_por_grupo f</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> poblacion_femenina p <span class="kw">ON</span> f.grupo_edad <span class="op">=</span> p.grupo_edad</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> f.grupo_edad;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explicación analítica:</strong> La consulta calcula la tasa de nacimientos por cada 1.000 años-persona de exposición femenina por cohorte quinquenal, constituyendo la entrada base para construir tablas de vida y matrices de Leslie.</p>
+<section id="tabla-de-mortalidad-en-sql-relacional" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-de-mortalidad-en-sql-relacional">4. Tabla de mortalidad en SQL relacional</h2>
+<p>El análisis demográfico no exporta a una hoja de cálculo: computa sobre el motor relacional con funciones de ventana. La consulta deriva la función de supervivencia <span class="math inline">\(l(x)\)</span> y la probabilidad condicional de muerte <span class="math inline">\(q(x)\)</span> a partir de un registro bruto de defunciones.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- SQLite: cohort life table derived from raw parish records</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> conteo_edad <span class="kw">AS</span> (</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        edad_fallecimiento <span class="kw">AS</span> x,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> defunciones_dx</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> registros_parroquiales</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> cohorte_nacimiento <span class="op">=</span> <span class="dv">1680</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> edad_fallecimiento</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>acumulado <span class="kw">AS</span> (</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        x,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        defunciones_dx,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(defunciones_dx) <span class="kw">OVER</span> (</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">ORDER</span> <span class="kw">BY</span> x <span class="kw">ROWS</span> <span class="kw">BETWEEN</span> <span class="kw">UNBOUNDED</span> <span class="kw">PRECEDING</span> <span class="kw">AND</span> <span class="kw">UNBOUNDED</span> <span class="kw">FOLLOWING</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        ) <span class="kw">AS</span> total_cohorte,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(defunciones_dx) <span class="kw">OVER</span> (</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>            <span class="kw">ORDER</span> <span class="kw">BY</span> x <span class="kw">ROWS</span> <span class="kw">BETWEEN</span> <span class="kw">UNBOUNDED</span> <span class="kw">PRECEDING</span> <span class="kw">AND</span> <span class="dv">1</span> <span class="kw">PRECEDING</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        ) <span class="kw">AS</span> muertes_previas</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> conteo_edad</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    x <span class="kw">AS</span> edad,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    total_cohorte <span class="op">-</span> <span class="fu">COALESCE</span>(muertes_previas, <span class="dv">0</span>) <span class="kw">AS</span> supervivientes_lx,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    defunciones_dx,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ROUND</span>(</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="fu">CAST</span>(defunciones_dx <span class="kw">AS</span> <span class="dt">REAL</span>) <span class="op">/</span> (total_cohorte <span class="op">-</span> <span class="fu">COALESCE</span>(muertes_previas, <span class="dv">0</span>)),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    ) <span class="kw">AS</span> probabilidad_muerte_qx</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> acumulado</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> edad;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explicación analítica:</strong> la primera ventana suma toda la cohorte sin ordenarla por posición; la segunda acumula las defunciones <em>anteriores</em> a cada edad, y de ahí sale <span class="math inline">\(l(x)\)</span> como resta. La probabilidad condicional <span class="math inline">\(q(x) = d(x) / l(x)\)</span> sale ya como columna, lista para alimentar una matriz de Leslie.</p>
 <hr>
 </section>
-<section id="estimación-no-paramétrica-de-parámetros-complejos-por-bootstrap-r" class="level2">
-<h2 class="anchored" data-anchor-id="estimación-no-paramétrica-de-parámetros-complejos-por-bootstrap-r">5. Estimación no paramétrica de parámetros complejos por bootstrap (R)</h2>
-<p>Script para estimar el intervalo de confianza del <strong>índice de Gini</strong> sin asumir normalidad en la distribución del error.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<section id="intervalos-de-confianza-por-bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="intervalos-de-confianza-por-bootstrap">5. Intervalos de confianza por bootstrap</h2>
+<p>Al estudiar rentas, patrimonios o ratios de fecundidad —distribuciones con cola pesada— suponer normalidad es un error de bulto. El remuestreo de Efron reconstruye la distribución muestral del estimador extrayendo muestras con reemplazo de los propios datos, sin postular nada sobre su forma.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the statistic to bootstrap (the Gini coefficient)</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>calc_gini <span class="ot">&lt;-</span> <span class="cf">function</span>(data, indices) {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Resampling with replacement</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">sort</span>(d)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span>n <span class="sc">*</span> d) <span class="sc">/</span> (n <span class="sc">*</span> <span class="fu">sum</span>(d)) <span class="sc">-</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> n</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a synthetic income distribution (lognormal)</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ingresos <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">meanlog =</span> <span class="fl">2.5</span>, <span class="at">sdlog =</span> <span class="fl">0.8</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap with R = 2000 replicates</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>resultados_boot <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data =</span> ingresos, <span class="at">statistic =</span> calc_gini, <span class="at">R =</span> <span class="dv">2000</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">101</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="fl">10_000</span>                       <span class="co"># bootstrap replicates</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Skewed empirical sample: lognormal with a heavy tail</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>patrimonio <span class="op">=</span> <span class="fu">exp</span>.(<span class="fu">randn</span>(<span class="fl">200</span>) <span class="op">.*</span> <span class="fl">1.2</span> <span class="op">.+</span> <span class="fl">9.5</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>mediana_observada <span class="op">=</span> <span class="fu">median</span>(patrimonio)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="fu">length</span>(patrimonio)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>medianas_boot <span class="op">=</span> <span class="fu">zeros</span>(B)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>B</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    remuestra <span class="op">=</span> patrimonio[<span class="fu">rand</span>(<span class="fl">1</span><span class="op">:</span>n, n)]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    medianas_boot[b] <span class="op">=</span> <span class="fu">median</span>(remuestra)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># BCa confidence interval (bias-corrected and accelerated)</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ci_gini <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(resultados_boot, <span class="at">type =</span> <span class="st">"bca"</span>)</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Gini Estimado Muestral:"</span>, resultados_boot<span class="sc">$</span>t0, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ci_gini)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Explicación analítica:</strong> El Gini muestral es <span class="math inline">\(0.409\)</span> y el intervalo BCa al 95% resulta <span class="math inline">\([0.388,\ 0.434]\)</span>, que cubre el valor poblacional exacto de la lognormal simulada, <span class="math inline">\(2\Phi(\sigma/\sqrt{2}) - 1 = 0.428\)</span>. El <em>bootstrap</em> recupera la incertidumbre de un estadístico cuya distribución muestral no tiene forma cerrada, sin postular normalidad en ningún punto.</p>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Empirical 95% percentile interval</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ic_inferior <span class="op">=</span> <span class="fu">quantile</span>(medianas_boot, <span class="fl">0.025</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>ic_superior <span class="op">=</span> <span class="fu">quantile</span>(medianas_boot, <span class="fl">0.975</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Mediana muestral: "</span>, <span class="fu">round</span>(mediana_observada, digits <span class="op">=</span> <span class="fl">2</span>))</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"IC 95% bootstrap: ["</span>, <span class="fu">round</span>(ic_inferior, digits <span class="op">=</span> <span class="fl">2</span>), <span class="st">", "</span>,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">round</span>(ic_superior, digits <span class="op">=</span> <span class="fl">2</span>), <span class="st">"]"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Explicación analítica:</strong> la mediana de una lognormal es <span class="math inline">\(e^{\mu}\)</span>, aquí <span class="math inline">\(e^{9.5} \approx 13\,360\)</span>. La mediana muestral es <span class="math inline">\(13\,055.63\)</span> y el intervalo percentil al 95% resulta <span class="math inline">\([10\,065.89,\ 14\,907.10]\)</span>, que cubre el valor poblacional. Se construye sin fórmula cerrada y sin suponer simetría, que es lo que lo hace utilizable sobre datos reales de patrimonio.</p>
 <hr>
 </section>
-<section id="repositorio-completo-en-github" class="level2">
-<h2 class="anchored" data-anchor-id="repositorio-completo-en-github">Repositorio completo en GitHub</h2>
-<p>Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos <code>.Rmd</code> y esquemas SQL están disponibles en nuestro repositorio oficial:</p>
+<section id="repositorio" class="level2">
+<h2 class="anchored" data-anchor-id="repositorio">Repositorio</h2>
+<p>Los scripts de esta página forman parte del libro de laboratorios del grado, junto con los cuadernos de cada asignatura y los esquemas de base de datos:</p>
 <p><strong><a href="https://github.com/danielgccr/nuevasomosaguas">github.com/danielgccr/nuevasomosaguas</a></strong></p>
 
 
@@ -1114,8 +1095,8 @@ window.Quarto = {
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Laboratorio computacional y scripts políglotas"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Ejemplos de código ejecutable en R, Python y SQL para ciencias sociales analíticas"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Laboratorios computacionales"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Cuadernos de experimentación: el algoritmo frente al hecho social"</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
@@ -1125,251 +1106,233 @@ window.Quarto = {
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Principio de transparencia algorítmica</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>La teoría social sin código ejecutable es simple literatura especulativa. En la **Nueva Somosaguas**, cada modelo causal, simulación de agentes o análisis demográfico se entrega acompañado de su script de réplica en **R**, **Python** o **SQL**. Esta sección ofrece a las mentes más técnicas una muestra directa de la carpintería computacional que sostiene nuestro plan de estudios.</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## El código como microscopio social</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>En la sociología escolástica las hipótesis se defienden con adjetivos; aquí se someten a la prueba del compilador. Un mecanismo generativo no se comprende hasta que se deriva desde primeros principios y se ejecuta sobre datos.</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Los cinco laboratorios siguientes están escritos en **Julia** —modelado dinámico, inferencia y simulación— y **SQL relacional puro**, sin librerías de caja negra: la mecánica algorítmica queda a la vista, que es justamente lo que se quiere enseñar. Cualquiera puede pegarlos en un REPL de Julia o en un cliente SQLite y verificarlos en segundos.</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Inferencia causal: identificación y control en DAGs (Python)</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>El siguiente script en Python utiliza grafos acíclicos dirigidos (DAGs) para simular una estructura donde existe un **sesgo de colisionador (*collider bias*)** y demostrar numéricamente cómo controlar por la variable incorrecta introduce una causa fantasma.</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. El sesgo de colisionador: la paradoja de Berkson</span></span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>Sean dos rasgos independientes en la población general: el talento analítico ($T$) y la diligencia ($D$). Un comité de admisiones selecciona solo a quienes superan cierto umbral de rendimiento combinado ($S = 1$). Al condicionar el análisis a la muestra seleccionada se bloquea el colisionador $S$, y talento y diligencia exhiben una correlación negativa que no existe en la población: entre los admitidos, quien no destaca en talento ha tenido que compensarlo con un esfuerzo desmedido.</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix the seed for reproducibility</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Exogenous variables (talent and beauty), genuinely independent</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>belleza <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span>N)</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># In the general population the correlation between talent and beauty is 0</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Success in Hollywood (the collider) depends on BOTH variables</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>prob_exito <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>(<span class="fl">0.8</span> <span class="op">*</span> talento <span class="op">+</span> <span class="fl">0.8</span> <span class="op">*</span> belleza)))</span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>exito_hollywood <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span>prob_exito)</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'talento'</span>: talento, <span class="st">'belleza'</span>: belleza, <span class="st">'exito'</span>: exito_hollywood})</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="co"># A. Regression on the GENERAL POPULATION (the correct model)</span></span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> sm.add_constant(df[<span class="st">'belleza'</span>])</span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>model_poblacion <span class="op">=</span> sm.OLS(df[<span class="st">'talento'</span>], X1).fit()</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="co"># B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)</span></span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>df_hollywood <span class="op">=</span> df[df[<span class="st">'exito'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> sm.add_constant(df_hollywood[<span class="st">'belleza'</span>])</span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>model_hollywood <span class="op">=</span> sm.OLS(df_hollywood[<span class="st">'talento'</span>], X2).fit()</span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- REGRESIÓN EN POBLACIÓN GENERAL ---"</span>)</span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_poblacion<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">42</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="fl">100_000</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Orthogonal, independent variables in the general population</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>talento <span class="op">=</span> <span class="fu">randn</span>(N)</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>diligencia <span class="op">=</span> <span class="fu">randn</span>(N)</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>r_pob <span class="op">=</span> <span class="fu">cor</span>(talento, diligencia)</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Correlación poblacional verdadera: "</span>, <span class="fu">round</span>(r_pob, digits <span class="op">=</span> <span class="fl">4</span>))</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Selection mechanism: S is a collider on both traits.</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="co">#    Entry to the elite stratum requires the top decile of the combined score.</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>puntuacion <span class="op">=</span> talento <span class="op">.+</span> diligencia</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>umbral <span class="op">=</span> <span class="fu">quantile</span>(puntuacion, <span class="fl">0.90</span>)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>seleccionados <span class="op">=</span> puntuacion <span class="op">.&gt;=</span> umbral</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Conditioning on S == 1 induces a spurious dependence</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>r_muestra <span class="op">=</span> <span class="fu">cor</span>(talento[seleccionados], diligencia[seleccionados])</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Correlación en la muestra condicionada: "</span>, <span class="fu">round</span>(r_muestra, digits <span class="op">=</span> <span class="fl">4</span>))</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** la correlación poblacional es nula, como corresponde a dos variables generadas de forma independiente. Al restringir la muestra al decil superior aparece una correlación de $r \approx -0.70$. Nada causal ha ocurrido entre $T$ y $D$: el sesgo lo introduce el propio acto de seleccionar por una variable que ambas causan.</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Actualización conjugada Beta-Binomial</span></span>
 <span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- REGRESIÓN EN Hollywood (Condicionado al Colisionador) ---"</span>)</span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coeficiente Belleza -&gt; Talento: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>params[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss"> (p-val: </span><span class="sc">{</span>model_hollywood<span class="sc">.</span>pvalues[<span class="st">'belleza'</span>]<span class="sc">:.4f}</span><span class="ss">)"</span>)</span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (*éxito en Hollywood*), aparece una **correlación negativa artificial** ($r &lt; 0, p &lt; 0.001$). Condicionar por una variable causada por ambas genera una falsa causa.</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>Frente al ritual del valor $p$, el análisis bayesiano actualiza probabilidades conforme llega la evidencia. Si la creencia previa sobre la probabilidad de cooperación $\theta$ se parametriza como $\text{Beta}(\alpha, \beta)$, observar $k$ éxitos en $n$ interacciones actualiza la posterior a $\text{Beta}(\alpha + k,\ \beta + n - k)$ de forma analítica y exacta, sin muestreo.</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Prior: a weak belief centred on 0.5</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>α_0, β_0 <span class="op">=</span> <span class="fl">2</span>, <span class="fl">2</span></span>
 <span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Inferencia bayesiana: actualización de *priors* en R (Harvard Stat 110)</span></span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>Ejemplo en **R** para derivar la distribución *a posteriori* de una tasa poblacional (p. ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.</span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Define the priors, Beta(alpha, beta)</span></span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="co"># A weakly informative prior centred on 0.20</span></span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>alpha_prior <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>beta_prior  <span class="ot">&lt;-</span> <span class="dv">8</span></span>
-<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid of theta values (the true proportion in the population)</span></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Observed data (N = 50 people, k = 18 successes)</span></span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>k_obs <span class="ot">&lt;-</span> <span class="dv">18</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Observed data: 14 cooperative moves in 20 rounds</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>k, n <span class="op">=</span> <span class="fl">14</span>, <span class="fl">20</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Conjugate update</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>α_post <span class="op">=</span> α_0 <span class="op">+</span> k</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>β_post <span class="op">=</span> β_0 <span class="op">+</span> (n <span class="op">-</span> k)</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>media_prior <span class="op">=</span> α_0 <span class="op">/</span> (α_0 <span class="op">+</span> β_0)</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>media_post  <span class="op">=</span> α_post <span class="op">/</span> (α_post <span class="op">+</span> β_post)</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Media a priori de cooperación: "</span>, <span class="fu">round</span>(media_prior, digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Media a posteriori actualizada: "</span>, <span class="fu">round</span>(media_post, digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Beta density written out in full. For integer parameters the normalising</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="co"># constant needs no gamma function: 1/B(a,b) = (a+b-1) * binomial(a+b-2, a-1).</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf_beta</span>(θ, a, b) <span class="op">=</span> θ<span class="op">^</span>(a <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> (<span class="fl">1</span> <span class="op">-</span> θ)<span class="op">^</span>(b <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> (a <span class="op">+</span> b <span class="op">-</span> <span class="fl">1</span>) <span class="op">*</span> <span class="fu">binomial</span>(a <span class="op">+</span> b <span class="op">-</span> <span class="fl">2</span>, a <span class="op">-</span> <span class="fl">1</span>)</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Densidad posterior en θ=0.65: "</span>, <span class="fu">round</span>(<span class="fu">pdf_beta</span>(<span class="fl">0.65</span>, α_post, β_post), digits <span class="op">=</span> <span class="fl">4</span>))</span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Likelihood and analytic posterior</span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>prior_density     <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior, beta_prior)</span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>posterior_density <span class="ot">&lt;-</span> <span class="fu">dbeta</span>(theta, alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** la media pasa de $0.5$ a $16/24 = 0.667$. La conjugación Beta-Binomial permite escribir la posterior en forma cerrada, de modo que el resultado no depende de ningún muestreador ni de su convergencia.</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Summary estimates: mean, mode (MAP) and credible interval</span></span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>prior_mean <span class="ot">&lt;-</span> alpha_prior <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior)</span>
-<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>post_mean  <span class="ot">&lt;-</span> (alpha_prior <span class="sc">+</span> k_obs) <span class="sc">/</span> (alpha_prior <span class="sc">+</span> beta_prior <span class="sc">+</span> n_obs)</span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>prior_map  <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(prior_density)]</span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>post_map   <span class="ot">&lt;-</span> theta[<span class="fu">which.max</span>(posterior_density)]</span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>ic_95      <span class="ot">&lt;-</span> <span class="fu">qbeta</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), alpha_prior <span class="sc">+</span> k_obs, beta_prior <span class="sc">+</span> (n_obs <span class="sc">-</span> k_obs))</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. El modelo de segregación espacial de Schelling</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>Ningún agente desea vivir en un gueto homogéneo: solo prefiere no ser una minoría extrema en su vecindario inmediato. Basta con esa microtolerancia para que la reubicación sucesiva de los insatisfechos desencadene una cascada de externalidades que convierte una mezcla aleatoria en una segregación casi total.</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
 <span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a priori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, prior_mean, prior_map))</span>
-<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Media a posteriori: %.3f (moda: %.3f)</span><span class="sc">\n</span><span class="st">"</span>, post_mean, post_map))</span>
-<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Intervalo de credibilidad al 95%%: [%.3f, %.3f]</span><span class="sc">\n</span><span class="st">"</span>, ic_95[<span class="dv">1</span>], ic_95[<span class="dv">2</span>]))</span>
-<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** El modelo pasa de un *prior* vago ($E[\theta] = 0.20$) a una estimación *a posteriori* ($E<span class="co">[</span><span class="ot">\theta \mid D</span><span class="co">]</span> = 0.333$) ponderando la masa de probabilidad según el tamaño muestral.</span>
-<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Modelo de segregación espacial de Schelling (Python)</span></span>
-<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>Simulación en Python que demuestra cómo un micro-motivo de tolerancia moderada ($33\%$ de vecinos similares) genera espontáneamente una macro-segregación residencial extrema.</span>
-<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prop_vecinos_iguales(grid, r, c):</span>
-<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Share of occupied neighbours belonging to the same group (Moore)."""</span></span>
-<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>    gs <span class="op">=</span> <span class="bu">len</span>(grid)</span>
-<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>    r0, r1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, r <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, r <span class="op">+</span> <span class="dv">2</span>)</span>
-<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>    c0, c1 <span class="op">=</span> <span class="bu">max</span>(<span class="dv">0</span>, c <span class="op">-</span> <span class="dv">1</span>), <span class="bu">min</span>(gs, c <span class="op">+</span> <span class="dv">2</span>)</span>
-<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>    bloque <span class="op">=</span> grid[r0:r1, c0:c1].copy()</span>
-<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>    bloque[r <span class="op">-</span> r0, c <span class="op">-</span> c0] <span class="op">=</span> <span class="dv">0</span>       <span class="co"># an agent is not its own neighbour</span></span>
-<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> bloque.flatten()</span>
-<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>    vecinos <span class="op">=</span> vecinos[vecinos <span class="op">!=</span> <span class="dv">0</span>]  <span class="co"># drop empty cells</span></span>
-<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(vecinos) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(vecinos <span class="op">==</span> grid[r, c]) <span class="op">/</span> <span class="bu">len</span>(vecinos)</span>
-<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice_segregacion(grid):</span>
-<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Mean share of same-group neighbours across every agent."""</span></span>
-<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> [prop_vecinos_iguales(grid, r, c)</span>
-<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid)) <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(grid))</span>
-<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>             <span class="cf">if</span> grid[r, c] <span class="op">!=</span> <span class="dv">0</span>]</span>
-<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean([p <span class="cf">for</span> p <span class="kw">in</span> props <span class="cf">if</span> p <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>])</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="st">"""Share of occupied Moore neighbours that belong to the agent's own group."""</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">prop_vecinos_iguales</span>(tablero, r, c)</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>    dim <span class="op">=</span> <span class="fu">size</span>(tablero, <span class="fl">1</span>)</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>    agente <span class="op">=</span> tablero[r, c]</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>    iguales <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>    ocupados <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fu">max</span>(<span class="fl">1</span>, r <span class="op">-</span> <span class="fl">1</span>)<span class="op">:</span><span class="fu">min</span>(dim, r <span class="op">+</span> <span class="fl">1</span>), j <span class="kw">in</span> <span class="fu">max</span>(<span class="fl">1</span>, c <span class="op">-</span> <span class="fl">1</span>)<span class="op">:</span><span class="fu">min</span>(dim, c <span class="op">+</span> <span class="fl">1</span>)</span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>        (i <span class="op">==</span> r <span class="op">&amp;&amp;</span> j <span class="op">==</span> c) <span class="op">&amp;&amp;</span> <span class="cf">continue</span>      <span class="co"># an agent is not its own neighbour</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>        tablero[i, j] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span>      <span class="co"># skip empty cells</span></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>        ocupados <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>        tablero[i, j] <span class="op">==</span> agente <span class="op">&amp;&amp;</span> (iguales <span class="op">+=</span> <span class="fl">1</span>)</span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ocupados <span class="op">==</span> <span class="fl">0</span> ? <span class="cn">nothing</span> <span class="op">:</span> iguales <span class="op">/</span> ocupados</span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="st">"""Mean share of same-group neighbours across every agent on the board."""</span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">indice_segregacion</span>(tablero)</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> <span class="dt">Float64</span>[]</span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ci <span class="kw">in</span> <span class="fu">CartesianIndices</span>(tablero)</span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>        tablero[ci] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> <span class="fu">prop_vecinos_iguales</span>(tablero, <span class="fu">Tuple</span>(ci)<span class="op">...</span>)</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>        p <span class="op">===</span> <span class="cn">nothing</span> <span class="op">||</span> <span class="fu">push!</span>(props, p)</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">mean</span>(props)</span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">simular_schelling</span>(dim <span class="op">=</span> <span class="fl">40</span>; vacios <span class="op">=</span> <span class="fl">0.1</span>, umbral <span class="op">=</span> <span class="fl">0.30</span>, max_iter <span class="op">=</span> <span class="fl">50</span>)</span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>    <span class="co"># States: 0 = empty, 1 = group A, 2 = group B</span></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>    n_celdas <span class="op">=</span> dim <span class="op">*</span> dim</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>    tablero <span class="op">=</span> <span class="fu">rand</span>([<span class="fl">1</span>, <span class="fl">2</span>], dim, dim)</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>    tablero[<span class="fu">randperm</span>(n_celdas)[<span class="fl">1</span><span class="op">:</span><span class="fu">round</span>(<span class="dt">Int</span>, vacios <span class="op">*</span> n_celdas)]] <span class="op">.=</span> <span class="fl">0</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">"Índice de segregación inicial: "</span>, <span class="fu">round</span>(<span class="fu">indice_segregacion</span>(tablero), digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> paso <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>max_iter</span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>        movimientos <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>        celdas_vacias <span class="op">=</span> <span class="fu">findall</span>(<span class="op">==</span>(<span class="fl">0</span>), tablero)</span>
 <span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">50</span>, pct_vacantes<span class="op">=</span><span class="fl">0.1</span>, pct_tipo1<span class="op">=</span><span class="fl">0.45</span>,</span>
-<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>                      umbral_tolerancia<span class="op">=</span><span class="fl">0.33</span>, pasos<span class="op">=</span><span class="dv">100</span>):</span>
-<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0: empty, 1: group A, 2: group B</span></span>
-<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>], size<span class="op">=</span>(grid_size, grid_size),</span>
-<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>                            p<span class="op">=</span>[pct_vacantes, (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>pct_tipo1,</span>
-<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>                               (<span class="dv">1</span><span class="op">-</span>pct_vacantes)<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>pct_tipo1)])</span>
-<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Índice de segregación inicial: </span><span class="sc">{</span>indice_segregacion(grid)<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> paso <span class="kw">in</span> <span class="bu">range</span>(pasos):</span>
-<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>        insatisfechos <span class="op">=</span> []</span>
-<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>        vacantes <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">*</span>np.where(grid <span class="op">==</span> <span class="dv">0</span>)))</span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ci <span class="kw">in</span> <span class="fu">CartesianIndices</span>(tablero)</span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>            tablero[ci] <span class="op">==</span> <span class="fl">0</span> <span class="op">&amp;&amp;</span> <span class="cf">continue</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>            <span class="fu">isempty</span>(celdas_vacias) <span class="op">&amp;&amp;</span> <span class="cf">break</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>            p <span class="op">=</span> <span class="fu">prop_vecinos_iguales</span>(tablero, <span class="fu">Tuple</span>(ci)<span class="op">...</span>)</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> p <span class="op">!==</span> <span class="cn">nothing</span> <span class="op">&amp;&amp;</span> p <span class="op">&lt;</span> umbral</span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>                destino <span class="op">=</span> <span class="fu">popat!</span>(celdas_vacias, <span class="fu">rand</span>(<span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(celdas_vacias)))</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>                tablero[destino] <span class="op">=</span> tablero[ci]</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>                tablero[ci] <span class="op">=</span> <span class="fl">0</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>                <span class="fu">push!</span>(celdas_vacias, ci)</span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>                movimientos <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
 <span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(grid_size):</span>
-<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(grid_size):</span>
-<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> grid[r, c] <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">continue</span></span>
-<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>                prop <span class="op">=</span> prop_vecinos_iguales(grid, r, c)</span>
-<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> prop <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> prop <span class="op">&lt;</span> umbral_tolerancia:</span>
-<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>                    insatisfechos.append((r, c))</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> movimientos <span class="op">==</span> <span class="fl">0</span></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>            <span class="fu">println</span>(<span class="st">"Convergencia alcanzada en la iteración "</span>, paso)</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tablero</span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
 <span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> insatisfechos:</span>
-<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Equilibrio alcanzado en el paso </span><span class="sc">{</span>paso<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>        np.random.shuffle(insatisfechos)</span>
-<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r, c <span class="kw">in</span> insatisfechos:</span>
-<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> vacantes:</span>
-<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
-<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>            nueva_r, nueva_c <span class="op">=</span> vacantes.pop(np.random.randint(<span class="bu">len</span>(vacantes)))</span>
-<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>            grid[nueva_r, nueva_c] <span class="op">=</span> grid[r, c]</span>
-<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a>            grid[r, c] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>            vacantes.append((r, c))</span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">7</span>)</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>tablero_final <span class="op">=</span> <span class="fu">simular_schelling</span>()</span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Índice de segregación final:   "</span>, <span class="fu">round</span>(<span class="fu">indice_segregacion</span>(tablero_final), digits <span class="op">=</span> <span class="fl">3</span>))</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** el umbral es del 30%, es decir, cada agente acepta ser minoría en una proporción de dos a uno. Aun así el índice de segregación —la proporción media de vecinos afines— pasa de $0.504$, el valor esperado en una distribución aleatoria, a $0.753$ en nueve iteraciones. Nadie ha buscado el gueto; lo produce la agregación de decisiones locales, que es exactamente la tesis generativa de Schelling y Joshua Epstein.</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Tabla de mortalidad en SQL relacional</span></span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>El análisis demográfico no exporta a una hoja de cálculo: computa sobre el motor relacional con funciones de ventana. La consulta deriva la función de supervivencia $l(x)$ y la probabilidad condicional de muerte $q(x)$ a partir de un registro bruto de defunciones.</span>
 <span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grid</span>
-<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="co"># Test run</span></span>
-<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">7</span>)</span>
-<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>grid_final <span class="op">=</span> simular_schelling(grid_size<span class="op">=</span><span class="dv">40</span>, pasos<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Índice de segregación final:   </span><span class="sc">{</span>indice_segregacion(grid_final)<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** Este es el clásico ejemplo de **emergencia generativa** (Joshua Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de $0.501$ —el valor esperado de una distribución aleatoria— a $0.767$ en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.</span>
-<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Consultas relacionales SQL para eventos de vida y demografía (PostgreSQL / SQLite)</span></span>
-<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>Modelado de bases de datos relacionales para calcular la **tasa de fecundidad específica por edad (ASFR)** por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.</span>
-<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
-<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="co">-- Relational SQL query: age-specific fertility rate (ASFR)</span></span>
-<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> nacimientos_por_grupo <span class="kw">AS</span> (</span>
-<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
-<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a>        <span class="cf">CASE</span> </span>
-<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">19</span> <span class="cf">THEN</span> <span class="st">'15-19'</span></span>
-<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">20</span> <span class="kw">AND</span> <span class="dv">24</span> <span class="cf">THEN</span> <span class="st">'20-24'</span></span>
-<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">25</span> <span class="kw">AND</span> <span class="dv">29</span> <span class="cf">THEN</span> <span class="st">'25-29'</span></span>
-<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">30</span> <span class="kw">AND</span> <span class="dv">34</span> <span class="cf">THEN</span> <span class="st">'30-34'</span></span>
-<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">35</span> <span class="kw">AND</span> <span class="dv">39</span> <span class="cf">THEN</span> <span class="st">'35-39'</span></span>
-<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">40</span> <span class="kw">AND</span> <span class="dv">44</span> <span class="cf">THEN</span> <span class="st">'40-44'</span></span>
-<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>            <span class="cf">WHEN</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">45</span> <span class="kw">AND</span> <span class="dv">49</span> <span class="cf">THEN</span> <span class="st">'45-49'</span></span>
-<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a>        <span class="cf">END</span> <span class="kw">AS</span> grupo_edad,</span>
-<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a>        <span class="fu">COUNT</span>(n<span class="ch">.</span>id_nacimiento) <span class="kw">AS</span> total_nacimientos</span>
-<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> madres m</span>
-<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>    <span class="kw">JOIN</span> nacimientos n <span class="kw">ON</span> m<span class="ch">.</span>id_madre <span class="op">=</span> n<span class="ch">.</span>id_madre</span>
-<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> n<span class="ch">.</span>año_nacimiento <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> m<span class="ch">.</span>edad_al_parto <span class="kw">BETWEEN</span> <span class="dv">15</span> <span class="kw">AND</span> <span class="dv">49</span>  <span class="co">-- drop births outside the reproductive age range</span></span>
-<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
-<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>),</span>
-<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>poblacion_femenina <span class="kw">AS</span> (</span>
-<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> </span>
-<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a>        grupo_edad,</span>
-<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(poblacion_expuesta) <span class="kw">AS</span> personas_año</span>
-<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> censo_mujeres_expuestas</span>
-<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> año <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> grupo_edad</span>
-<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
-<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a>    f<span class="ch">.</span>grupo_edad,</span>
-<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>    f<span class="ch">.</span>total_nacimientos,</span>
-<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a>    p<span class="ch">.</span>personas_año,</span>
-<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ROUND</span>((<span class="fu">CAST</span>(f<span class="ch">.</span>total_nacimientos <span class="kw">AS</span> <span class="dt">REAL</span>) <span class="op">/</span> p<span class="ch">.</span>personas_año) <span class="op">*</span> <span class="dv">1000</span>, <span class="dv">2</span>) <span class="kw">AS</span> asfr_por_1000</span>
-<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> nacimientos_por_grupo f</span>
-<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> poblacion_femenina p <span class="kw">ON</span> f<span class="ch">.</span>grupo_edad <span class="op">=</span> p<span class="ch">.</span>grupo_edad</span>
-<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> f<span class="ch">.</span>grupo_edad;</span>
-<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a><span class="co">-- SQLite: cohort life table derived from raw parish records</span></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> conteo_edad <span class="kw">AS</span> (</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>        edad_fallecimiento <span class="kw">AS</span> x,</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>        <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> defunciones_dx</span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> registros_parroquiales</span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> cohorte_nacimiento <span class="op">=</span> <span class="dv">1680</span></span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> edad_fallecimiento</span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>acumulado <span class="kw">AS</span> (</span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span></span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a>        x,</span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>        defunciones_dx,</span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(defunciones_dx) OVER (</span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a>            <span class="kw">ORDER</span> <span class="kw">BY</span> x ROWS <span class="kw">BETWEEN</span> UNBOUNDED PRECEDING <span class="kw">AND</span> UNBOUNDED FOLLOWING</span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a>        ) <span class="kw">AS</span> total_cohorte,</span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a>        <span class="fu">SUM</span>(defunciones_dx) OVER (</span>
+<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a>            <span class="kw">ORDER</span> <span class="kw">BY</span> x ROWS <span class="kw">BETWEEN</span> UNBOUNDED PRECEDING <span class="kw">AND</span> <span class="dv">1</span> PRECEDING</span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a>        ) <span class="kw">AS</span> muertes_previas</span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> conteo_edad</span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a>    x <span class="kw">AS</span> edad,</span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a>    total_cohorte <span class="op">-</span> <span class="fu">COALESCE</span>(muertes_previas, <span class="dv">0</span>) <span class="kw">AS</span> supervivientes_lx,</span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a>    defunciones_dx,</span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ROUND</span>(</span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>        <span class="fu">CAST</span>(defunciones_dx <span class="kw">AS</span> <span class="dt">REAL</span>) <span class="op">/</span> (total_cohorte <span class="op">-</span> <span class="fu">COALESCE</span>(muertes_previas, <span class="dv">0</span>)),</span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a>        <span class="dv">4</span></span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a>    ) <span class="kw">AS</span> probabilidad_muerte_qx</span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> acumulado</span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> edad;</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** la primera ventana suma toda la cohorte sin ordenarla por posición; la segunda acumula las defunciones *anteriores* a cada edad, y de ahí sale $l(x)$ como resta. La probabilidad condicional $q(x) = d(x) / l(x)$ sale ya como columna, lista para alimentar una matriz de Leslie.</span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Intervalos de confianza por bootstrap</span></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a>Al estudiar rentas, patrimonios o ratios de fecundidad —distribuciones con cola pesada— suponer normalidad es un error de bulto. El remuestreo de Efron reconstruye la distribución muestral del estimador extrayendo muestras con reemplazo de los propios datos, sin postular nada sobre su forma.</span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="in">```julia</span></span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span>, <span class="bu">Statistics</span></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">101</span>)</span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="fl">10_000</span>                       <span class="co"># bootstrap replicates</span></span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a><span class="co"># Skewed empirical sample: lognormal with a heavy tail</span></span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a>patrimonio <span class="op">=</span> <span class="fu">exp</span>.(<span class="fu">randn</span>(<span class="fl">200</span>) <span class="op">.*</span> <span class="fl">1.2</span> <span class="op">.+</span> <span class="fl">9.5</span>)</span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a>mediana_observada <span class="op">=</span> <span class="fu">median</span>(patrimonio)</span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="fu">length</span>(patrimonio)</span>
 <span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** La consulta calcula la tasa de nacimientos por cada 1.000 años-persona de exposición femenina por cohorte quinquenal, constituyendo la entrada base para construir tablas de vida y matrices de Leslie.</span>
-<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Estimación no paramétrica de parámetros complejos por bootstrap (R)</span></span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a>medianas_boot <span class="op">=</span> <span class="fu">zeros</span>(B)</span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>B</span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a>    remuestra <span class="op">=</span> patrimonio[<span class="fu">rand</span>(<span class="fl">1</span><span class="op">:</span>n, n)]</span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a>    medianas_boot[b] <span class="op">=</span> <span class="fu">median</span>(remuestra)</span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
 <span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a>Script para estimar el intervalo de confianza del **índice de Gini** sin asumir normalidad en la distribución del error.</span>
-<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
-<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the statistic to bootstrap (the Gini coefficient)</span></span>
-<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a>calc_gini <span class="ot">&lt;-</span> <span class="cf">function</span>(data, indices) {</span>
-<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> data[indices] <span class="co"># Resampling with replacement</span></span>
-<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
-<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">sort</span>(d)</span>
-<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sum</span>(<span class="dv">1</span><span class="sc">:</span>n <span class="sc">*</span> d) <span class="sc">/</span> (n <span class="sc">*</span> <span class="fu">sum</span>(d)) <span class="sc">-</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> n</span>
-<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a><span class="co"># Empirical 95% percentile interval</span></span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a>ic_inferior <span class="op">=</span> <span class="fu">quantile</span>(medianas_boot, <span class="fl">0.025</span>)</span>
+<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a>ic_superior <span class="op">=</span> <span class="fu">quantile</span>(medianas_boot, <span class="fl">0.975</span>)</span>
+<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"Mediana muestral: "</span>, <span class="fu">round</span>(mediana_observada, digits <span class="op">=</span> <span class="fl">2</span>))</span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a><span class="fu">println</span>(<span class="st">"IC 95% bootstrap: ["</span>, <span class="fu">round</span>(ic_inferior, digits <span class="op">=</span> <span class="fl">2</span>), <span class="st">", "</span>,</span>
+<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a>        <span class="fu">round</span>(ic_superior, digits <span class="op">=</span> <span class="fl">2</span>), <span class="st">"]"</span>)</span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** la mediana de una lognormal es $e^{\mu}$, aquí $e^{9.5} \approx 13\,360$. La mediana muestral es $13\,055.63$ y el intervalo percentil al 95% resulta $<span class="co">[</span><span class="ot">10\,065.89,\ 14\,907.10</span><span class="co">]</span>$, que cubre el valor poblacional. Se construye sin fórmula cerrada y sin suponer simetría, que es lo que lo hace utilizable sobre datos reales de patrimonio.</span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a synthetic income distribution (lognormal)</span></span>
-<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
-<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a>ingresos <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">meanlog =</span> <span class="fl">2.5</span>, <span class="at">sdlog =</span> <span class="fl">0.8</span>)</span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositorio</span></span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a>Los scripts de esta página forman parte del libro de laboratorios del grado, junto con los cuadernos de cada asignatura y los esquemas de base de datos:</span>
 <span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap with R = 2000 replicates</span></span>
-<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a>resultados_boot <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data =</span> ingresos, <span class="at">statistic =</span> calc_gini, <span class="at">R =</span> <span class="dv">2000</span>)</span>
-<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a><span class="co"># BCa confidence interval (bias-corrected and accelerated)</span></span>
-<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>ci_gini <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(resultados_boot, <span class="at">type =</span> <span class="st">"bca"</span>)</span>
-<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Gini Estimado Muestral:"</span>, resultados_boot<span class="sc">$</span>t0, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ci_gini)</span>
-<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>**Explicación analítica:** El Gini muestral es $0.409$ y el intervalo BCa al 95% resulta $<span class="co">[</span><span class="ot">0.388,\ 0.434</span><span class="co">]</span>$, que cubre el valor poblacional exacto de la lognormal simulada, $2\Phi(\sigma/\sqrt{2}) - 1 = 0.428$. El *bootstrap* recupera la incertidumbre de un estadístico cuya distribución muestral no tiene forma cerrada, sin postular normalidad en ningún punto.</span>
-<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repositorio completo en GitHub</span></span>
-<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos <span class="in">`.Rmd`</span> y esquemas SQL están disponibles en nuestro repositorio oficial:</span>
-<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>**[github.com/danielgccr/nuevasomosaguas](https://github.com/danielgccr/nuevasomosaguas)**</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a>**[github.com/danielgccr/nuevasomosaguas](https://github.com/danielgccr/nuevasomosaguas)**</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

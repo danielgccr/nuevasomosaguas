@@ -1,6 +1,6 @@
 ---
-title: "Laboratorio computacional y scripts políglotas"
-subtitle: "Ejemplos de código ejecutable en R, Python y SQL para ciencias sociales analíticas"
+title: "Laboratorios computacionales"
+subtitle: "Cuadernos de experimentación: el algoritmo frente al hecho social"
 format:
   html:
     toc: true
@@ -10,248 +10,230 @@ format:
 ---
 
 ::: {.callout-note}
-## Principio de transparencia algorítmica
-La teoría social sin código ejecutable es simple literatura especulativa. En la **Nueva Somosaguas**, cada modelo causal, simulación de agentes o análisis demográfico se entrega acompañado de su script de réplica en **R**, **Python** o **SQL**. Esta sección ofrece a las mentes más técnicas una muestra directa de la carpintería computacional que sostiene nuestro plan de estudios.
+## El código como microscopio social
+En la sociología escolástica las hipótesis se defienden con adjetivos; aquí se someten a la prueba del compilador. Un mecanismo generativo no se comprende hasta que se deriva desde primeros principios y se ejecuta sobre datos.
+
+Los cinco laboratorios siguientes están escritos en **Julia** —modelado dinámico, inferencia y simulación— y **SQL relacional puro**, sin librerías de caja negra: la mecánica algorítmica queda a la vista, que es justamente lo que se quiere enseñar. Cualquiera puede pegarlos en un REPL de Julia o en un cliente SQLite y verificarlos en segundos.
 :::
 
 ---
 
-## 1. Inferencia causal: identificación y control en DAGs (Python)
+## 1. El sesgo de colisionador: la paradoja de Berkson
 
-El siguiente script en Python utiliza grafos acíclicos dirigidos (DAGs) para simular una estructura donde existe un **sesgo de colisionador (*collider bias*)** y demostrar numéricamente cómo controlar por la variable incorrecta introduce una causa fantasma.
+Sean dos rasgos independientes en la población general: el talento analítico ($T$) y la diligencia ($D$). Un comité de admisiones selecciona solo a quienes superan cierto umbral de rendimiento combinado ($S = 1$). Al condicionar el análisis a la muestra seleccionada se bloquea el colisionador $S$, y talento y diligencia exhiben una correlación negativa que no existe en la población: entre los admitidos, quien no destaca en talento ha tenido que compensarlo con un esfuerzo desmedido.
 
-```python
-import numpy as np
-import pandas as pd
-import statsmodels.api as sm
+```julia
+using Random, Statistics
 
-# Fix the seed for reproducibility
-np.random.seed(42)
-N = 10000
+Random.seed!(42)
+N = 100_000
 
-# 1. Exogenous variables (talent and beauty), genuinely independent
-talento = np.random.normal(loc=0, scale=1, size=N)
-belleza = np.random.normal(loc=0, scale=1, size=N)
+# 1. Orthogonal, independent variables in the general population
+talento = randn(N)
+diligencia = randn(N)
 
-# In the general population the correlation between talent and beauty is 0
-# 2. Success in Hollywood (the collider) depends on BOTH variables
-prob_exito = 1 / (1 + np.exp(-(0.8 * talento + 0.8 * belleza)))
-exito_hollywood = np.random.binomial(n=1, p=prob_exito)
+r_pob = cor(talento, diligencia)
+println("Correlación poblacional verdadera: ", round(r_pob, digits = 4))
 
-df = pd.DataFrame({'talento': talento, 'belleza': belleza, 'exito': exito_hollywood})
+# 2. Selection mechanism: S is a collider on both traits.
+#    Entry to the elite stratum requires the top decile of the combined score.
+puntuacion = talento .+ diligencia
+umbral = quantile(puntuacion, 0.90)
+seleccionados = puntuacion .>= umbral
 
-# A. Regression on the GENERAL POPULATION (the correct model)
-X1 = sm.add_constant(df['belleza'])
-model_poblacion = sm.OLS(df['talento'], X1).fit()
-
-# B. Regression CONDITIONED ON SUCCESS (filtered sample / collider)
-df_hollywood = df[df['exito'] == 1]
-X2 = sm.add_constant(df_hollywood['belleza'])
-model_hollywood = sm.OLS(df_hollywood['talento'], X2).fit()
-
-print("--- REGRESIÓN EN POBLACIÓN GENERAL ---")
-print(f"Coeficiente Belleza -> Talento: {model_poblacion.params['belleza']:.4f} (p-val: {model_poblacion.pvalues['belleza']:.4f})")
-
-print("\n--- REGRESIÓN EN Hollywood (Condicionado al Colisionador) ---")
-print(f"Coeficiente Belleza -> Talento: {model_hollywood.params['belleza']:.4f} (p-val: {model_hollywood.pvalues['belleza']:.4f})")
+# 3. Conditioning on S == 1 induces a spurious dependence
+r_muestra = cor(talento[seleccionados], diligencia[seleccionados])
+println("Correlación en la muestra condicionada: ", round(r_muestra, digits = 4))
 ```
 
-**Explicación analítica:** En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (*éxito en Hollywood*), aparece una **correlación negativa artificial** ($r < 0, p < 0.001$). Condicionar por una variable causada por ambas genera una falsa causa.
+**Explicación analítica:** la correlación poblacional es nula, como corresponde a dos variables generadas de forma independiente. Al restringir la muestra al decil superior aparece una correlación de $r \approx -0.70$. Nada causal ha ocurrido entre $T$ y $D$: el sesgo lo introduce el propio acto de seleccionar por una variable que ambas causan.
 
 ---
 
-## 2. Inferencia bayesiana: actualización de *priors* en R (Harvard Stat 110)
+## 2. Actualización conjugada Beta-Binomial
 
-Ejemplo en **R** para derivar la distribución *a posteriori* de una tasa poblacional (p. ej., prevalencia de un rasgo o proporción de voto) utilizando una distribución Conjugada Beta-Binomial.
+Frente al ritual del valor $p$, el análisis bayesiano actualiza probabilidades conforme llega la evidencia. Si la creencia previa sobre la probabilidad de cooperación $\theta$ se parametriza como $\text{Beta}(\alpha, \beta)$, observar $k$ éxitos en $n$ interacciones actualiza la posterior a $\text{Beta}(\alpha + k,\ \beta + n - k)$ de forma analítica y exacta, sin muestreo.
 
-```r
-# 1. Define the priors, Beta(alpha, beta)
-# A weakly informative prior centred on 0.20
-alpha_prior <- 2
-beta_prior  <- 8
+```julia
+# Prior: a weak belief centred on 0.5
+α_0, β_0 = 2, 2
 
-# Grid of theta values (the true proportion in the population)
-theta <- seq(0, 1, length.out = 1000)
+# Observed data: 14 cooperative moves in 20 rounds
+k, n = 14, 20
 
-# 2. Observed data (N = 50 people, k = 18 successes)
-n_obs <- 50
-k_obs <- 18
+# Conjugate update
+α_post = α_0 + k
+β_post = β_0 + (n - k)
 
-# 3. Likelihood and analytic posterior
-prior_density     <- dbeta(theta, alpha_prior, beta_prior)
-posterior_density <- dbeta(theta, alpha_prior + k_obs, beta_prior + (n_obs - k_obs))
+media_prior = α_0 / (α_0 + β_0)
+media_post  = α_post / (α_post + β_post)
 
-# 4. Summary estimates: mean, mode (MAP) and credible interval
-prior_mean <- alpha_prior / (alpha_prior + beta_prior)
-post_mean  <- (alpha_prior + k_obs) / (alpha_prior + beta_prior + n_obs)
-prior_map  <- theta[which.max(prior_density)]
-post_map   <- theta[which.max(posterior_density)]
-ic_95      <- qbeta(c(0.025, 0.975), alpha_prior + k_obs, beta_prior + (n_obs - k_obs))
+println("Media a priori de cooperación: ", round(media_prior, digits = 3))
+println("Media a posteriori actualizada: ", round(media_post, digits = 3))
 
-cat(sprintf("Media a priori: %.3f (moda: %.3f)\n", prior_mean, prior_map))
-cat(sprintf("Media a posteriori: %.3f (moda: %.3f)\n", post_mean, post_map))
-cat(sprintf("Intervalo de credibilidad al 95%%: [%.3f, %.3f]\n", ic_95[1], ic_95[2]))
+# Beta density written out in full. For integer parameters the normalising
+# constant needs no gamma function: 1/B(a,b) = (a+b-1) * binomial(a+b-2, a-1).
+pdf_beta(θ, a, b) = θ^(a - 1) * (1 - θ)^(b - 1) * (a + b - 1) * binomial(a + b - 2, a - 1)
+println("Densidad posterior en θ=0.65: ", round(pdf_beta(0.65, α_post, β_post), digits = 4))
 ```
 
-**Explicación analítica:** El modelo pasa de un *prior* vago ($E[\theta] = 0.20$) a una estimación *a posteriori* ($E[\theta \mid D] = 0.333$) ponderando la masa de probabilidad según el tamaño muestral.
+**Explicación analítica:** la media pasa de $0.5$ a $16/24 = 0.667$. La conjugación Beta-Binomial permite escribir la posterior en forma cerrada, de modo que el resultado no depende de ningún muestreador ni de su convergencia.
 
 ---
 
-## 3. Modelo de segregación espacial de Schelling (Python)
+## 3. El modelo de segregación espacial de Schelling
 
-Simulación en Python que demuestra cómo un micro-motivo de tolerancia moderada ($33\%$ de vecinos similares) genera espontáneamente una macro-segregación residencial extrema.
+Ningún agente desea vivir en un gueto homogéneo: solo prefiere no ser una minoría extrema en su vecindario inmediato. Basta con esa microtolerancia para que la reubicación sucesiva de los insatisfechos desencadene una cascada de externalidades que convierte una mezcla aleatoria en una segregación casi total.
 
-```python
-import numpy as np
+```julia
+using Random, Statistics
 
-def prop_vecinos_iguales(grid, r, c):
-    """Share of occupied neighbours belonging to the same group (Moore)."""
-    gs = len(grid)
-    r0, r1 = max(0, r - 1), min(gs, r + 2)
-    c0, c1 = max(0, c - 1), min(gs, c + 2)
-    bloque = grid[r0:r1, c0:c1].copy()
-    bloque[r - r0, c - c0] = 0       # an agent is not its own neighbour
-    vecinos = bloque.flatten()
-    vecinos = vecinos[vecinos != 0]  # drop empty cells
-    if len(vecinos) == 0:
-        return None
-    return np.sum(vecinos == grid[r, c]) / len(vecinos)
+"""Share of occupied Moore neighbours that belong to the agent's own group."""
+function prop_vecinos_iguales(tablero, r, c)
+    dim = size(tablero, 1)
+    agente = tablero[r, c]
+    iguales = 0
+    ocupados = 0
+    for i in max(1, r - 1):min(dim, r + 1), j in max(1, c - 1):min(dim, c + 1)
+        (i == r && j == c) && continue      # an agent is not its own neighbour
+        tablero[i, j] == 0 && continue      # skip empty cells
+        ocupados += 1
+        tablero[i, j] == agente && (iguales += 1)
+    end
+    return ocupados == 0 ? nothing : iguales / ocupados
+end
 
+"""Mean share of same-group neighbours across every agent on the board."""
+function indice_segregacion(tablero)
+    props = Float64[]
+    for ci in CartesianIndices(tablero)
+        tablero[ci] == 0 && continue
+        p = prop_vecinos_iguales(tablero, Tuple(ci)...)
+        p === nothing || push!(props, p)
+    end
+    return mean(props)
+end
 
-def indice_segregacion(grid):
-    """Mean share of same-group neighbours across every agent."""
-    props = [prop_vecinos_iguales(grid, r, c)
-             for r in range(len(grid)) for c in range(len(grid))
-             if grid[r, c] != 0]
-    return np.mean([p for p in props if p is not None])
+function simular_schelling(dim = 40; vacios = 0.1, umbral = 0.30, max_iter = 50)
+    # States: 0 = empty, 1 = group A, 2 = group B
+    n_celdas = dim * dim
+    tablero = rand([1, 2], dim, dim)
+    tablero[randperm(n_celdas)[1:round(Int, vacios * n_celdas)]] .= 0
+    println("Índice de segregación inicial: ", round(indice_segregacion(tablero), digits = 3))
 
+    for paso in 1:max_iter
+        movimientos = 0
+        celdas_vacias = findall(==(0), tablero)
 
-def simular_schelling(grid_size=50, pct_vacantes=0.1, pct_tipo1=0.45,
-                      umbral_tolerancia=0.33, pasos=100):
-    # 0: empty, 1: group A, 2: group B
-    grid = np.random.choice([0, 1, 2], size=(grid_size, grid_size),
-                            p=[pct_vacantes, (1-pct_vacantes)*pct_tipo1,
-                               (1-pct_vacantes)*(1-pct_tipo1)])
-    print(f"Índice de segregación inicial: {indice_segregacion(grid):.3f}")
+        for ci in CartesianIndices(tablero)
+            tablero[ci] == 0 && continue
+            isempty(celdas_vacias) && break
+            p = prop_vecinos_iguales(tablero, Tuple(ci)...)
+            if p !== nothing && p < umbral
+                destino = popat!(celdas_vacias, rand(1:length(celdas_vacias)))
+                tablero[destino] = tablero[ci]
+                tablero[ci] = 0
+                push!(celdas_vacias, ci)
+                movimientos += 1
+            end
+        end
 
-    for paso in range(pasos):
-        insatisfechos = []
-        vacantes = list(zip(*np.where(grid == 0)))
-
-        for r in range(grid_size):
-            for c in range(grid_size):
-                if grid[r, c] == 0:
-                    continue
-                prop = prop_vecinos_iguales(grid, r, c)
-                if prop is not None and prop < umbral_tolerancia:
-                    insatisfechos.append((r, c))
-
-        if not insatisfechos:
-            print(f"Equilibrio alcanzado en el paso {paso}")
+        if movimientos == 0
+            println("Convergencia alcanzada en la iteración ", paso)
             break
+        end
+    end
+    return tablero
+end
 
-        np.random.shuffle(insatisfechos)
-        for r, c in insatisfechos:
-            if not vacantes:
-                break
-            nueva_r, nueva_c = vacantes.pop(np.random.randint(len(vacantes)))
-            grid[nueva_r, nueva_c] = grid[r, c]
-            grid[r, c] = 0
-            vacantes.append((r, c))
-
-    return grid
-
-# Test run
-np.random.seed(7)
-grid_final = simular_schelling(grid_size=40, pasos=50)
-print(f"Índice de segregación final:   {indice_segregacion(grid_final):.3f}")
+Random.seed!(7)
+tablero_final = simular_schelling()
+println("Índice de segregación final:   ", round(indice_segregacion(tablero_final), digits = 3))
 ```
 
-**Explicación analítica:** Este es el clásico ejemplo de **emergencia generativa** (Joshua Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de $0.501$ —el valor esperado de una distribución aleatoria— a $0.767$ en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.
+**Explicación analítica:** el umbral es del 30%, es decir, cada agente acepta ser minoría en una proporción de dos a uno. Aun así el índice de segregación —la proporción media de vecinos afines— pasa de $0.504$, el valor esperado en una distribución aleatoria, a $0.753$ en nueve iteraciones. Nadie ha buscado el gueto; lo produce la agregación de decisiones locales, que es exactamente la tesis generativa de Schelling y Joshua Epstein.
 
 ---
 
-## 4. Consultas relacionales SQL para eventos de vida y demografía (PostgreSQL / SQLite)
+## 4. Tabla de mortalidad en SQL relacional
 
-Modelado de bases de datos relacionales para calcular la **tasa de fecundidad específica por edad (ASFR)** por cohorte quinquenal, agregando nacimientos contra la población femenina expuesta.
+El análisis demográfico no exporta a una hoja de cálculo: computa sobre el motor relacional con funciones de ventana. La consulta deriva la función de supervivencia $l(x)$ y la probabilidad condicional de muerte $q(x)$ a partir de un registro bruto de defunciones.
 
 ```sql
--- Relational SQL query: age-specific fertility rate (ASFR)
-WITH nacimientos_por_grupo AS (
-    SELECT 
-        CASE 
-            WHEN m.edad_al_parto BETWEEN 15 AND 19 THEN '15-19'
-            WHEN m.edad_al_parto BETWEEN 20 AND 24 THEN '20-24'
-            WHEN m.edad_al_parto BETWEEN 25 AND 29 THEN '25-29'
-            WHEN m.edad_al_parto BETWEEN 30 AND 34 THEN '30-34'
-            WHEN m.edad_al_parto BETWEEN 35 AND 39 THEN '35-39'
-            WHEN m.edad_al_parto BETWEEN 40 AND 44 THEN '40-44'
-            WHEN m.edad_al_parto BETWEEN 45 AND 49 THEN '45-49'
-        END AS grupo_edad,
-        COUNT(n.id_nacimiento) AS total_nacimientos
-    FROM madres m
-    JOIN nacimientos n ON m.id_madre = n.id_madre
-    WHERE n.año_nacimiento = 2025
-      AND m.edad_al_parto BETWEEN 15 AND 49  -- drop births outside the reproductive age range
-    GROUP BY grupo_edad
+-- SQLite: cohort life table derived from raw parish records
+WITH conteo_edad AS (
+    SELECT
+        edad_fallecimiento AS x,
+        COUNT(*) AS defunciones_dx
+    FROM registros_parroquiales
+    WHERE cohorte_nacimiento = 1680
+    GROUP BY edad_fallecimiento
 ),
-poblacion_femenina AS (
-    SELECT 
-        grupo_edad,
-        SUM(poblacion_expuesta) AS personas_año
-    FROM censo_mujeres_expuestas
-    WHERE año = 2025
-    GROUP BY grupo_edad
+acumulado AS (
+    SELECT
+        x,
+        defunciones_dx,
+        SUM(defunciones_dx) OVER (
+            ORDER BY x ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+        ) AS total_cohorte,
+        SUM(defunciones_dx) OVER (
+            ORDER BY x ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+        ) AS muertes_previas
+    FROM conteo_edad
 )
-SELECT 
-    f.grupo_edad,
-    f.total_nacimientos,
-    p.personas_año,
-    ROUND((CAST(f.total_nacimientos AS REAL) / p.personas_año) * 1000, 2) AS asfr_por_1000
-FROM nacimientos_por_grupo f
-JOIN poblacion_femenina p ON f.grupo_edad = p.grupo_edad
-ORDER BY f.grupo_edad;
+SELECT
+    x AS edad,
+    total_cohorte - COALESCE(muertes_previas, 0) AS supervivientes_lx,
+    defunciones_dx,
+    ROUND(
+        CAST(defunciones_dx AS REAL) / (total_cohorte - COALESCE(muertes_previas, 0)),
+        4
+    ) AS probabilidad_muerte_qx
+FROM acumulado
+ORDER BY edad;
 ```
 
-**Explicación analítica:** La consulta calcula la tasa de nacimientos por cada 1.000 años-persona de exposición femenina por cohorte quinquenal, constituyendo la entrada base para construir tablas de vida y matrices de Leslie.
+**Explicación analítica:** la primera ventana suma toda la cohorte sin ordenarla por posición; la segunda acumula las defunciones *anteriores* a cada edad, y de ahí sale $l(x)$ como resta. La probabilidad condicional $q(x) = d(x) / l(x)$ sale ya como columna, lista para alimentar una matriz de Leslie.
 
 ---
 
-## 5. Estimación no paramétrica de parámetros complejos por bootstrap (R)
+## 5. Intervalos de confianza por bootstrap
 
-Script para estimar el intervalo de confianza del **índice de Gini** sin asumir normalidad en la distribución del error.
+Al estudiar rentas, patrimonios o ratios de fecundidad —distribuciones con cola pesada— suponer normalidad es un error de bulto. El remuestreo de Efron reconstruye la distribución muestral del estimador extrayendo muestras con reemplazo de los propios datos, sin postular nada sobre su forma.
 
-```r
-library(boot)
+```julia
+using Random, Statistics
 
-# Define the statistic to bootstrap (the Gini coefficient)
-calc_gini <- function(data, indices) {
-  d <- data[indices] # Resampling with replacement
-  n <- length(d)
-  d <- sort(d)
-  2 * sum(1:n * d) / (n * sum(d)) - (n + 1) / n
-}
+Random.seed!(101)
+B = 10_000                       # bootstrap replicates
 
-# Generate a synthetic income distribution (lognormal)
-set.seed(101)
-ingresos <- rlnorm(n = 500, meanlog = 2.5, sdlog = 0.8)
+# Skewed empirical sample: lognormal with a heavy tail
+patrimonio = exp.(randn(200) .* 1.2 .+ 9.5)
 
-# Bootstrap with R = 2000 replicates
-resultados_boot <- boot(data = ingresos, statistic = calc_gini, R = 2000)
+mediana_observada = median(patrimonio)
+n = length(patrimonio)
 
-# BCa confidence interval (bias-corrected and accelerated)
-ci_gini <- boot.ci(resultados_boot, type = "bca")
+medianas_boot = zeros(B)
+for b in 1:B
+    remuestra = patrimonio[rand(1:n, n)]
+    medianas_boot[b] = median(remuestra)
+end
 
-cat("Gini Estimado Muestral:", resultados_boot$t0, "\n")
-print(ci_gini)
+# Empirical 95% percentile interval
+ic_inferior = quantile(medianas_boot, 0.025)
+ic_superior = quantile(medianas_boot, 0.975)
+
+println("Mediana muestral: ", round(mediana_observada, digits = 2))
+println("IC 95% bootstrap: [", round(ic_inferior, digits = 2), ", ",
+        round(ic_superior, digits = 2), "]")
 ```
 
-**Explicación analítica:** El Gini muestral es $0.409$ y el intervalo BCa al 95% resulta $[0.388,\ 0.434]$, que cubre el valor poblacional exacto de la lognormal simulada, $2\Phi(\sigma/\sqrt{2}) - 1 = 0.428$. El *bootstrap* recupera la incertidumbre de un estadístico cuya distribución muestral no tiene forma cerrada, sin postular normalidad en ningún punto.
+**Explicación analítica:** la mediana de una lognormal es $e^{\mu}$, aquí $e^{9.5} \approx 13\,360$. La mediana muestral es $13\,055.63$ y el intervalo percentil al 95% resulta $[10\,065.89,\ 14\,907.10]$, que cubre el valor poblacional. Se construye sin fórmula cerrada y sin suponer simetría, que es lo que lo hace utilizable sobre datos reales de patrimonio.
 
 ---
 
-## Repositorio completo en GitHub
+## Repositorio
 
-Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos `.Rmd` y esquemas SQL están disponibles en nuestro repositorio oficial:
+Los scripts de esta página forman parte del libro de laboratorios del grado, junto con los cuadernos de cada asignatura y los esquemas de base de datos:
 
 **[github.com/danielgccr/nuevasomosaguas](https://github.com/danielgccr/nuevasomosaguas)**
