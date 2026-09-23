@@ -122,7 +122,7 @@ El corpus completo de `r n_obras` obras fundacionales, ordenado en `r dominios_t
 ::: {.g-col-12 .g-col-md-6}
 ### [Preguntas frecuentes](faq.qmd)
 
-Nueve respuestas directas sobre admisión, reduccionismo biológico, sesgo ideológico, el papel de la IA y las salidas profesionales del programa.
+Nueve respuestas sobre el reduccionismo biológico, la neutralidad axiológica, el lugar que conserva lo cualitativo, la criba de acceso, la elección de Julia y las salidas del grado.
 :::
 ::::::::::
 

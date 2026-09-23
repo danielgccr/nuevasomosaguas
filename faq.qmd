@@ -1,112 +1,90 @@
 ---
-title: "Preguntas frecuentes (FAQ)"
-subtitle: "Resolución de dudas sobre la transición al paradigma analítico y cuantitativo"
+title: "Preguntas frecuentes"
+subtitle: "Fundamentos epistemológicos, criterios docentes y salidas del programa"
 format:
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
 ---
 
-::: callout-note
-### Propósito de esta sección
-
-Esta guía de Preguntas Frecuentes responde a las dudas más comunes formuladas por estudiantes, investigadores y autodidactas que consideran dar el salto desde las ciencias sociales tradicionales hacia la arquitectura cuantitativa, biológica y computacional de la **Nueva Somosaguas**.
+::: {.lead}
+Este documento responde a las dudas más habituales sobre los fundamentos epistemológicos, los criterios docentes y las salidas profesionales de la Nueva Somosaguas.
 :::
 
-------------------------------------------------------------------------
+---
 
-## Preguntas académicas y de admisión
+## Fundamentos y método
 
-### 1. ¿Necesito una formación previa en matemáticas avanzadas para ingresar en el programa?
+### 1. ¿Por qué refundar la sociología sobre bases matemáticas y biológicas?
 
-**No.** No se exige haber cursado un bachillerato de ciencias puras ni dominar de entrada el cálculo multivariable. Lo que se requiere es una **absoluta disposición a perder el miedo al lenguaje formal** y una elevada capacidad de razonamiento abstracto e inteligencia fluida ($G_f$).
+No se trata de una refundación arbitraria, sino del retorno al estándar científico que comparten el resto de las disciplinas empíricas. Durante décadas, una parte sustancial de las ciencias sociales operó bajo el supuesto de que el comportamiento humano podía explicarse prescindiendo de la biología evolutiva, de la demografía formal y de la identificación causal estricta.
 
-El primer año de la carrera está diseñado precisamente como una rampa de aceleración:
+La Nueva Somosaguas asume que la sociedad es un agregado de organismos biológicos que interactúan bajo restricciones ecológicas, institucionales y materiales, y que esas interacciones deben modelarse con herramientas cuantitativas reproducibles.
 
-* Arranca con el *bootcamp propedéutico* y las asignaturas **1.2, Álgebra lineal computacional**, y **1.3, Probabilidad axiomática**, con Strang y Blitzstein, enseñando la matemática desde la geometría y la implementación directa en Julia.
-* La exigencia no reside en memorizar fórmulas, sino en aprender a pensar con la precisión sintáctica de un científico.
+---
 
-------------------------------------------------------------------------
+### 2. ¿Constituye este enfoque una forma de reduccionismo biológico?
 
-### 2. ¿Qué ocurre si no supero el test psicométrico interno de la facultad?
+Rechazamos tanto el reduccionismo genético ingenuo como el constructivismo radical de la *tabula rasa*. El ser humano no es un autómata determinado por sus genes, pero tampoco es arcilla maleable sin restricciones biológicas previas.
 
-El saber no se privatiza tras un peaje corporativo o una prueba eliminatoria. La criba psicométrica interna (Raven / pruebas de razonamiento proporcional) únicamente administra recursos físicos universitarios escasos: plazas de laboratorio de investigación, acceso a servidores de supercomputación y estipendios de investigación.
+Siguiendo los modelos de coevolución gen-cultura (Boyd y Richerson) y la genética cuantitativa moderna (Falconer, Plomin), la biología se trata no como destino unívoco, sino como un conjunto de restricciones estructurales y distribuciones de rasgos que interactúan de forma dinámica con el entorno institucional. La mayoría de los rasgos humanos son poligénicos y probabilísticos, y el análisis de la interacción gen-ambiente ($G \times E$) forma parte explícita de los modelos que se enseñan.
 
-Si no accedes al grupo de investigación de élite (*Somosaguas Fellow*):
+---
 
-* Mantienes tu matrícula en el grado oficial y cursas la titulación con normalidad.
-* Dispones del **100% del material en abierto**: temarios, scripts de Julia, R y Python, guías docentes, bases de datos y el corpus de fuentes. Puedes conectar todo el repositorio a tu cuenta de Google/LLM institucional para disponer de un tutor RAG personalizado a coste cero y estudiar a tu propio ritmo.
+### 3. ¿Tiene la Nueva Somosaguas una orientación ideológica o partidista?
 
-------------------------------------------------------------------------
+Ninguna. La institución mantiene una neutralidad axiológica estricta en el sentido de Max Weber. No se evalúan adhesiones morales ni declaraciones de principios políticos.
 
-### 3. Si el grado se imparte en la universidad pública, ¿no estará expuesto a notas de corte bajas o perfiles poco preparados?
+El único criterio de validez descansa en tres cosas: la consistencia deductiva interna del modelo, la identificación causal frente a hipótesis alternativas y la reproducibilidad del resultado ante el dato. El rigor formal no pertenece a ninguna trinchera del espectro político, y una afirmación que no sobreviva a la réplica se descarta con independencia de lo conveniente que resulte.
 
-Sí, y el diseño institucional contempla esa realidad con total realismo. Si la demanda inicial es baja y la nota de corte de la Selectividad española cae al 5,0, la excelencia del programa se preserva mediante dos mecanismos inexpugnables:
+---
 
-1.  **Transparencia disuasoria (*señalamiento de Spence*):** Publicar abiertamente los exámenes, los scripts de R y las exigencias formales disuade al estudiante que busca una carrera de letras fácil o contemplativa.
-2.  **Criba de permanencia en el primer semestre:** El primer semestre no contiene asignaturas introductorias amables. Arranca directamente con probabilidad en R, cálculo diferencial y álgebra. Quien carezca de disciplina o potencia cognitiva tropieza de inmediato con la exigencia real y redirige su matrícula de forma natural.
+### 4. ¿Queda descartada la investigación cualitativa?
 
-------------------------------------------------------------------------
+No. Como sostienen sociólogos analíticos como Peter Hedström y Richard Swedberg, la observación cualitativa rigurosa, el trabajo de archivo y el trabajo de campo etnográfico son instrumentos insustituibles para descubrir mecanismos sociales plausibles y formular conjeturas sobre ellos.
 
-## Preguntas epistemológicas y metodológicas
+Lo que este plan rechaza es la sustitución del contraste formal por la exégesis textual. La intuición cualitativa es aquí el punto de partida que identifica deseos, creencias y oportunidades; el trabajo posterior consiste en formalizar ese mecanismo y someterlo a evaluación empírica.
 
-### 4. ¿Por qué sustituir la sociología cualitativa y constructivista por la genética, los DAGs causales y la teoría de juegos?
+---
 
-Porque la sociología cualitativa tradicional y el constructivismo radical han demostrado una **incapacidad sistémica para generar conocimiento acumulativo, replicable y predictivo**.
+## Acceso y seguimiento
 
-* Atribuir los fenómenos humanos a causas abstractas u «opresiones invisibles» proporciona confort ideológico, pero no explica los engranajes reales (*cogs and wheels*).
-* La **Nueva Somosaguas** adopta la **consiliencia de E. O. Wilson**: integramos la genética cuantitativa ($h^2$, puntuaciones poligénicas) para controlar la varianza biológica subyacente; empleamos diagramas acíclicos dirigidos (DAGs de Judea Pearl) para identificar la causalidad contrafactual; y utilizamos la teoría de juegos (Binmore) y la sociología analítica DBO (Hedström) para descomponer la acción colectiva en incentivos micro-fundamentados.
+### 5. ¿Por qué se utiliza una criba psicométrica para el acceso presencial?
 
-------------------------------------------------------------------------
+El plan somete al alumno desde el primer curso a cálculo multivariante, álgebra matricial y programación científica. Administrar recursos públicos escasos —plazas de laboratorio, tiempo de cómputo y atención docente en grupos reducidos— exige verificar que el estudiante cuenta con la aptitud analítica abstracta necesaria para afrontar esa carga sin frustración ni abandono prematuro.
 
-### 5. ¿No cae este enfoque en un «reduccionismo biológico» o «determinismo genético»?
+No es un juicio sobre la dignidad ni el valor de las personas, sino un criterio técnico de adecuación curricular, habitual en las disciplinas formales de mayor exigencia.
 
-**En absoluto.** Confundir la genética de la conducta con el determinismo es un error propio de quien desconoce la estadística de rasgos complejos.
+---
 
-* La genética cuantitativa demuestra que la mayoría de los rasgos humanos son **poligénicos y probabilísticos**, no deterministas.
-* Además, los modelos de la facultad analizan explícitamente la **interacción gen-ambiente ($G \times E$)** y la **transmisión cultural** (Boyd & Richerson, Henrich). Comprender el motor biológico y la heredabilidad de una población no niega el ambiente; es el único modo riguroso de medir el verdadero impacto ambiental limpiándolo de confusión genética.
+### 6. Si no resido en Madrid o trabajo a jornada completa, ¿puedo seguir el programa?
 
-------------------------------------------------------------------------
+Sí. La totalidad del canon bibliográfico, los cuadernos de laboratorio, los scripts reproducibles y las guías de estudio están publicados en acceso abierto. Cualquier persona con la constancia necesaria puede recorrer el itinerario por su cuenta, sin barrera económica ni territorial.
 
-### 6. ¿Cómo se evita la corrección política y los sesgos ideológicos en las aulas?
+La [guía autodidacta](guia_autodidacta.qmd) organiza ese recorrido en cuatro hitos, cada uno con su presupuesto de horas y su proyecto de verificación con microdatos reales. Son unas 2.600 horas netas en total, entre dos años y medio y tres y medio a 15-20 horas semanales: la cifra se declara por delante para que nadie confunda el ritmo real con el de un curso de verano.
 
-Mediante el principio innegociable de **máxima honestidad intelectual e invariancia empírica**. En la Nueva Somosaguas:
+---
 
-* No existen temas tabú ni conclusiones prohibidas por decreto moral.
-* Cualquier afirmación —sobre diferencias individuales, instituciones, demografía o política— se juzga de forma fría y transparente bajo tres criterios: **consistencia lógica del modelo, identificación causal limpia del diseño y calidad empírica del dataset**.
-* Si un argumento no sobrevive a la prueba de la pizarra o a la réplica en script, se descarta, sin importar cuán popular o políticamente conveniente sea.
+## Tecnología y salidas
 
-------------------------------------------------------------------------
+### 7. ¿Cuál es el papel de la inteligencia artificial en la docencia?
 
-## Preguntas tecnológicas y profesionales
+La IA se utiliza como exoesqueleto cognitivo y tutor socrático permanente, inspirado en el *CS50 Duck*, nunca como sustituto del pensamiento autónomo. El estudiante la emplea para depurar código, acelerar tareas de formateo y someter sus propios argumentos a escrutinio dialéctico.
 
-### 7. ¿La inteligencia artificial no volverá obsoleta la formación del estudiante?
+Para evitar la dependencia no reflexiva, las evaluaciones decisivas se realizan a terminal abierta bajo presión de tiempo y se defienden de viva voz en la pizarra, donde ninguna máquina puede simular la comprensión del mecanismo. Los detalles están en la [política de IA](politica_ia.qmd).
 
-La IA solo vuelve obsoleto al estudiante que actúa como una grabadora pasiva de contenidos. En la facultad aplicamos el **principio del exoesqueleto cognitivo**:
+---
 
-* La IA acelera la carpintería sintáctica (Julia, R, SQL) y ayuda a explorar hipótesis adversarias (*Red Teaming*).
-* Sin embargo, la atrofia se combate mediante la **prueba de la pizarra (*Blackboard Defence*)**: exámenes orales en los que el alumno debe derivar los modelos a mano alzada y explicar cada línea de código sin pantallas de por medio. La máquina es el siervo; la mente humana es el arquitecto.
+### 8. ¿Por qué Julia como lenguaje principal, y no Python o R?
 
-------------------------------------------------------------------------
+Julia resuelve el problema de los dos lenguajes: combina la expresividad de una sintaxis próxima a la notación matemática con la velocidad de ejecución y la eficiencia en memoria del código compilado. El estudiante puede implementar simulaciones basadas en agentes, optimización dinámica y cálculo matricial a gran escala sin delegar el núcleo del cómputo en una caja negra ajena.
 
-### 8. ¿Qué salidas profesionales reales tiene un egresado de la Nueva Somosaguas?
+Python y R se conservan como herramientas auxiliares, cada una en lo que hace mejor: la ingesta y manipulación de datos tabulares, y el análisis microeconométrico, bioestadístico y psicométrico.
 
-Frente al graduado tradicional en ciencias humanas —frecuentemente abocado a la precariedad por carecer de habilidades cuantitativas auditables—, el egresado de este programa posee un perfil de **altísima demanda en el mercado global**:
+---
 
-* **Data Science & ML Engineering:** Dominio políglota de Julia, Python, R y SQL, modelos bayesianos y redes.
-* **Causal Inference & Policy Evaluation:** Capacidad para diseñar experimentos naturales, A/B testing avanzado e inferencia causal por DAGs en grandes tecnológicas, consultoría estratégica y think tanks.
-* **Análisis demográfico y prospectiva:** Dominio de modelos matriciales de población, cliodinámica y análisis biofísico/energético para gestión pública y fondos de inversión.
-* **Investigación académica de frontera:** Preparación directa para ingresar en los programas de doctorado cuantitativo más exigentes del mundo (Chicago, Harvard, MIT, LSE).
+### 9. ¿Cuáles son las salidas profesionales de un egresado?
 
-------------------------------------------------------------------------
+El graduado no compite en el mercado de la opinión: ofrece competencias técnicas directamente demandables. Las salidas naturales incluyen la ciencia de datos, la consultoría cuantitativa, el análisis demográfico y actuarial, la evaluación econométrica de políticas públicas en organismos internacionales, la planificación logística territorial y la modelización de riesgos en entidades financieras.
 
-### 9. Deseo estudiar por mi cuenta sin matricularme en la universidad, ¿por dónde empiezo?
-
-Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este sitio web. El itinerario son cuatro hitos, cada uno con su presupuesto de horas y su proyecto de verificación:
-
-1. **El andamiaje formal** (~800 h): álgebra lineal con *Strang*, probabilidad con *Harvard Stat 110* y demografía con Wachter, sobre Julia y la consola de Unix.
-2. **Restricciones biológicas e identificación causal** (~700 h): Falconer y Mackay, Pearl y Angrist y Pischke.
-3. **Mecanismos micro y teoría estratégica** (~600 h): Hedström, Gibbons y Jackson.
-4. **Dinámicas macro y cliodinámica** (~500 h): Galor, Turchin y Buchanan y Tullock.
-
-Son unas 2.600 horas netas en total: entre dos años y medio y tres y medio a 15-20 horas semanales. La guía declara ese presupuesto por delante para que nadie confunda el ritmo real con el de un curso de verano.
+Es también la preparación directa para los programas de doctorado cuantitativo más exigentes.
