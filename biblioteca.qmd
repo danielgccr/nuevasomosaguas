@@ -273,4 +273,4 @@ El fondo no es un escaparate de PDF para leer en el sofá. Alimenta directamente
 * **Particionado semántico por teoremas.** El troceado no se hace por número de caracteres, sino por unidad argumental: un teorema con su demostración viaja junto, y una ficha de mecanismo no se parte por la mitad.
 * **Reordenamiento jerárquico.** Un *re-ranker* prioriza los pasajes de mayor densidad formal ante consultas analíticas, de modo que la respuesta cite la derivación y no la paráfrasis divulgativa del mismo contenido.
 
-Las condiciones de uso de ese sistema —cita obligatoria, trazabilidad al texto fuente y prohibición de delegar la identificación causal— están en la [política de IA](politica_ia.qmd).
+Las condiciones de uso de ese sistema —cita obligatoria, trazabilidad al texto fuente y prohibición de delegar la identificación causal— están en la [política de inteligencia artificial](politica_ia.qmd).

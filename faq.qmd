@@ -71,7 +71,7 @@ La [guía autodidacta](guia_autodidacta.qmd) organiza ese recorrido en cuatro hi
 
 La IA se utiliza como exoesqueleto cognitivo y tutor socrático permanente, inspirado en el *CS50 Duck*, nunca como sustituto del pensamiento autónomo. El estudiante la emplea para depurar código, acelerar tareas de formateo y someter sus propios argumentos a escrutinio dialéctico.
 
-Para evitar la dependencia no reflexiva, las evaluaciones decisivas se realizan a terminal abierta bajo presión de tiempo y se defienden de viva voz en la pizarra, donde ninguna máquina puede simular la comprensión del mecanismo. Los detalles están en la [política de IA](politica_ia.qmd).
+Para evitar la dependencia no reflexiva, las evaluaciones decisivas se realizan a terminal abierta bajo presión de tiempo y se defienden de viva voz en la pizarra, donde ninguna máquina puede simular la comprensión del mecanismo. Los detalles están en la [política de inteligencia artificial](politica_ia.qmd).
 
 ---
 

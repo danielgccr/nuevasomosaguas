@@ -99,7 +99,7 @@ Cinco laboratorios ejecutables en Julia y SQL, sin librerías de caja negra: par
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-### [Política de la IA](politica_ia.qmd)
+### [Política de inteligencia artificial](politica_ia.qmd)
 
 El *exoesqueleto cognitivo*: exámenes a terminal abierta donde se asume el uso de la IA, trazabilidad del *prompt* y la semilla, y la prohibición de delegarle la identificación causal.
 :::
