@@ -1,6 +1,7 @@
 ---
 title: "Preguntas frecuentes"
 subtitle: "Fundamentos epistemológicos, criterios docentes y salidas del programa"
+description: "Respuestas sobre los fundamentos epistemológicos, los criterios docentes, el acceso y las salidas profesionales de la Nueva Somosaguas."
 format:
   html:
     toc: true

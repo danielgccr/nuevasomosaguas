@@ -1,6 +1,7 @@
 ---
 title: "Quiénes somos"
 subtitle: "Origen, naturaleza institucional y criterio de validez de la Nueva Somosaguas"
+description: "Qué es la Nueva Somosaguas y a quién se dirige: un bien público de código abierto que somete el estudio de la sociedad a los estándares de las ciencias empíricas."
 format:
   html:
     toc: true

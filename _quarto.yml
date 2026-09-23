@@ -22,6 +22,12 @@ website:
   title: "Nueva Somosaguas"
   site-url: "https://danielgccr.github.io/nuevasomosaguas"
   repo-url: "https://github.com/danielgccr/nuevasomosaguas"
+  # Link previews in Telegram, WhatsApp, X, Mastodon... Each page supplies its
+  # own `description`; this one covers any page that does not.
+  description: "Facultad libre y de código abierto de ciencias sociales analíticas y cuantitativas."
+  open-graph:
+    locale: es_ES
+  twitter-card: true
   navbar:
     background: "#1a1a1a"
     foreground: "#f8f9fa"

@@ -1,6 +1,7 @@
 ---
 title: "Laboratorios computacionales"
 subtitle: "Cuadernos de experimentación: el algoritmo frente al hecho social"
+description: "Cinco laboratorios en Julia y SQL puro, sin cajas negras: sesgo de colisionador, actualización bayesiana, segregación de Schelling, tablas de mortalidad y bootstrap."
 format:
   html:
     toc: true

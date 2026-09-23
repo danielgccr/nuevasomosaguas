@@ -1,6 +1,7 @@
 ---
 title: "Currículo"
 subtitle: "Estructura de 4 años y 19 asignaturas del grado en ciencias sociales analíticas y cuantitativas"
+description: "Cuatro años y 19 asignaturas con Julia como entorno nuclear: un texto matriz y un cuaderno reproducible por materia, y el mecanismo separado de la identificación causal."
 format:
   html:
     toc: true

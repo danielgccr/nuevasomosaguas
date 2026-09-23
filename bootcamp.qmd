@@ -1,6 +1,7 @@
 ---
 title: "Bootcamp propedéutico de nivelación"
 subtitle: "Nivelación formal y computacional en doce semanas, con Julia y la terminal como único entorno"
+description: "Doce semanas de nivelación en cálculo, álgebra matricial y programación científica antes del grado, con Julia y la terminal como único entorno."
 format:
   html:
     toc: true

@@ -1,6 +1,7 @@
 ---
 title: "Manual de bolsillo"
 subtitle: "Diez herramientas analíticas para el debate cotidiano"
+description: "Diez preguntas en castellano llano para desarmar las falacias del debate público sin jerga ni pedantería, cada una con el andamiaje teórico que la sostiene."
 format:
   html:
     toc: true

@@ -1,6 +1,7 @@
 ---
 title: "Biblioteca"
 subtitle: "El corpus vivo de la Nueva Somosaguas — `r {source('refs.R'); n_obras}` obras ordenadas por función causal"
+description: "El corpus completo ordenado por función causal, de la genética cuantitativa a la inferencia causal y el cómputo, con ficha del mecanismo que aísla cada una. Descargable en BibTeX."
 engine: knitr
 format:
   html:

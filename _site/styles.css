@@ -235,3 +235,9 @@ svg[id$="-mermaid"] foreignObject {
   color: var(--bg-color);
   background-color: var(--accent-color);
 }
+
+/* Each page's `description` exists for link previews and search engines; the
+   subtitle already introduces the page, so the title block does not repeat it. */
+#title-block-header .description {
+  display: none;
+}

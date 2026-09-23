@@ -1,6 +1,7 @@
 ---
 title: "Guía autodidacta"
 subtitle: "La carrera en solitario: cuatro hitos, presupuesto real de horas y un proyecto auditable en cada uno"
+description: "La carrera sin aula: cuatro hitos, unas 2.600 horas netas declaradas y un proyecto reproducible con microdatos reales para cerrar cada uno."
 format:
   html:
     toc: true

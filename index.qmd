@@ -1,6 +1,7 @@
 ---
 title: "Nueva Somosaguas"
 subtitle: "Facultad libre de ciencias sociales analíticas y cuantitativas"
+description: "Facultad libre y de código abierto que refunda la sociología sobre las matemáticas, la demografía formal, la genética cuantitativa, la inferencia causal y la computación reproducible."
 ---
 
 ```{r}

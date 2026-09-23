@@ -1,6 +1,7 @@
 ---
 title: "Política de inteligencia artificial"
 subtitle: "Doctrina de soberanía intelectual y exoesqueleto cognitivo"
+description: "La inteligencia artificial como exoesqueleto cognitivo, no como sustituto: tutores socráticos, fuentes siempre citadas y ninguna delegación de la identificación causal."
 format:
   html:
     toc: true
