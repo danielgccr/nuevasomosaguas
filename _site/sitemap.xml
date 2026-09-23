@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/manual_bolsillo.html</loc>
-    <lastmod>2026-09-23T16:56:41.366Z</lastmod>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/bootcamp.html</loc>
+    <lastmod>2026-09-23T17:49:01.867Z</lastmod>
   </url>
   <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/index.html</loc>
-    <lastmod>2026-09-23T17:39:00.218Z</lastmod>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/politica_ia.html</loc>
+    <lastmod>2026-09-23T17:49:01.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/manual_bolsillo.html</loc>
+    <lastmod>2026-09-23T16:56:41.366Z</lastmod>
   </url>
   <url>
     <loc>https://danielgccr.github.io/nuevasomosaguas/faq.html</loc>
     <lastmod>2026-09-23T17:00:28.738Z</lastmod>
   </url>
   <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/bootcamp.html</loc>
-    <lastmod>2026-09-23T16:43:59.350Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/politica_ia.html</loc>
-    <lastmod>2026-09-23T16:53:46.379Z</lastmod>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/biblioteca.html</loc>
+    <lastmod>2026-09-23T17:08:17.260Z</lastmod>
   </url>
   <url>
     <loc>https://danielgccr.github.io/nuevasomosaguas/about.html</loc>
     <lastmod>2026-09-23T17:02:48.200Z</lastmod>
   </url>
   <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/biblioteca.html</loc>
-    <lastmod>2026-09-23T17:08:17.260Z</lastmod>
-  </url>
-  <url>
     <loc>https://danielgccr.github.io/nuevasomosaguas/curriculo.html</loc>
     <lastmod>2026-09-23T16:36:43.676Z</lastmod>
   </url>
   <url>
-    <loc>https://danielgccr.github.io/nuevasomosaguas/guia_autodidacta.html</loc>
-    <lastmod>2026-09-23T16:47:04.081Z</lastmod>
-  </url>
-  <url>
     <loc>https://danielgccr.github.io/nuevasomosaguas/laboratorios.html</loc>
     <lastmod>2026-09-23T16:51:50.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/index.html</loc>
+    <lastmod>2026-09-23T17:49:01.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielgccr.github.io/nuevasomosaguas/guia_autodidacta.html</loc>
+    <lastmod>2026-09-23T17:49:01.867Z</lastmod>
   </url>
 </urlset>

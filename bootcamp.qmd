@@ -49,7 +49,7 @@ Lo que el verano entrega es **amplitud estratégica**; la **profundidad operativ
 %%| label: fig-fases
 %%| fig-cap: "Las tres fases del bootcamp: el álgebra precede al cálculo, y el cálculo a la demografía."
 
-%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 12, "useMaxWidth": true}}}%%
+%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 28, "useMaxWidth": true}}}%%
 flowchart TB
     F1["Fase I · Semanas 1-4<br/>Geometría matricial y entorno de cálculo<br/>Espacios vectoriales · QR · POSIX · git · Julia"]
     F2["Fase II · Semanas 5-8<br/>Cálculo multivariante y probabilidad axiomática<br/>Gradientes · Hessianas · Lagrange · Kolmogorov"]

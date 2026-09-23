@@ -28,7 +28,7 @@ Frente a la tradición que redujo la sociología a una exégesis verbal de texto
 %%| label: fig-pilares
 %%| fig-cap: "Los cuatro pilares de la consiliencia y sus referencias fundacionales."
 
-%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 60, "padding": 12, "useMaxWidth": true}}}%%
+%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 60, "padding": 28, "useMaxWidth": true}}}%%
 flowchart LR
     NS["LA NUEVA SOMOSAGUAS<br/>Ciencias sociales<br/>analíticas y cuantitativas"]
 

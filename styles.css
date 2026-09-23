@@ -167,6 +167,17 @@ blockquote {
   --mermaid-fg-color--lighter: #e0e0d8;
 }
 
+/* Mermaid labels live in a <foreignObject>, which clips its content. Mermaid
+   sizes that box from a measurement made in a scratch element that inherits
+   the document font (Newsreader, a webfont), while the label is painted in
+   the stack above: if the webfont had not loaded when it measured, the box
+   comes out too narrow and the label is cut mid-word. Painting outside the
+   viewport costs nothing — the node padding leaves room — and removes the
+   dependency on both fonts agreeing. */
+svg[id$="-mermaid"] foreignObject {
+  overflow: visible;
+}
+
 /* Landing hero: a band inside the prose column. A .column-screen-* wrapper
    would widen Quarto's page grid and push the text off-centre, leaving the
    home page narrower than every section. */

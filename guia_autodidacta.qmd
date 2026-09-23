@@ -35,7 +35,7 @@ Presentar estas fases como etapas ligeras que se despachan en unos meses induce 
 %%| label: fig-hitos
 %%| fig-cap: "Los cuatro hitos, con su presupuesto de horas netas."
 
-%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 12, "useMaxWidth": true}}}%%
+%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 28, "useMaxWidth": true}}}%%
 flowchart TB
     H1["Hito I · ~800 h<br/>El andamiaje formal<br/>Álgebra · Probabilidad · Demografía"]
     H2["Hito II · ~700 h<br/>Restricciones biológicas e identificación causal<br/>Genética cuantitativa · DAGs · Etología"]
