@@ -61,6 +61,8 @@ format:
     toc: true
     toc-depth: 3
     toc-location: right
+    grid:
+      body-width: 900px
     code-copy: true
     code-fold: show
     highlight-style: github

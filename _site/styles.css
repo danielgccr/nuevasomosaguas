@@ -19,7 +19,7 @@ body {
   font-family: var(--font-body);
   font-size: 19px;
   line-height: 1.6;
-  max-width: 900px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   text-rendering: optimizeLegibility;
@@ -165,6 +165,13 @@ blockquote {
      grey. Point both at the site's own surface and border tokens. */
   --mermaid-fg-color--lightest: #f5f5ee;
   --mermaid-fg-color--lighter: #e0e0d8;
+}
+
+/* The measure is set on the prose column, not on <body>: Quarto splits the
+   body between the content column and the margin TOC, so capping <body> caps
+   the pair and leaves the text far narrower than intended. */
+#quarto-document-content {
+  max-width: 80ch;
 }
 
 /* Card headings in the landing grid are links, not prose headings:
