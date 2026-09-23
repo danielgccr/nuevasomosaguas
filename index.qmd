@@ -116,7 +116,7 @@ Diez herramientas para desarmar la retórica blanda sin recurrir al tecnicismo: 
 ::: {.g-col-12 .g-col-md-6}
 ### [Biblioteca](biblioteca.qmd)
 
-El corpus completo de `r n_obras` obras fundacionales, ordenado en `r dominios_txt` dominios y graduado por nivel de exigencia: de la probabilidad de Blitzstein a la cliodinámica de Turchin.
+El corpus completo de `r n_obras` obras, ordenado no por rótulos de facultad sino por función causal en `r estratos_txt` estratos, con ficha técnica del mecanismo que aísla cada obra vertebral.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

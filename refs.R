@@ -1,16 +1,18 @@
 # Single source of truth for the size and shape of the library.
 biblio <- readLines("biblioteca.qmd", warn = FALSE)
 
-# Every reference is a bullet whose first field is the bolded author.
-n_obras <- length(grep("^\\* \\*\\*", biblio))
+# A catalogued work is a bullet whose bolded author is followed by a year in
+# parentheses. The year is what separates a reference from any other bold
+# bullet on the page.
+n_obras <- length(grep("^\\* \\*\\*.*\\([0-9]{4}", biblio))
 
-# Every domain is a numbered level-2 heading.
-n_dominios <- length(grep("^## [0-9]+\\.", biblio))
+# The corpus is ordered by causal function, in ascending strata.
+n_estratos <- length(grep("^## Estrato ", biblio))
 
 # Prose spells out small counts; fall back to the numeral beyond ten.
-dominios_txt <- if (n_dominios <= 10) {
+estratos_txt <- if (n_estratos <= 10) {
   c("uno", "dos", "tres", "cuatro", "cinco", "seis",
-    "siete", "ocho", "nueve", "diez")[n_dominios]
-} else as.character(n_dominios)
+    "siete", "ocho", "nueve", "diez")[n_estratos]
+} else as.character(n_estratos)
 
-stopifnot(n_obras > 0, n_dominios > 0)
+stopifnot(n_obras > 0, n_estratos > 0)

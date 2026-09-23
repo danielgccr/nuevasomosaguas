@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -317,14 +346,14 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Índice</h2>
    
-  <ul>
-  <li><a href="#cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" id="toc-cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" class="nav-link active" data-scroll-target="#cimientos-formales-probabilidad-álgebra-e-inferencia-estadística">1. Cimientos formales, probabilidad, álgebra e inferencia estadística</a></li>
-  <li><a href="#biología-evolutiva-genética-cuantitativa-y-paleogenómica" id="toc-biología-evolutiva-genética-cuantitativa-y-paleogenómica" class="nav-link" data-scroll-target="#biología-evolutiva-genética-cuantitativa-y-paleogenómica">2. Biología evolutiva, genética cuantitativa y paleogenómica</a></li>
-  <li><a href="#sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" id="toc-sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" class="nav-link" data-scroll-target="#sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo">3. Sociología analítica, inferencia causal y mecanismos micro (DBO)</a></li>
-  <li><a href="#teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" id="toc-teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" class="nav-link" data-scroll-target="#teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación">4. Teoría de juegos, elección pública, redes y dinámica de la cooperación</a></li>
-  <li><a href="#psicología-cognitiva-antropología-de-la-cultura-y-economía-política" id="toc-psicología-cognitiva-antropología-de-la-cultura-y-economía-política" class="nav-link" data-scroll-target="#psicología-cognitiva-antropología-de-la-cultura-y-economía-política">5. Psicología cognitiva, antropología de la cultura y economía política</a></li>
-  <li><a href="#cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" id="toc-cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" class="nav-link" data-scroll-target="#cliodinámica-macrohistoria-economía-biofísica-e-historia-económica">6. Cliodinámica, macrohistoria, economía biofísica e historia económica</a></li>
-  <li><a href="#ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" id="toc-ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" class="nav-link" data-scroll-target="#ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota">7. Ciencias sociales generativas, simulación de agentes y ciencia de datos políglota</a></li>
+  <ul class="collapse">
+  <li><a href="#estrato-0.-el-sustrato-material" id="toc-estrato-0.-el-sustrato-material" class="nav-link active" data-scroll-target="#estrato-0.-el-sustrato-material">Estrato 0. El sustrato material</a></li>
+  <li><a href="#estrato-1.-la-acción-estratégica" id="toc-estrato-1.-la-acción-estratégica" class="nav-link" data-scroll-target="#estrato-1.-la-acción-estratégica">Estrato 1. La acción estratégica</a></li>
+  <li><a href="#estrato-2.-topología-y-dinámica-de-agregación" id="toc-estrato-2.-topología-y-dinámica-de-agregación" class="nav-link" data-scroll-target="#estrato-2.-topología-y-dinámica-de-agregación">Estrato 2. Topología y dinámica de agregación</a></li>
+  <li><a href="#estrato-3.-el-laboratorio-inferencial" id="toc-estrato-3.-el-laboratorio-inferencial" class="nav-link" data-scroll-target="#estrato-3.-el-laboratorio-inferencial">Estrato 3. El laboratorio inferencial</a></li>
+  <li><a href="#frontera-empírica-artículos-seminales" id="toc-frontera-empírica-artículos-seminales" class="nav-link" data-scroll-target="#frontera-empírica-artículos-seminales">Frontera empírica: artículos seminales</a></li>
+  <li><a href="#núcleo-instrumental-de-cómputo" id="toc-núcleo-instrumental-de-cómputo" class="nav-link" data-scroll-target="#núcleo-instrumental-de-cómputo">Núcleo instrumental de cómputo</a></li>
+  <li><a href="#conexión-con-la-infraestructura-rag" id="toc-conexión-con-la-infraestructura-rag" class="nav-link" data-scroll-target="#conexión-con-la-infraestructura-rag">Conexión con la infraestructura RAG</a></li>
   </ul>
 </nav>
     </div>
@@ -335,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Biblioteca</h1>
-<p class="subtitle lead">El corpus vivo de la Nueva Somosaguas — 132 obras fundacionales</p>
+<p class="subtitle lead">El corpus vivo de la Nueva Somosaguas — 141 obras ordenadas por función causal</p>
 </div>
 
 
@@ -358,23 +387,206 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>El filtro de consiliencia
+<span class="screen-reader-only">Nota</span>El fin del inventario muerto
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Esta biblioteca reúne la totalidad de las <strong>132 fuentes primarias</strong> que constituyen la columna vertebral intelectual de la <strong>Nueva Somosaguas</strong>. Frente al canon impresionista de la sociología tradicional, cada obra aquí incluida cumple estrictamente con el principio de consiliencia de E. O. Wilson: <strong>compatibilidad vertical entre las matemáticas, la biología evolutiva, los micro-mecanismos de decisión y la historia cuantitativa de gran escala</strong>.</p>
+<p>Una biblioteca científica no es un museo de encuadernaciones ni una lista de lecturas piadosas. Ninguna de estas <strong>141 obras</strong> entra en el canon por prestigio literario o consenso de época: cada una se cataloga porque aísla un mecanismo generativo, impone una restricción medible o aporta el aparato formal necesario para purgar el error inferencial.</p>
+<p>Por eso el corpus no se ordena por rótulos de facultad —«Economía», «Sociología», «Biología»—, que son la taxonomía decimonónica de la biblioteca universitaria, sino por <strong>función causal en la arquitectura de los agregados sociales</strong>: cuatro estratos ascendentes, una frontera de artículos y un núcleo instrumental.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cómo leer las fichas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las obras que vertebran cada estrato llevan ficha técnica con tres campos: el <strong>mecanismo</strong> que aíslan, el <strong>aparato formal</strong> que exigen y su <strong>función en el RAG</strong> institucional. La etiqueta <code>[Nivel 1-3 | Descriptor]</code> indica el grado de exigencia analítica, no el estrato.</p>
 </div>
 </div>
 <hr>
-<section id="cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" class="level2">
-<h2 class="anchored" data-anchor-id="cimientos-formales-probabilidad-álgebra-e-inferencia-estadística">1. Cimientos formales, probabilidad, álgebra e inferencia estadística</h2>
-<p>Obras dedicadas al adiestramiento del razonamiento cuantitativo de primer orden, la eliminación de la ilusión estadística y la formalización matemática del azar.</p>
+<section id="estrato-0.-el-sustrato-material" class="level2">
+<h2 class="anchored" data-anchor-id="estrato-0.-el-sustrato-material">Estrato 0. El sustrato material</h2>
+<p>Las invariantes del animal humano, previas al inicio del juego social: arquitectura genética, varianza de los rasgos, cognición y etología comparada. Nada de lo que viene después puede contradecir este nivel.</p>
 <ul>
-<li><strong>Blitzstein, Joseph K. &amp; Hwang, Jessica</strong> (2019). <em>Introduction to Probability</em> (Harvard Stat 110). Chapman and Hall/CRC. <code>[Nivel 1 | Probabilidad]</code></li>
+<li><strong>Plomin, Robert</strong> (2018). <em>Blueprint: How DNA Makes Us Who We Are</em>. The MIT Press. <code>[Nivel 2 | Genética Cuantitativa]</code>
+<ul>
+<li><em>Mecanismo:</em> Puntuaciones poligénicas, covarianza gen-ambiente y el colapso explicativo del ambiente familiar compartido.</li>
+<li><em>Aparato formal:</em> Genética cuantitativa; descomposición de la varianza fenotípica (<span class="math inline">\(h^2\)</span>).</li>
+<li><em>Función en el RAG:</em> Filtro contra la falacia del determinismo cultural exclusivo.</li>
+</ul></li>
+<li><strong>Plomin, Robert &amp; Asbury, Kathryn</strong> (2013). <em>G is for Genes: The Impact of Genetics on Education and Achievement</em>. Wiley-Blackwell. <code>[Nivel 1 | Genética Educativa]</code></li>
+<li><strong>Falconer, D. S. &amp; Mackay, Trudy F. C.</strong> (1996/2009). <em>Introduction to Quantitative Genetics</em> (4th Edition). Pearson. <code>[Nivel 3 | Genética Matemática]</code>
+<ul>
+<li><em>Mecanismo:</em> Modelo infinitesimal, respuesta a la selección y desequilibrio de ligamiento.</li>
+<li><em>Aparato formal:</em> Álgebra de covarianzas entre parientes; matrices de parentesco aditivo.</li>
+<li><em>Función en el RAG:</em> Formalización de la heredabilidad en sentido estricto.</li>
+</ul></li>
+<li><strong>Reich, David</strong> (2018). <em>Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past</em>. Pantheon Books. <code>[Nivel 2 | Paleogenómica]</code></li>
+<li><strong>Cochran, Gregory &amp; Harpending, Henry</strong> (2009). <em>The 10,000 Year Explosion: How Civilization Accelerated Human Evolution</em>. Basic Books. <code>[Nivel 2 | Evolución Reciente]</code></li>
+<li><strong>Haier, Richard J.</strong> (2017). <em>The Neuroscience of Intelligence</em>. Cambridge University Press. <code>[Nivel 2 | Psicometría/Neurociencia]</code>
+<ul>
+<li><em>Mecanismo:</em> Teoría de integración parieto-frontal (P-FIT), eficiencia neuronal y sustrato biológico del factor <span class="math inline">\(g\)</span>.</li>
+<li><em>Aparato formal:</em> Psicometría multivariante y correlación con neuroimagen estructural y funcional.</li>
+<li><em>Función en el RAG:</em> Modelización de asimetrías de capital cognitivo sobre distribuciones normales.</li>
+</ul></li>
+<li><strong>Buss, David M. &amp; Hawley, Patricia H.</strong> (Eds.) (2010). <em>The Evolution of Personality and Individual Differences</em>. Oxford University Press. <code>[Nivel 2 | Psicología Evolutiva]</code></li>
+<li><strong>Boehm, Christopher</strong> (1999). <em>Hierarchy in the Forest: The Evolution of Egalitarian Behavior</em>. Harvard University Press. <code>[Nivel 2 | Antropología Evolutiva]</code>
+<ul>
+<li><em>Mecanismo:</em> Jerarquías de dominación inversa: coaliciones que sancionan y suprimen al macho alfa en bandas forrajeras.</li>
+<li><em>Aparato formal:</em> Etología comparada y teoría de juegos evolutiva.</li>
+<li><em>Función en el RAG:</em> Origen evolutivo de las normas morales y de las instituciones sancionadoras.</li>
+</ul></li>
+<li><strong>Tuschman, Avi</strong> (2013). <em>Our Political Nature: The Evolutionary Origins of What Divides Us</em>. Prometheus Books. <code>[Nivel 2 | Psicología Política]</code></li>
+<li><strong>Sesardic, Neven</strong> (2005). <em>Making Sense of Heritability</em>. Cambridge University Press. <code>[Nivel 3 | Filosofía de la Heredabilidad]</code></li>
+<li><strong>Vanhanen, Tatu</strong> (2012). <em>Ethnic Conflicts: Their Biological Roots in Ethnic Nepotism</em>. Ulster Institute for Social Research. <code>[Nivel 2 | Nepotismo Étnico]</code></li>
+<li><strong>Frans de Waal</strong> (2016). <em>Are We Smart Enough to Know How Smart Animals Are?</em> W. W. Norton &amp; Company. <code>[Nivel 1 | Etología Comparada]</code></li>
+<li><strong>Pigliucci, Massimo &amp; Kaplan, Jonathan</strong> (2006). <em>Making Sense of Evolution: The Conceptual Foundations of Evolutionary Biology</em>. University of Chicago Press. <code>[Nivel 3 | Filosofía Biológica]</code></li>
+<li><strong>Lindeberg, Staffan</strong> (2010). <em>Food and Western Disease: Health and Nutrition from an Evolutionary Perspective</em>. Wiley-Blackwell. <code>[Nivel 1 | Medicina Evolutiva]</code></li>
+<li><strong>Mercier, Hugo &amp; Sperber, Dan</strong> (2017). <em>The Enigma of Reason: A New Theory of Human Understanding</em>. Harvard University Press. <code>[Nivel 2 | Teoría Argumentativa]</code></li>
+<li><strong>Tomasello, Michael</strong> (2014). <em>A Natural History of Human Thinking</em>. Harvard University Press. <code>[Nivel 2 | Desarrollo Cognitivo]</code></li>
+<li><strong>Jussim, Lee</strong> (2012). <em>Social Perception and Social Reality: Why Accuracy Dominates Bias and Self-Fulfilling Prophecy</em>. Oxford University Press. <code>[Nivel 2 | Precisión de la Percepción]</code></li>
+<li><strong>Nisbett, Richard E.</strong> (2015). <em>Mindware: Tools for Smart Thinking</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Herramientas Cognitivas]</code></li>
+<li><strong>Bloom, Paul</strong> (2016). <em>Against Empathy: The Case for Rational Compassion</em>. Ecco. <code>[Nivel 1 | Ética Racional]</code></li>
+<li><strong>Beaujean, A. Alexander</strong> (2014). <em>Latent Variable Modeling with R: Structural Equation Modeling with the sem Package</em>. Routledge. <code>[Nivel 2 | Psicometría]</code></li>
+<li><strong>Boyer, Pascal</strong> (2006). <em>Tradition as Truth and Communication: A Cognitive Description of Traditional Discourse</em>. Cambridge University Press. <code>[Nivel 2 | Antropología Cognitiva]</code></li>
+<li><strong>Atran, Scott</strong> (2002). <em>In Gods We Trust: The Evolutionary Landscape of Religion</em>. Oxford University Press. <code>[Nivel 2 | Evolución Religiosa]</code></li>
+<li><strong>Norenzayan, Ara</strong> (2013). <em>Big Gods: How Religion Transformed Cooperation and Conflict</em>. Princeton University Press. <code>[Nivel 2 | Religión y Cooperación]</code></li>
+</ul>
+<hr>
+</section>
+<section id="estrato-1.-la-acción-estratégica" class="level2">
+<h2 class="anchored" data-anchor-id="estrato-1.-la-acción-estratégica">Estrato 1. La acción estratégica</h2>
+<p>La lógica de la elección individual bajo restricciones institucionales, asimetrías de información y equilibrios. Es donde se fija el mecanismo: quién hace qué y qué gana al hacerlo.</p>
+<ul>
+<li><strong>Hedström, Peter</strong> (2005). <em>Dissecting the Social: On the Principles of Analytical Sociology</em>. Cambridge University Press. <code>[Nivel 2 | Sociología Analítica]</code>
+<ul>
+<li><em>Mecanismo:</em> Esquema DBO, transiciones micro-macro y crítica del empirismo sin mecanismo.</li>
+<li><em>Aparato formal:</em> Individualismo metodológico estructural y modelos generativos.</li>
+<li><em>Función en el RAG:</em> Núcleo de extracción causal frente a las explicaciones holistas.</li>
+</ul></li>
+<li><strong>Elster, Jon</strong> (2015). <em>Explaining Social Behavior: More Nuts and Bolts for the Social Sciences</em> (2nd Edition). Cambridge University Press. <code>[Nivel 2 | Mecanismos DBO]</code></li>
+<li><strong>Boudon, Raymond</strong> (1974). <em>The Logic of Sociological Explanation</em>. Penguin Education. <code>[Nivel 1 | Individualismo Metodológico]</code></li>
+<li><strong>Demeulenaere, Pierre</strong> (Ed.) (2011). <em>Analytical Sociology and Social Mechanisms</em>. Cambridge University Press. <code>[Nivel 2 | Mecanismos Sociales]</code></li>
+<li><strong>Ragin, Charles C.</strong> (2008). <em>Redesigning Social Inquiry: Fuzzy Sets and Beyond</em>. University of Chicago Press. <code>[Nivel 3 | Métodos Cualitativo-Comparativos]</code></li>
+<li><strong>Swedberg, Richard</strong> (2014). <em>The Art of Social Theory</em>. Princeton University Press. <code>[Nivel 1 | Teorización Creativa]</code></li>
+<li><strong>Swedberg, Richard</strong> (Ed.) (2014). <em>Theorizing in Social Science: The Context of Discovery</em>. Stanford Social Sciences. <code>[Nivel 1 | Contexto de Descubrimiento]</code></li>
+<li><strong>Binmore, Ken</strong> (2007). <em>Playing for Real: A Text on Game Theory</em>. Oxford University Press. <code>[Nivel 2 | Teoría de Juegos Clásica]</code></li>
+<li><strong>Binmore, Ken</strong> (2011). <em>Evolution and Rationality: Decisions, Cooperation and Strategic Behaviour</em>. Cambridge University Press. <code>[Nivel 3 | Juegos Evolutivos]</code></li>
+<li><strong>Binmore, Ken</strong> (2007). <em>Game Theory: A Very Short Introduction</em>. Oxford University Press. <code>[Nivel 1 | Teoría de Juegos Introductoria]</code></li>
+<li><strong>Gibbons, Robert</strong> (1992). <em>Game Theory for Applied Economists</em>. Princeton University Press. <code>[Nivel 2 | Teoría de Juegos Aplicada]</code>
+<ul>
+<li><em>Mecanismo:</em> Juegos estáticos y dinámicos con información completa e incompleta; equilibrios bayesianos perfectos.</li>
+<li><em>Aparato formal:</em> Optimización de funciones de pago e inducción hacia atrás.</li>
+<li><em>Función en el RAG:</em> Modelización de la interacción estratégica en dilemas colectivos.</li>
+</ul></li>
+<li><strong>Gintis, Herbert</strong> (2017). <em>The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences</em> (Revised Edition). Princeton University Press. <code>[Nivel 3 | Unificación de Ciencias Conductuales]</code></li>
+<li><strong>Schecter, Stephen &amp; Gintis, Herbert</strong> (2016). <em>Game Theory in Action: An Introduction to Classical and Evolutionary Models</em>. Princeton University Press. <code>[Nivel 2 | Modelos Aplicados]</code></li>
+<li><strong>Vega-Redondo, Fernando</strong> (2003). <em>Economics and the Theory of Games</em>. Cambridge University Press. <code>[Nivel 3 | Economía Matemática]</code></li>
+<li><strong>Rodríguez, Abel &amp; Mendes, Bruno</strong> (2018). <em>Probability, Decisions and Games: A Gentle Introduction using R</em>. Wiley. <code>[Nivel 1 | Juegos en R]</code></li>
+<li><strong>Buchanan, James M. &amp; Tullock, Gordon</strong> (1962/2020). <em>The Calculus of Consent: Logical Foundations of Constitutional Democracy</em>. University of Michigan Press. <code>[Nivel 2 | Elección Pública]</code>
+<ul>
+<li><em>Mecanismo:</em> Simetría conductual del burócrata: costes externos frente a costes de decisión, y búsqueda de rentas.</li>
+<li><em>Aparato formal:</em> Elección pública y reglas de votación óptimas.</li>
+<li><em>Función en el RAG:</em> Fiscalización de los incentivos privados del decisor estatal.</li>
+</ul></li>
+<li><strong>Mueller, Dennis C.</strong> (2003). <em>Public Choice III</em>. Cambridge University Press. <code>[Nivel 3 | Elección Pública Avanzada]</code></li>
+<li><strong>Olson, Mancur</strong> (1965/2020). <em>The Logic of Collective Action: Public Goods and the Theory of Groups</em>. Harvard University Press. <code>[Nivel 2 | Bienes Públicos]</code>
+<ul>
+<li><em>Mecanismo:</em> El dilema del polizón, la asimetría entre grupos concentrados y difusos, y los incentivos selectivos.</li>
+<li><em>Aparato formal:</em> Teoría de la provisión de bienes públicos puros.</li>
+<li><em>Función en el RAG:</em> Desarme del mito de la movilización espontánea.</li>
+</ul></li>
+<li><strong>Caplan, Bryan</strong> (2007). <em>The Myth of the Rational Voter: Why Democracies Choose Bad Policies</em>. Princeton University Press. <code>[Nivel 2 | Economía Política]</code></li>
+<li><strong>Achen, Christopher H. &amp; Bartels, Larry M.</strong> (2016). <em>Democracy for Realists: Why Elections Do Not Produce Responsive Government</em>. Princeton University Press. <code>[Nivel 2 | Comportamiento Electoral]</code></li>
+<li><strong>Tetlock, Philip E.</strong> (2005). <em>Expert Political Judgment: How Good Is It? How Can We Know?</em> Princeton University Press. <code>[Nivel 2 | Predicción Política]</code></li>
+<li><strong>Gelman, Andrew</strong> (2009). <em>Red State, Blue State, Rich State, Poor State: Why Americans Vote the Way They Do</em> (Expanded Edition). Princeton University Press. <code>[Nivel 2 | Geografía Electoral]</code></li>
+<li><strong>Wallis, W. D.</strong> (2014). <em>The Mathematics of Elections and Voting</em>. Springer. <code>[Nivel 2 | Sistemas Electorales]</code></li>
+<li><strong>Taagepera, Rein</strong> (2007). <em>Predicting Party Sizes: The Logic of Simple Electoral Systems</em>. Oxford University Press. <code>[Nivel 3 | Leyes Electorales Formales]</code></li>
+<li><strong>Taagepera, Rein</strong> (2008). <em>Making Social Sciences More Scientific: The Need for Predictive Models</em>. Oxford University Press. <code>[Nivel 2 | Epistemología Cuantitativa]</code></li>
+<li><strong>Postman, Neil</strong> (1985). <em>Amusing Ourselves to Death: Public Discourse in the Age of Show Business</em>. Viking. <code>[Nivel 1 | Sociología de Medios]</code></li>
+</ul>
+<hr>
+</section>
+<section id="estrato-2.-topología-y-dinámica-de-agregación" class="level2">
+<h2 class="anchored" data-anchor-id="estrato-2.-topología-y-dinámica-de-agregación">Estrato 2. Topología y dinámica de agregación</h2>
+<p>Cómo la interacción de agentes heterogéneos en el espacio y en el tiempo genera fenómenos macroscópicos que nadie diseñó: redes, difusión, emergencia y ciclos seculares.</p>
+<ul>
+<li><strong>Schelling, Thomas C.</strong> (1978). <em>Micromotives and Macrobehavior</em>. W. W. Norton. <code>[Nivel 1 | Segregación Emergente]</code>
+<ul>
+<li><em>Mecanismo:</em> Externalidades de proximidad y masas críticas: la segregación residencial emerge de preferencias moderadas.</li>
+<li><em>Aparato formal:</em> Autómatas celulares discretos sobre retícula bidimensional.</li>
+<li><em>Función en el RAG:</em> Divergencia demostrable entre preferencia individual y patrón macro.</li>
+</ul></li>
+<li><strong>Jackson, Matthew O.</strong> (2008). <em>Social and Economic Networks</em>. Princeton University Press. <code>[Nivel 3 | Análisis de Redes]</code>
+<ul>
+<li><em>Mecanismo:</em> Formación estratégica de redes, homofilia estructural, centralidad espectral y difusión.</li>
+<li><em>Aparato formal:</em> Teoría de grafos aleatorios y juegos sobre redes.</li>
+<li><em>Función en el RAG:</em> Modelización del contagio y del capital social relacional.</li>
+</ul></li>
+<li><strong>Kolaczyk, Eric D. &amp; Csárdi, Gábor</strong> (2014). <em>Statistical Analysis of Network Data with R</em>. Springer. <code>[Nivel 2 | Redes en R]</code></li>
+<li><strong>Page, Scott E.</strong> (2007). <em>The Difference: How the Power of Diversity Creates Better Groups, Firms, Schools, and Societies</em>. Princeton University Press. <code>[Nivel 1 | Diversidad y Modelos]</code></li>
+<li><strong>Durlauf, Steven N. &amp; Young, H. Peyton</strong> (Eds.) (2001). <em>Social Dynamics</em>. The MIT Press. <code>[Nivel 3 | Dinámica Social Compleja]</code></li>
+<li><strong>Turchin, Peter &amp; Nefedov, Sergey A.</strong> (2009). <em>Secular Cycles</em>. Princeton University Press. <code>[Nivel 3 | Cliodinámica / Demografía Estructural]</code>
+<ul>
+<li><em>Mecanismo:</em> Teoría demográfico-estructural: sobreproducción de élites, pauperización e inestabilidad secular.</li>
+<li><em>Aparato formal:</em> Sistemas dinámicos acoplados no lineales, de tipo Lotka-Volterra.</li>
+<li><em>Función en el RAG:</em> Calibración de ciclos históricos de colapso.</li>
+</ul></li>
+<li><strong>Smil, Vaclav</strong> (2017). <em>Energy and Civilization: A History</em>. The MIT Press. <code>[Nivel 2 | Historia Biofísica]</code></li>
+<li><strong>Wrigley, E. A.</strong> (2010). <em>Energy and the English Industrial Revolution</em>. Cambridge University Press. <code>[Nivel 2 | Historia Energética]</code></li>
+<li><strong>Clark, Gregory</strong> (2007). <em>A Farewell to Alms: A Brief Economic History of the World</em>. Princeton University Press. <code>[Nivel 2 | Historia Económica Malthusiana]</code></li>
+<li><strong>Galor, Oded &amp; Katz, Ori</strong> (2022). <em>The Journey of Humanity: The Origins of Wealth and Inequality</em>. Random House. <code>[Nivel 1 | Teoría del Crecimiento Unificado]</code></li>
+<li><strong>Galor, Oded</strong> (2011). <em>Unified Growth Theory</em>. Princeton University Press. <code>[Nivel 3 | Crecimiento Unificado]</code></li>
+<li><strong>Morris, Ian &amp; Scheidel, Walter</strong> (Eds.) (2009). <em>The Dynamics of Ancient Empires: State Power from Assyria to Byzantium</em>. Oxford University Press. <code>[Nivel 2 | Macro-Sociología Histórica]</code></li>
+<li><strong>Morris, Ian</strong> (2014). <em>War! What Is It Good For? Conflict and the Progress of Civilization from Primates to Robots</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Evolución del Conflicto]</code></li>
+<li><strong>Gat, Azar</strong> (2017). <em>The Causes of War and the Spread of Peace: But Will War Rebound?</em> Oxford University Press. <code>[Nivel 2 | Orígenes de la Guerra]</code></li>
+<li><strong>Bairoch, Paul</strong> (1995). <em>Economics and World History: Myths and Paradoxes</em>. University of Chicago Press. <code>[Nivel 2 | Historia Económica Cuantitativa]</code></li>
+<li><strong>Findlay, Ronald &amp; O’Rourke, Kevin H.</strong> (2007). <em>Power and Plenty: Trade, War, and the World Economy in the Second Millennium</em>. Princeton University Press. <code>[Nivel 2 | Comercio y Poder]</code></li>
+<li><strong>Wickham, Chris</strong> (2005). <em>Framing the Early Middle Ages: Europe and the Mediterranean, 400-800</em>. Oxford University Press. <code>[Nivel 3 | Historia Comparada]</code></li>
+<li><strong>Harris, Bernard et al.</strong> (2011). <em>The Changing Body: Health, Nutrition, and Human Development in the Western World since 1700</em>. Cambridge University Press. <code>[Nivel 2 | Antropometría Histórica]</code></li>
+<li><strong>Seabright, Paul</strong> (2010). <em>The Company of Strangers: A Natural History of Economic Life</em> (Revised Edition). Princeton University Press. <code>[Nivel 1 | Cooperación Económica]</code></li>
+<li><strong>Mesoudi, Alex</strong> (2011). <em>Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences</em>. University of Chicago Press. <code>[Nivel 2 | Transmisión Cultural]</code></li>
+<li><strong>Ritchey, Tom</strong> (2011). <em>Wicked Problems - Social Messes: Decision Support Modelling with Morphological Analysis</em>. Springer. <code>[Nivel 2 | Análisis Morfológico]</code></li>
+<li><strong>Epstein, Joshua M.</strong> (2006). <em>Generative Social Science: Studies in Agent-Based Computational Modeling</em>. Princeton University Press. <code>[Nivel 3 | Ciencias Sociales Generativas]</code>
+<ul>
+<li><em>Mecanismo:</em> Epistemología generativa: si no se construye algorítmicamente, no está explicado.</li>
+<li><em>Aparato formal:</em> Simulación multiagente (ABM).</li>
+<li><em>Función en el RAG:</em> Plantillas ejecutables para dinámicas emergentes no lineales.</li>
+</ul></li>
+<li><strong>Epstein, Joshua M.</strong> (2014). <em>Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science</em>. Princeton University Press. <code>[Nivel 3 | Simulación Agent_Zero]</code></li>
+<li><strong>Epstein, Joshua M.</strong> (1997). <em>Nonlinear Dynamics, Mathematical Biology, and Social Science</em>. Addison-Wesley / Santa Fe Institute. <code>[Nivel 3 | Sistemas Dinámicos]</code></li>
+<li><strong>Railsback, Steven F. &amp; Grimm, Volker</strong> (2019). <em>Agent-Based and Individual-Based Modeling: A Practical Introduction</em> (2nd Edition). Princeton University Press. <code>[Nivel 2 | Modelado Basado en Agentes]</code></li>
+<li><strong>Strogatz, Steven H.</strong> (2015). <em>Nonlinear Dynamics and Chaos</em> (2nd Edition). Westview Press. <code>[Nivel 3 | Dinámica No Lineal]</code></li>
+<li><strong>Gintis, Herbert; Bowles, Samuel; Boyd, Robert T. &amp; Fehr, Ernst</strong> (Eds.) (2005). <em>Moral Sentiments and Material Interests: The Foundations of Cooperation in Economic Life</em>. The MIT Press. <code>[Nivel 2 | Simulación y Experimentos]</code></li>
+<li><strong>Stachurski, John</strong> (2009). <em>Economic Dynamics: Theory and Computation</em>. The MIT Press. <code>[Nivel 3 | Computación Económica]</code></li>
+</ul>
+<hr>
+</section>
+<section id="estrato-3.-el-laboratorio-inferencial" class="level2">
+<h2 class="anchored" data-anchor-id="estrato-3.-el-laboratorio-inferencial">Estrato 3. El laboratorio inferencial</h2>
+<p>El estándar de comprobación: probabilidad axiomática, identificación causal, demografía matemática y contrastación empírica. Es el nivel que decide si lo anterior es cierto.</p>
+<ul>
+<li><strong>Preston, Samuel H.; Heuveline, Patrick &amp; Guillot, Michel</strong> (2001). <em>Demography: Measuring and Modeling Population Processes</em>. Blackwell. <code>[Nivel 2 | Demografía Formal]</code></li>
+<li><strong>Keyfitz, Nathan &amp; Caswell, Hal</strong> (2005). <em>Applied Mathematical Demography</em> (3rd Edition). Springer. <code>[Nivel 3 | Demografía Matemática]</code></li>
+<li><strong>Wachter, Kenneth W.</strong> (2014). <em>Essential Demographic Methods</em>. Harvard University Press. <code>[Nivel 2 | Métodos Demográficos]</code>
+<ul>
+<li><em>Mecanismo:</em> Ecuación de Euler-Lotka, tabla de supervivencia <span class="math inline">\(l(x)\)</span>, tasa intrínseca <span class="math inline">\(r\)</span> y poblaciones estables.</li>
+<li><em>Aparato formal:</em> Ecuaciones integrales de renovación y proyecciones matriciales de Leslie.</li>
+<li><em>Función en el RAG:</em> Contabilidad actuarial frente a la promesa fiscal.</li>
+</ul></li>
+<li><strong>Blitzstein, Joseph K. &amp; Hwang, Jessica</strong> (2019). <em>Introduction to Probability</em> (Harvard Stat 110). Chapman and Hall/CRC. <code>[Nivel 1 | Probabilidad]</code>
+<ul>
+<li><em>Mecanismo:</em> El condicionamiento como método de resolución; variables aleatorias y leyes asintóticas.</li>
+<li><em>Aparato formal:</em> Probabilidad axiomática de Kolmogorov y distribuciones conjugadas.</li>
+<li><em>Función en el RAG:</em> Base formal de cualquier modelo de incertidumbre empírica.</li>
+</ul></li>
 <li><strong>Axler, Sheldon</strong> (2024). <em>Linear Algebra Done Right</em> (4th Edition). Springer. <code>[Nivel 1 | Álgebra Lineal]</code></li>
-<li><strong>Strang, Gilbert</strong> (1991). <em>Calculus</em> (MIT OpenCourseWare). Wellesley-Cambridge Press. <code>[Nivel 1 | Cálculo]</code></li>
 <li><strong>Simon, Carl P. &amp; Blume, Lawrence</strong> (1994). <em>Mathematics for Economists</em>. W. W. Norton. <code>[Nivel 1 | Matemáticas para Economistas]</code></li>
-<li><strong>Strang, Gilbert</strong> (2005). <em>Linear Algebra and Its Applications</em> (4th Edition). Cengage. <code>[Nivel 1 | Álgebra Lineal Aplicada]</code></li>
 <li><strong>Boyd, Stephen &amp; Vandenberghe, Lieven</strong> (2018). <em>Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares</em>. Cambridge University Press. <code>[Nivel 1 | Álgebra Lineal Numérica]</code></li>
 <li><strong>Casella, George &amp; Berger, Roger L.</strong> (2024). <em>Statistical Inference</em> (2nd Edition). Chapman and Hall/CRC. <code>[Nivel 2 | Inferencia Formal]</code></li>
 <li><strong>Efron, Bradley &amp; Hastie, Trevor</strong> (2016). <em>Computer Age Statistical Inference: Algorithms, Evidence, and Data Science</em>. Cambridge University Press. <code>[Nivel 3 | Inferencia Computacional]</code></li>
@@ -396,133 +608,66 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Pigott, Terri D.</strong> (2012). <em>Advances in Meta-Analysis</em>. Springer. <code>[Nivel 3 | Meta-Análisis]</code></li>
 <li><strong>Finkelstein, Michael O. &amp; Levin, Bruce</strong> (2015). <em>Statistics for Lawyers</em>. Springer. <code>[Nivel 1 | Aplicación Jurídica]</code></li>
 <li><strong>O’Brien, Robert M.</strong> (2014). <em>Age-Period-Cohort Models: Approaches and Analyses with Aggregate Data</em>. CRC Press. <code>[Nivel 3 | Demografía APC]</code></li>
-</ul>
-<hr>
-</section>
-<section id="biología-evolutiva-genética-cuantitativa-y-paleogenómica" class="level2">
-<h2 class="anchored" data-anchor-id="biología-evolutiva-genética-cuantitativa-y-paleogenómica">2. Biología evolutiva, genética cuantitativa y paleogenómica</h2>
-<p>Fuentes destinadas a la comprensión de la naturaleza humana biológicamente asentada, la heredabilidad de rasgos complejos, las diferencias individuales y la coevolución genético-cultural.</p>
+<li><strong>Pearl, Judea</strong> (2009). <em>Causality: Models, Reasoning, and Inference</em> (2nd Edition). Cambridge University Press. <code>[Nivel 3 | Inferencia Causal / DAGs]</code>
 <ul>
-<li><strong>Plomin, Robert</strong> (2018). <em>Blueprint: How DNA Makes Us Who We Are</em>. The MIT Press. <code>[Nivel 2 | Genética Cuantitativa]</code></li>
-<li><strong>Plomin, Robert &amp; Asbury, Kathryn</strong> (2013). <em>G is for Genes: The Impact of Genetics on Education and Achievement</em>. Wiley-Blackwell. <code>[Nivel 1 | Genética Educativa]</code></li>
-<li><strong>Falconer, D. S. &amp; Mackay, Trudy F. C.</strong> (1996/2009). <em>Introduction to Quantitative Genetics</em> (4th Edition). Pearson. <code>[Nivel 3 | Genética Matemática]</code></li>
-<li><strong>Reich, David</strong> (2018). <em>Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past</em>. Pantheon Books. <code>[Nivel 2 | Paleogenómica]</code></li>
-<li><strong>Cochran, Gregory &amp; Harpending, Henry</strong> (2009). <em>The 10,000 Year Explosion: How Civilization Accelerated Human Evolution</em>. Basic Books. <code>[Nivel 2 | Evolución Reciente]</code></li>
-<li><strong>Haier, Richard J.</strong> (2017). <em>The Neuroscience of Intelligence</em>. Cambridge University Press. <code>[Nivel 2 | Psicometría/Neurociencia]</code></li>
-<li><strong>Buss, David M. &amp; Hawley, Patricia H.</strong> (Eds.) (2010). <em>The Evolution of Personality and Individual Differences</em>. Oxford University Press. <code>[Nivel 2 | Psicología Evolutiva]</code></li>
-<li><strong>Boehm, Christopher</strong> (1999). <em>Hierarchy in the Forest: The Evolution of Egalitarian Behavior</em>. Harvard University Press. <code>[Nivel 2 | Antropología Evolutiva]</code></li>
-<li><strong>Tuschman, Avi</strong> (2013). <em>Our Political Nature: The Evolutionary Origins of What Divides Us</em>. Prometheus Books. <code>[Nivel 2 | Psicología Política]</code></li>
-<li><strong>Sesardic, Neven</strong> (2005). <em>Making Sense of Heritability</em>. Cambridge University Press. <code>[Nivel 3 | Filosofía de la Heredabilidad]</code></li>
-<li><strong>Vanhanen, Tatu</strong> (2012). <em>Ethnic Conflicts: Their Biological Roots in Ethnic Nepotism</em>. Ulster Institute for Social Research. <code>[Nivel 2 | Nepotismo Étnico]</code></li>
-<li><strong>Frans de Waal</strong> (2016). <em>Are We Smart Enough to Know How Smart Animals Are?</em> W. W. Norton &amp; Company. <code>[Nivel 1 | Etología Comparada]</code></li>
-<li><strong>Pigliucci, Massimo &amp; Kaplan, Jonathan</strong> (2006). <em>Making Sense of Evolution: The Conceptual Foundations of Evolutionary Biology</em>. University of Chicago Press. <code>[Nivel 3 | Filosofía Biológica]</code></li>
-<li><strong>Lindeberg, Staffan</strong> (2010). <em>Food and Western Disease: Health and Nutrition from an Evolutionary Perspective</em>. Wiley-Blackwell. <code>[Nivel 1 | Medicina Evolutiva]</code></li>
-</ul>
-<hr>
-</section>
-<section id="sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" class="level2">
-<h2 class="anchored" data-anchor-id="sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo">3. Sociología analítica, inferencia causal y mecanismos micro (DBO)</h2>
-<p>Cuerpo teórico que desmantela las «causas mágicas» y el holismo estructuralista, reemplazándolos por mecanismos micro-fundamentados de acción individual, diagramas acíclicos dirigidos (DAGs) y experimentos naturales.</p>
-<ul>
-<li><strong>Hedström, Peter</strong> (2005). <em>Dissecting the Social: On the Principles of Analytical Sociology</em>. Cambridge University Press. <code>[Nivel 2 | Sociología Analítica]</code></li>
-<li><strong>Elster, Jon</strong> (2015). <em>Explaining Social Behavior: More Nuts and Bolts for the Social Sciences</em> (2nd Edition). Cambridge University Press. <code>[Nivel 2 | Mecanismos DBO]</code></li>
-<li><strong>Boudon, Raymond</strong> (1974). <em>The Logic of Sociological Explanation</em>. Penguin Education. <code>[Nivel 1 | Individualismo Metodológico]</code></li>
-<li><strong>Demeulenaere, Pierre</strong> (Ed.) (2011). <em>Analytical Sociology and Social Mechanisms</em>. Cambridge University Press. <code>[Nivel 2 | Mecanismos Sociales]</code></li>
-<li><strong>Pearl, Judea</strong> (2009). <em>Causality: Models, Reasoning, and Inference</em> (2nd Edition). Cambridge University Press. <code>[Nivel 3 | Inferencia Causal / DAGs]</code></li>
+<li><em>Mecanismo:</em> DAGs, criterio de la puerta trasera, <span class="math inline">\(do\)</span>-cálculo y contrafactuales.</li>
+<li><em>Aparato formal:</em> Modelos causales estructurales no paramétricos.</li>
+<li><em>Función en el RAG:</em> Blindaje contra el sesgo de colisionador y la confusión.</li>
+</ul></li>
 <li><strong>Pearl, Judea; Glymour, Madelyn &amp; Jewell, Nicholas P.</strong> (2016). <em>Causal Inference in Statistics: A Primer</em>. Wiley. <code>[Nivel 1 | Inferencia Causal Introductoria]</code></li>
-<li><strong>Angrist, Joshua D. &amp; Pischke, Jörn-Steffen</strong> (2009). <em>Mostly Harmless Econometrics: An Empiricist’s Companion</em>. Princeton University Press. <code>[Nivel 2 | Econometría Cuasi-Experimental]</code></li>
+<li><strong>Angrist, Joshua D. &amp; Pischke, Jörn-Steffen</strong> (2009). <em>Mostly Harmless Econometrics: An Empiricist’s Companion</em>. Princeton University Press. <code>[Nivel 2 | Econometría Cuasi-Experimental]</code>
+<ul>
+<li><em>Mecanismo:</em> Resultados potenciales, variables instrumentales (LATE), diferencias en diferencias y regresión discontinua.</li>
+<li><em>Aparato formal:</em> Econometría cuasi-experimental y errores estándar robustos.</li>
+<li><em>Función en el RAG:</em> Protocolo forense para auditar evaluaciones de políticas públicas.</li>
+</ul></li>
 <li><strong>Morgan, Stephen L. &amp; Winship, Christopher</strong> (2014). <em>Counterfactuals and Causal Inference: Models and Principles for Social Research</em>. Cambridge University Press. <code>[Nivel 2 | Modelos Contrafactuales]</code></li>
 <li><strong>Imbens, Guido W. &amp; Rubin, Donald B.</strong> (2015). <em>Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction</em>. Cambridge University Press. <code>[Nivel 3 | Resultados Potenciales]</code></li>
 <li><strong>Dunning, Thad</strong> (2012). <em>Natural Experiments in the Social Sciences: A Design-Based Approach</em>. Cambridge University Press. <code>[Nivel 2 | Experimentos Naturales]</code></li>
 <li><strong>Molak, Aleksander &amp; Jaokar, Ajit</strong> (2023). <em>Causal Inference and Discovery in Python</em>. Packt Publishing. <code>[Nivel 2 | Inferencia Causal en Python]</code></li>
 <li><strong>Mumford, Stephen &amp; Anjum, Rani Lill</strong> (2014). <em>Causation: A Very Short Introduction</em>. Oxford University Press. <code>[Nivel 1 | Metafísica Causal]</code></li>
+</ul>
+<hr>
+</section>
+<section id="frontera-empírica-artículos-seminales" class="level2">
+<h2 class="anchored" data-anchor-id="frontera-empírica-artículos-seminales">Frontera empírica: artículos seminales</h2>
+<p>Los tratados fijan los axiomas, pero el mecanismo se aísla en el artículo. Una biblioteca compuesta solo de monografías arrastra un retraso estructural respecto de la frontera empírica y transmite al estudiante una ilusión de estabilidad que la disciplina no tiene.</p>
+<ul>
+<li><strong>Granovetter, Mark S.</strong> (1973). <em>The Strength of Weak Ties</em>. American Journal of Sociology 78(6). <code>[Nivel 2 | Topología de Redes]</code>
+<ul>
+<li><em>Mecanismo:</em> Los lazos débiles son puentes de baja transitividad entre grupos densos, e indispensables para que la información laboral circule.</li>
+</ul></li>
+<li><strong>Granovetter, Mark</strong> (1978). <em>Threshold Models of Collective Behavior</em>. American Journal of Sociology 83(6). <code>[Nivel 2 | Cascadas Conductuales]</code>
+<ul>
+<li><em>Mecanismo:</em> Una revuelta se modela por la distribución de umbrales individuales de activación, no por el grado de descontento medio.</li>
+</ul></li>
+<li><strong>Watts, Duncan J. &amp; Strogatz, Steven H.</strong> (1998). <em>Collective Dynamics of «Small-World» Networks</em>. Nature 393. <code>[Nivel 3 | Mundo Pequeño]</code>
+<ul>
+<li><em>Mecanismo:</em> El recableado aleatorio con probabilidad <span class="math inline">\(p\)</span> acorta drásticamente la distancia media sin destruir el agrupamiento local.</li>
+</ul></li>
+<li><strong>Hamilton, W. D.</strong> (1964). <em>The Genetical Evolution of Social Behaviour</em>. Journal of Theoretical Biology 7(1). <code>[Nivel 3 | Aptitud Inclusiva]</code>
+<ul>
+<li><em>Mecanismo:</em> La cooperación se extiende cuando <span class="math inline">\(rb &gt; c\)</span>: parentesco por beneficio supera al coste. Es la desigualdad fundacional de la conducta social.</li>
+</ul></li>
+<li><strong>Shannon, Claude E.</strong> (1948). <em>A Mathematical Theory of Communication</em>. Bell System Technical Journal 27. <code>[Nivel 3 | Teoría de la Información]</code>
+<ul>
+<li><em>Mecanismo:</em> Axiomática del bit, entropía <span class="math inline">\(H\)</span> y límite de transmisión sobre un canal con ruido.</li>
+</ul></li>
 <li><strong>Goldthorpe, John H.</strong> (2001). <em>Causation, Statistics, and Sociology</em>. European Sociological Review. <code>[Nivel 2 | Causalidad Sociológica]</code></li>
-<li><strong>Ragin, Charles C.</strong> (2008). <em>Redesigning Social Inquiry: Fuzzy Sets and Beyond</em>. University of Chicago Press. <code>[Nivel 3 | Métodos Cualitativo-Comparativos]</code></li>
-<li><strong>Swedberg, Richard</strong> (2014). <em>The Art of Social Theory</em>. Princeton University Press. <code>[Nivel 1 | Teorización Creativa]</code></li>
-<li><strong>Swedberg, Richard</strong> (Ed.) (2014). <em>Theorizing in Social Science: The Context of Discovery</em>. Stanford Social Sciences. <code>[Nivel 1 | Contexto de Descubrimiento]</code></li>
 </ul>
 <hr>
 </section>
-<section id="teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" class="level2">
-<h2 class="anchored" data-anchor-id="teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación">4. Teoría de juegos, elección pública, redes y dinámica de la cooperación</h2>
-<p>Herramientas para modelar la interacción estratégica, los dilemas de acción colectiva, la formación de redes socioeconómicas y la arquitectura de incentivos institucionales.</p>
+<section id="núcleo-instrumental-de-cómputo" class="level2">
+<h2 class="anchored" data-anchor-id="núcleo-instrumental-de-cómputo">Núcleo instrumental de cómputo</h2>
+<p>Los manuales de taller: cómo hablar con la máquina sin intermediarios ni interfaces opacas. No están aquí como adorno humanista, sino porque sin ellos los tres estratos anteriores no se pueden verificar.</p>
 <ul>
-<li><strong>Binmore, Ken</strong> (2007). <em>Playing for Real: A Text on Game Theory</em>. Oxford University Press. <code>[Nivel 2 | Teoría de Juegos Clásica]</code></li>
-<li><strong>Binmore, Ken</strong> (2011). <em>Evolution and Rationality: Decisions, Cooperation and Strategic Behaviour</em>. Cambridge University Press. <code>[Nivel 3 | Juegos Evolutivos]</code></li>
-<li><strong>Binmore, Ken</strong> (2007). <em>Game Theory: A Very Short Introduction</em>. Oxford University Press. <code>[Nivel 1 | Teoría de Juegos Introductoria]</code></li>
-<li><strong>Gibbons, Robert</strong> (1992). <em>Game Theory for Applied Economists</em>. Princeton University Press. <code>[Nivel 2 | Teoría de Juegos Aplicada]</code></li>
-<li><strong>Gintis, Herbert</strong> (2017). <em>The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences</em> (Revised Edition). Princeton University Press. <code>[Nivel 3 | Unificación de Ciencias Conductuales]</code></li>
-<li><strong>Schecter, Stephen &amp; Gintis, Herbert</strong> (2016). <em>Game Theory in Action: An Introduction to Classical and Evolutionary Models</em>. Princeton University Press. <code>[Nivel 2 | Modelos Aplicados]</code></li>
-<li><strong>Vega-Redondo, Fernando</strong> (2003). <em>Economics and the Theory of Games</em>. Cambridge University Press. <code>[Nivel 3 | Economía Matemática]</code></li>
-<li><strong>Rodríguez, Abel &amp; Mendes, Bruno</strong> (2018). <em>Probability, Decisions and Games: A Gentle Introduction using R</em>. Wiley. <code>[Nivel 1 | Juegos en R]</code></li>
-<li><strong>Buchanan, James M. &amp; Tullock, Gordon</strong> (1962/2020). <em>The Calculus of Consent: Logical Foundations of Constitutional Democracy</em>. University of Michigan Press. <code>[Nivel 2 | Elección Pública]</code></li>
-<li><strong>Mueller, Dennis C.</strong> (2003). <em>Public Choice III</em>. Cambridge University Press. <code>[Nivel 3 | Elección Pública Avanzada]</code></li>
-<li><strong>Olson, Mancur</strong> (1965/2020). <em>The Logic of Collective Action: Public Goods and the Theory of Groups</em>. Harvard University Press. <code>[Nivel 2 | Bienes Públicos]</code></li>
-<li><strong>Jackson, Matthew O.</strong> (2008). <em>Social and Economic Networks</em>. Princeton University Press. <code>[Nivel 3 | Análisis de Redes]</code></li>
-<li><strong>Kolaczyk, Eric D. &amp; Csárdi, Gábor</strong> (2014). <em>Statistical Analysis of Network Data with R</em>. Springer. <code>[Nivel 2 | Redes en R]</code></li>
-<li><strong>Page, Scott E.</strong> (2007). <em>The Difference: How the Power of Diversity Creates Better Groups, Firms, Schools, and Societies</em>. Princeton University Press. <code>[Nivel 1 | Diversidad y Modelos]</code></li>
-<li><strong>Durlauf, Steven N. &amp; Young, H. Peyton</strong> (Eds.) (2001). <em>Social Dynamics</em>. The MIT Press. <code>[Nivel 3 | Dinámica Social Compleja]</code></li>
-</ul>
-<hr>
-</section>
-<section id="psicología-cognitiva-antropología-de-la-cultura-y-economía-política" class="level2">
-<h2 class="anchored" data-anchor-id="psicología-cognitiva-antropología-de-la-cultura-y-economía-política">5. Psicología cognitiva, antropología de la cultura y economía política</h2>
-<p>Estudio de los sesgos cognitivos, la evolución de la moral y las religiones, la irracionalidad del votante y las patologías de la elección democrática.</p>
+<li><strong>Strang, Gilbert</strong> (1991). <em>Calculus</em> (MIT OpenCourseWare). Wellesley-Cambridge Press. <code>[Nivel 1 | Cálculo]</code></li>
+<li><strong>Strang, Gilbert</strong> (2005). <em>Linear Algebra and Its Applications</em> (4th Edition). Cengage. <code>[Nivel 1 | Álgebra Lineal Aplicada]</code>
 <ul>
-<li><strong>Mercier, Hugo &amp; Sperber, Dan</strong> (2017). <em>The Enigma of Reason: A New Theory of Human Understanding</em>. Harvard University Press. <code>[Nivel 2 | Teoría Argumentativa]</code></li>
-<li><strong>Tomasello, Michael</strong> (2014). <em>A Natural History of Human Thinking</em>. Harvard University Press. <code>[Nivel 2 | Desarrollo Cognitivo]</code></li>
-<li><strong>Jussim, Lee</strong> (2012). <em>Social Perception and Social Reality: Why Accuracy Dominates Bias and Self-Fulfilling Prophecy</em>. Oxford University Press. <code>[Nivel 2 | Precisión de la Percepción]</code></li>
-<li><strong>Nisbett, Richard E.</strong> (2015). <em>Mindware: Tools for Smart Thinking</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Herramientas Cognitivas]</code></li>
-<li><strong>Bloom, Paul</strong> (2016). <em>Against Empathy: The Case for Rational Compassion</em>. Ecco. <code>[Nivel 1 | Ética Racional]</code></li>
-<li><strong>Beaujean, A. Alexander</strong> (2014). <em>Latent Variable Modeling with R: Structural Equation Modeling with the sem Package</em>. Routledge. <code>[Nivel 2 | Psicometría]</code></li>
-<li><strong>Boyer, Pascal</strong> (2006). <em>Tradition as Truth and Communication: A Cognitive Description of Traditional Discourse</em>. Cambridge University Press. <code>[Nivel 2 | Antropología Cognitiva]</code></li>
-<li><strong>Atran, Scott</strong> (2002). <em>In Gods We Trust: The Evolutionary Landscape of Religion</em>. Oxford University Press. <code>[Nivel 2 | Evolución Religiosa]</code></li>
-<li><strong>Norenzayan, Ara</strong> (2013). <em>Big Gods: How Religion Transformed Cooperation and Conflict</em>. Princeton University Press. <code>[Nivel 2 | Religión y Cooperación]</code></li>
-<li><strong>Caplan, Bryan</strong> (2007). <em>The Myth of the Rational Voter: Why Democracies Choose Bad Policies</em>. Princeton University Press. <code>[Nivel 2 | Economía Política]</code></li>
-<li><strong>Achen, Christopher H. &amp; Bartels, Larry M.</strong> (2016). <em>Democracy for Realists: Why Elections Do Not Produce Responsive Government</em>. Princeton University Press. <code>[Nivel 2 | Comportamiento Electoral]</code></li>
-<li><strong>Tetlock, Philip E.</strong> (2005). <em>Expert Political Judgment: How Good Is It? How Can We Know?</em> Princeton University Press. <code>[Nivel 2 | Predicción Política]</code></li>
-<li><strong>Gelman, Andrew</strong> (2009). <em>Red State, Blue State, Rich State, Poor State: Why Americans Vote the Way They Do</em> (Expanded Edition). Princeton University Press. <code>[Nivel 2 | Geografía Electoral]</code></li>
-<li><strong>Wallis, W. D.</strong> (2014). <em>The Mathematics of Elections and Voting</em>. Springer. <code>[Nivel 2 | Sistemas Electorales]</code></li>
-<li><strong>Taagepera, Rein</strong> (2007). <em>Predicting Party Sizes: The Logic of Simple Electoral Systems</em>. Oxford University Press. <code>[Nivel 3 | Leyes Electorales Formales]</code></li>
-<li><strong>Taagepera, Rein</strong> (2008). <em>Making Social Sciences More Scientific: The Need for Predictive Models</em>. Oxford University Press. <code>[Nivel 2 | Epistemología Cuantitativa]</code></li>
-<li><strong>Postman, Neil</strong> (1985). <em>Amusing Ourselves to Death: Public Discourse in the Age of Show Business</em>. Viking. <code>[Nivel 1 | Sociología de Medios]</code></li>
-</ul>
-<hr>
-</section>
-<section id="cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" class="level2">
-<h2 class="anchored" data-anchor-id="cliodinámica-macrohistoria-economía-biofísica-e-historia-económica">6. Cliodinámica, macrohistoria, economía biofísica e historia económica</h2>
-<p>Obras de análisis de gran escala sobre el surgimiento de la prosperidad, los límites energéticos y los ciclos seculares de estabilidad e inestabilidad política.</p>
-<ul>
-<li><strong>Turchin, Peter &amp; Nefedov, Sergey A.</strong> (2009). <em>Secular Cycles</em>. Princeton University Press. <code>[Nivel 3 | Cliodinámica / Demografía Estructural]</code></li>
-<li><strong>Smil, Vaclav</strong> (2017). <em>Energy and Civilization: A History</em>. The MIT Press. <code>[Nivel 2 | Historia Biofísica]</code></li>
-<li><strong>Wrigley, E. A.</strong> (2010). <em>Energy and the English Industrial Revolution</em>. Cambridge University Press. <code>[Nivel 2 | Historia Energética]</code></li>
-<li><strong>Clark, Gregory</strong> (2007). <em>A Farewell to Alms: A Brief Economic History of the World</em>. Princeton University Press. <code>[Nivel 2 | Historia Económica Malthusiana]</code></li>
-<li><strong>Galor, Oded &amp; Katz, Ori</strong> (2022). <em>The Journey of Humanity: The Origins of Wealth and Inequality</em>. Random House. <code>[Nivel 1 | Teoría del Crecimiento Unificado]</code></li>
-<li><strong>Galor, Oded</strong> (2011). <em>Unified Growth Theory</em>. Princeton University Press. <code>[Nivel 3 | Crecimiento Unificado]</code></li>
-<li><strong>Morris, Ian &amp; Scheidel, Walter</strong> (Eds.) (2009). <em>The Dynamics of Ancient Empires: State Power from Assyria to Byzantium</em>. Oxford University Press. <code>[Nivel 2 | Macro-Sociología Histórica]</code></li>
-<li><strong>Morris, Ian</strong> (2014). <em>War! What Is It Good For? Conflict and the Progress of Civilization from Primates to Robots</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Evolución del Conflicto]</code></li>
-<li><strong>Gat, Azar</strong> (2017). <em>The Causes of War and the Spread of Peace: But Will War Rebound?</em> Oxford University Press. <code>[Nivel 2 | Orígenes de la Guerra]</code></li>
-<li><strong>Bairoch, Paul</strong> (1995). <em>Economics and World History: Myths and Paradoxes</em>. University of Chicago Press. <code>[Nivel 2 | Historia Económica Cuantitativa]</code></li>
-<li><strong>Findlay, Ronald &amp; O’Rourke, Kevin H.</strong> (2007). <em>Power and Plenty: Trade, War, and the World Economy in the Second Millennium</em>. Princeton University Press. <code>[Nivel 2 | Comercio y Poder]</code></li>
-<li><strong>Wickham, Chris</strong> (2005). <em>Framing the Early Middle Ages: Europe and the Mediterranean, 400-800</em>. Oxford University Press. <code>[Nivel 3 | Historia Comparada]</code></li>
-<li><strong>Harris, Bernard et al.</strong> (2011). <em>The Changing Body: Health, Nutrition, and Human Development in the Western World since 1700</em>. Cambridge University Press. <code>[Nivel 2 | Antropometría Histórica]</code></li>
-<li><strong>Seabright, Paul</strong> (2010). <em>The Company of Strangers: A Natural History of Economic Life</em> (Revised Edition). Princeton University Press. <code>[Nivel 1 | Cooperación Económica]</code></li>
-<li><strong>Mesoudi, Alex</strong> (2011). <em>Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences</em>. University of Chicago Press. <code>[Nivel 2 | Transmisión Cultural]</code></li>
-<li><strong>Ritchey, Tom</strong> (2011). <em>Wicked Problems - Social Messes: Decision Support Modelling with Morphological Analysis</em>. Springer. <code>[Nivel 2 | Análisis Morfológico]</code></li>
-</ul>
-<hr>
-</section>
-<section id="ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" class="level2">
-<h2 class="anchored" data-anchor-id="ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota">7. Ciencias sociales generativas, simulación de agentes y ciencia de datos políglota</h2>
-<p>Fuentes técnicas para la simulación desde abajo (<em>bottom-up</em>), la ciencia de datos en Julia, R, Python y SQL, y la infraestructura computacional de investigación.</p>
-<ul>
-<li><strong>Epstein, Joshua M.</strong> (2006). <em>Generative Social Science: Studies in Agent-Based Computational Modeling</em>. Princeton University Press. <code>[Nivel 3 | Ciencias Sociales Generativas]</code></li>
-<li><strong>Epstein, Joshua M.</strong> (2014). <em>Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science</em>. Princeton University Press. <code>[Nivel 3 | Simulación Agent_Zero]</code></li>
-<li><strong>Epstein, Joshua M.</strong> (1997). <em>Nonlinear Dynamics, Mathematical Biology, and Social Science</em>. Addison-Wesley / Santa Fe Institute. <code>[Nivel 3 | Sistemas Dinámicos]</code></li>
-<li><strong>Railsback, Steven F. &amp; Grimm, Volker</strong> (2019). <em>Agent-Based and Individual-Based Modeling: A Practical Introduction</em> (2nd Edition). Princeton University Press. <code>[Nivel 2 | Modelado Basado en Agentes]</code></li>
-<li><strong>Strogatz, Steven H.</strong> (2015). <em>Nonlinear Dynamics and Chaos</em> (2nd Edition). Westview Press. <code>[Nivel 3 | Dinámica No Lineal]</code></li>
-<li><strong>Gintis, Herbert; Bowles, Samuel; Boyd, Robert T. &amp; Fehr, Ernst</strong> (Eds.) (2005). <em>Moral Sentiments and Material Interests: The Foundations of Cooperation in Economic Life</em>. The MIT Press. <code>[Nivel 2 | Simulación y Experimentos]</code></li>
-<li><strong>Stachurski, John</strong> (2009). <em>Economic Dynamics: Theory and Computation</em>. The MIT Press. <code>[Nivel 3 | Computación Económica]</code></li>
+<li><em>Mecanismo:</em> Geometría de los cuatro subespacios fundamentales y proyecciones ortogonales.</li>
+<li><em>Aparato formal:</em> Descomposición en valores singulares y matrices estocásticas de Markov.</li>
+<li><em>Función en el RAG:</em> Puente entre el operador lineal y su implementación en Julia.</li>
+</ul></li>
 <li><strong>Wickham, Hadley</strong> (2016). <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer. <code>[Nivel 1 | Visualización en R]</code></li>
 <li><strong>Matloff, Norman</strong> (2023). <em>The Art of Machine Learning: A Hands-On Guide</em>. No Starch Press. <code>[Nivel 2 | Machine Learning]</code></li>
 <li><strong>Tuckfield, Bradford</strong> (2020). <em>Dive Into Algorithms: A Pythonic Adventure for the Daring</em>. No Starch Press. <code>[Nivel 1 | Algoritmos en Python]</code></li>
@@ -532,7 +677,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Kopec, David</strong> (2025). <em>Computer Science From Scratch</em>. No Starch Press. <code>[Nivel 1 | Ciencias de la Computación]</code></li>
 <li><strong>Day, Ryan</strong> (2025). <em>Hands-On APIs for AI and Data Science: Python Development</em>. O’Reilly Media. <code>[Nivel 2 | Integración de APIs]</code></li>
 <li><strong>Date, C. J.</strong> (2015). <em>SQL and Relational Theory: How to Write Accurate SQL Code</em> (3rd Edition). O’Reilly Media. <code>[Nivel 2 | Base de Datos SQL]</code></li>
-<li><strong>Kernighan, Brian W. &amp; Pike, Rob</strong> (1999). <em>The Practice of Programming</em>. Addison-Wesley. <code>[Nivel 1 | Práctica de Programación]</code></li>
+<li><strong>Kernighan, Brian W. &amp; Pike, Rob</strong> (1999). <em>The Practice of Programming</em>. Addison-Wesley. <code>[Nivel 1 | Práctica de Programación]</code>
+<ul>
+<li><em>Mecanismo:</em> Simplicidad, claridad y generalidad; diseño de estructuras de datos e higiene de código.</li>
+<li><em>Aparato formal:</em> Complejidad temporal <span class="math inline">\(O(n)\)</span> frente a <span class="math inline">\(O(n^2)\)</span>.</li>
+<li><em>Función en el RAG:</em> Manual de taller para trabajar en consola sin interfaces opacas.</li>
+</ul></li>
 <li><strong>Kernighan, Brian W.</strong> (2018). <em>Millions, Billions, Zillions: Defending Yourself in a World of Too Many Numbers</em>. Princeton University Press. <code>[Nivel 1 | Alfabetización Numérica]</code></li>
 <li><strong>Shotts, William</strong> (2019). <em>The Linux Command Line: A Complete Introduction</em> (2nd Edition). No Starch Press. <code>[Nivel 1 | Línea de Comandos]</code></li>
 <li><strong>Taylor, Dave &amp; Perry, Brandon</strong> (2016). <em>Wicked Cool Shell Scripts</em> (2nd Edition). No Starch Press. <code>[Nivel 1 | Scripting Unix]</code></li>
@@ -545,6 +695,17 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Firestein, Stuart</strong> (2015). <em>Failure: Why Science Is So Successful</em>. Oxford University Press. <code>[Nivel 1 | Filosofía de la Ciencia]</code></li>
 <li><strong>Murray, Charles</strong> (2003). <em>Human Accomplishment: The Pursuit of Excellence in the Arts and Sciences, 800 B.C. to 1950</em>. HarperCollins. <code>[Nivel 2 | Historia de la Excelencia]</code></li>
 </ul>
+<hr>
+</section>
+<section id="conexión-con-la-infraestructura-rag" class="level2">
+<h2 class="anchored" data-anchor-id="conexión-con-la-infraestructura-rag">Conexión con la infraestructura RAG</h2>
+<p>El fondo no es un escaparate de PDF para leer en el sofá. Alimenta directamente los cuadernos RAG temáticos alojados en el clúster de la facultad, mediante tres operaciones:</p>
+<ul>
+<li><strong>Trituración con reconocimiento de fórmulas.</strong> El OCR y el HTR conservan la notación matemática en lugar de degradarla a texto plano ilegible, que es el modo habitual de inutilizar un manual técnico al indexarlo.</li>
+<li><strong>Particionado semántico por teoremas.</strong> El troceado no se hace por número de caracteres, sino por unidad argumental: un teorema con su demostración viaja junto, y una ficha de mecanismo no se parte por la mitad.</li>
+<li><strong>Reordenamiento jerárquico.</strong> Un <em>re-ranker</em> prioriza los pasajes de mayor densidad formal ante consultas analíticas, de modo que la respuesta cite la derivación y no la paráfrasis divulgativa del mismo contenido.</li>
+</ul>
+<p>Las condiciones de uso de ese sistema —cita obligatoria, trazabilidad al texto fuente y prohibición de delegar la identificación causal— están en la <a href="./politica_ia.html">política de IA</a>.</p>
 
 
 </section>
