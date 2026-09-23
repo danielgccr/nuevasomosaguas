@@ -26,6 +26,27 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Dark mode. Quarto swaps in the darkly bundle and sets body.quarto-dark, but
+   this sheet loads last and its tokens are literals, so without these the page
+   stayed cream while the chrome went dark. Redefining the tokens is enough:
+   every rule below already reads them. Contrast against the dark background:
+   text 14.4:1, accent 7.6:1, muted 7.3:1. */
+body.quarto-dark {
+  --bg-color: #17170f;
+  --text-color: #e9e6da;
+  --accent-color: #e2938f;   /* the burgundy lifted until it is legible on dark */
+  --muted-color: #a9a498;
+  --code-bg: #24241c;
+  --border-color: #3a382e;
+
+  --mermaid-fg-color--lightest: #24241c;
+  --mermaid-fg-color--lighter: #3a382e;
+}
+
+body.quarto-dark a:hover {
+  background-color: rgba(226, 147, 143, 0.14);
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
