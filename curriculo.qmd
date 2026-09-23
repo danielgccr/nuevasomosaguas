@@ -42,7 +42,7 @@ En el primer año se desintoxica al estudiante del lenguaje vago y la sociologí
 * **Bibliografía principal:**
   * 3Blue1Brown — *The Essence of Calculus*.
   * Gilbert Strang — *Calculus* (MIT OpenCourseWare).
-  * Joshua M. Epstein — *Nonlinear Dynamics, Mathematical Biology, and Social Science*.
+  * Joshua Epstein — *Nonlinear Dynamics, Mathematical Biology, and Social Science*.
 * **Laboratorio:** Integración numérica y sistemas dinámicos continuos en **Python (SciPy)**.
 
 ### 103. Demografía matemáticamente fundamentada
@@ -147,8 +147,8 @@ El último año capacita al estudiante para ejecutar investigación generativa y
 ### 402. Ciencias sociales generativas y simulación de agentes
 * **Objetivo:** Reconstruir la emergencia de patrones sociales macro desde la interacción computacional bottom-up.
 * **Bibliografía principal:**
-  * Joshua M. Epstein — *Generative Social Science*.
-  * Joshua M. Epstein — *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*.
+  * Joshua Epstein — *Generative Social Science*.
+  * Joshua Epstein — *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*.
 * **Laboratorio:** Programación de modelos de agentes (segregación de Schelling, dinámicas epidémicas y conflicto) en **Python (Mesa)**.
 
 ### 403. Cliodinámica e historia económica cuantitativa

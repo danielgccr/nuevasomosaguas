@@ -167,7 +167,7 @@ grid_final = simular_schelling(grid_size=40, pasos=50)
 print(f"Índice de segregación final:   {indice_segregacion(grid_final):.3f}")
 ```
 
-**Explicación analítica:** Este es el clásico ejemplo de **emergencia generativa** (Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de $0.501$ —el valor esperado de una distribución aleatoria— a $0.767$ en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.
+**Explicación analítica:** Este es el clásico ejemplo de **emergencia generativa** (Joshua Epstein / Schelling). Nadie desea la segregación total, pero la dinámica de optimización individual desestabiliza las fronteras mixtas hasta colapsar en guetos. Con esta semilla, el índice de segregación pasa de $0.501$ —el valor esperado de una distribución aleatoria— a $0.767$ en apenas 14 pasos, sin que ningún agente exija más de un tercio de vecinos afines.
 
 ---
 

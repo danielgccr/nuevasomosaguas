@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>El exoesqueleto cognitivo: política de inteligencia artificial – Nueva Somosaguas</title>
+<title>Bootcamp intensivo de verano – Nueva Somosaguas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -81,6 +81,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -273,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Currículo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./bootcamp.html"> 
+    <a class="nav-link active" href="./bootcamp.html" aria-current="page"> 
 <span class="menu-text">Bootcamp</span></a>
   </li>  
   <li class="nav-item">
@@ -285,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Laboratorios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./politica_ia.html" aria-current="page"> 
+    <a class="nav-link" href="./politica_ia.html"> 
 <span class="menu-text">Política de la IA</span></a>
   </li>  
   <li class="nav-item">
@@ -321,31 +350,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#preámbulo-la-paradoja-de-la-herramienta-amplificadora" id="toc-preámbulo-la-paradoja-de-la-herramienta-amplificadora" class="nav-link active" data-scroll-target="#preámbulo-la-paradoja-de-la-herramienta-amplificadora"><span class="header-section-number">1</span> Preámbulo: la paradoja de la herramienta amplificadora</a></li>
-  <li><a href="#el-exoesqueleto-cognitivo-vs.-la-muleta-mental" id="toc-el-exoesqueleto-cognitivo-vs.-la-muleta-mental" class="nav-link" data-scroll-target="#el-exoesqueleto-cognitivo-vs.-la-muleta-mental"><span class="header-section-number">2</span> El exoesqueleto cognitivo vs.&nbsp;la muleta mental</a>
+  <li><a href="#filosofía-cero-tolerancia-a-la-asimetría-de-origen" id="toc-filosofía-cero-tolerancia-a-la-asimetría-de-origen" class="nav-link active" data-scroll-target="#filosofía-cero-tolerancia-a-la-asimetría-de-origen">1. Filosofía: cero tolerancia a la asimetría de origen</a></li>
+  <li><a href="#alcance-real-el-vuelo-de-reconocimiento-no-la-cantería" id="toc-alcance-real-el-vuelo-de-reconocimiento-no-la-cantería" class="nav-link" data-scroll-target="#alcance-real-el-vuelo-de-reconocimiento-no-la-cantería">2. Alcance real: el vuelo de reconocimiento, no la cantería</a>
   <ul class="collapse">
-  <li><a href="#la-muleta-mental-estrictamente-prohibida" id="toc-la-muleta-mental-estrictamente-prohibida" class="nav-link" data-scroll-target="#la-muleta-mental-estrictamente-prohibida"><span class="header-section-number">2.1</span> La muleta mental (estrictamente prohibida)</a></li>
-  <li><a href="#el-exoesqueleto-cognitivo-exigido-y-estimulado" id="toc-el-exoesqueleto-cognitivo-exigido-y-estimulado" class="nav-link" data-scroll-target="#el-exoesqueleto-cognitivo-exigido-y-estimulado"><span class="header-section-number">2.2</span> El exoesqueleto cognitivo (exigido y estimulado)</a></li>
+  <li><a href="#las-tres-funciones-del-verano" id="toc-las-tres-funciones-del-verano" class="nav-link" data-scroll-target="#las-tres-funciones-del-verano">Las tres funciones del verano</a></li>
+  <li><a href="#profundidad-prueba-de-concepto-frente-a-mecánica-de-precisión" id="toc-profundidad-prueba-de-concepto-frente-a-mecánica-de-precisión" class="nav-link" data-scroll-target="#profundidad-prueba-de-concepto-frente-a-mecánica-de-precisión">Profundidad: prueba de concepto frente a mecánica de precisión</a></li>
   </ul></li>
-  <li><a href="#arquitectura-rag-académica-grounding-y-trazabilidad" id="toc-arquitectura-rag-académica-grounding-y-trazabilidad" class="nav-link" data-scroll-target="#arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</a></li>
-  <li><a href="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden" id="toc-protocolo-anti-atrofia-y-evaluación-de-segundo-orden" class="nav-link" data-scroll-target="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</a>
+  <li><a href="#programa-estructurado-de-12-semanas" id="toc-programa-estructurado-de-12-semanas" class="nav-link" data-scroll-target="#programa-estructurado-de-12-semanas">3. Programa estructurado de 12 semanas</a>
   <ul class="collapse">
-  <li><a href="#la-prueba-de-la-pizarra-blackboard-defence" id="toc-la-prueba-de-la-pizarra-blackboard-defence" class="nav-link" data-scroll-target="#la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> La prueba de la pizarra (<em>Blackboard Defence</em>)</a></li>
-  <li><a href="#uso-adversarial-obligatorio-red-teaming-cognitive" id="toc-uso-adversarial-obligatorio-red-teaming-cognitive" class="nav-link" data-scroll-target="#uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</a></li>
-  <li><a href="#evaluación-de-la-arquitectura-del-prompting-y-auditoría" id="toc-evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="nav-link" data-scroll-target="#evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> Evaluación de la arquitectura del prompting y auditoría</a></li>
+  <li><a href="#módulo-i-cimientos-formales-y-programación-políglota-semanas-1-a-4" id="toc-módulo-i-cimientos-formales-y-programación-políglota-semanas-1-a-4" class="nav-link" data-scroll-target="#módulo-i-cimientos-formales-y-programación-políglota-semanas-1-a-4">Módulo I: cimientos formales y programación políglota (semanas 1 a 4)</a></li>
+  <li><a href="#módulo-ii-computación-datos-y-biología-evolutiva-semanas-5-a-8" id="toc-módulo-ii-computación-datos-y-biología-evolutiva-semanas-5-a-8" class="nav-link" data-scroll-target="#módulo-ii-computación-datos-y-biología-evolutiva-semanas-5-a-8">Módulo II: computación, datos y biología evolutiva (semanas 5 a 8)</a></li>
+  <li><a href="#módulo-iii-causalidad-redes-y-síntesis-generativa-semanas-9-a-12" id="toc-módulo-iii-causalidad-redes-y-síntesis-generativa-semanas-9-a-12" class="nav-link" data-scroll-target="#módulo-iii-causalidad-redes-y-síntesis-generativa-semanas-9-a-12">Módulo III: causalidad, redes y síntesis generativa (semanas 9 a 12)</a></li>
   </ul></li>
-  <li><a href="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia" id="toc-decálogo-del-estudiante-políglota-en-la-era-de-la-ia" class="nav-link" data-scroll-target="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia"><span class="header-section-number">5</span> Decálogo del estudiante políglota en la era de la IA</a></li>
+  <li><a href="#formato-y-exigencia-de-dedicación" id="toc-formato-y-exigencia-de-dedicación" class="nav-link" data-scroll-target="#formato-y-exigencia-de-dedicación">4. Formato y exigencia de dedicación</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">El exoesqueleto cognitivo: política de inteligencia artificial</h1>
-<p class="subtitle lead">Regulación, integración RAG y protocolos anti-atrofia intelectual en la Nueva Somosaguas</p>
+<h1 class="title">Bootcamp intensivo de verano</h1>
+<p class="subtitle lead">Rampa de desintoxicación matemática, calibración técnica y nivelación políglota (12 semanas)</p>
 </div>
 
 
@@ -362,168 +390,257 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p><em>«La Inteligencia Artificial no es un artefacto mágico ni una amenaza existencial para la educación; es un acelerador de masa crítica. La máquina debe multiplicar la fuerza del atleta intelectual, nunca sustituir sus huesos ni sus músculos.»</em></p>
-</blockquote>
-<hr>
-<section id="preámbulo-la-paradoja-de-la-herramienta-amplificadora" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="preámbulo-la-paradoja-de-la-herramienta-amplificadora"><span class="header-section-number">1</span> Preámbulo: la paradoja de la herramienta amplificadora</h2>
-<p>Al igual que la llegada del cálculo simbólico, los lenguajes de programación de alto nivel o los entornos de simulación computacional, los <strong>modelos de lenguaje a gran escala (LLMs)</strong> y los sistemas de <strong>generación aumentada por recuperación (RAG)</strong> alteran drásticamente el coste marginal de procesar información, escribir código y sintetizar literatura.</p>
-<p>Rechazar la IA en la educación superior por miedo al fraude es un acto de ceguera ludita que condena al estudiante al anacronismo. Sin embargo, aceptarla como una «muleta» que sustituya el esfuerzo lógico conduce al embrutecimiento sistemático: la atrofia del músculo analítico, la incapacidad para detectar falacias empíricas y la dependencia infantil de la máquina.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>El principio fundamental
+<div class="callout-body-container">
+<p><strong>Propósito institucional:</strong> El bootcamp de verano es la rampa de acceso obligatoria de 12 semanas (julio a septiembre) diseñada para eliminar la asimetría matemática de origen, erradicar el pánico al lenguaje formal y garantizar que todo alumno se maneje con soltura en R, Python, SQL y la terminal de Unix antes de comenzar el primer semestre del grado.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>La <strong>Nueva Somosaguas</strong> establece una política innegociable de IA basada en el <strong>principio del exoesqueleto cognitivo</strong>: la tecnología es nuestro siervo; el rigor intelectual es nuestro rey.</p>
 </div>
-</div>
+<section id="filosofía-cero-tolerancia-a-la-asimetría-de-origen" class="level2">
+<h2 class="anchored" data-anchor-id="filosofía-cero-tolerancia-a-la-asimetría-de-origen">1. Filosofía: cero tolerancia a la asimetría de origen</h2>
+<p>La educación universitaria tradicional comete un pecado capital: asume que los estudiantes procedentes de itinerarios humanísticos o sociales están «incapacitados» para las matemáticas avanzadas, mientras supone que los procedentes de ciencias puras entienden intuitivamente la complejidad de la interacción humana. Ambos supuestos son falsos.</p>
+<p>El <strong>bootcamp de verano de la Nueva Somosaguas</strong> es un programa intensivo de <strong>desintoxicación y nivelación</strong>. Durante 12 semanas de inmersión completa, el estudiante no memoriza teoremas abstractos ni realiza ejercicios mecánicos descontextualizados: <strong>construye las herramientas cuantitativas directamente sobre el código</strong>, traduciendo cada concepto matemático en una función ejecutable.</p>
 <hr>
 </section>
-<section id="el-exoesqueleto-cognitivo-vs.-la-muleta-mental" class="level2 page-columns page-full" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="el-exoesqueleto-cognitivo-vs.-la-muleta-mental"><span class="header-section-number">2</span> El exoesqueleto cognitivo vs.&nbsp;la muleta mental</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><em>«Un exoesqueleto exige un cuerpo fuerte para sostener la estructura; una muleta asume la invalidez del usuario.»</em></p>
-</div></div><p>Para guiar el día a día académico, se establece una distinción clara y operativa entre dos modos de uso de la tecnología:</p>
-<section id="la-muleta-mental-estrictamente-prohibida" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="la-muleta-mental-estrictamente-prohibida"><span class="header-section-number">2.1</span> La muleta mental (estrictamente prohibida)</h3>
+<section id="alcance-real-el-vuelo-de-reconocimiento-no-la-cantería" class="level2">
+<h2 class="anchored" data-anchor-id="alcance-real-el-vuelo-de-reconocimiento-no-la-cantería">2. Alcance real: el vuelo de reconocimiento, no la cantería</h2>
+<p>El bootcamp no compite con la carrera en profundidad: compite contra la parálisis inicial y el choque térmico. Prometer que en doce semanas se domina el cálculo continuo, la genética cuantitativa o la inferencia causal contrafactual sería el reclamo de un máster privado, no una afirmación defendible. Lo que el verano entrega es <strong>amplitud estratégica</strong>; la <strong>profundidad operativa</strong> es el trabajo de los cuatro años.</p>
+<section id="las-tres-funciones-del-verano" class="level3">
+<h3 class="anchored" data-anchor-id="las-tres-funciones-del-verano">Las tres funciones del verano</h3>
 <ul>
-<li>Delegar en la máquina el planteamiento inicial de un problema o la hipótesis de investigación.</li>
-<li>Generar textos académicos vacíos, hinchados de adjetivación burocrática.</li>
-<li>Aceptar respuestas sintéticas o p-valores sin verificación directa sobre los datos primarios.</li>
-<li>Entregar scripts de código en R, Python o SQL que el estudiante no comprende ni sabe derivar desde primeros principios.</li>
+<li><strong>Inoculación y desmitificación:</strong> el objetivo no es que el estudiante derive teoremas, sino que pierda el pánico al lenguaje formal. Doce semanas de exposición a la terminal, a las matrices, a los <em>priors</em> bayesianos y a los scripts de R y Python bastan para sustituir el «no entiendo nada y me aterra» por un «sé qué es esto, sé dónde buscarlo y la sintaxis no me intimida».</li>
+<li><strong>Calibración del <em>prior</em>:</strong> el bootcamp recorre en miniatura los cuatro pilares de la facultad, de modo que al empezar el curso el estudiante ya sabe dónde encaja cada pieza. El álgebra lineal deja de ser un castigo aislado y pasa a ser el motor que explica los componentes principales en la genética de Plomin o los grafos causales de Pearl.</li>
+<li><strong>Filtro de autoselección imparcial:</strong> es la prueba de esfuerzo más limpia que existe. Doce semanas a 25-30 horas semanales muestran sin adornos cómo es la ciencia social cuantitativa; a quien le repelen la consola y las matemáticas, la autoselección le ahorra años de frustración en una disciplina que no le conviene.</li>
 </ul>
 </section>
-<section id="el-exoesqueleto-cognitivo-exigido-y-estimulado" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="el-exoesqueleto-cognitivo-exigido-y-estimulado"><span class="header-section-number">2.2</span> El exoesqueleto cognitivo (exigido y estimulado)</h3>
-<ul>
-<li>Acelerar la carpintería mecánica de la sintaxis (depuración de errores, optimización de algoritmos, refactorización).</li>
-<li>Utilizar la IA como oponente dialéctico para someter a prueba las propias hipótesis (<em>Red Teaming</em>).</li>
-<li>Refinar el estilo de la prosa buscando claridad, concisión y fuerza expresiva.</li>
-<li>Automatizar pruebas de esfuerzo (<em>stress testing</em>) y simulación Monte Carlo sobre modelos teóricos.</li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="profundidad-prueba-de-concepto-frente-a-mecánica-de-precisión" class="level3">
+<h3 class="anchored" data-anchor-id="profundidad-prueba-de-concepto-frente-a-mecánica-de-precisión">Profundidad: prueba de concepto frente a mecánica de precisión</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dimensión</th>
+<th style="text-align: left;">Bootcamp de verano (12 semanas)</th>
+<th style="text-align: left;">Grado de 4 años (16 asignaturas)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Enfoque</strong></td>
+<td style="text-align: left;">Intuición y <em>proof of concept</em>.</td>
+<td style="text-align: left;">Derivación y réplica estricta.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Matemáticas</strong></td>
+<td style="text-align: left;">Comprensión geométrica (3Blue1Brown, Strang) y uso de librerías.</td>
+<td style="text-align: left;">Demostración formal desde primeros principios (Axler, Casella &amp; Berger).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Datos</strong></td>
+<td style="text-align: left;">Datos sintéticos y simulaciones de juguete (Schelling, <em>Agent_Zero</em>).</td>
+<td style="text-align: left;">Microdatos censales reales, encuestas sucias y limpieza en R y SQL.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Inferencia</strong></td>
+<td style="text-align: left;">Lógica visual de los DAGs, lectura de <em>p</em>-valores y <em>priors</em> básicos.</td>
+<td style="text-align: left;">Identificación causal contrafactual, <em>bootstrap</em> no paramétrico e intervalos BCa.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Evaluación</strong></td>
+<td style="text-align: left;">Ejecutar el script y comprender el resultado macro.</td>
+<td style="text-align: left;">Prueba de la pizarra (<em>Blackboard Defence</em>), sin código delante.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>La regla de oro de la cátedra
+<div class="callout-body-container">
+<p>El bootcamp es la fotografía aérea de la catedral; el grado es la cantería piedra a piedra. Ninguna de las dos sustituye a la otra, y confundirlas es la forma más rápida de prometer un milagro pedagógico que nadie puede cumplir.</p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Ningún estudiante podrá entregar una sola línea de código, ecuación o argumento generado por IA que no sea capaz de derivar, explicar y defender personalmente en la pizarra sin asistencia tecnológica.</strong></p>
 </div>
 </div>
 <hr>
 </section>
 </section>
-<section id="arquitectura-rag-académica-grounding-y-trazabilidad" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</h2>
-<p>Para evitar que el aprendizaje se degenere en el consumo de alucinaciones plausibles pero falsas, el entorno computacional de la facultad opera sobre un <strong>sistema RAG (Retrieval-Augmented Generation) de frontera</strong>.</p>
+<section id="programa-estructurado-de-12-semanas" class="level2">
+<h2 class="anchored" data-anchor-id="programa-estructurado-de-12-semanas">3. Programa estructurado de 12 semanas</h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-rag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-calendario" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-calendario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-rag">%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 14, "useMaxWidth": true}}}%%
-flowchart TD
-    C["CORPUS CERRADO DE CONSILIENCIA&lt;br/&gt;Plomin · Reich · Pearl · Morgan y Winship&lt;br/&gt;Dunning · Efron · Smil · etc."]
-    M["MOTOR RAG ACADÉMICO / VECTOR DB&lt;br/&gt;Búsqueda semántica por pasajes de alta densidad&lt;br/&gt;Cita obligatoria con índice y trazabilidad a la fuente"]
-    E["EXOESQUELETO COGNITIVO DEL ALUMNO&lt;br/&gt;Auditoría activa de errores y detección de alucinaciones"]
+<pre class="mermaid mermaid-js" data-label="fig-calendario">%%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 40, "padding": 10, "useMaxWidth": true}}}%%
+flowchart TB
+    subgraph JUL["Julio · Módulo I"]
+        direction LR
+        S1["Sem 1&lt;br/&gt;Vectores · Álgebra"] --&gt; S2["Sem 2&lt;br/&gt;EDOs · Cálculo"] --&gt; S3["Sem 3&lt;br/&gt;Bayes · Inferencia"] --&gt; S4["Sem 4&lt;br/&gt;OLS · Regresión"]
+    end
+    subgraph AGO["Agosto · Módulo II"]
+        direction LR
+        S5["Sem 5&lt;br/&gt;Gradiente · Optimización"] --&gt; S6["Sem 6&lt;br/&gt;SQL · Bases de datos"] --&gt; S7["Sem 7&lt;br/&gt;Genética · GWAS"] --&gt; S8["Sem 8&lt;br/&gt;DBO · Mecanismos"]
+    end
+    subgraph SEP["Septiembre · Módulo III"]
+        direction LR
+        S9["Sem 9&lt;br/&gt;DAGs · Causalidad"] --&gt; S10["Sem 10&lt;br/&gt;Redes · Grafos"] --&gt; S11["Sem 11&lt;br/&gt;Agent_Zero"] --&gt; S12["Sem 12&lt;br/&gt;Proyecto integrador"]
+    end
 
-    C --&gt; M --&gt; E
+    JUL --&gt; AGO --&gt; SEP
 
-    classDef corpus fill:#1a1a1a,stroke:#1a1a1a,stroke-width:2px,color:#f8f9fa
-    classDef motor fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
-    classDef alumno fill:#f5f5ee,stroke:#e0e0d8,stroke-width:1.5px,color:#111111
-
-    class C corpus
-    class M motor
-    class E alumno
+    classDef sem fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12 sem
 </pre>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Arquitectura RAG de la facultad: del corpus cerrado a la auditoría del alumno.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calendario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Las doce semanas del bootcamp, agrupadas por mes y por módulo.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+<section id="módulo-i-cimientos-formales-y-programación-políglota-semanas-1-a-4" class="level3">
+<h3 class="anchored" data-anchor-id="módulo-i-cimientos-formales-y-programación-políglota-semanas-1-a-4">Módulo I: cimientos formales y programación políglota (semanas 1 a 4)</h3>
+<section id="semana-1-álgebra-lineal-operativa-y-espacios-vectoriales" class="level4">
+<h4 class="anchored" data-anchor-id="semana-1-álgebra-lineal-operativa-y-espacios-vectoriales">Semana 1: álgebra lineal operativa y espacios vectoriales</h4>
+<ul>
+<li><strong>Conceptos:</strong> Espacios vectoriales, combinaciones lineales, independencia, rango, transformaciones lineales y valores/vectores propios (Eigenvalues/Eigenvectors).</li>
+<li><strong>Lectura:</strong> Sheldon Axler — <em>Linear Algebra Done Right</em> (Caps. 1-3).</li>
+<li><strong>Laboratorio en Python:</strong> Representación de espacios de datos socioeconómicos mediante matrices en <code>numpy</code>. Transformaciones geométricas de datos y descomposición en valores singulares (SVD).</li>
+</ul>
+</section>
+<section id="semana-2-cálculo-continuo-tasas-de-cambio-y-sistemas-dinámicos" class="level4">
+<h4 class="anchored" data-anchor-id="semana-2-cálculo-continuo-tasas-de-cambio-y-sistemas-dinámicos">Semana 2: cálculo continuo, tasas de cambio y sistemas dinámicos</h4>
+<ul>
+<li><strong>Conceptos:</strong> Derivadas, integrales, ecuaciones diferenciales ordinarias (EDOs) y estabilidad de puntos fijos.</li>
+<li><strong>Lectura:</strong> Gilbert Strang — <em>Calculus</em> / 3Blue1Brown — <em>The Essence of Calculus</em>.</li>
+<li><strong>Laboratorio en Python:</strong> Integración numérica de modelos dinámicos de transmisión cultural y dinámicas poblacionales mediante <code>scipy.integrate.odeint</code>.</li>
+</ul>
+</section>
+<section id="semana-3-probabilidad-conceptual-e-inferencia-bayesiana" class="level4">
+<h4 class="anchored" data-anchor-id="semana-3-probabilidad-conceptual-e-inferencia-bayesiana">Semana 3: probabilidad conceptual e inferencia bayesiana</h4>
+<ul>
+<li><strong>Conceptos:</strong> Axiomas de probabilidad, variables aleatorias, regla de Bayes, distribuciones conjugadas y actualización de <em>priors</em>.</li>
+<li><strong>Lectura:</strong> Joseph K. Blitzstein — <em>Harvard Stat 110: Probability</em> / E.T. Jaynes.</li>
+<li><strong>Laboratorio en R:</strong> Simulación Monte Carlo y actualización Beta-Binomial de creencias ante evidencias empíricas sucesivas.</li>
+</ul>
+</section>
+<section id="semana-4-geometría-del-ajuste-y-mínimos-cuadrados-ordinarios-ols" class="level4">
+<h4 class="anchored" data-anchor-id="semana-4-geometría-del-ajuste-y-mínimos-cuadrados-ordinarios-ols">Semana 4: geometría del ajuste y mínimos cuadrados ordinarios (OLS)</h4>
+<ul>
+<li><strong>Conceptos:</strong> Regresión como proyección ortogonal en un espacio vectorial, residuos, teorema de Gauss-Markov y descomposición de varianza.</li>
+<li><strong>Lectura:</strong> John F. Monahan — <em>A Primer on Linear Models</em>.</li>
+<li><strong>Laboratorio en R/Python:</strong> Programación desde cero del estimador OLS <span class="math inline">\((\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}\)</span> sin usar librerías de alto nivel (<code>lm()</code> o <code>statsmodels</code>).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="módulo-ii-computación-datos-y-biología-evolutiva-semanas-5-a-8" class="level3">
+<h3 class="anchored" data-anchor-id="módulo-ii-computación-datos-y-biología-evolutiva-semanas-5-a-8">Módulo II: computación, datos y biología evolutiva (semanas 5 a 8)</h3>
+<section id="semana-5-optimización-superficies-de-pérdida-y-descenso-de-gradiente" class="level4">
+<h4 class="anchored" data-anchor-id="semana-5-optimización-superficies-de-pérdida-y-descenso-de-gradiente">Semana 5: optimización, superficies de pérdida y descenso de gradiente</h4>
+<ul>
+<li><strong>Conceptos:</strong> Gradiente, Hessiano, optimización convexa y no convexa, tasa de aprendizaje (<em>learning rate</em>).</li>
+<li><strong>Lectura:</strong> Bradford Tuckfield — <em>Dive Into Algorithms</em>.</li>
+<li><strong>Laboratorio en Python:</strong> Implementación del algoritmo de descenso de gradiente para la estimación de máxima verosimilitud en modelos logísticos.</li>
+</ul>
+</section>
+<section id="semana-6-arquitectura-de-datos-y-consultas-relacionales-sql" class="level4">
+<h4 class="anchored" data-anchor-id="semana-6-arquitectura-de-datos-y-consultas-relacionales-sql">Semana 6: arquitectura de datos y consultas relacionales (SQL)</h4>
+<ul>
+<li><strong>Conceptos:</strong> Modelo relacional, álgebra relacional, normalización, funciones de ventana (<em>window functions</em>) y agregación temporal.</li>
+<li><strong>Lectura:</strong> C.J. Date — <em>SQL and Relational Theory</em>.</li>
+<li><strong>Laboratorio en SQLite/PostgreSQL:</strong> Construcción y consulta de la base de datos de microdatos censales y demográficos de la facultad.</li>
+</ul>
+</section>
+<section id="semana-7-genética-cuantitativa-y-puntuaciones-poligénicas" class="level4">
+<h4 class="anchored" data-anchor-id="semana-7-genética-cuantitativa-y-puntuaciones-poligénicas">Semana 7: genética cuantitativa y puntuaciones poligénicas</h4>
+<ul>
+<li><strong>Conceptos:</strong> Matriz de parentesco genómico, descomposición de varianza fenotípica (<span class="math inline">\(V_P = V_G + V_E\)</span>), heredabilidad en sentido estricto (<span class="math inline">\(h^2\)</span>) y puntuaciones de riesgo poligénico (PRS).</li>
+<li><strong>Lectura:</strong> Robert Plomin — <em>Blueprint</em> / Falconer &amp; Mackay — <em>Introduction to Quantitative Genetics</em>.</li>
+<li><strong>Laboratorio en R:</strong> Estimación de heredabilidad mediante ecuaciones de modelos mixtos y simulación de estudios GWAS.</li>
+</ul>
+</section>
+<section id="semana-8-sociología-analítica-y-descomposición-dbo" class="level4">
+<h4 class="anchored" data-anchor-id="semana-8-sociología-analítica-y-descomposición-dbo">Semana 8: sociología analítica y descomposición DBO</h4>
+<ul>
+<li><strong>Conceptos:</strong> Deseos, Creencias y Oportunidades (DBO), mecanismos micro-macro, agregación no lineal y prevención de causas mágicas.</li>
+<li><strong>Lectura:</strong> Peter Hedström — <em>Dissecting the Social</em>.</li>
+<li><strong>Laboratorio en Python:</strong> Modelización de elecciones individuales bajo restricciones de oportunidad e influencia de pares.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="módulo-iii-causalidad-redes-y-síntesis-generativa-semanas-9-a-12" class="level3">
+<h3 class="anchored" data-anchor-id="módulo-iii-causalidad-redes-y-síntesis-generativa-semanas-9-a-12">Módulo III: causalidad, redes y síntesis generativa (semanas 9 a 12)</h3>
+<section id="semana-9-inferencia-causal-por-diagramas-acíclicos-dirigidos-dags" class="level4">
+<h4 class="anchored" data-anchor-id="semana-9-inferencia-causal-por-diagramas-acíclicos-dirigidos-dags">Semana 9: inferencia causal por diagramas acíclicos dirigidos (DAGs)</h4>
+<ul>
+<li><strong>Conceptos:</strong> Grafos causales, criterio de la puerta trasera (<em>backdoor criterion</em>), colisionadores (<em>colliders</em>), d-separación y <em>do-calculus</em>.</li>
+<li><strong>Lectura:</strong> Judea Pearl — <em>Causality</em> / Morgan &amp; Winship — <em>Counterfactuals and Causal Inference</em>.</li>
+<li><strong>Laboratorio en Python (<code>pgmpy</code>/<code>causalgraphicalmodels</code>):</strong> Identificación de conjuntos de ajuste mínimo para bloquear sesgos de confusión y neutralizar causas fantasmas.</li>
+</ul>
+</section>
+<section id="semana-10-análisis-de-redes-sociales-e-interacción-estratégica" class="level4">
+<h4 class="anchored" data-anchor-id="semana-10-análisis-de-redes-sociales-e-interacción-estratégica">Semana 10: análisis de redes sociales e interacción estratégica</h4>
+<ul>
+<li><strong>Conceptos:</strong> Grafos dirigidos y no dirigidos, matriz de adyacencia, centralidad (grado, intermediación, eigenvector) y homofilia.</li>
+<li><strong>Lectura:</strong> Matthew O. Jackson — <em>Social and Economic Networks</em> / Eric Kolaczyk.</li>
+<li><strong>Laboratorio en R (<code>igraph</code>):</strong> Análisis de difusión de información y colapso de cooperación en redes complejas.</li>
+</ul>
+</section>
+<section id="semana-11-simulación-basada-en-agentes-abm-y-emergencia-macro" class="level4">
+<h4 class="anchored" data-anchor-id="semana-11-simulación-basada-en-agentes-abm-y-emergencia-macro">Semana 11: simulación basada en agentes (ABM) y emergencia macro</h4>
+<ul>
+<li><strong>Conceptos:</strong> Modelos generativos, reglas locales simples, patrones macro emergentes, arquitectura <em>Agent_Zero</em> (afecto, cognición, red).</li>
+<li><strong>Lectura:</strong> Joshua Epstein — <em>Agent_Zero</em> / Thomas Schelling.</li>
+<li><strong>Laboratorio en Python:</strong> Programación orientada a objetos (POO) de una simulación generativa de segregación espacial y pánico colectivo.</li>
+</ul>
+</section>
+<section id="semana-12-proyecto-integrador-de-réplica-y-prueba-de-la-pizarra" class="level4">
+<h4 class="anchored" data-anchor-id="semana-12-proyecto-integrador-de-réplica-y-prueba-de-la-pizarra">Semana 12: proyecto integrador de réplica y prueba de la pizarra</h4>
+<ul>
+<li><strong>Objetivo:</strong> Ejecutar un proyecto completo de réplica empírica sobre un artículo científico de alta competición.</li>
+<li><strong>Entregable:</strong>
 <ol type="1">
-<li><strong>Garantía de grounding estricto:</strong> Los entornos RAG institucionales y los tutores locales se alimentan de las 116 fuentes de consiliencia del pensum, más las obras que se vayan incorporando y que superen rigurosos estándares de calidad. Cada afirmación fáctica realizada por el sistema debe ir acompañada de su citación y trazabilidad directa a los textos fuente.</li>
-<li><strong>Auditoría de alucinaciones como evaluación:</strong> Parte del adiestramiento avanzado consiste en <strong>identificar activamente los fallos del modelo</strong>: detectar cuándo la IA confunde correlación con causalidad, dónde comete errores en la inducción estadística o cuándo inventa referencias. Encontrar el error de la máquina cuenta como evidencia de alta maestría.</li>
-</ol>
-<hr>
-</section>
-<section id="protocolo-anti-atrofia-y-evaluación-de-segundo-orden" class="level2 page-columns page-full" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</h2>
-<p>Dado que la IA puede generar resúmenes o scripts de R/Python en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:</p>
-<section id="la-prueba-de-la-pizarra-blackboard-defence" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> La prueba de la pizarra (<em>Blackboard Defence</em>)</h3>
-<p>Cualquier entrega de código o <em>working paper</em> puede ser sometida a un examen oral sorpresa en el que el alumno, frente a la pizarra y sin dispositivos electrónicos, debe:</p>
-<ul>
-<li>Derivar el modelo matemático o econométrico subyacente.</li>
-<li>Recomponer la lógica del script línea por línea.</li>
-<li>Explicar el DAG causal y las restricciones de identificación de su estudio.</li>
-</ul>
-</section>
-<section id="uso-adversarial-obligatorio-red-teaming-cognitive" class="level3 page-columns page-full" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><em>«Para neutralizar el myside bias (Mercier &amp; Sperber), la IA debe actuar como el fiscal más despiadado de tus propias ideas.»</em></p>
-</div></div><p>Para combatir el sesgo de confirmación y la racionalización cómoda, el alumno está obligado a utilizar la IA como un <strong>oponente dialéctico</strong>. El estudiante debe instruir al sistema para que:</p>
-<ul>
-<li>Busque fallos de colisionador o variables omitidas en su DAG.</li>
-<li>Proponga explicaciones alternativas convincentes basadas en incentivos.</li>
-<li>Critique la solidez de los <em>priors</em> seleccionados.</li>
-</ul>
-<p>La memoria de cada trabajo debe incluir el registro del debate adversarial con la máquina y la justificación de cómo el alumno defendió o corrigió su modelo.</p>
-</section>
-<section id="evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> Evaluación de la arquitectura del prompting y auditoría</h3>
-<p>Se evalúa la <strong>densidad del planteamiento del problema</strong> realizado por el estudiante:</p>
-<ul>
-<li>La precisión analítica del <em>steering prompt</em>.</li>
-<li>La relevancia de las restricciones impuestas al modelo.</li>
-<li>La corrección rigurosa de los borradores intermedios generados por la máquina.</li>
+<li>Repositorio en GitHub con código políglota verificado (R, Python, SQL).</li>
+<li>Documento reproducible en Quarto con gráficos en estilo Edward Tufte.</li>
+<li><strong>Prueba de la pizarra (<em>Blackboard Defence</em>):</strong> Examen oral individual donde el estudiante deriva en la pizarra el modelo matemático subyacente y responde a preguntas del tribunal sin ayuda tecnológica.</li>
+</ol></li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="decálogo-del-estudiante-políglota-en-la-era-de-la-ia" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="decálogo-del-estudiante-políglota-en-la-era-de-la-ia"><span class="header-section-number">5</span> Decálogo del estudiante políglota en la era de la IA</h2>
-<div class="callout callout-style-default callout-note callout-titled">
+</section>
+<section id="formato-y-exigencia-de-dedicación" class="level2">
+<h2 class="anchored" data-anchor-id="formato-y-exigencia-de-dedicación">4. Formato y exigencia de dedicación</h2>
+<ul>
+<li><strong>Dedicación estimada:</strong> 25-30 horas semanales (combinación de conferencias grabadas, lecturas de fuentes primarias y resolución de laboratorios de código).</li>
+<li><strong>Modalidad:</strong> 100% abierto y accesible. Los scripts de laboratorio, los cuadernos Jupyter/Quarto y los conjuntos de datos están disponibles de forma gratuita en el repositorio oficial de GitHub de la facultad para alumnos matriculados y estudiantes autodidactas.</li>
+<li><strong>Evaluación:</strong> Cero exámenes de test. Cero entregas de literatura especulativa. Cada semana se supera mediante la <strong>entrega de un script ejecutable verificado por integración continua (CI)</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Principios de conducta intelectual
+<span class="screen-reader-only">Tip</span>¿Eres un estudiante autodidacta?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li><strong>Usa la IA para llegar más lejos, no para trabajar menos.</strong> Si la IA te ahorra tres horas de programar sintaxis básica, esas tres horas se invierten en estudiar la teoría de la prueba o profundizar en la evidencia empírica.</li>
-<li><strong>Si no puedes verificarlo, no existe.</strong> Ningún dato, cita o p-valor provisto por un modelo de lenguaje se da por bueno sin contrastación directa con la fuente o el script de réplica.</li>
-<li><strong>El código es el deliverable; la mente es el arquitecto.</strong> La sintaxis pertenece a la máquina, pero la especificación del problema, la intuición causal y la responsabilidad son 100% tuyas.</li>
-<li><strong>Cultiva la prosa limpia y musculosa.</strong> La IA tiende a la adjetivación hinchada y al tono burocrático; tu obligación es podar el texto hasta dejar la prosa sobria, incisiva e inexpugnable.</li>
-<li><strong>No temas discutirle a la máquina.</strong> La IA no posee intuición sociológica ni juicio causal; es un modelo probabilístico de predicción de tokens. Tu labor es ser el juez.</li>
-<li><strong>Entrena con el RAG de la facultad.</strong> La información dispersa en la web está contaminada de sesgos; busca el grounding en las fuentes validadas de la consiliencia.</li>
-<li><strong>Pasa la prueba de la pizarra cada día.</strong> Pregúntate en cada línea de código o párrafo: <em>«¿Sabría explicar esto sin pantallas ante un tribunal?»</em>. Si la respuesta es no, vuelve a empezar.</li>
-<li><strong>Sé transparente en el flujo de trabajo.</strong> Documenta qué partes del análisis contaron con asistencia algorítmica y cómo fueron auditadas.</li>
-<li><strong>Usa la IA para buscar tus propios puntos ciegos.</strong> Haz que el modelo adopte la postura del crítico más duro de tu trabajo antes de entregarlo.</li>
-<li><strong>El rigor no se negocia.</strong> La tecnología cambia cada mes; la consistencia lógica, la honestidad intelectual y la búsqueda de la verdad permanecen.</li>
-</ol>
+<p>Puedes seguir este bootcamp de verano a tu propio ritmo utilizando la <a href="./guia_autodidacta.html">Guía autodidacta</a> y el repositorio oficial de laboratorios. La disciplina matemática se adquiere mediante la práctica constante sobre la terminal.</p>
 </div>
 </div>
 

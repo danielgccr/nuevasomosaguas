@@ -159,6 +159,12 @@ blockquote {
    painting in the same typeface. */
 :root {
   --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+
+  /* Quarto derives the subgraph background from the FOREGROUND colour, so its
+     "lightest" shade comes out dark slate and the group titles land grey on
+     grey. Point both at the site's own surface and border tokens. */
+  --mermaid-fg-color--lightest: #f5f5ee;
+  --mermaid-fg-color--lighter: #e0e0d8;
 }
 
 /* Card headings in the landing grid are links, not prose headings:
