@@ -1,0 +1,158 @@
+---
+title: "Bootcamp intensivo de verano"
+subtitle: "Rampa de desintoxicación matemática, calibración técnica y nivelación políglota (12 semanas)"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+::: {.callout-note appearance="simple"}
+**Propósito institucional:** El bootcamp de verano es la rampa de acceso obligatoria de 12 semanas (julio a septiembre) diseñada para eliminar la asimetría matemática de origen, erradicar el pánico al lenguaje formal y garantizar que todo alumno se maneje con soltura en R, Python, SQL y la terminal de Unix antes de comenzar el primer semestre del grado.
+:::
+
+## 1. Filosofía: cero tolerancia a la asimetría de origen
+
+La educación universitaria tradicional comete un pecado capital: asume que los estudiantes procedentes de itinerarios humanísticos o sociales están «incapacitados» para las matemáticas avanzadas, mientras supone que los procedentes de ciencias puras entienden intuitivamente la complejidad de la interacción humana. Ambos supuestos son falsos.
+
+El **bootcamp de verano de la Nueva Somosaguas** es un programa intensivo de **desintoxicación y nivelación**. Durante 12 semanas de inmersión completa, el estudiante no memoriza teoremas abstractos ni realiza ejercicios mecánicos descontextualizados: **construye las herramientas cuantitativas directamente sobre el código**, traduciendo cada concepto matemático en una función ejecutable.
+
+---
+
+## 2. Alcance real: el vuelo de reconocimiento, no la cantería
+
+El bootcamp no compite con la carrera en profundidad: compite contra la parálisis inicial y el choque térmico. Prometer que en doce semanas se domina el cálculo continuo, la genética cuantitativa o la inferencia causal contrafactual sería el reclamo de un máster privado, no una afirmación defendible. Lo que el verano entrega es **amplitud estratégica**; la **profundidad operativa** es el trabajo de los cuatro años.
+
+### Las tres funciones del verano
+
+* **Inoculación y desmitificación:** el objetivo no es que el estudiante derive teoremas, sino que pierda el pánico al lenguaje formal. Doce semanas de exposición a la terminal, a las matrices, a los *priors* bayesianos y a los scripts de R y Python bastan para sustituir el «no entiendo nada y me aterra» por un «sé qué es esto, sé dónde buscarlo y la sintaxis no me intimida».
+* **Calibración del *prior*:** el bootcamp recorre en miniatura los cuatro pilares de la facultad, de modo que al empezar el curso el estudiante ya sabe dónde encaja cada pieza. El álgebra lineal deja de ser un castigo aislado y pasa a ser el motor que explica los componentes principales en la genética de Plomin o los grafos causales de Pearl.
+* **Filtro de autoselección imparcial:** es la prueba de esfuerzo más limpia que existe. Doce semanas a 25-30 horas semanales muestran sin adornos cómo es la ciencia social cuantitativa; a quien le repelen la consola y las matemáticas, la autoselección le ahorra años de frustración en una disciplina que no le conviene.
+
+### Profundidad: prueba de concepto frente a mecánica de precisión
+
+| Dimensión | Bootcamp de verano (12 semanas) | Grado de 4 años (16 asignaturas) |
+|:---|:---|:---|
+| **Enfoque** | Intuición y *proof of concept*. | Derivación y réplica estricta. |
+| **Matemáticas** | Comprensión geométrica (3Blue1Brown, Strang) y uso de librerías. | Demostración formal desde primeros principios (Axler, Casella & Berger). |
+| **Datos** | Datos sintéticos y simulaciones de juguete (Schelling, *Agent_Zero*). | Microdatos censales reales, encuestas sucias y limpieza en R y SQL. |
+| **Inferencia** | Lógica visual de los DAGs, lectura de *p*-valores y *priors* básicos. | Identificación causal contrafactual, *bootstrap* no paramétrico e intervalos BCa. |
+| **Evaluación** | Ejecutar el script y comprender el resultado macro. | Prueba de la pizarra (*Blackboard Defence*), sin código delante. |
+
+::: {.callout-note appearance="simple"}
+El bootcamp es la fotografía aérea de la catedral; el grado es la cantería piedra a piedra. Ninguna de las dos sustituye a la otra, y confundirlas es la forma más rápida de prometer un milagro pedagógico que nadie puede cumplir.
+:::
+
+---
+
+## 3. Programa estructurado de 12 semanas
+
+```{mermaid}
+%%| label: fig-calendario
+%%| fig-cap: "Las doce semanas del bootcamp, agrupadas por mes y por módulo."
+
+%%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 40, "padding": 10, "useMaxWidth": true}}}%%
+flowchart TB
+    subgraph JUL["Julio · Módulo I"]
+        direction LR
+        S1["Sem 1<br/>Vectores · Álgebra"] --> S2["Sem 2<br/>EDOs · Cálculo"] --> S3["Sem 3<br/>Bayes · Inferencia"] --> S4["Sem 4<br/>OLS · Regresión"]
+    end
+    subgraph AGO["Agosto · Módulo II"]
+        direction LR
+        S5["Sem 5<br/>Gradiente · Optimización"] --> S6["Sem 6<br/>SQL · Bases de datos"] --> S7["Sem 7<br/>Genética · GWAS"] --> S8["Sem 8<br/>DBO · Mecanismos"]
+    end
+    subgraph SEP["Septiembre · Módulo III"]
+        direction LR
+        S9["Sem 9<br/>DAGs · Causalidad"] --> S10["Sem 10<br/>Redes · Grafos"] --> S11["Sem 11<br/>Agent_Zero"] --> S12["Sem 12<br/>Proyecto integrador"]
+    end
+
+    JUL --> AGO --> SEP
+
+    classDef sem fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12 sem
+```
+
+### Módulo I: cimientos formales y programación políglota (semanas 1 a 4)
+
+#### Semana 1: álgebra lineal operativa y espacios vectoriales
+* **Conceptos:** Espacios vectoriales, combinaciones lineales, independencia, rango, transformaciones lineales y valores/vectores propios (Eigenvalues/Eigenvectors).
+* **Lectura:** Sheldon Axler — *Linear Algebra Done Right* (Caps. 1-3).
+* **Laboratorio en Python:** Representación de espacios de datos socioeconómicos mediante matrices en `numpy`. Transformaciones geométricas de datos y descomposición en valores singulares (SVD).
+
+#### Semana 2: cálculo continuo, tasas de cambio y sistemas dinámicos
+* **Conceptos:** Derivadas, integrales, ecuaciones diferenciales ordinarias (EDOs) y estabilidad de puntos fijos.
+* **Lectura:** Gilbert Strang — *Calculus* / 3Blue1Brown — *The Essence of Calculus*.
+* **Laboratorio en Python:** Integración numérica de modelos dinámicos de transmisión cultural y dinámicas poblacionales mediante `scipy.integrate.odeint`.
+
+#### Semana 3: probabilidad conceptual e inferencia bayesiana
+* **Conceptos:** Axiomas de probabilidad, variables aleatorias, regla de Bayes, distribuciones conjugadas y actualización de *priors*.
+* **Lectura:** Joseph K. Blitzstein — *Harvard Stat 110: Probability* / E.T. Jaynes.
+* **Laboratorio en R:** Simulación Monte Carlo y actualización Beta-Binomial de creencias ante evidencias empíricas sucesivas.
+
+#### Semana 4: geometría del ajuste y mínimos cuadrados ordinarios (OLS)
+* **Conceptos:** Regresión como proyección ortogonal en un espacio vectorial, residuos, teorema de Gauss-Markov y descomposición de varianza.
+* **Lectura:** John F. Monahan — *A Primer on Linear Models*.
+* **Laboratorio en R/Python:** Programación desde cero del estimador OLS $(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$ sin usar librerías de alto nivel (`lm()` o `statsmodels`).
+
+---
+
+### Módulo II: computación, datos y biología evolutiva (semanas 5 a 8)
+
+#### Semana 5: optimización, superficies de pérdida y descenso de gradiente
+* **Conceptos:** Gradiente, Hessiano, optimización convexa y no convexa, tasa de aprendizaje (*learning rate*).
+* **Lectura:** Bradford Tuckfield — *Dive Into Algorithms*.
+* **Laboratorio en Python:** Implementación del algoritmo de descenso de gradiente para la estimación de máxima verosimilitud en modelos logísticos.
+
+#### Semana 6: arquitectura de datos y consultas relacionales (SQL)
+* **Conceptos:** Modelo relacional, álgebra relacional, normalización, funciones de ventana (*window functions*) y agregación temporal.
+* **Lectura:** C.J. Date — *SQL and Relational Theory*.
+* **Laboratorio en SQLite/PostgreSQL:** Construcción y consulta de la base de datos de microdatos censales y demográficos de la facultad.
+
+#### Semana 7: genética cuantitativa y puntuaciones poligénicas
+* **Conceptos:** Matriz de parentesco genómico, descomposición de varianza fenotípica ($V_P = V_G + V_E$), heredabilidad en sentido estricto ($h^2$) y puntuaciones de riesgo poligénico (PRS).
+* **Lectura:** Robert Plomin — *Blueprint* / Falconer & Mackay — *Introduction to Quantitative Genetics*.
+* **Laboratorio en R:** Estimación de heredabilidad mediante ecuaciones de modelos mixtos y simulación de estudios GWAS.
+
+#### Semana 8: sociología analítica y descomposición DBO
+* **Conceptos:** Deseos, Creencias y Oportunidades (DBO), mecanismos micro-macro, agregación no lineal y prevención de causas mágicas.
+* **Lectura:** Peter Hedström — *Dissecting the Social*.
+* **Laboratorio en Python:** Modelización de elecciones individuales bajo restricciones de oportunidad e influencia de pares.
+
+---
+
+### Módulo III: causalidad, redes y síntesis generativa (semanas 9 a 12)
+
+#### Semana 9: inferencia causal por diagramas acíclicos dirigidos (DAGs)
+* **Conceptos:** Grafos causales, criterio de la puerta trasera (*backdoor criterion*), colisionadores (*colliders*), d-separación y *do-calculus*.
+* **Lectura:** Judea Pearl — *Causality* / Morgan & Winship — *Counterfactuals and Causal Inference*.
+* **Laboratorio en Python (`pgmpy`/`causalgraphicalmodels`):** Identificación de conjuntos de ajuste mínimo para bloquear sesgos de confusión y neutralizar causas fantasmas.
+
+#### Semana 10: análisis de redes sociales e interacción estratégica
+* **Conceptos:** Grafos dirigidos y no dirigidos, matriz de adyacencia, centralidad (grado, intermediación, eigenvector) y homofilia.
+* **Lectura:** Matthew O. Jackson — *Social and Economic Networks* / Eric Kolaczyk.
+* **Laboratorio en R (`igraph`):** Análisis de difusión de información y colapso de cooperación en redes complejas.
+
+#### Semana 11: simulación basada en agentes (ABM) y emergencia macro
+* **Conceptos:** Modelos generativos, reglas locales simples, patrones macro emergentes, arquitectura *Agent_Zero* (afecto, cognición, red).
+* **Lectura:** Joshua Epstein — *Agent_Zero* / Thomas Schelling.
+* **Laboratorio en Python:** Programación orientada a objetos (POO) de una simulación generativa de segregación espacial y pánico colectivo.
+
+#### Semana 12: proyecto integrador de réplica y prueba de la pizarra
+* **Objetivo:** Ejecutar un proyecto completo de réplica empírica sobre un artículo científico de alta competición.
+* **Entregable:**
+  1. Repositorio en GitHub con código políglota verificado (R, Python, SQL).
+  2. Documento reproducible en Quarto con gráficos en estilo Edward Tufte.
+  3. **Prueba de la pizarra (*Blackboard Defence*):** Examen oral individual donde el estudiante deriva en la pizarra el modelo matemático subyacente y responde a preguntas del tribunal sin ayuda tecnológica.
+
+---
+
+## 4. Formato y exigencia de dedicación
+
+* **Dedicación estimada:** 25-30 horas semanales (combinación de conferencias grabadas, lecturas de fuentes primarias y resolución de laboratorios de código).
+* **Modalidad:** 100% abierto y accesible. Los scripts de laboratorio, los cuadernos Jupyter/Quarto y los conjuntos de datos están disponibles de forma gratuita en el repositorio oficial de GitHub de la facultad para alumnos matriculados y estudiantes autodidactas.
+* **Evaluación:** Cero exámenes de test. Cero entregas de literatura especulativa. Cada semana se supera mediante la **entrega de un script ejecutable verificado por integración continua (CI)**.
+
+::: {.callout-tip}
+### ¿Eres un estudiante autodidacta?
+Puedes seguir este bootcamp de verano a tu propio ritmo utilizando la [Guía autodidacta](guia_autodidacta.qmd) y el repositorio oficial de laboratorios. La disciplina matemática se adquiere mediante la práctica constante sobre la terminal.
+:::

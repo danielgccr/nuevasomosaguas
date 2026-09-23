@@ -43,7 +43,7 @@ flowchart LR
     P1 --> R1["Stat 110 · Blitzstein<br/>Álgebra lineal · Axler<br/>R / Python / SQL"]
     P2 --> R2["Puntuaciones poligénicas · Plomin<br/>Paleogenómica · Reich<br/>Genética cuantitativa · Falconer"]
     P3 --> R3["Mecanismos DBO · Hedström<br/>Grafos causales · Pearl<br/>Teoría de juegos · Binmore"]
-    P4 --> R4["Agent_Zero · Epstein<br/>Ciclos seculares · Turchin<br/>Energía y civilización · Smil"]
+    P4 --> R4["Agent_Zero · Joshua Epstein<br/>Ciclos seculares · Turchin<br/>Energía y civilización · Smil"]
 
     classDef raiz fill:#1a1a1a,stroke:#1a1a1a,stroke-width:2px,color:#f8f9fa
     classDef pilar fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
@@ -81,6 +81,12 @@ Explore los documentos fundamentales que articulan la facultad:
 ### [Currículo](curriculo.qmd)
 
 Consulte el plan de estudios de 4 años (16 asignaturas) graduado en tres niveles de exigencia analítica: desde la intuición inicial hasta la alta competición matemática.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [Bootcamp de verano](bootcamp.qmd)
+
+Doce semanas de nivelación antes del primer semestre: del álgebra vectorial y el cálculo continuo a los DAGs, las redes y la simulación de agentes, siempre sobre código.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

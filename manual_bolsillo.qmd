@@ -133,7 +133,7 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 10. El test de la simulación generativa
 
-* **Fundamento:** ciencias sociales generativas y simulación basada en agentes (*Joshua M. Epstein / Agent_Zero / Thomas Schelling*).
+* **Fundamento:** ciencias sociales generativas y simulación basada en agentes (*Joshua Epstein / Agent_Zero / Thomas Schelling*).
 * **El principio:** *«If you didn't grow it, you didn't explain it»* (Si no puedes simular cómo emerge un fenómeno desde abajo con agentes simples, no lo has explicado).
 * **Ejemplo cotidiano:** Atribuir la segregación de un barrio a la existencia de odio profundo o conspiraciones, cuando preferencias individuales moderadas («solo quiero que al menos el 30% de mis vecinos se parezcan a mí») generan guetos monolíticos de forma espontánea (Modelo de Schelling).
 

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://nuevasomosaguas.org/manual_bolsillo.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuevasomosaguas.org/index.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuevasomosaguas.org/faq.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nuevasomosaguas.org/bootcamp.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
+  </url>
+  <url>
     <loc>https://nuevasomosaguas.org/politica_ia.html</loc>
     <lastmod>2026-09-23T13:38:43.254Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nuevasomosaguas.org/laboratorios.html</loc>
-    <lastmod>2026-09-23T14:55:06.676Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nuevasomosaguas.org/guia_autodidacta.html</loc>
-    <lastmod>2026-09-23T13:42:16.044Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nuevasomosaguas.org/curriculo.html</loc>
-    <lastmod>2026-09-23T15:50:58.171Z</lastmod>
   </url>
   <url>
     <loc>https://nuevasomosaguas.org/about.html</loc>
@@ -22,18 +26,18 @@
   </url>
   <url>
     <loc>https://nuevasomosaguas.org/biblioteca.html</loc>
-    <lastmod>2026-09-23T13:42:16.043Z</lastmod>
+    <lastmod>2026-09-23T15:15:07.909Z</lastmod>
   </url>
   <url>
-    <loc>https://nuevasomosaguas.org/faq.html</loc>
-    <lastmod>2026-09-23T13:38:43.253Z</lastmod>
+    <loc>https://nuevasomosaguas.org/curriculo.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
   </url>
   <url>
-    <loc>https://nuevasomosaguas.org/index.html</loc>
-    <lastmod>2026-09-23T15:05:48.137Z</lastmod>
+    <loc>https://nuevasomosaguas.org/guia_autodidacta.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
   </url>
   <url>
-    <loc>https://nuevasomosaguas.org/manual_bolsillo.html</loc>
-    <lastmod>2026-09-23T13:38:43.254Z</lastmod>
+    <loc>https://nuevasomosaguas.org/laboratorios.html</loc>
+    <lastmod>2026-09-23T15:52:43.821Z</lastmod>
   </url>
 </urlset>

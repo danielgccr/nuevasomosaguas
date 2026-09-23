@@ -31,6 +31,8 @@ website:
         href: index.qmd
       - text: "Currículo"
         href: curriculo.qmd
+      - text: "Bootcamp"
+        href: bootcamp.qmd
       - text: "Guía autodidacta"
         href: guia_autodidacta.qmd
       - text: "Laboratorios"
