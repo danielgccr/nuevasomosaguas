@@ -31,7 +31,7 @@ En el primer año se desintoxica al estudiante del lenguaje vago y la sociologí
 
 ### 101. Álgebra lineal y probabilidad para ciencias sociales
 * **Objetivo:** Dominar el espacio vectorial y el cálculo de probabilidades sin caer en recetas de cocina estadística.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Joseph K. Blitzstein & Jessica Hwang — *Introduction to Probability (Harvard Stat 110)*.
   * Sheldon Axler — *Linear Algebra Done Right*.
   * Paul Lockhart — *Measurement*.
@@ -39,14 +39,14 @@ En el primer año se desintoxica al estudiante del lenguaje vago y la sociologí
 
 ### 102. Cálculo y modelos dinámicos
 * **Objetivo:** Comprender las tasas de cambio, la optimización y las ecuaciones diferenciales aplicadas a la evolución de poblaciones.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * 3Blue1Brown — *The Essence of Calculus*.
   * Joshua M. Epstein — *Nonlinear Dynamics, Mathematical Biology, and Social Science*.
 * **Laboratorio:** Integración numérica y sistemas dinámicos continuos en **Python (SciPy)**.
 
 ### 103. Demografía matemáticamente fundamentada
 * **Objetivo:** Analizar las estructuras de población, tablas de vida, mortalidad y fecundidad como la restricción biológica primaria.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Samuel H. Preston, Patrick Heuveline & Michel Guillot — *Demography: Measuring and Modeling Population Processes*.
   * Nathan Keyfitz & Hal Caswell — *Applied Mathematical Demography*.
   * Kenneth W. Wachter — *Essential Demographic Methods*.
@@ -54,7 +54,8 @@ En el primer año se desintoxica al estudiante del lenguaje vago y la sociologí
 
 ### 104. Programación políglota y gestión de datos
 * **Objetivo:** Manejar entornos de desarrollo profesional, filtrado, limpieza y estructuración relacional de bases de datos masivas.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
+  * William Shotts — *The Linux Command Line: A Complete Introduction*.
   * Hadley Wickham — *ggplot2: Elegant Graphics for Data Analysis*.
   * Joel Grus — *Data Science from Scratch*.
   * C. J. Date — *SQL and Relational Theory*.
@@ -68,14 +69,14 @@ Se introducen los mecanismos biológicos, psicológicos e interaccionistas que c
 
 ### 201. Antropología evolutiva y psicología cognitiva
 * **Objetivo:** Entender la mente humana no como una *tabula rasa*, sino como un órgano evolucionado para la cooperación y la competencia tribal.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Hugo Mercier & Dan Sperber — *The Enigma of Reason*.
   * Michael Tomasello — *A Natural History of Human Thinking*.
   * Frans de Waal — *Are We Smart Enough to Know How Smart Animals Are?*.
 
 ### 202. Genética cuantitativa y paleogenómica
-* **Objetivo:** Estudiar la herodabilidad de rasgos complejos, puntuaciones poligénicas (*polygenic scores*) y la historia de las migraciones humanas.
-* **Bibliografía Principal:**
+* **Objetivo:** Estudiar la heredabilidad de rasgos complejos, puntuaciones poligénicas (*polygenic scores*) y la historia de las migraciones humanas.
+* **Bibliografía principal:**
   * Robert Plomin — *Blueprint: How DNA Makes Us Who We Are*.
   * David Reich — *Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past*.
   * D. S. Falconer & Trudy F. C. Mackay — *Introduction to Quantitative Genetics*.
@@ -83,14 +84,14 @@ Se introducen los mecanismos biológicos, psicológicos e interaccionistas que c
 
 ### 203. Sociología analítica y mecanismos micro (DBO)
 * **Objetivo:** Descomponer los fenómenos macro en acciones individuales mediadas por Deseos, Creencias y Oportunidades.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Peter Hedström — *Dissecting the Social: On the Principles of Analytical Sociology*.
   * Jon Elster — *Explaining Social Behavior: More Nuts and Bolts for the Social Sciences*.
   * Raymond Boudon — *The Logic of Sociological Explanation*.
 
 ### 204. Teoría de juegos y elección pública
 * **Objetivo:** Formalizar la interacción estratégica, los equilibrios de Nash y el colapso de los bienes públicos.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Ken Binmore — *Playing for Real: A Text on Game Theory*.
   * Herbert Gintis — *The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences*.
   * James M. Buchanan & Gordon Tullock — *The Calculus of Consent*.
@@ -99,14 +100,14 @@ Se introducen los mecanismos biológicos, psicológicos e interaccionistas que c
 
 ### 301. Análisis de redes sociales y dinámicas populares
 * **Objetivo:** Mapear la topología de la interacción humana, los fenómenos de pequeña escala (*small-world*) y la difusión de información.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Matthew O. Jackson — *Social and Economic Networks*.
   * Eric D. Kolaczyk & Gábor Csárdi — *Statistical Analysis of Network Data with R*.
 * **Laboratorio:** Algoritmos de centralidad, detección de comunidades y gráficos de red con **igraph en R**.
 
 ### 302. Econometría aplicada y análisis de supervivencia
 * **Objetivo:** Evaluar datos de panel, series temporales y tiempos de espera hasta eventos de interés social o biológico.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Angus Deaton — *The Analysis of Household Surveys*.
   * Damodar Gujarati — *Econometrics by Example*.
   * Robert M. O'Brien — *Age-Period-Cohort Models*.
@@ -114,7 +115,7 @@ Se introducen los mecanismos biológicos, psicológicos e interaccionistas que c
 
 ### 303. Inferencia causal por diseño
 * **Objetivo:** Identificar relaciones causales mediante Grafos Acíclicos Dirigidos (DAGs) y experimentos naturales.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Judea Pearl — *Causality: Models, Reasoning, and Inference*.
   * Stephen L. Morgan & Christopher Winship — *Counterfactuals and Causal Inference*.
   * Thad Dunning — *Natural Experiments in the Social Sciences*.
@@ -122,7 +123,7 @@ Se introducen los mecanismos biológicos, psicológicos e interaccionistas que c
 
 ### 304. Economía política y comportamiento electoral
 * **Objetivo:** Analizar las fallas del mercado político, la irracionalidad del votante y la estabilidad de las democracias reales.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Bryan Caplan — *The Myth of the Rational Voter*.
   * Christopher H. Achen & Larry M. Bartels — *Democracy for Realists*.
   * Andrew Gelman — *Red State, Blue State, Rich State, Poor State*.
@@ -136,7 +137,7 @@ El último año capacita al estudiante para ejecutar investigación generativa y
 
 ### 401. Inferencia en la era computacional
 * **Objetivo:** Dominar el *bootstrap*, el Bayes Empírico, la contracción de James-Stein y el control de la tasa de falso descubrimiento (FDR).
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Bradley Efron & Trevor Hastie — *Computer Age Statistical Inference*.
   * Jeff Gill & Le Bao — *Bayesian Social Science Statistics*.
   * Richard McElreath — *Statistical Rethinking*.
@@ -144,14 +145,14 @@ El último año capacita al estudiante para ejecutar investigación generativa y
 
 ### 402. Ciencias sociales generativas y simulación de agentes
 * **Objetivo:** Reconstruir la emergencia de patrones sociales macro desde la interacción computacional bottom-up.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Joshua M. Epstein — *Generative Social Science*.
   * Joshua M. Epstein — *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*.
 * **Laboratorio:** Programación de modelos de agentes (segregación de Schelling, dinámicas epidémicas y conflicto) en **Python (Mesa)**.
 
 ### 403. Cliodinámica e historia económica cuantitativa
 * **Objetivo:** Modelar los ciclos seculares de estabilidad/colapso y la evolución de la riqueza a escala milenaria.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Peter Turchin & Sergey A. Nefedov — *Secular Cycles*.
   * Gregory Clark — *A Farewell to Alms*.
   * Oded Galor — *The Journey of Humanity*.
@@ -159,7 +160,7 @@ El último año capacita al estudiante para ejecutar investigación generativa y
 
 ### 404. Termodinámica social y macroeconomía biofísica
 * **Objetivo:** Integrar las restricciones físicas de conversión energética en el análisis de las estructuras políticas y urbanas.
-* **Bibliografía Principal:**
+* **Bibliografía principal:**
   * Vaclav Smil — *Energy and Civilization: A History*.
   * E. A. Wrigley — *Energy and the English Industrial Revolution*.
   * Ian Morris — *War! What Is It Good For?*.

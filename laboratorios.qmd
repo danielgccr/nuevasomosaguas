@@ -56,7 +56,7 @@ print("\n--- REGRESIÓN EN Hollywood (Condicionado al Colisionador) ---")
 print(f"Coeficiente Belleza -> Talento: {model_hollywood.params['belleza']:.4f} (p-val: {model_hollywood.pvalues['belleza']:.4f})")
 ```
 
-**Explicación analítica:** En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (*Éxito en Hollywood*), aparece una **correlación negativa artificial** ($r < 0, p < 0.001$). Condicionar por una variable causada por ambas genera una falsa causa.
+**Explicación analítica:** En la población general, la relación entre talento y belleza es cero. Sin embargo, al estratificar por el colisionador (*éxito en Hollywood*), aparece una **correlación negativa artificial** ($r < 0, p < 0.001$). Condicionar por una variable causada por ambas genera una falsa causa.
 
 ---
 

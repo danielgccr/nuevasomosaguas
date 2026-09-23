@@ -14,7 +14,7 @@ source("refs.R")
 ::: {.column-screen-inset style="background-color: #f8f9fa; padding: 3rem 2rem; border-bottom: 2px solid #e9ecef; margin-bottom: 2rem;"}
 # La ciencia social fundada en la realidad
 
-> *"Durante décadas, las ciencias humanas han preferido el consuelo de las causas mágicas y el refugio del dogma ideológico antes que el riesgo del rigor empírico. La Nueva Somosaguas nace para restaurar la dignidad intelectual del estudio del hombre y la sociedad mediante la consiliencia de la matemática, la biología evolutiva, la sociología analítica y la computación."*
+> *«Durante décadas, las ciencias humanas han preferido el consuelo de las causas mágicas y el refugio del dogma ideológico antes que el riesgo del rigor empírico. La Nueva Somosaguas nace para restaurar la dignidad intelectual del estudio del hombre y la sociedad mediante la consiliencia de la matemática, la biología evolutiva, la sociología analítica y la computación.»*
 :::
 
 ## El fin de la especulación de salón
@@ -64,7 +64,7 @@ El ser humano no es una *tabla rasa* ni un producto maleable de la construcción
 
 ### 3. Sociología analítica y mecanismos micro (DBO)
 
-Rechazamos las explicaciones holistas que invocan "estructuras omnipotentes". Cada fenómeno macro-social debe derivarse de la acción de agentes concretos guiados por sus **Deseos, Creencias y Oportunidades (DBO)** (*Peter Hedström*, *Jon Elster*), la teoría de juegos evolutiva (*Ken Binmore*) y los grafos causales dirigidos (*Judea Pearl*).
+Rechazamos las explicaciones holistas que invocan «estructuras omnipotentes». Cada fenómeno macro-social debe derivarse de la acción de agentes concretos guiados por sus **Deseos, Creencias y Oportunidades (DBO)** (*Peter Hedström*, *Jon Elster*), la teoría de juegos evolutiva (*Ken Binmore*) y los grafos causales dirigidos (*Judea Pearl*).
 
 ### 4. Ciencias sociales generativas y macrohistoria
 
@@ -76,7 +76,7 @@ La sociedad se comprende cuando se puede *reconstruir computacionalmente*. Media
 
 Explore los documentos fundamentales que articulan la facultad:
 
-::::::: grid
+:::::::::: grid
 ::: {.g-col-12 .g-col-md-6}
 ### [📘 Currículo](curriculo.qmd)
 
@@ -98,7 +98,7 @@ Cinco laboratorios ejecutables en R, Python y SQL: sesgo de colisionador, actual
 ::: {.g-col-12 .g-col-md-6}
 ### [🤖 Política de la IA](politica_ia.qmd)
 
-Descubra la política de *Exoesqueleto Cognitivo*: el uso obligatorio de la IA para acelerar el código y la revisión adversarial, preservando la *Prueba de la Pizarra*.
+Descubra la política de *exoesqueleto cognitivo*: el uso obligatorio de la IA para acelerar el código y la revisión adversarial, preservando la *prueba de la pizarra*.
 :::
 
 ::: {.g-col-12 .g-col-md-6}
@@ -108,11 +108,17 @@ Descubra la política de *Exoesqueleto Cognitivo*: el uso obligatorio de la IA p
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-### [📚 Biblioteca de consiliencia](biblioteca.qmd)
+### [📚 Biblioteca](biblioteca.qmd)
 
 El corpus completo de `r n_obras` obras fundacionales, ordenado en `r dominios_txt` dominios y graduado por nivel de exigencia: de la probabilidad de Blitzstein a la cliodinámica de Turchin.
 :::
-:::::::
+
+::: {.g-col-12 .g-col-md-6}
+### [❓ Preguntas frecuentes](faq.qmd)
+
+Nueve respuestas directas sobre admisión, reduccionismo biológico, sesgo ideológico, el papel de la IA y las salidas profesionales del programa.
+:::
+::::::::::
 
 ------------------------------------------------------------------------
 

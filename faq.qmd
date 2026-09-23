@@ -1,0 +1,105 @@
+---
+title: "Preguntas frecuentes (FAQ)"
+subtitle: "Resolución de dudas sobre la transición al paradigma analítico y cuantitativo"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+::: callout-note
+### Propósito de esta sección
+
+Esta guía de Preguntas Frecuentes responde a las dudas más comunes formuladas por estudiantes, investigadores y autodidactas que consideran dar el salto desde las ciencias sociales tradicionales hacia la arquitectura cuantitativa, biológica y computacional de la **Nueva Somosaguas**.
+:::
+
+------------------------------------------------------------------------
+
+## Preguntas académicas y de admisión
+
+### 1. ¿Necesito una formación previa en matemáticas avanzadas para ingresar en el programa?
+
+**No.** No se exige haber cursado un bachillerato de ciencias puras ni dominar de entrada el cálculo multivariable. Lo que se requiere es una **absoluta disposición a perder el miedo al lenguaje formal** y una elevada capacidad de razonamiento abstracto e inteligencia fluida ($G_f$).
+
+El primer año de la carrera está diseñado precisamente como una rampa de aceleración:
+
+* Arranca con el *bootcamp de verano* y la asignatura **101. Álgebra lineal y probabilidad**, utilizando *Harvard Stat 110* (Blitzstein) y *Linear Algebra Done Right* (Axler), enseñando la matemática desde la intuición geométrica y la simulación en código.
+* La exigencia no reside en memorizar fórmulas, sino en aprender a pensar con la precisión sintáctica de un científico.
+
+------------------------------------------------------------------------
+
+### 2. ¿Qué ocurre si no supero el test psicométrico interno de la facultad?
+
+El saber no se privatiza tras un peaje corporativo o una prueba eliminatoria. La criba psicométrica interna (Raven / pruebas de razonamiento proporcional) únicamente administra recursos físicos universitarios escasos: plazas de laboratorio de investigación, acceso a servidores de supercomputación y estipendios de investigación.
+
+Si no accedes al grupo de investigación de élite (*Somosaguas Fellow*):
+
+* Mantienes tu matrícula en el grado oficial y cursas la titulación con normalidad.
+* Dispones del **100% del material en abierto**: temarios, scripts de R y Python, guías docentes, bases de datos y el corpus de fuentes. Puedes conectar todo el repositorio a tu cuenta de Google/LLM institucional para disponer de un tutor RAG personalizado a coste cero y estudiar a tu propio ritmo.
+
+------------------------------------------------------------------------
+
+### 3. Si el grado se imparte en la universidad pública, ¿no estará expuesto a notas de corte bajas o perfiles poco preparados?
+
+Sí, y el diseño institucional contempla esa realidad con total realismo. Si la demanda inicial es baja y la nota de corte de la Selectividad española cae al 5,0, la excelencia del programa se preserva mediante dos mecanismos inexpugnables:
+
+1.  **Transparencia disuasoria (*señalamiento de Spence*):** Publicar abiertamente los exámenes, los scripts de R y las exigencias formales disuade al estudiante que busca una carrera de letras fácil o contemplativa.
+2.  **Criba de permanencia en el primer semestre:** El primer semestre no contiene asignaturas introductorias amables. Arranca directamente con probabilidad en R, cálculo diferencial y álgebra. Quien carezca de disciplina o potencia cognitiva tropieza de inmediato con la exigencia real y redirige su matrícula de forma natural.
+
+------------------------------------------------------------------------
+
+## Preguntas epistemológicas y metodológicas
+
+### 4. ¿Por qué sustituir la sociología cualitativa y constructivista por la genética, los DAGs causales y la teoría de juegos?
+
+Porque la sociología cualitativa tradicional y el constructivismo radical han demostrado una **incapacidad sistémica para generar conocimiento acumulativo, replicable y predictivo**.
+
+* Atribuir los fenómenos humanos a causas abstractas u «opresiones invisibles» proporciona confort ideológico, pero no explica los engranajes reales (*cogs and wheels*).
+* La **Nueva Somosaguas** adopta la **consiliencia de E. O. Wilson**: integramos la genética cuantitativa ($h^2$, puntuaciones poligénicas) para controlar la varianza biológica subyacente; empleamos diagramas acíclicos dirigidos (DAGs de Judea Pearl) para identificar la causalidad contrafactual; y utilizamos la teoría de juegos (Binmore) y la sociología analítica DBO (Hedström) para descomponer la acción colectiva en incentivos micro-fundamentados.
+
+------------------------------------------------------------------------
+
+### 5. ¿No cae este enfoque en un «reduccionismo biológico» o «determinismo genético»?
+
+**En absoluto.** Confundir la genética de la conducta con el determinismo es un error propio de quien desconoce la estadística de rasgos complejos.
+
+* La genética cuantitativa demuestra que la mayoría de los rasgos humanos son **poligénicos y probabilísticos**, no deterministas.
+* Además, los modelos de la facultad analizan explícitamente la **interacción gen-ambiente ($G \times E$)** y la **transmisión cultural** (Boyd & Richerson, Henrich). Comprender el motor biológico y la heredabilidad de una población no niega el ambiente; es el único modo riguroso de medir el verdadero impacto ambiental limpiándolo de confusión genética.
+
+------------------------------------------------------------------------
+
+### 6. ¿Cómo se evita la corrección política y los sesgos ideológicos en las aulas?
+
+Mediante el principio innegociable de **máxima honestidad intelectual e invariancia empírica**. En la Nueva Somosaguas:
+
+* No existen temas tabú ni conclusiones prohibidas por decreto moral.
+* Cualquier afirmación —sobre diferencias individuales, instituciones, demografía o política— se juzga de forma fría y transparente bajo tres criterios: **consistencia lógica del modelo, identificación causal limpia del diseño y calidad empírica del dataset**.
+* Si un argumento no sobrevive a la prueba de la pizarra o a la réplica en script, se descarta, sin importar cuán popular o políticamente conveniente sea.
+
+------------------------------------------------------------------------
+
+## Preguntas tecnológicas y profesionales
+
+### 7. ¿La inteligencia artificial no volverá obsoleta la formación del estudiante?
+
+La IA solo vuelve obsoleto al estudiante que actúa como una grabadora pasiva de contenidos. En la facultad aplicamos el **principio del exoesqueleto cognitivo**:
+
+* La IA acelera la carpintería sintáctica (R, Python, SQL) y ayuda a explorar hipótesis adversarias (*Red Teaming*).
+* Sin embargo, la atrofia se combate mediante la **prueba de la pizarra (*Blackboard Defence*)**: exámenes orales en los que el alumno debe derivar los modelos a mano alzada y explicar cada línea de código sin pantallas de por medio. La máquina es el siervo; la mente humana es el arquitecto.
+
+------------------------------------------------------------------------
+
+### 8. ¿Qué salidas profesionales reales tiene un egresado de la Nueva Somosaguas?
+
+Frente al graduado tradicional en ciencias humanas —frecuentemente abocado a la precariedad por carecer de habilidades cuantitativas auditables—, el egresado de este programa posee un perfil de **altísima demanda en el mercado global**:
+
+* **Data Science & ML Engineering:** Dominio políglota de Python, R, SQL, modelos bayesianos y redes.
+* **Causal Inference & Policy Evaluation:** Capacidad para diseñar experimentos naturales, A/B testing avanzado e inferencia causal por DAGs en grandes tecnológicas, consultoría estratégica y think tanks.
+* **Análisis demográfico y prospectiva:** Dominio de modelos matriciales de población, cliodinámica y análisis biofísico/energético para gestión pública y fondos de inversión.
+* **Investigación académica de frontera:** Preparación directa para ingresar en los programas de doctorado cuantitativo más exigentes del mundo (Chicago, Harvard, MIT, LSE).
+
+------------------------------------------------------------------------
+
+### 9. Deseo estudiar por mi cuenta sin matricularme en la universidad, ¿por dónde empiezo?
+
+Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este sitio web. Sigue el camino trazado en cuatro fases: 1. Empieza por la terminal Bash y el manual de Allesina & Wilmes (*Computing Skills for Biologists*). 2. Domina la probabilidad con *Harvard Stat 110* y el álgebra lineal con *Axler*. 3. Desglosa los textos fundamentales de Plomin (*Blueprint*), Pearl (*Causality*) y Hedström (*Dissecting the Social*). 4. Configura tu LLM local con el protocolo socrático que proporcionamos y ejecuta los laboratorios prácticos en R y Python.

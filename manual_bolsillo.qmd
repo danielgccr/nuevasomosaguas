@@ -25,9 +25,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 1. La regla del «Apagar la causa fantasma»
 
-* **Fundamento:** Inferencia Causal, Diagramas Acíclicos Dirigidos (DAGs) y Criterio de la Puerta Trasera (*Judea Pearl / Morgan & Winship*).
+* **Fundamento:** inferencia causal, diagramas acíclicos dirigidos (DAGs) y criterio de la puerta trasera (*Judea Pearl / Morgan & Winship*).
 * **El principio:** Una correlación entre dos hechos ($A$ y $B$) raras veces significa que $A$ cause $B$. Casi siempre existe una tercera variable no observada —una **causa fantasma** ($C$)— que mueve a las dos simultáneamente.
-* **Ejemplo cotidiano:** Decir que comer helados causa ahogamientos en la playa porque en los meses en que se disparan las ventas de helados también aumentan los ahogamientos. La "causa fantasma" es el calor estival.
+* **Ejemplo cotidiano:** Decir que comer helados causa ahogamientos en la playa porque en los meses en que se disparan las ventas de helados también aumentan los ahogamientos. La «causa fantasma» es el calor estival.
 
 :::{.callout-note title="Script de debate"}
 > *«Antes de prohibir o subvencionar $A$ para arreglar $B$, muéstrame la causa fantasma que mueve a las dos a la vez. Si no apagas el calor del verano, prohibir los helados solo dejará a la gente sin postre y con el mismo número de ahogados.»*
@@ -37,7 +37,7 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 2. El aforo del local y la física de la cuchara
 
-* **Fundamento:** Termodinámica Social, Densidad de Flujo de Potencia y Restricción Energética (*Vaclav Smil / E.A. Wrigley*).
+* **Fundamento:** termodinámica social, densidad de flujo de potencia y restricción energética (*Vaclav Smil / E.A. Wrigley*).
 * **El principio:** Ningún deseo moral, ley parlamentaria o consenso votado por unanimidad puede derogar las leyes físicas de la energía y la materia. La viabilidad de una sociedad se mide en vatios por metro cuadrado ($\text{W/m}^2$) y rendimiento energético de la inversión (EROEI).
 * **Ejemplo cotidiano:** Proponer alimentar a una metrópolis industrial exclusivamente con energía solar o eólica sin calcular el espacio físico, los materiales requeridos ni la densidad de potencia de almacenamiento.
 
@@ -49,8 +49,8 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 3. La ley de «Demasiados jefes para poca mesa»
 
-* **Fundamento:** Cliodinámica, Dinámica de Poblaciones y Sobreproducción de Élites (*Peter Turchin / Lotka-Volterra*).
-* **El principio:** La polarización política y el guerracivilismo ideológico no surgen por "maldad moral" o epidemias de odio, sino por la sobreproducción de aspirantes a posiciones de élite compitiendo por un número fijo de puestos de poder y rentas públicas.
+* **Fundamento:** cliodinámica, dinámica de poblaciones y sobreproducción de élites (*Peter Turchin / Lotka-Volterra*).
+* **El principio:** La polarización política y el guerracivilismo ideológico no surgen por «maldad moral» o epidemias de odio, sino por la sobreproducción de aspirantes a posiciones de élite compitiendo por un número fijo de puestos de poder y rentas públicas.
 * **Ejemplo cotidiano:** La frustración masiva y la radicalización de miles de graduados universitarios compitiendo por un puñado de plazas en la administración o en puestos directivos.
 
 :::{.callout-note title="Script de debate"}
@@ -61,7 +61,7 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 4. El mapa de inicio frente a la mirada al individuo
 
-* **Fundamento:** Inferencia Bayesianas, *Priors* y Precisión de Estereotipos (*Lee Jussim / E.T. Jaynes / William Briggs*).
+* **Fundamento:** inferencia bayesiana, *priors* y precisión de estereotipos (*Lee Jussim / E.T. Jaynes / William Briggs*).
 * **El principio:** Un estereotipo o promedio poblacional es simplemente una estimación *a priori* (un *prior* bayesiano). Es informacionalmente racional usarlo cuando no hay datos individuales, pero es irracional mantenerlo cuando dispones de información diagnóstica individual.
 * **Ejemplo cotidiano:** Mirar el cielo nublado para coger un paraguas antes de salir (usar el *prior*), pero guardarlo si al poner un pie en la calle el sol brilla intensamente (información individual directa).
 
@@ -73,9 +73,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 5. El abogado interno frente al juez imparcial
 
-* **Fundamento:** Teoría Argumentativa de la Razón y Razonamiento Defensivo (*Hugo Mercier & Dan Sperber / Bryan Caplan*).
+* **Fundamento:** teoría argumentativa de la razón y razonamiento defensivo (*Hugo Mercier & Dan Sperber / Bryan Caplan*).
 * **El principio:** El cerebro humano no evolucionó como un laboratorio de búsqueda de verdad objetiva, sino como un **abogado defensor** diseñado para ganar discusiones en la tribu, proteger la reputación y racionalizar creencias útiles.
-* **Ejemplo cotidiano:** Justificar los escándalos de corrupción del propio partido político como "errores administrativos" mientras se exige prisión inmediata para los mismos hechos en el partido rival.
+* **Ejemplo cotidiano:** Justificar los escándalos de corrupción del propio partido político como «errores administrativos» mientras se exige prisión inmediata para los mismos hechos en el partido rival.
 
 :::{.callout-note title="Script de debate"}
 > *«No me des el alegato de tu abogado; muéstrame el veredicto del juez. Dime exactamente qué dato o prueba empírica concreta te haría cambiar de opinión. Si admites que ningún dato te haría cambiar, reconoces que no estás razonando, sino defendiendo a tu cliente.»*
@@ -85,9 +85,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 6. El mecanismo de las 9:00 de la mañana
 
-* **Fundamento:** Sociología Analítica y Descomposición DBO: Deseos, Creencias y Oportunidades (*Peter Hedström / Jon Elster*).
-* **El principio:** Las estructuras sociales incorpóreas ("el sistema", "el patriarcado", "el capitalismo malvado") no ejecutan acciones. Solo los individuos actúan. Cualquier explicación válida debe descomponerse en incentivos individuales micro.
-* **Ejemplo cotidiano:** Explicar el fracaso de una política diciendo que "la sociedad no está preparada" o que "el sistema se opone".
+* **Fundamento:** sociología analítica y descomposición DBO: Deseos, Creencias y Oportunidades (*Peter Hedström / Jon Elster*).
+* **El principio:** Las estructuras sociales incorpóreas («el sistema», «el patriarcado», «el capitalismo malvado») no ejecutan acciones. Solo los individuos actúan. Cualquier explicación válida debe descomponerse en incentivos individuales micro.
+* **Ejemplo cotidiano:** Explicar el fracaso de una política diciendo que «la sociedad no está preparada» o que «el sistema se opone».
 
 :::{.callout-note title="Script de debate"}
 > *«¿Qué incentivo concreto cambia esta medida para la persona A mañana a las 9:00 de la mañana, y cómo responderá la persona B ante ese cambio? Si no hay una persona respondiendo a un incentivo concreto, tu 'estructura' es un mito abstracto.»*
@@ -97,9 +97,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 7. La matriz de pagos frente al sermón moral
 
-* **Fundamento:** Teoría de Juegos, Elección Pública y Dinámica de la Cooperación (*Ken Binmore / Mancur Olson / James Buchanan*).
-* **El principio:** Los problemas de acción colectiva (defraudar, tirar basura, gorronear) no se resuelven apelando a la "concienciación" o a la "solidaridad", sino modificando las recompensas y castigos de la matriz de pagos.
-* **Ejemplo cotidiano:** Campañas institucionales pidiendo a los ciudadanos "ser responsables" mientras el sistema incentiva económicamente el incumplimiento.
+* **Fundamento:** teoría de juegos, elección pública y dinámica de la cooperación (*Ken Binmore / Mancur Olson / James Buchanan*).
+* **El principio:** Los problemas de acción colectiva (defraudar, tirar basura, gorronear) no se resuelven apelando a la «concienciación» o a la «solidaridad», sino modificando las recompensas y castigos de la matriz de pagos.
+* **Ejemplo cotidiano:** Campañas institucionales pidiendo a los ciudadanos «ser responsables» mientras el sistema incentiva económicamente el incumplimiento.
 
 :::{.callout-note title="Script de debate"}
 > *«El sermón moral jamás cambia la estrategia dominante. Para que la gente coopere, necesitas que la reciprocidad castigada ('Tit-for-Tat') sea la estrategia más rentable. Cambia la matriz de pagos y cambiarás la conducta sin decir una sola palabra predicatoria.»*
@@ -109,9 +109,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 8. La ilusión de la muestra limpia (el criterio del filtro)
 
-* **Fundamento:** Sesgo de Selección y Estratificación por Colisionador (*Thad Dunning / Andrew Gelman / Joseph Berkson*).
+* **Fundamento:** sesgo de selección y estratificación por colisionador (*Thad Dunning / Andrew Gelman / Joseph Berkson*).
 * **El principio:** Cuando analizas un grupo que ya ha pasado por un filtro exigente, las variables que permitieron superar ese filtro aparecen falsamente correlacionadas de forma negativa en la muestra final.
-* **Ejemplo cotidiano:** Afirmar que "los actores guapos son malos actores", porque en la élite de Hollywood los que no son físicamente atractivos han tenido que compensarlo con un talento actoral estratosférico para llegar allí.
+* **Ejemplo cotidiano:** Afirmar que «los actores guapos son malos actores», porque en la élite de Hollywood los que no son físicamente atractivos han tenido que compensarlo con un talento actoral estratosférico para llegar allí.
 
 :::{.callout-note title="Script de debate"}
 > *«Estás analizando a los supervivientes de un filtro previo. Al estudiar solo a los que llegaron a la cima, has creado una correlación fantasma en tu muestra que no existe en la población general.»*
@@ -121,9 +121,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 9. La heredabilidad como índice de equidad
 
-* **Fundamento:** Genética Cuantitativa de Rasgos Complejos (*Robert Plomin / David Reich / D.S. Falconer*).
+* **Fundamento:** genética cuantitativa de rasgos complejos (*Robert Plomin / David Reich / D.S. Falconer*).
 * **El principio:** Cuanto más igualitario, meritocrático y estandarizado es un entorno (misma escuela, misma nutrición, mismo acceso a libros), mayor es la proporción de varianza explicada por los genes ($h^2 \to 1$).
-* **Ejemplo cotidiano:** Asumir que si el rendimiento escolar dentro de un colegio de élite igualado se explica en un 80% por diferencias genéticas, la escuela es "injusta".
+* **Ejemplo cotidiano:** Asumir que si el rendimiento escolar dentro de un colegio de élite igualado se explica en un 80% por diferencias genéticas, la escuela es «injusta».
 
 :::{.callout-note title="Script de debate"}
 > *«Es exactamente al revés: si igualas al 100% las oportunidades ambientales, las únicas diferencias que quedan son las biológicas. Una alta heredabilidad dentro de un entorno controlado es la prueba definitiva de que has eliminado las barreras socioeconómicas.»*
@@ -133,9 +133,9 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 ### 10. El test de la simulación generativa
 
-* **Fundamento:** Ciencias Sociales Generativas y Simulación Basada en Agentes (*Joshua M. Epstein / Agent_Zero / Thomas Schelling*).
-* **El principio:** *"If you didn't grow it, you didn't explain it"* (Si no puedes simular cómo emerge un fenómeno desde abajo con agentes simples, no lo has explicado).
-* **Ejemplo cotidiano:** Atribuir la segregación de un barrio a la existencia de odio profundo o conspiraciones, cuando preferencias individuales moderadas ("solo quiero que al menos el 30% de mis vecinos se parezcan a mí") generan guetos monolíticos de forma espontánea (Modelo de Schelling).
+* **Fundamento:** ciencias sociales generativas y simulación basada en agentes (*Joshua M. Epstein / Agent_Zero / Thomas Schelling*).
+* **El principio:** *«If you didn't grow it, you didn't explain it»* (Si no puedes simular cómo emerge un fenómeno desde abajo con agentes simples, no lo has explicado).
+* **Ejemplo cotidiano:** Atribuir la segregación de un barrio a la existencia de odio profundo o conspiraciones, cuando preferencias individuales moderadas («solo quiero que al menos el 30% de mis vecinos se parezcan a mí») generan guetos monolíticos de forma espontánea (Modelo de Schelling).
 
 :::{.callout-note title="Script de debate"}
 > *«No necesitas asumir maldad extrema o conspiraciones para explicar un resultado colectivo. Reglas locales simples generan patrones macro complejos. Si no eres capaz de simular cómo surge ese patrón desde abajo con reglas individuales, tu teoría es solo una narración fantástica.»*
@@ -147,13 +147,13 @@ Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramie
 
 | Concepto técnico | Metáfora de debate | Pregunta clave de control |
 | :--- | :--- | :--- |
-| **Confusión Causal** | La causa fantasma | ¿Qué variable no observada mueve a las dos a la vez? |
-| **Restricción Energética** | El aforo del local | ¿Cuál es la densidad de potencia ($\text{W/m}^2$) real? |
-| **Sobreproducción Élites** | Demasiados jefes | ¿Cuántos aspirantes compiten por esa silla? |
-| **Priors Bayesianos** | El mapa de inicio | ¿Qué dato individual te hace guardar el mapa? |
-| **Razonamiento Defensivo** | El abogado interno | ¿Qué prueba concreta te haría cambiar de opinión? |
+| **Confusión causal** | La causa fantasma | ¿Qué variable no observada mueve a las dos a la vez? |
+| **Restricción energética** | El aforo del local | ¿Cuál es la densidad de potencia ($\text{W/m}^2$) real? |
+| **Sobreproducción de élites** | Demasiados jefes | ¿Cuántos aspirantes compiten por esa silla? |
+| **Priors bayesianos** | El mapa de inicio | ¿Qué dato individual te hace guardar el mapa? |
+| **Razonamiento defensivo** | El abogado interno | ¿Qué prueba concreta te haría cambiar de opinión? |
 | **Micro-fundamentos** | Las 9:00 de la mañana | ¿Qué incentivo cambia para la persona A mañana? |
-| **Teoría de Juegos** | La matriz de pagos | ¿Cuál es la estrategia dominante con las reglas actuales? |
-| **Sesgo de Selección** | El filtro de supervivencia | ¿Cómo se seleccionó la muestra antes del análisis? |
+| **Teoría de juegos** | La matriz de pagos | ¿Cuál es la estrategia dominante con las reglas actuales? |
+| **Sesgo de selección** | El filtro de supervivencia | ¿Cómo se seleccionó la muestra antes del análisis? |
 | **Heredabilidad ($h^2$)** | El índice de equidad | Si igualas el entorno, ¿qué varianza esperas que quede? |
-| **Enfoque Generativo** | La simulación desde abajo | ¿Puedes generar el patrón macro con reglas simples? |
+| **Enfoque generativo** | La simulación desde abajo | ¿Puedes generar el patrón macro con reglas simples? |

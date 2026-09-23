@@ -150,9 +150,18 @@ blockquote {
   }
 }
 
-/* Mermaid: scale the diagram to the full text column (mermaid sizes the SVG
-   from its own text measurement; only scale it proportionally, never restyle
-   the fonts, or labels overflow their boxes) */
+/* Mermaid.
+   Quarto inyecta un themeCSS dentro del SVG que reescribe la fuente de las
+   etiquetas a --mermaid-font-family (Lato, la del tema flatly). Mermaid ya ha
+   medido el texto para entonces, y lo mide con su propia fuente por defecto,
+   asi que las cajas salen mas estrechas que el texto y este se corta. Igualar
+   la variable a la fuente con la que mermaid mide deja medida y dibujo en la
+   misma tipografia. */
+:root {
+  --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+}
+
+/* Escalar el diagrama al ancho de la columna, siempre de forma proporcional. */
 .cell-output-display svg[id^="mermaid"] {
   width: 100%;
   max-width: 100% !important;

@@ -77,6 +77,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -290,6 +293,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Biblioteca</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./faq.html"> 
+<span class="menu-text">FAQ</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Quiénes somos</span></a>
   </li>  
@@ -319,9 +326,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#arquitectura-rag-académica-grounding-y-trazabilidad" id="toc-arquitectura-rag-académica-grounding-y-trazabilidad" class="nav-link" data-scroll-target="#arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</a></li>
   <li><a href="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden" id="toc-protocolo-anti-atrofia-y-evaluación-de-segundo-orden" class="nav-link" data-scroll-target="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</a>
   <ul class="collapse">
-  <li><a href="#la-prueba-de-la-pizarra-blackboard-defence" id="toc-la-prueba-de-la-pizarra-blackboard-defence" class="nav-link" data-scroll-target="#la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> 1. La prueba de la pizarra (<em>Blackboard Defence</em>)</a></li>
-  <li><a href="#uso-adversarial-obligatorio-red-teaming-cognitive" id="toc-uso-adversarial-obligatorio-red-teaming-cognitive" class="nav-link" data-scroll-target="#uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> 2. Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</a></li>
-  <li><a href="#evaluación-de-la-arquitectura-del-prompting-y-auditoría" id="toc-evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="nav-link" data-scroll-target="#evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> 3. Evaluación de la arquitectura del prompting y auditoría</a></li>
+  <li><a href="#la-prueba-de-la-pizarra-blackboard-defence" id="toc-la-prueba-de-la-pizarra-blackboard-defence" class="nav-link" data-scroll-target="#la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> La prueba de la pizarra (<em>Blackboard Defence</em>)</a></li>
+  <li><a href="#uso-adversarial-obligatorio-red-teaming-cognitive" id="toc-uso-adversarial-obligatorio-red-teaming-cognitive" class="nav-link" data-scroll-target="#uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</a></li>
+  <li><a href="#evaluación-de-la-arquitectura-del-prompting-y-auditoría" id="toc-evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="nav-link" data-scroll-target="#evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> Evaluación de la arquitectura del prompting y auditoría</a></li>
   </ul></li>
   <li><a href="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia" id="toc-decálogo-del-estudiante-políglota-en-la-era-de-la-ia" class="nav-link" data-scroll-target="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia"><span class="header-section-number">5</span> Decálogo del estudiante políglota en la era de la IA</a></li>
   </ul>
@@ -352,13 +359,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <blockquote class="blockquote">
-<p><em>“La Inteligencia Artificial no es un artefacto mágico ni una amenaza existencial para la educación; es un acelerador de masa crítica. La máquina debe multiplicar la fuerza del atleta intelectual, nunca sustituir sus huesos ni sus músculos.”</em></p>
+<p><em>«La Inteligencia Artificial no es un artefacto mágico ni una amenaza existencial para la educación; es un acelerador de masa crítica. La máquina debe multiplicar la fuerza del atleta intelectual, nunca sustituir sus huesos ni sus músculos.»</em></p>
 </blockquote>
 <hr>
 <section id="preámbulo-la-paradoja-de-la-herramienta-amplificadora" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="preámbulo-la-paradoja-de-la-herramienta-amplificadora"><span class="header-section-number">1</span> Preámbulo: la paradoja de la herramienta amplificadora</h2>
-<p>Al igual que la llegada del cálculo simbólico, los lenguajes de programación de alto nivel o los entornos de simulación computacional, los <strong>modelos de lenguaje a gran escala (LLMs)</strong> y los sistemas de <strong>Generación Aumentada por Recuperación (RAG)</strong> alteran drásticamente el coste marginal de procesar información, escribir código y sintetizar literatura.</p>
-<p>Rechazar la IA en la educación superior por miedo al fraude es un acto de ceguera Luddita que condena al estudiante al anacronismo. Sin embargo, aceptarla como una “muleta” que sustituya el esfuerzo lógico conduce al embrutecimiento sistemático: la atrofia del músculo analítico, la incapacidad para detectar falacias empíricas y la dependencia infantil de la máquina.</p>
+<p>Al igual que la llegada del cálculo simbólico, los lenguajes de programación de alto nivel o los entornos de simulación computacional, los <strong>modelos de lenguaje a gran escala (LLMs)</strong> y los sistemas de <strong>generación aumentada por recuperación (RAG)</strong> alteran drásticamente el coste marginal de procesar información, escribir código y sintetizar literatura.</p>
+<p>Rechazar la IA en la educación superior por miedo al fraude es un acto de ceguera ludita que condena al estudiante al anacronismo. Sin embargo, aceptarla como una «muleta» que sustituya el esfuerzo lógico conduce al embrutecimiento sistemático: la atrofia del músculo analítico, la incapacidad para detectar falacias empíricas y la dependencia infantil de la máquina.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -369,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La <strong>Nueva Somosaguas</strong> establece una política innegociable de IA basada en el <strong>Principio del Exoesqueleto Cognitivo</strong>: la tecnología es nuestro siervo; el rigor intelectual es nuestro rey.</p>
+<p>La <strong>Nueva Somosaguas</strong> establece una política innegociable de IA basada en el <strong>principio del exoesqueleto cognitivo</strong>: la tecnología es nuestro siervo; el rigor intelectual es nuestro rey.</p>
 </div>
 </div>
 <hr>
@@ -378,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="2" class="anchored" data-anchor-id="el-exoesqueleto-cognitivo-vs.-la-muleta-mental"><span class="header-section-number">2</span> El exoesqueleto cognitivo vs.&nbsp;la muleta mental</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><em>“Un exoesqueleto exige un cuerpo fuerte para sostener la estructura; una muleta asume la invalidez del usuario.”</em></p>
+<p><em>«Un exoesqueleto exige un cuerpo fuerte para sostener la estructura; una muleta asume la invalidez del usuario.»</em></p>
 </div></div><p>Para guiar el día a día académico, se establece una distinción clara y operativa entre dos modos de uso de la tecnología:</p>
 <section id="la-muleta-mental-estrictamente-prohibida" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="la-muleta-mental-estrictamente-prohibida"><span class="header-section-number">2.1</span> La muleta mental (estrictamente prohibida)</h3>
@@ -416,26 +423,40 @@ ul.task-list li input[type="checkbox"] {
 <section id="arquitectura-rag-académica-grounding-y-trazabilidad" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</h2>
 <p>Para evitar que el aprendizaje se degenere en el consumo de alucinaciones plausibles pero falsas, el entorno computacional de la facultad opera sobre un <strong>sistema RAG (Retrieval-Augmented Generation) de frontera</strong>.</p>
-<pre><code>┌────────────────────────────────────────────────────────────────────────┐
-│                 CORPUS CERRADO DE CONSILIENCIA                         │
-│   • Plomin, Reich, Pearl, Morgan &amp; Winship, Dunning, Efron, Smil, etc. │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                   MOTOR RAG ACADÉMICO / VECTOR DB                     │
-│   • Búsqueda semántica por pasajes de alta densidad                    │
-│   • Cita obligatoria con índice [i] y trazabilidad a la fuente        │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                  EXOESQUELETO COGNITIVO DEL ALUMNO                     │
-│   • Auditoría activa de errores y detección de alucinaciones           │
-└────────────────────────────────────────────────────────────────────────┘</code></pre>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-rag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-rag">%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 14, "useMaxWidth": true}}}%%
+flowchart TD
+    C["CORPUS CERRADO DE CONSILIENCIA&lt;br/&gt;Plomin · Reich · Pearl · Morgan y Winship&lt;br/&gt;Dunning · Efron · Smil · etc."]
+    M["MOTOR RAG ACADÉMICO / VECTOR DB&lt;br/&gt;Búsqueda semántica por pasajes de alta densidad&lt;br/&gt;Cita obligatoria con índice y trazabilidad a la fuente"]
+    E["EXOESQUELETO COGNITIVO DEL ALUMNO&lt;br/&gt;Auditoría activa de errores y detección de alucinaciones"]
+
+    C --&gt; M --&gt; E
+
+    classDef corpus fill:#1a1a1a,stroke:#1a1a1a,stroke-width:2px,color:#f8f9fa
+    classDef motor fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    classDef alumno fill:#f5f5ee,stroke:#e0e0d8,stroke-width:1.5px,color:#111111
+
+    class C corpus
+    class M motor
+    class E alumno
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Arquitectura RAG de la facultad: del corpus cerrado a la auditoría del alumno.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <ol type="1">
-<li><strong>Garantía de Grounding Estricto:</strong> Los entornos RAG institucionales y los tutores locales se alimentan de las 114 fuentes de consiliencia del pensum. Cada afirmación fáctica realizada por el sistema debe ir acompañada de su citación y trazabilidad directa a los textos fuente.</li>
-<li><strong>Auditoría de Alucinaciones como Evaluación:</strong> Parte del adiestramiento avanzado consiste en <strong>identificar activamente los fallos del modelo</strong>: detectar cuándo la IA confunde correlación con causalidad, dónde comete errores en la inducción estadística o cuándo inventa referencias. Encontrar el error de la máquina cuenta como evidencia de alta maestría.</li>
+<li><strong>Garantía de grounding estricto:</strong> Los entornos RAG institucionales y los tutores locales se alimentan de las 115 fuentes de consiliencia del pensum, más las obras que se vayan incorporando y que superen rigurosos estándares de calidad. Cada afirmación fáctica realizada por el sistema debe ir acompañada de su citación y trazabilidad directa a los textos fuente.</li>
+<li><strong>Auditoría de alucinaciones como evaluación:</strong> Parte del adiestramiento avanzado consiste en <strong>identificar activamente los fallos del modelo</strong>: detectar cuándo la IA confunde correlación con causalidad, dónde comete errores en la inducción estadística o cuándo inventa referencias. Encontrar el error de la máquina cuenta como evidencia de alta maestría.</li>
 </ol>
 <hr>
 </section>
@@ -443,7 +464,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4" class="anchored" data-anchor-id="protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</h2>
 <p>Dado que la IA puede generar resúmenes o scripts de R/Python en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:</p>
 <section id="la-prueba-de-la-pizarra-blackboard-defence" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> 1. La prueba de la pizarra (<em>Blackboard Defence</em>)</h3>
+<h3 data-number="4.1" class="anchored" data-anchor-id="la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> La prueba de la pizarra (<em>Blackboard Defence</em>)</h3>
 <p>Cualquier entrega de código o <em>working paper</em> puede ser sometida a un examen oral sorpresa en el que el alumno, frente a la pizarra y sin dispositivos electrónicos, debe:</p>
 <ul>
 <li>Derivar el modelo matemático o econométrico subyacente.</li>
@@ -452,16 +473,26 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="uso-adversarial-obligatorio-red-teaming-cognitive" class="level3 page-columns page-full" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> 2. Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</h3>
+<h3 data-number="4.2" class="anchored" data-anchor-id="uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><em>“Para neutralizar el myside bias (Mercier &amp; Sperber), la IA debe actuar como el fiscal más despiadado de tus propias ideas.”</em></p>
-</div></div><p>Para combatir el sesgo de confirmación y la racionalización cómoda, el alumno está obligado a utilizar la IA como un <strong>oponente dialéctico</strong>. El estudiante debe instruir al sistema para que: * Busque fallos de colisionador o variables omitidas en su DAG. * Proponga explicaciones alternativas convincentes basadas en incentivos. * Critique la solidez de los <em>priors</em> seleccionados.</p>
+<p><em>«Para neutralizar el myside bias (Mercier &amp; Sperber), la IA debe actuar como el fiscal más despiadado de tus propias ideas.»</em></p>
+</div></div><p>Para combatir el sesgo de confirmación y la racionalización cómoda, el alumno está obligado a utilizar la IA como un <strong>oponente dialéctico</strong>. El estudiante debe instruir al sistema para que:</p>
+<ul>
+<li>Busque fallos de colisionador o variables omitidas en su DAG.</li>
+<li>Proponga explicaciones alternativas convincentes basadas en incentivos.</li>
+<li>Critique la solidez de los <em>priors</em> seleccionados.</li>
+</ul>
 <p>La memoria de cada trabajo debe incluir el registro del debate adversarial con la máquina y la justificación de cómo el alumno defendió o corrigió su modelo.</p>
 </section>
 <section id="evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> 3. Evaluación de la arquitectura del prompting y auditoría</h3>
-<p>Se evalúa la <strong>densidad del planteamiento del problema</strong> realizado por el estudiante: * La precisión analítica del <em>steering prompt</em>. * La relevancia de las restricciones impuestas al modelo. * La corrección rigurosa de los borradores intermedios generados por la máquina.</p>
+<h3 data-number="4.3" class="anchored" data-anchor-id="evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> Evaluación de la arquitectura del prompting y auditoría</h3>
+<p>Se evalúa la <strong>densidad del planteamiento del problema</strong> realizado por el estudiante:</p>
+<ul>
+<li>La precisión analítica del <em>steering prompt</em>.</li>
+<li>La relevancia de las restricciones impuestas al modelo.</li>
+<li>La corrección rigurosa de los borradores intermedios generados por la máquina.</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -484,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Cultiva la prosa limpia y musculosa.</strong> La IA tiende a la adjetivación hinchada y al tono burocrático; tu obligación es podar el texto hasta dejar la prosa sobria, incisiva e inexpugnable.</li>
 <li><strong>No temas discutirle a la máquina.</strong> La IA no posee intuición sociológica ni juicio causal; es un modelo probabilístico de predicción de tokens. Tu labor es ser el juez.</li>
 <li><strong>Entrena con el RAG de la facultad.</strong> La información dispersa en la web está contaminada de sesgos; busca el grounding en las fuentes validadas de la consiliencia.</li>
-<li><strong>Pasa la Prueba de la Pizarra cada día.</strong> Pregúntate en cada línea de código o párrafo: <em>“¿Sabría explicar esto sin pantallas ante un tribunal?”</em>. Si la respuesta es no, vuelve a empezar.</li>
+<li><strong>Pasa la prueba de la pizarra cada día.</strong> Pregúntate en cada línea de código o párrafo: <em>«¿Sabría explicar esto sin pantallas ante un tribunal?»</em>. Si la respuesta es no, vuelve a empezar.</li>
 <li><strong>Sé transparente en el flujo de trabajo.</strong> Documenta qué partes del análisis contaron con asistencia algorítmica y cómo fueron auditadas.</li>
 <li><strong>Usa la IA para buscar tus propios puntos ciegos.</strong> Haz que el modelo adopte la postura del crítico más duro de tu trabajo antes de entregarlo.</li>
 <li><strong>El rigor no se negocia.</strong> La tecnología cambia cada mes; la consistencia lógica, la honestidad intelectual y la búsqueda de la verdad permanecen.</li>

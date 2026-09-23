@@ -1,6 +1,14 @@
 project:
   type: website
   output-dir: _site
+  preview:
+    port: 4200
+    browser: false
+    watch-inputs: true
+
+# El editor visual de RStudio reserializa el Markdown al guardar:
+# aplasta listas en parrafos y alarga las vallas ::: de los divs.
+editor: source
 
 website:
   title: "Nueva Somosaguas"
@@ -25,6 +33,8 @@ website:
         href: manual_bolsillo.qmd
       - text: "Biblioteca"
         href: biblioteca.qmd
+      - text: "FAQ"
+        href: faq.qmd
       - text: "Quiénes somos"
         href: about.qmd
 
