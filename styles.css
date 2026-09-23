@@ -221,3 +221,17 @@ svg[id$="-mermaid"] foreignObject {
 .grid h3 {
   font-style: normal;
 }
+
+/* A link dressed as a button: the global link rule would underline it and
+   paint it in the accent on hover, so it takes the accent as its outline. */
+.btn.descarga {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  text-decoration: none;
+  margin: 0.5rem 0 1rem;
+}
+
+.btn.descarga:hover {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+}

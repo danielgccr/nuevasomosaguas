@@ -7,7 +7,14 @@ format:
     toc: true
     toc-depth: 2
     toc-location: right
+resources:
+  - biblioteca.bib
 ---
+
+```{r}
+#| include: false
+escribe_bib("biblioteca.bib")
+```
 
 ::: {.callout-note}
 ## El fin del inventario muerto
@@ -20,6 +27,8 @@ Por eso el corpus no se ordena por rótulos de facultad —«Economía», «Soci
 ### Cómo leer las fichas
 Las obras que vertebran cada estrato llevan ficha técnica con tres campos: el **mecanismo** que aíslan, el **aparato formal** que exigen y su **función en el RAG** institucional. La etiqueta `[Nivel 1-3 | Descriptor]` indica el grado de exigencia analítica, no el estrato.
 :::
+
+[<i class="bi bi-download"></i> Descargar las `r n_obras` referencias en BibTeX](biblioteca.bib){.btn .descarga download="nuevasomosaguas.bib"}
 
 ---
 
@@ -50,7 +59,7 @@ Las invariantes del animal humano, previas al inicio del juego social: arquitect
 * **Tuschman, Avi** (2013). *Our Political Nature: The Evolutionary Origins of What Divides Us*. Prometheus Books. `[Nivel 2 | Psicología Política]`
 * **Sesardic, Neven** (2005). *Making Sense of Heritability*. Cambridge University Press. `[Nivel 3 | Filosofía de la Heredabilidad]`
 * **Vanhanen, Tatu** (2012). *Ethnic Conflicts: Their Biological Roots in Ethnic Nepotism*. Ulster Institute for Social Research. `[Nivel 2 | Nepotismo Étnico]`
-* **Frans de Waal** (2016). *Are We Smart Enough to Know How Smart Animals Are?* W. W. Norton & Company. `[Nivel 1 | Etología Comparada]`
+* **de Waal, Frans** (2016). *Are We Smart Enough to Know How Smart Animals Are?* W. W. Norton & Company. `[Nivel 1 | Etología Comparada]`
 * **Pigliucci, Massimo & Kaplan, Jonathan** (2006). *Making Sense of Evolution: The Conceptual Foundations of Evolutionary Biology*. University of Chicago Press. `[Nivel 3 | Filosofía Biológica]`
 * **Lindeberg, Staffan** (2010). *Food and Western Disease: Health and Nutrition from an Evolutionary Perspective*. Wiley-Blackwell. `[Nivel 1 | Medicina Evolutiva]`
 * **Mercier, Hugo & Sperber, Dan** (2017). *The Enigma of Reason: A New Theory of Human Understanding*. Harvard University Press. `[Nivel 2 | Teoría Argumentativa]`
