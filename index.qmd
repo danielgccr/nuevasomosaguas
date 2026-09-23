@@ -14,7 +14,7 @@ source("refs.R")
 ::: {.column-screen-inset style="background-color: #f8f9fa; padding: 3rem 2rem; border-bottom: 2px solid #e9ecef; margin-bottom: 2rem;"}
 # La ciencia social fundada en la realidad
 
-> *«Durante décadas, la academia dominante abjuró del método riguroso para refugiarse en el dogma ideológico y las causas mágicas. La Nueva Somosaguas nace para restaurar la dignidad intelectual del estudio del hombre y la sociedad mediante la consiliencia de la matemática, la biología evolutiva, la sociología analítica y la computación.»*
+> *«Durante décadas, la academia dominante abjuró del método formal para dividirse entre la exégesis doctrinaria y el ajuste estadístico ciego. La Nueva Somosaguas recupera el estudio del hombre y la sociedad mediante la integración rigurosa de las matemáticas, la demografía formal, la genética cuantitativa, la sociología analítica y la computación reproducible.»*
 :::
 
 ## El fin de la especulación de salón
@@ -60,11 +60,11 @@ El lenguaje de la naturaleza social es matemático. Desde el primer semestre, el
 
 ### 2. Biología evolutiva y genética cuantitativa
 
-El ser humano no es una *tabla rasa* ni un producto maleable de la construcción discursiva. Incorporamos la arquitectura genómica de rasgos complejos (*Robert Plomin*), la paleogenómica (*David Reich*) y la psicología evolutiva como variables fundamentales para entender la varianza individual y la estratificación social.
+El ser humano no es una *tabla rasa* ni un constructo discursivo maleable. Integramos la arquitectura genómica poligénica, la paleogenómica poblacional y las restricciones de la biología evolutiva como parámetros estructurales indispensables para modelar la varianza fenotípica individual y purgar los sesgos de autoselección en el análisis de la desigualdad.
 
 ### 3. Sociología analítica y mecanismos micro (DBO)
 
-Rechazamos las explicaciones holistas que invocan «estructuras omnipotentes». Cada fenómeno macro-social debe derivarse de la acción de agentes concretos guiados por sus **Deseos, Creencias y Oportunidades (DBO)** (*Peter Hedström*, *Jon Elster*), la teoría de juegos evolutiva (*Ken Binmore*) y los grafos causales dirigidos (*Judea Pearl*).
+Rechazamos las explicaciones holistas que atribuyen causalidad a entidades abstractas o totalidades colectivas. Todo patrón macro-social debe derivarse de mecanismos generativos discretos fundamentados en Deseos, Creencias y Oportunidades (esquema DBO), formalizarse mediante teoría de juegos evolutiva y contrastarse empíricamente asegurando la identificación causal mediante modelos gráficos dirigidos (DAGs).
 
 ### 4. Ciencias sociales generativas y macrohistoria
 
