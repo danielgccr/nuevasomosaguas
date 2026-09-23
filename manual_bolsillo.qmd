@@ -1,6 +1,6 @@
 ---
-title: "Manual de bolsillo para la controversia pública"
-subtitle: "10 armas epistemológicas de la Nueva Somosaguas para el debate cotidiano"
+title: "Manual de bolsillo"
+subtitle: "Diez herramientas analíticas para el debate cotidiano"
 format:
   html:
     toc: true
@@ -8,152 +8,140 @@ format:
 ---
 
 :::{.lead}
-**Propósito:** Traducir las leyes de la consiliencia, la inferencia causal, la termodinámica social y la genética de la conducta en principios de sentido común, herramientas de debate y scripts de intervención para la conversación pública.
+El debate público está anegado de buenas intenciones morales, correlaciones interesadas y causas abstractas. La función del analista no es abrumar al interlocutor con jerga ni citar autores de memoria: es introducir preguntas sencillas y quirúrgicas que expongan las costuras del pensamiento blando.
 :::
 
 ---
 
-## Preámbulo: la regla de oro del debate analítico
+## El arte de desarmar sin pedantería
 
-La ciencia social tradicional fracasó por dos vías simétricas: cuando quiso ser popular, se degradó en **sermones morales y consignas infantiles**; cuando quiso ser académica, se refugió en una **jerga inexpugnable** diseñada para proteger la incompetencia.
+Decirle a alguien que está «abriendo un colisionador de Berkson» no desarma su argumento: lo desconcierta, o lo irrita. La elegancia analítica consiste en **aplicar la estructura lógica del concepto sin nombrar al autor ni exhibir el tecnicismo**. La misma objeción, en castellano llano, suena así: «estás juzgando a todo el grupo mirando solo a quienes ya superaron el filtro de entrada».
 
-Este manual proporciona a la ciudadanía intelectualmente inquieta diez herramientas inexpugnables. No se trata de memorizar ecuaciones, sino de **identificar los engranajes mecánicos de la realidad** para desenmascarar la charlatanería en la mesa de un café, en una reunión de trabajo o en la esfera pública.
+Cada herramienta de este manual se presenta, por tanto, en tres piezas: cuándo aparece la falacia, la pregunta que la desarma y —al final, para quien quiera profundizar— el andamiaje teórico que la sostiene. El orden importa: la etiqueta técnica va al pie, no en la boca.
 
----
+::: {.callout-warning}
+### A quién se dirige realmente
+Estas herramientas no sirven para convertir a quien obtiene estatus, identidad o entretenimiento de un dogma. En el ágora, el militante no debate para encontrar la verdad: consume narrativa política como bien expresivo a coste marginal cero, y sostener una creencia falsa reconfortante le resulta individualmente óptimo. Exigirle rigor es desconocer la racionalidad de la ignorancia política (Downs, Caplan).
 
-## Las 10 armas epistemológicas
-
-### 1. La regla del «Apagar la causa fantasma»
-
-* **Fundamento:** inferencia causal, diagramas acíclicos dirigidos (DAGs) y criterio de la puerta trasera (*Judea Pearl / Morgan & Winship*).
-* **El principio:** Una correlación entre dos hechos ($A$ y $B$) raras veces significa que $A$ cause $B$. Casi siempre existe una tercera variable no observada —una **causa fantasma** ($C$)— que mueve a las dos simultáneamente.
-* **Ejemplo cotidiano:** Decir que comer helados causa ahogamientos en la playa porque en los meses en que se disparan las ventas de helados también aumentan los ahogamientos. La «causa fantasma» es el calor estival.
-
-:::{.callout-note title="Script de debate"}
-> *«Antes de prohibir o subvencionar $A$ para arreglar $B$, muéstrame la causa fantasma que mueve a las dos a la vez. Si no apagas el calor del verano, prohibir los helados solo dejará a la gente sin postre y con el mismo número de ahogados.»*
+El destinatario es **el espectador neutral** que asiste a la controversia. A él no se le convence: se le vacuna.
 :::
 
 ---
 
-### 2. El aforo del local y la física de la cuchara
+## Las diez reglas
 
-* **Fundamento:** termodinámica social, densidad de flujo de potencia y restricción energética (*Vaclav Smil / E.A. Wrigley*).
-* **El principio:** Ningún deseo moral, ley parlamentaria o consenso votado por unanimidad puede derogar las leyes físicas de la energía y la materia. La viabilidad de una sociedad se mide en vatios por metro cuadrado ($\text{W/m}^2$) y rendimiento energético de la inversión (EROEI).
-* **Ejemplo cotidiano:** Proponer alimentar a una metrópolis industrial exclusivamente con energía solar o eólica sin calcular el espacio físico, los materiales requeridos ni la densidad de potencia de almacenamiento.
+### 1. Exige el sujeto y la acción
 
-:::{.callout-note title="Script de debate"}
-> *«Un piso de 50 metros cuadrados no aloja a 500 personas en una fiesta sin que los baños colapsen y falte el aire, por mucho que los 500 invitados voten que quieren seguir bailando. Los deseos no generan vatios. Muéstrame la densidad de potencia y la contabilidad de materiales antes de venderme el eslogan.»*
+* **En el debate:** cada vez que alguien invoque «el Mercado», «el Patriarcado», «la Sociedad» o «el Capitalismo» como causas activas de un problema.
+* **El fondo teórico:** el esquema DBO —deseos, creencias, oportunidades— de Jon Elster y Peter Hedström. Las abstracciones no tienen manos, cuentas corrientes ni voluntad. Todo fenómeno agregado resulta de agentes concretos decidiendo bajo restricciones concretas.
+
+:::{.callout-note title="La pregunta"}
+> *«¿Quién hizo qué, exactamente, y qué ganaba al hacerlo?»*
 :::
 
 ---
 
-### 3. La ley de «Demasiados jefes para poca mesa»
+### 2. No confundas el filtro con el efecto
 
-* **Fundamento:** cliodinámica, dinámica de poblaciones y sobreproducción de élites (*Peter Turchin / Lotka-Volterra*).
-* **El principio:** La polarización política y el guerracivilismo ideológico no surgen por «maldad moral» o epidemias de odio, sino por la sobreproducción de aspirantes a posiciones de élite compitiendo por un número fijo de puestos de poder y rentas públicas.
-* **Ejemplo cotidiano:** La frustración masiva y la radicalización de miles de graduados universitarios compitiendo por un puñado de plazas en la administración o en puestos directivos.
+* **En el debate:** cuando afirmen que «los graduados de tal universidad ganan más porque la enseñanza es superior», o que «los hospitales enferman, porque allí muere más gente».
+* **El fondo teórico:** el sesgo de selección y la paradoja del colisionador. Cuando se evalúa un resultado observando solo a quienes cruzaron un umbral previo —admisión, contratación, ingreso hospitalario—, la muestra está truncada y la comparación directa queda invalidada.
 
-:::{.callout-note title="Script de debate"}
-> *«No estamos ante una lucha filosófica entre el bien y el mal, sino ante 100 delanteros disputándose un solo puesto en la plantilla. Cuando multiplicas las expectativas y los títulos pero no las sillas reales de poder, el vestuario revienta.»*
+:::{.callout-note title="La pregunta"}
+> *«¿Esas personas ya eran distintas antes de entrar por la puerta?»*
 :::
 
 ---
 
-### 4. El mapa de inicio frente a la mirada al individuo
+### 3. La realidad se pesa en toneladas y megavatios
 
-* **Fundamento:** inferencia bayesiana, *priors* y precisión de estereotipos (*Lee Jussim / E.T. Jaynes / William Briggs*).
-* **El principio:** Un estereotipo o promedio poblacional es simplemente una estimación *a priori* (un *prior* bayesiano). Es informacionalmente racional usarlo cuando no hay datos individuales, pero es irracional mantenerlo cuando dispones de información diagnóstica individual.
-* **Ejemplo cotidiano:** Mirar el cielo nublado para coger un paraguas antes de salir (usar el *prior*), pero guardarlo si al poner un pie en la calle el sol brilla intensamente (información individual directa).
+* **En el debate:** ante planes de descarbonización instantánea o promesas de abundancia sin coste material.
+* **El fondo teórico:** la contabilidad biofísica de Vaclav Smil. Las sociedades operan dentro de balances innegociables de masa y energía, y ni las leyes de la física ni el rendimiento de los materiales se modifican por consenso parlamentario.
 
-:::{.callout-note title="Script de debate"}
-> *«El mapa sirve para orientarte cuando caminas a ciegas, pero cuando tienes a la persona delante y ves sus datos y rendimiento individual, ignorarla para volver a mirar el mapa no es prudencia: es ceguera.»*
+::: {.callout-important}
+**Dónde acaba el argumento físico.** Smil da la **frontera de lo posible**, no el mecanismo de la acción social. El uso efectivo de un recurso depende de precios relativos, derechos de propiedad, costes de extracción y sustitución tecnológica. Reducir una sociedad a megajulios es el mismo determinismo tuerto que se le reprocha al estructuralismo, cambiando el capital por los teravatios. La física acota el espacio factible; los incentivos y las instituciones deciden la asignación dentro de él.
+:::
+
+:::{.callout-note title="La pregunta"}
+> *«¿Cuántas toneladas de acero, cemento y energía primaria exige eso, y de dónde salen mañana por la mañana?»*
 :::
 
 ---
 
-### 5. El abogado interno frente al juez imparcial
+### 4. El juicio calibrado, que no es el prejuicio
 
-* **Fundamento:** teoría argumentativa de la razón y razonamiento defensivo (*Hugo Mercier & Dan Sperber / Bryan Caplan*).
-* **El principio:** El cerebro humano no evolucionó como un laboratorio de búsqueda de verdad objetiva, sino como un **abogado defensor** diseñado para ganar discusiones en la tribu, proteger la reputación y racionalizar creencias útiles.
-* **Ejemplo cotidiano:** Justificar los escándalos de corrupción del propio partido político como «errores administrativos» mientras se exige prisión inmediata para los mismos hechos en el partido rival.
+* **En el debate:** cuando se descalifique cualquier estimación probabilística sobre grupos tachándola sin más de prejuicio arbitrario.
+* **El fondo teórico:** la calibración empírica de Lee Jussim. El resultado no es que todo prejuicio vulgar sea verdad revelada. Es más estrecho y más interesante: las estimaciones agregadas de la gente común sobre medias de grupo correlacionan con los datos censales reales en torno a $r \approx 0{,}60$–$0{,}80$, lo que las convierte en heurísticas razonablemente calibradas **cuando no hay información individual**.
 
-:::{.callout-note title="Script de debate"}
-> *«No me des el alegato de tu abogado; muéstrame el veredicto del juez. Dime exactamente qué dato o prueba empírica concreta te haría cambiar de opinión. Si admites que ningún dato te haría cambiar, reconoces que no estás razonando, sino defendiendo a tu cliente.»*
+::: {.callout-important}
+**El segundo paso, que es el decisivo.** Un promedio de grupo es una estimación *a priori*, y solo eso. En cuanto se dispone de información diagnóstica sobre la persona concreta, el agente racional **descarta el prior y juzga por el dato individual**. Omitir este paso convierte una defensa de la racionalidad bayesiana en una apología del prejuicio, que es precisamente lo contrario de lo que la evidencia sostiene.
+:::
+
+:::{.callout-note title="La pregunta"}
+> *«¿Esa generalización contradice los datos reales, o solo describe una media? ¿Y qué sabes de esta persona en concreto?»*
 :::
 
 ---
 
-### 6. El mecanismo de las 9:00 de la mañana
+### 5. Identifica la regla del juego, no la moral del jugador
 
-* **Fundamento:** sociología analítica y descomposición DBO: Deseos, Creencias y Oportunidades (*Peter Hedström / Jon Elster*).
-* **El principio:** Las estructuras sociales incorpóreas («el sistema», «el patriarcado», «el capitalismo malvado») no ejecutan acciones. Solo los individuos actúan. Cualquier explicación válida debe descomponerse en incentivos individuales micro.
-* **Ejemplo cotidiano:** Explicar el fracaso de una política diciendo que «la sociedad no está preparada» o que «el sistema se opone».
+* **En el debate:** cuando se atribuya una ineficiencia persistente a la «maldad» o la «falta de solidaridad» de los implicados.
+* **El fondo teórico:** la teoría de juegos de Nash y Binmore. Si un mal resultado se repite de forma sostenida, no se debe a un defecto biográfico de los actores: la estructura de pagos convierte esa conducta en su mejor respuesta individual.
 
-:::{.callout-note title="Script de debate"}
-> *«¿Qué incentivo concreto cambia esta medida para la persona A mañana a las 9:00 de la mañana, y cómo responderá la persona B ante ese cambio? Si no hay una persona respondiendo a un incentivo concreto, tu 'estructura' es un mito abstracto.»*
+:::{.callout-note title="La pregunta"}
+> *«Si una persona sensata e informada estuviera en esa misma posición, ¿tendría motivos para actuar de otra manera?»*
 :::
 
 ---
 
-### 7. La matriz de pagos frente al sermón moral
+### 6. La aritmética actuarial no negocia
 
-* **Fundamento:** teoría de juegos, elección pública y dinámica de la cooperación (*Ken Binmore / Mancur Olson / James Buchanan*).
-* **El principio:** Los problemas de acción colectiva (defraudar, tirar basura, gorronear) no se resuelven apelando a la «concienciación» o a la «solidaridad», sino modificando las recompensas y castigos de la matriz de pagos.
-* **Ejemplo cotidiano:** Campañas institucionales pidiendo a los ciudadanos «ser responsables» mientras el sistema incentiva económicamente el incumplimiento.
+* **En el debate:** promesas de pensiones blindadas, sanidad en expansión perpetua y jubilación temprana en sociedades con fecundidad bajo mínimos.
+* **El fondo teórico:** la ecuación de renovación de Lotka y la demografía formal de Keyfitz. Un sistema de reparto no es una reserva guardada en una caja fuerte: es una transferencia en tiempo real entre generaciones vivas. Si la tasa de reemplazo colapsa, ningún decreto fabrica cotizantes que no nacieron.
 
-:::{.callout-note title="Script de debate"}
-> *«El sermón moral jamás cambia la estrategia dominante. Para que la gente coopere, necesitas que la reciprocidad castigada ('Tit-for-Tat') sea la estrategia más rentable. Cambia la matriz de pagos y cambiarás la conducta sin decir una sola palabra predicatoria.»*
+:::{.callout-note title="La pregunta"}
+> *«¿Cuántos cotizantes sostendrán a cada jubilado dentro de quince años, y qué parte de su nómina habrá que retenerles?»*
 :::
 
 ---
 
-### 8. La ilusión de la muestra limpia (el criterio del filtro)
+### 7. El coste del altruismo supuesto
 
-* **Fundamento:** sesgo de selección y estratificación por colisionador (*Thad Dunning / Andrew Gelman / Joseph Berkson*).
-* **El principio:** Cuando analizas un grupo que ya ha pasado por un filtro exigente, las variables que permitieron superar ese filtro aparecen falsamente correlacionadas de forma negativa en la muestra final.
-* **Ejemplo cotidiano:** Afirmar que «los actores guapos son malos actores», porque en la élite de Hollywood los que no son físicamente atractivos han tenido que compensarlo con un talento actoral estratosférico para llegar allí.
+* **En el debate:** cuando se diseñe un proyecto público dando por hecho que todos colaborarán de forma espontánea por el bien común.
+* **El fondo teórico:** la lógica de la acción colectiva de Mancur Olson. Salvo en grupos pequeños y densamente supervisados, los bienes públicos se desmoronan ante el incentivo universal al parasitismo racional, a menos que existan sanciones o incentivos selectivos.
 
-:::{.callout-note title="Script de debate"}
-> *«Estás analizando a los supervivientes de un filtro previo. Al estudiar solo a los que llegaron a la cima, has creado una correlación fantasma en tu muestra que no existe en la población general.»*
+:::{.callout-note title="La pregunta"}
+> *«¿Qué incentivo tiene alguien para no aportar nada, si va a disfrutar del beneficio de todos modos?»*
 :::
 
 ---
 
-### 9. La heredabilidad como índice de equidad
+### 8. Mide el contrafactual, no la secuencia temporal
 
-* **Fundamento:** genética cuantitativa de rasgos complejos (*Robert Plomin / David Reich / D.S. Falconer*).
-* **El principio:** Cuanto más igualitario, meritocrático y estandarizado es un entorno (misma escuela, misma nutrición, mismo acceso a libros), mayor es la proporción de varianza explicada por los genes ($h^2 \to 1$).
-* **Ejemplo cotidiano:** Asumir que si el rendimiento escolar dentro de un colegio de élite igualado se explica en un 80% por diferencias genéticas, la escuela es «injusta».
+* **En el debate:** «aprobamos la ley X y dos meses después subió el empleo; luego la ley X funcionó».
+* **El fondo teórico:** el modelo de resultados potenciales de Rubin y el arsenal cuasi-experimental de Angrist y Pischke. La inferencia causal no consiste en observar qué pasó después de una intervención, sino en reconstruir de forma creíble qué habría pasado sin ella.
 
-:::{.callout-note title="Script de debate"}
-> *«Es exactamente al revés: si igualas al 100% las oportunidades ambientales, las únicas diferencias que quedan son las biológicas. Una alta heredabilidad dentro de un entorno controlado es la prueba definitiva de que has eliminado las barreras socioeconómicas.»*
+:::{.callout-note title="La pregunta"}
+> *«¿Qué habría ocurrido con esa misma variable en un territorio idéntico donde no se aprobó la medida?»*
 :::
 
 ---
 
-### 10. El test de la simulación generativa
+### 9. Desconfía de la explicación que sirve para todo
 
-* **Fundamento:** ciencias sociales generativas y simulación basada en agentes (*Joshua Epstein / Agent_Zero / Thomas Schelling*).
-* **El principio:** *«If you didn't grow it, you didn't explain it»* (Si no puedes simular cómo emerge un fenómeno desde abajo con agentes simples, no lo has explicado).
-* **Ejemplo cotidiano:** Atribuir la segregación de un barrio a la existencia de odio profundo o conspiraciones, cuando preferencias individuales moderadas («solo quiero que al menos el 30% de mis vecinos se parezcan a mí») generan guetos monolíticos de forma espontánea (Modelo de Schelling).
+* **En el debate:** argumentos circulares donde tanto un resultado como su contrario se leen como confirmación de la misma teoría.
+* **El fondo teórico:** el criterio de demarcación de Karl Popper. Una proposición que no concibe ningún escenario empírico capaz de refutarla no es una explicación del mundo: es un dogma, o un blindaje retórico inmune al aprendizaje.
 
-:::{.callout-note title="Script de debate"}
-> *«No necesitas asumir maldad extrema o conspiraciones para explicar un resultado colectivo. Reglas locales simples generan patrones macro complejos. Si no eres capaz de simular cómo surge ese patrón desde abajo con reglas individuales, tu teoría es solo una narración fantástica.»*
+:::{.callout-note title="La pregunta"}
+> *«¿Qué dato observable te obligaría a admitir que tu hipótesis era falsa?»*
 :::
 
 ---
 
-## Síntesis operativa
+### 10. La burocracia vive del problema, no de la solución
 
-| Concepto técnico | Metáfora de debate | Pregunta clave de control |
-| :--- | :--- | :--- |
-| **Confusión causal** | La causa fantasma | ¿Qué variable no observada mueve a las dos a la vez? |
-| **Restricción energética** | El aforo del local | ¿Cuál es la densidad de potencia ($\text{W/m}^2$) real? |
-| **Sobreproducción de élites** | Demasiados jefes | ¿Cuántos aspirantes compiten por esa silla? |
-| **Priors bayesianos** | El mapa de inicio | ¿Qué dato individual te hace guardar el mapa? |
-| **Razonamiento defensivo** | El abogado interno | ¿Qué prueba concreta te haría cambiar de opinión? |
-| **Micro-fundamentos** | Las 9:00 de la mañana | ¿Qué incentivo cambia para la persona A mañana? |
-| **Teoría de juegos** | La matriz de pagos | ¿Cuál es la estrategia dominante con las reglas actuales? |
-| **Sesgo de selección** | El filtro de supervivencia | ¿Cómo se seleccionó la muestra antes del análisis? |
-| **Heredabilidad ($h^2$)** | El índice de equidad | Si igualas el entorno, ¿qué varianza esperas que quede? |
-| **Enfoque generativo** | La simulación desde abajo | ¿Puedes generar el patrón macro con reglas simples? |
+* **En el debate:** la creencia de que las agencias y comités públicos actúan como planificadores neutrales empeñados en eliminar su propio objeto de trabajo.
+* **El fondo teórico:** la teoría de la elección pública de Buchanan y Tullock. El gestor público responde a su propia función de utilidad —presupuesto, estatus, influencia—, y tiene un incentivo estructural para ampliar la definición del agravio y perpetuar la necesidad de intervenir.
+
+:::{.callout-note title="La pregunta"}
+> *«Si este organismo resolviera definitivamente el problema, ¿qué pasaría con su presupuesto y con los puestos de quienes lo dirigen?»*
+:::

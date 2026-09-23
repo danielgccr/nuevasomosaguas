@@ -110,7 +110,7 @@ El *exoesqueleto cognitivo*: exámenes a terminal abierta donde se asume el uso 
 ::: {.g-col-12 .g-col-md-6}
 ### [Manual de bolsillo](manual_bolsillo.qmd)
 
-10 armas epistemológicas para traducir el rigor de Pearl, Smil, Jussim y Binmore al debate público cotidiano con sencillez y precisión.
+Diez herramientas para desarmar la retórica blanda sin recurrir al tecnicismo: cuándo aparece la falacia, la pregunta que la parte en dos y el andamiaje teórico al pie.
 :::
 
 ::: {.g-col-12 .g-col-md-6}
