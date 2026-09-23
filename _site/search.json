@@ -158,42 +158,35 @@
     "href": "about.html",
     "title": "Quiénes somos",
     "section": "",
-    "text": "La Nueva Somosaguas es una facultad libre de ciencias sociales analíticas y cuantitativas: un pensum completo, abierto y gratuito, construido sobre la premisa de que el estudio de la sociedad humana es una ciencia empírica o no es nada.\nNo expedimos títulos ni pedimos matrícula. Publicamos el plan de estudios, la bibliografía, los scripts y los entornos de trabajo para que cualquiera pueda recorrerlos por su cuenta, en su orden y a su ritmo."
+    "text": "Durante más de medio siglo, el campus de Somosaguas fue el centro de gravedad de la sociología y las ciencias políticas en el mundo hispanohablante. Con las décadas, la disciplina fue abandonando la ambición científica de sus fundadores para instalarse en lo que Jon Elster llamó soft obscurantism: un entramado de explicaciones funcionales, analogías literarias y causas indemostrables en el que «el capitalismo», «el sistema» o «el patriarcado» actuaban como agentes con voluntad propia.\nLa Nueva Somosaguas no es una reforma burocrática ni una solicitud de despacho. Es una reapropiación epistemológica de ese legado: se toma el nombre del epicentro histórico de la disciplina para refundar el estudio de la sociedad sobre los estándares de las ciencias empíricas —álgebra lineal, probabilidad axiomática, demografía formal, genética cuantitativa y computación reproducible—. Donde hubo asamblea sentimental hay ahora cálculo matricial y una terminal abierta."
   },
   {
-    "objectID": "about.html#qué-es-esta-facultad",
-    "href": "about.html#qué-es-esta-facultad",
+    "objectID": "about.html#el-retorno-al-hecho-material",
+    "href": "about.html#el-retorno-al-hecho-material",
     "title": "Quiénes somos",
     "section": "",
-    "text": "La Nueva Somosaguas es una facultad libre de ciencias sociales analíticas y cuantitativas: un pensum completo, abierto y gratuito, construido sobre la premisa de que el estudio de la sociedad humana es una ciencia empírica o no es nada.\nNo expedimos títulos ni pedimos matrícula. Publicamos el plan de estudios, la bibliografía, los scripts y los entornos de trabajo para que cualquiera pueda recorrerlos por su cuenta, en su orden y a su ritmo."
+    "text": "Durante más de medio siglo, el campus de Somosaguas fue el centro de gravedad de la sociología y las ciencias políticas en el mundo hispanohablante. Con las décadas, la disciplina fue abandonando la ambición científica de sus fundadores para instalarse en lo que Jon Elster llamó soft obscurantism: un entramado de explicaciones funcionales, analogías literarias y causas indemostrables en el que «el capitalismo», «el sistema» o «el patriarcado» actuaban como agentes con voluntad propia.\nLa Nueva Somosaguas no es una reforma burocrática ni una solicitud de despacho. Es una reapropiación epistemológica de ese legado: se toma el nombre del epicentro histórico de la disciplina para refundar el estudio de la sociedad sobre los estándares de las ciencias empíricas —álgebra lineal, probabilidad axiomática, demografía formal, genética cuantitativa y computación reproducible—. Donde hubo asamblea sentimental hay ahora cálculo matricial y una terminal abierta."
   },
   {
-    "objectID": "about.html#por-qué-existe",
-    "href": "about.html#por-qué-existe",
+    "objectID": "about.html#naturaleza-institucional",
+    "href": "about.html#naturaleza-institucional",
     "title": "Quiénes somos",
-    "section": "Por qué existe",
-    "text": "Por qué existe\nLa sociología académica sorteó su crisis de rigor refugiándose en la exégesis y sustituyendo la inferencia causal por la denuncia moral. El resultado es una disciplina fértil en literatura y estéril en capacidad predictiva.\nNuestra respuesta no es ideológica sino metodológica: reconstruir la formación del científico social sobre cuatro cimientos que ya funcionan en otras disciplinas —la probabilidad, la biología evolutiva, los mecanismos micro-fundados y la simulación generativa— y exigir de cada afirmación lo que se exige en cualquier ciencia madura: un mecanismo explícito, un dato que la pueda refutar y un modelo que se pueda correr."
+    "section": "Naturaleza institucional",
+    "text": "Naturaleza institucional\nNo somos un centro de adoctrinamiento partidista ni una consultora orientada a captar contratos de asesoría estatal. La Nueva Somosaguas se constituye como un bien público de código abierto, mantenido por una red independiente y descentralizada de científicos de datos, demógrafos, econometristas y biólogos cuantitativos repartidos entre universidades, centros de cómputo y el sector tecnológico.\nLa legitimidad del proyecto no descansa en las biografías de quienes lo promueven, sino en la consiliencia de sus fuentes y en la auditabilidad de su código. Tres certezas operativas lo sostienen:\n\nEl fin del mandarinato de cátedra. La autoridad no emana de la jerarquía funcionarial ni de la antigüedad en un claustro cerrado, sino de la consistencia deductiva interna y de la resistencia del código ante microdatos administrativos en bruto.\nAcceso sin peajes. El canon bibliográfico, los cuadernos de laboratorio, las canalizaciones en Julia y las guías docentes están a disposición de cualquiera con la disciplina necesaria para recorrerlos por su cuenta. No se expiden títulos ni se cobra matrícula.\nNeutralidad axiológica. En el sentido de Weber: el mundo real exhibe límites biológicos innegociables, asimetrías de incentivos y tragedias de coordinación que operan con independencia de nuestras preferencias morales. Describirlos no es aprobarlos."
   },
   {
-    "objectID": "about.html#cómo-trabajamos",
-    "href": "about.html#cómo-trabajamos",
+    "objectID": "about.html#a-quién-se-dirige",
+    "href": "about.html#a-quién-se-dirige",
     "title": "Quiénes somos",
-    "section": "Cómo trabajamos",
-    "text": "Cómo trabajamos\nEl dato antes que la doctrina. Ninguna conclusión se sostiene por la autoridad de quien la firma ni por su conveniencia política. Se sostiene por su diseño de identificación.\nEl mecanismo antes que la correlación. Un fenómeno macro-social no está explicado hasta que se deriva de las decisiones de agentes concretos: sus deseos, sus creencias y sus oportunidades.\nEl código antes que la promesa. Los modelos se publican ejecutables. Una simulación que nadie puede correr es una opinión con notación matemática.\nLa revisión adversarial como norma. Todo trabajo se somete a la crítica más severa disponible —humana o algorítmica— antes de considerarse terminado. Véase nuestra política de IA."
+    "section": "A quién se dirige",
+    "text": "A quién se dirige\nEl proyecto está pensado para quienes no encuentran acomodo ni en la sociología discursiva ni en el ajuste ritual de regresiones sin teoría detrás.\n\nEl estudiante y el autodidacta\nQuien busca una formación exigente centrada en mecanismos concretos: modelar la segregación urbana, construir tablas de vida, deducir equilibrios de teoría de juegos y auditar políticas públicas desde la línea de comandos. La guía autodidacta traza ese recorrido con su presupuesto de horas declarado.\n\n\nEl profesional técnico\nIngenieros, matemáticos y científicos de datos que quieren abordar la demografía histórica, la arquitectura poligénica o la sociología analítica con el mismo rigor formal que aplican a un sistema físico, y que hasta ahora solo han encontrado divulgación.\n\n\nEl analista cívico\nQuien entiende que la fiscalización democrática no se ejerce con manifiestos, sino procesando datos masivos, modelando grafos de adjudicación y exponiendo las relaciones institucionales con la frialdad de quien audita un circuito."
   },
   {
-    "objectID": "about.html#acceso-y-mérito",
-    "href": "about.html#acceso-y-mérito",
+    "objectID": "about.html#el-criterio-de-validez",
+    "href": "about.html#el-criterio-de-validez",
     "title": "Quiénes somos",
-    "section": "Acceso y mérito",
-    "text": "Acceso y mérito\nLa totalidad del material es pública. Las pruebas de acceso psicométrico existen únicamente para repartir recursos de laboratorio escasos, nunca para decidir quién tiene derecho a aprender.\nQuien traiga la disciplina, encontrará aquí el itinerario completo: el currículo de cuatro años, la biblioteca de referencia y el manual de bolsillo para llevar ese rigor al debate público."
-  },
-  {
-    "objectID": "about.html#contacto",
-    "href": "about.html#contacto",
-    "title": "Quiénes somos",
-    "section": "Contacto",
-    "text": "Contacto\nCorrecciones, refutaciones y colaboraciones son bienvenidas en el repositorio del proyecto. Las erratas metodológicas se agradecen especialmente."
+    "section": "El criterio de validez",
+    "text": "El criterio de validez\nNo se pide adhesión doctrinaria ni fe en el plan de estudios. Se exige lo que exige cualquier disciplina científica: que todo argumento declare sus supuestos, formalice el espacio de estados y someta sus conjeturas al compilador y al dato. Donde un modelo colapsa ante la evidencia se descarta; donde un teorema se sostiene, se integra.\nEso vale también para este sitio. Las correcciones, refutaciones y erratas metodológicas se agradecen en el repositorio del proyecto, y se agradecen especialmente cuando duelen.\n\nUna sociología que sustituye el arbitrio discursivo por las matemáticas y el contraste empírico de la biología."
   },
   {
     "objectID": "biblioteca.html",
