@@ -176,6 +176,7 @@ Fuentes técnicas para la simulación desde abajo (*bottom-up*), la ciencia de d
 * **Tuckfield, Bradford** (2020). *Dive Into Algorithms: A Pythonic Adventure for the Daring*. No Starch Press. `[Nivel 1 | Algoritmos en Python]`
 * **Tuckfield, Bradford** (2023). *Dive into Data Science: Use Python to Tackle Your Toughest Questions*. No Starch Press. `[Nivel 1 | Ciencia de Datos]`
 * **Grus, Joel** (2019). *Data Science from Scratch: First Principles with Python* (2nd Edition). O'Reilly Media. `[Nivel 1 | Python desde Cero]`
+* **Lauwens, Ben & Downey, Allen B.** (2019). *Think Julia: How to Think Like a Computer Scientist*. O'Reilly Media. `[Nivel 1 | Julia desde Cero]`
 * **Kopec, David** (2025). *Computer Science From Scratch*. No Starch Press. `[Nivel 1 | Ciencias de la Computación]`
 * **Day, Ryan** (2025). *Hands-On APIs for AI and Data Science: Python Development*. O'Reilly Media. `[Nivel 2 | Integración de APIs]`
 * **Date, C. J.** (2015). *SQL and Relational Theory: How to Write Accurate SQL Code* (3rd Edition). O'Reilly Media. `[Nivel 2 | Base de Datos SQL]`
