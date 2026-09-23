@@ -167,6 +167,16 @@ blockquote {
   --mermaid-fg-color--lighter: #e0e0d8;
 }
 
+/* Landing hero: a band inside the prose column. A .column-screen-* wrapper
+   would widen Quarto's page grid and push the text off-centre, leaving the
+   home page narrower than every section. */
+.hero {
+  background-color: var(--code-bg);
+  border-bottom: 2px solid var(--border-color);
+  padding: 2rem 2rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
 /* The measure is set on the prose column, not on <body>: Quarto splits the
    body between the content column and the margin TOC, so capping <body> caps
    the pair and leaves the text far narrower than intended. */
