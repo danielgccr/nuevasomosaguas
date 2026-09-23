@@ -1,0 +1,44 @@
+---
+title: "Quiénes somos"
+subtitle: "Origen, gobierno y compromisos de la Nueva Somosaguas"
+---
+
+## Qué es esta facultad
+
+La **Nueva Somosaguas** es una facultad libre de ciencias sociales analíticas y cuantitativas: un pensum completo, abierto y gratuito, construido sobre la premisa de que el estudio de la sociedad humana es una ciencia empírica o no es nada.
+
+No expedimos títulos ni pedimos matrícula. Publicamos el plan de estudios, la bibliografía, los scripts y los entornos de trabajo para que cualquiera pueda recorrerlos por su cuenta, en su orden y a su ritmo.
+
+------------------------------------------------------------------------
+
+## Por qué existe
+
+La sociología académica heredada resolvió su crisis de rigor sustituyendo la medición por la exégesis y la inferencia por la denuncia. El resultado es un campo que produce literatura abundante y predicciones escasas.
+
+Nuestra respuesta no es ideológica sino metodológica: reconstruir la formación del científico social sobre cuatro cimientos que ya funcionan en otras disciplinas —la probabilidad, la biología evolutiva, los mecanismos micro-fundados y la simulación generativa— y exigir de cada afirmación lo que se exige en cualquier ciencia madura: un mecanismo explícito, un dato que la pueda refutar y un modelo que se pueda correr.
+
+------------------------------------------------------------------------
+
+## Cómo trabajamos
+
+**El dato antes que la doctrina.** Ninguna conclusión se sostiene por la autoridad de quien la firma ni por su conveniencia política. Se sostiene por su diseño de identificación.
+
+**El mecanismo antes que la correlación.** Un fenómeno macro-social no está explicado hasta que se deriva de las decisiones de agentes concretos: sus deseos, sus creencias y sus oportunidades.
+
+**El código antes que la promesa.** Los modelos se publican ejecutables. Una simulación que nadie puede correr es una opinión con notación matemática.
+
+**La revisión adversarial como norma.** Todo trabajo se somete a la crítica más severa disponible —humana o algorítmica— antes de considerarse terminado. Véase nuestra [política de IA](politica_ia.qmd).
+
+------------------------------------------------------------------------
+
+## Acceso y mérito
+
+La totalidad del material es pública. Las pruebas de acceso psicométrico existen únicamente para repartir recursos de laboratorio escasos, nunca para decidir quién tiene derecho a aprender.
+
+Quien traiga la disciplina, encontrará aquí el itinerario completo: el [currículo](curriculo.qmd) de cuatro años, la [biblioteca](biblioteca.qmd) de referencia y el [manual de bolsillo](manual_bolsillo.qmd) para llevar ese rigor al debate público.
+
+------------------------------------------------------------------------
+
+## Contacto
+
+Correcciones, refutaciones y colaboraciones son bienvenidas en el [repositorio del proyecto](https://github.com/nuevasomosaguas/nuevasomosaguas.org). Las erratas metodológicas se agradecen especialmente.

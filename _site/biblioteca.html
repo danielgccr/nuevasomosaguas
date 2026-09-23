@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Biblioteca de consiliencia – Nueva Somosaguas</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5a3cb9f0c28eb911de556e5303f2638a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3ed9d1fb20842a74a3e4d823837814c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5a3cb9f0c28eb911de556e5303f2638a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Nueva Somosaguas</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./curriculo.html"> 
+<span class="menu-text">Currículo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./guia_autodidacta.html"> 
+<span class="menu-text">Guía autodidacta</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./laboratorios.html"> 
+<span class="menu-text">Laboratorios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./politica_ia.html"> 
+<span class="menu-text">Política de la IA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./manual_bolsillo.html"> 
+<span class="menu-text">Debate público</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./biblioteca.html" aria-current="page"> 
+<span class="menu-text">Biblioteca</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Quiénes somos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" id="toc-cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" class="nav-link active" data-scroll-target="#cimientos-formales-probabilidad-álgebra-e-inferencia-estadística">1. Cimientos formales, probabilidad, álgebra e inferencia estadística</a></li>
+  <li><a href="#biología-evolutiva-genética-cuantitativa-y-paleogenómica" id="toc-biología-evolutiva-genética-cuantitativa-y-paleogenómica" class="nav-link" data-scroll-target="#biología-evolutiva-genética-cuantitativa-y-paleogenómica">2. Biología evolutiva, genética cuantitativa y paleogenómica</a></li>
+  <li><a href="#sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" id="toc-sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" class="nav-link" data-scroll-target="#sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo">3. Sociología analítica, inferencia causal y mecanismos micro (DBO)</a></li>
+  <li><a href="#teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" id="toc-teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" class="nav-link" data-scroll-target="#teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación">4. Teoría de juegos, elección pública, redes y dinámica de la cooperación</a></li>
+  <li><a href="#psicología-cognitiva-antropología-de-la-cultura-y-economía-política" id="toc-psicología-cognitiva-antropología-de-la-cultura-y-economía-política" class="nav-link" data-scroll-target="#psicología-cognitiva-antropología-de-la-cultura-y-economía-política">5. Psicología cognitiva, antropología de la cultura y economía política</a></li>
+  <li><a href="#cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" id="toc-cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" class="nav-link" data-scroll-target="#cliodinámica-macrohistoria-economía-biofísica-e-historia-económica">6. Cliodinámica, macrohistoria, economía biofísica e historia económica</a></li>
+  <li><a href="#ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" id="toc-ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" class="nav-link" data-scroll-target="#ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota">7. Ciencias sociales generativas, simulación de agentes y ciencia de datos políglota</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Biblioteca de consiliencia</h1>
+<p class="subtitle lead">El corpus vivo de la Nueva Somosaguas — 114 obras fundacionales</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>El filtro de consiliencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esta biblioteca reúne la totalidad de las <strong>114 fuentes primarias</strong> que constituyen la columna vertebral intelectual de la <strong>Nueva Somosaguas</strong>. Frente al canon impresionista de la sociología tradicional, cada obra aquí incluida cumple estrictamente con el principio de consiliencia de E. O. Wilson: <strong>compatibilidad vertical entre las matemáticas, la biología evolutiva, los micro-mecanismos de decisión y la historia cuantitativa de gran escala</strong>.</p>
+</div>
+</div>
+<hr>
+<section id="cimientos-formales-probabilidad-álgebra-e-inferencia-estadística" class="level2">
+<h2 class="anchored" data-anchor-id="cimientos-formales-probabilidad-álgebra-e-inferencia-estadística">1. Cimientos formales, probabilidad, álgebra e inferencia estadística</h2>
+<p>Obras dedicadas al adiestramiento del razonamiento cuantitativo de primer orden, la eliminación de la ilusión estadística y la formalización matemática del azar.</p>
+<ul>
+<li><strong>Blitzstein, Joseph K. &amp; Hwang, Jessica</strong> (2019). <em>Introduction to Probability</em> (Harvard Stat 110). Chapman and Hall/CRC. <code>[Nivel 1 | Probabilidad]</code></li>
+<li><strong>Axler, Sheldon</strong> (2024). <em>Linear Algebra Done Right</em> (4th Edition). Springer. <code>[Nivel 1 | Álgebra Lineal]</code></li>
+<li><strong>Casella, George &amp; Berger, Roger L.</strong> (2024). <em>Statistical Inference</em> (2nd Edition). Chapman and Hall/CRC. <code>[Nivel 2 | Inferencia Formal]</code></li>
+<li><strong>Efron, Bradley &amp; Hastie, Trevor</strong> (2016). <em>Computer Age Statistical Inference: Algorithms, Evidence, and Data Science</em>. Cambridge University Press. <code>[Nivel 3 | Inferencia Computacional]</code></li>
+<li><strong>Efron, Bradley</strong> (2026). <em>To Think Like A Statistician</em>. Princeton University Press. <code>[Nivel 2 | Filosofía Estadística]</code></li>
+<li><strong>Jaynes, Edwin T.</strong> (2003). <em>Probability Theory: The Logic of Science</em>. Cambridge University Press. <code>[Nivel 3 | Bayes/Epistemología]</code></li>
+<li><strong>Gill, Jeff &amp; Bao, Le</strong> (2024). <em>Bayesian Social Science Statistics: Volume 1</em>. Cambridge University Press. <code>[Nivel 2 | Estadística Bayesiana]</code></li>
+<li><strong>Gill, Jeff</strong> (2006). <em>Essential Mathematics for Political and Social Research</em>. Cambridge University Press. <code>[Nivel 1 | Matemáticas Fundamentales]</code></li>
+<li><strong>Hacking, Ian</strong> (2016). <em>Logic of Statistical Inference</em>. Cambridge University Press. <code>[Nivel 2 | Lógica e Inferencia]</code></li>
+<li><strong>Briggs, William M.</strong> (2016). <em>Uncertainty: The Soul of Modeling, Probability &amp; Statistics</em>. Springer. <code>[Nivel 2 | Modelización]</code></li>
+<li><strong>Harman, Gilbert &amp; Kulkarni, Sanjeev</strong> (2007). <em>Reliable Reasoning: Induction and Statistical Learning Theory</em>. The MIT Press. <code>[Nivel 2 | Teoria del Aprendizaje]</code></li>
+<li><strong>Dienes, Zoltan</strong> (2008). <em>Understanding Psychology as a Science: An Introduction to Scientific and Bayesian Inference</em>. Palgrave Macmillan. <code>[Nivel 1 | Método Científico]</code></li>
+<li><strong>Lockhart, Paul</strong> (2012). <em>Measurement</em>. Belknap Press of Harvard University Press. <code>[Nivel 1 | Intuición Matemática]</code></li>
+<li><strong>Enderton, Herbert B.</strong> (2001). <em>A Mathematical Introduction to Logic</em> (2nd Edition). Academic Press. <code>[Nivel 2 | Lógica Matemática]</code></li>
+<li><strong>Monahan, John F.</strong> (2008). <em>A Primer on Linear Models</em>. Chapman &amp; Hall/CRC. <code>[Nivel 2 | Modelos Lineales]</code></li>
+<li><strong>Sheather, Simon</strong> (2009). <em>A Modern Approach to Regression with R</em>. Springer. <code>[Nivel 1 | Regresión Aplicada]</code></li>
+<li><strong>Wilcox, Rand</strong> (2011). <em>Modern Statistics for the Social and Behavioral Sciences: A Practical Introduction</em>. CRC Press. <code>[Nivel 2 | Estadística Robusta]</code></li>
+<li><strong>Kraska-Miller, Maria</strong> (2013). <em>Nonparametric Statistics for Social and Behavioral Sciences</em>. CRC Press. <code>[Nivel 2 | No Paramétrica]</code></li>
+<li><strong>Pigott, Terri D.</strong> (2012). <em>Advances in Meta-Analysis</em>. Springer. <code>[Nivel 3 | Meta-Análisis]</code></li>
+<li><strong>Finkelstein, Michael O. &amp; Levin, Bruce</strong> (2015). <em>Statistics for Lawyers</em>. Springer. <code>[Nivel 1 | Aplicación Jurídica]</code></li>
+<li><strong>O’Brien, Robert M.</strong> (2014). <em>Age-Period-Cohort Models: Approaches and Analyses with Aggregate Data</em>. CRC Press. <code>[Nivel 3 | Demografía APC]</code></li>
+</ul>
+<hr>
+</section>
+<section id="biología-evolutiva-genética-cuantitativa-y-paleogenómica" class="level2">
+<h2 class="anchored" data-anchor-id="biología-evolutiva-genética-cuantitativa-y-paleogenómica">2. Biología evolutiva, genética cuantitativa y paleogenómica</h2>
+<p>Fuentes destinadas a la comprensión de la naturaleza humana biológicamente asentada, la heredabilidad de rasgos complejos, las diferencias individuales y la coevolución genético-cultural.</p>
+<ul>
+<li><strong>Plomin, Robert</strong> (2018). <em>Blueprint: How DNA Makes Us Who We Are</em>. The MIT Press. <code>[Nivel 2 | Genética Cuantitativa]</code></li>
+<li><strong>Plomin, Robert &amp; Asbury, Kathryn</strong> (2013). <em>G is for Genes: The Impact of Genetics on Education and Achievement</em>. Wiley-Blackwell. <code>[Nivel 1 | Genética Educativa]</code></li>
+<li><strong>Falconer, D. S. &amp; Mackay, Trudy F. C.</strong> (1996/2009). <em>Introduction to Quantitative Genetics</em> (4th Edition). Pearson. <code>[Nivel 3 | Genética Matemática]</code></li>
+<li><strong>Reich, David</strong> (2018). <em>Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past</em>. Pantheon Books. <code>[Nivel 2 | Paleogenómica]</code></li>
+<li><strong>Cochran, Gregory &amp; Harpending, Henry</strong> (2009). <em>The 10,000 Year Explosion: How Civilization Accelerated Human Evolution</em>. Basic Books. <code>[Nivel 2 | Evolución Reciente]</code></li>
+<li><strong>Haier, Richard J.</strong> (2017). <em>The Neuroscience of Intelligence</em>. Cambridge University Press. <code>[Nivel 2 | Psicometría/Neurociencia]</code></li>
+<li><strong>Buss, David M. &amp; Hawley, Patricia H.</strong> (Eds.) (2010). <em>The Evolution of Personality and Individual Differences</em>. Oxford University Press. <code>[Nivel 2 | Psicología Evolutiva]</code></li>
+<li><strong>Boehm, Christopher</strong> (1999). <em>Hierarchy in the Forest: The Evolution of Egalitarian Behavior</em>. Harvard University Press. <code>[Nivel 2 | Antropología Evolutiva]</code></li>
+<li><strong>Tuschman, Avi</strong> (2013). <em>Our Political Nature: The Evolutionary Origins of What Divides Us</em>. Prometheus Books. <code>[Nivel 2 | Psicología Política]</code></li>
+<li><strong>Sesardic, Neven</strong> (2005). <em>Making Sense of Heritability</em>. Cambridge University Press. <code>[Nivel 3 | Filosofía de la Heredabilidad]</code></li>
+<li><strong>Vanhanen, Tatu</strong> (2012). <em>Ethnic Conflicts: Their Biological Roots in Ethnic Nepotism</em>. Ulster Institute for Social Research. <code>[Nivel 2 | Nepotismo Étnico]</code></li>
+<li><strong>Frans de Waal</strong> (2016). <em>Are We Smart Enough to Know How Smart Animals Are?</em> W. W. Norton &amp; Company. <code>[Nivel 1 | Etología Comparada]</code></li>
+<li><strong>Pigliucci, Massimo &amp; Kaplan, Jonathan</strong> (2006). <em>Making Sense of Evolution: The Conceptual Foundations of Evolutionary Biology</em>. University of Chicago Press. <code>[Nivel 3 | Filosofía Biológica]</code></li>
+<li><strong>Lindeberg, Staffan</strong> (2010). <em>Food and Western Disease: Health and Nutrition from an Evolutionary Perspective</em>. Wiley-Blackwell. <code>[Nivel 1 | Medicina Evolutiva]</code></li>
+</ul>
+<hr>
+</section>
+<section id="sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo" class="level2">
+<h2 class="anchored" data-anchor-id="sociología-analítica-inferencia-causal-y-mecanismos-micro-dbo">3. Sociología analítica, inferencia causal y mecanismos micro (DBO)</h2>
+<p>Cuerpo teórico que desmantela las “causas mágicas” y el holismo estructuralista, reemplazándolos por mecanismos micro-fundamentados de acción individual, diagramas acíclicos dirigidos (DAGs) y experimentos naturales.</p>
+<ul>
+<li><strong>Hedström, Peter</strong> (2005). <em>Dissecting the Social: On the Principles of Analytical Sociology</em>. Cambridge University Press. <code>[Nivel 2 | Sociología Analítica]</code></li>
+<li><strong>Elster, Jon</strong> (2015). <em>Explaining Social Behavior: More Nuts and Bolts for the Social Sciences</em> (2nd Edition). Cambridge University Press. <code>[Nivel 2 | Mecanismos DBO]</code></li>
+<li><strong>Boudon, Raymond</strong> (1974). <em>The Logic of Sociological Explanation</em>. Penguin Education. <code>[Nivel 1 | Individualismo Metodológico]</code></li>
+<li><strong>Demeulenaere, Pierre</strong> (Ed.) (2011). <em>Analytical Sociology and Social Mechanisms</em>. Cambridge University Press. <code>[Nivel 2 | Mecanismos Sociales]</code></li>
+<li><strong>Pearl, Judea</strong> (2009). <em>Causality: Models, Reasoning, and Inference</em> (2nd Edition). Cambridge University Press. <code>[Nivel 3 | Inferencia Causal / DAGs]</code></li>
+<li><strong>Morgan, Stephen L. &amp; Winship, Christopher</strong> (2014). <em>Counterfactuals and Causal Inference: Models and Principles for Social Research</em>. Cambridge University Press. <code>[Nivel 2 | Modelos Contrafactuales]</code></li>
+<li><strong>Dunning, Thad</strong> (2012). <em>Natural Experiments in the Social Sciences: A Design-Based Approach</em>. Cambridge University Press. <code>[Nivel 2 | Experimentos Naturales]</code></li>
+<li><strong>Molak, Aleksander &amp; Jaokar, Ajit</strong> (2023). <em>Causal Inference and Discovery in Python</em>. Packt Publishing. <code>[Nivel 2 | Inferencia Causal en Python]</code></li>
+<li><strong>Mumford, Stephen &amp; Anjum, Rani Lill</strong> (2014). <em>Causation: A Very Short Introduction</em>. Oxford University Press. <code>[Nivel 1 | Metafísica Causal]</code></li>
+<li><strong>Goldthorpe, John H.</strong> (2001). <em>Causation, Statistics, and Sociology</em>. European Sociological Review. <code>[Nivel 2 | Causalidad Sociológica]</code></li>
+<li><strong>Ragin, Charles C.</strong> (2008). <em>Redesigning Social Inquiry: Fuzzy Sets and Beyond</em>. University of Chicago Press. <code>[Nivel 3 | Métodos Cualitativo-Comparativos]</code></li>
+<li><strong>Swedberg, Richard</strong> (2014). <em>The Art of Social Theory</em>. Princeton University Press. <code>[Nivel 1 | Teorización Creativa]</code></li>
+<li><strong>Swedberg, Richard</strong> (Ed.) (2014). <em>Theorizing in Social Science: The Context of Discovery</em>. Stanford Social Sciences. <code>[Nivel 1 | Contexto de Descubrimiento]</code></li>
+</ul>
+<hr>
+</section>
+<section id="teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-de-juegos-elección-pública-redes-y-dinámica-de-la-cooperación">4. Teoría de juegos, elección pública, redes y dinámica de la cooperación</h2>
+<p>Herramientas para modelar la interacción estratégica, los dilemas de acción colectiva, la formación de redes socioeconómicas y la arquitectura de incentivos institucionales.</p>
+<ul>
+<li><strong>Binmore, Ken</strong> (2007). <em>Playing for Real: A Text on Game Theory</em>. Oxford University Press. <code>[Nivel 2 | Teoría de Juegos Classic]</code></li>
+<li><strong>Binmore, Ken</strong> (2011). <em>Evolution and Rationality: Decisions, Cooperation and Strategic Behaviour</em>. Cambridge University Press. <code>[Nivel 3 | Juegos Evolutivos]</code></li>
+<li><strong>Gintis, Herbert</strong> (2017). <em>The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences</em> (Revised Edition). Princeton University Press. <code>[Nivel 3 | Unificación de Ciencias Conductuales]</code></li>
+<li><strong>Schecter, Stephen &amp; Gintis, Herbert</strong> (2016). <em>Game Theory in Action: An Introduction to Classical and Evolutionary Models</em>. Princeton University Press. <code>[Nivel 2 | Modelos Aplicados]</code></li>
+<li><strong>Vega-Redondo, Fernando</strong> (2003). <em>Economics and the Theory of Games</em>. Cambridge University Press. <code>[Nivel 3 | Economía Matemática]</code></li>
+<li><strong>Rodríguez, Abel &amp; Mendes, Bruno</strong> (2018). <em>Probability, Decisions and Games: A Gentle Introduction using R</em>. Wiley. <code>[Nivel 1 | Juegos en R]</code></li>
+<li><strong>Buchanan, James M. &amp; Tullock, Gordon</strong> (1962/2020). <em>The Calculus of Consent: Logical Foundations of Constitutional Democracy</em>. University of Michigan Press. <code>[Nivel 2 | Elección Pública]</code></li>
+<li><strong>Olson, Mancur</strong> (1965/2020). <em>The Logic of Collective Action: Public Goods and the Theory of Groups</em>. Harvard University Press. <code>[Nivel 2 | Bienes Públicos]</code></li>
+<li><strong>Jackson, Matthew O.</strong> (2008). <em>Social and Economic Networks</em>. Princeton University Press. <code>[Nivel 3 | Análisis de Redes]</code></li>
+<li><strong>Kolaczyk, Eric D. &amp; Csárdi, Gábor</strong> (2014). <em>Statistical Analysis of Network Data with R</em>. Springer. <code>[Nivel 2 | Redes en R]</code></li>
+<li><strong>Page, Scott E.</strong> (2007). <em>The Difference: How the Power of Diversity Creates Better Groups, Firms, Schools, and Societies</em>. Princeton University Press. <code>[Nivel 1 | Diversidad y Modelos]</code></li>
+<li><strong>Durlauf, Steven N. &amp; Young, H. Peyton</strong> (Eds.) (2001). <em>Social Dynamics</em>. The MIT Press. <code>[Nivel 3 | Dinámica Social Compleja]</code></li>
+</ul>
+<hr>
+</section>
+<section id="psicología-cognitiva-antropología-de-la-cultura-y-economía-política" class="level2">
+<h2 class="anchored" data-anchor-id="psicología-cognitiva-antropología-de-la-cultura-y-economía-política">5. Psicología cognitiva, antropología de la cultura y economía política</h2>
+<p>Estudio de los sesgos cognitivos, la evolución de la moral y las religiones, la irracionalidad del votante y las patologías de la elección democrática.</p>
+<ul>
+<li><strong>Mercier, Hugo &amp; Sperber, Dan</strong> (2017). <em>The Enigma of Reason: A New Theory of Human Understanding</em>. Harvard University Press. <code>[Nivel 2 | Teoría Argumentativa]</code></li>
+<li><strong>Tomasello, Michael</strong> (2014). <em>A Natural History of Human Thinking</em>. Harvard University Press. <code>[Nivel 2 | Desarrollo Cognitivo]</code></li>
+<li><strong>Nisbett, Richard E.</strong> (2015). <em>Mindware: Tools for Smart Thinking</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Herramientas Cognitivas]</code></li>
+<li><strong>Bloom, Paul</strong> (2016). <em>Against Empathy: The Case for Rational Compassion</em>. Ecco. <code>[Nivel 1 | Ética Rational]</code></li>
+<li><strong>Boyer, Pascal</strong> (2006). <em>Tradition as Truth and Communication: A Cognitive Description of Traditional Discourse</em>. Cambridge University Press. <code>[Nivel 2 | Antropología Cognitiva]</code></li>
+<li><strong>Atran, Scott</strong> (2002). <em>In Gods We Trust: The Evolutionary Landscape of Religion</em>. Oxford University Press. <code>[Nivel 2 | Evolución Religiosa]</code></li>
+<li><strong>Norenzayan, Ara</strong> (2013). <em>Big Gods: How Religion Transformed Cooperation and Conflict</em>. Princeton University Press. <code>[Nivel 2 | Religión y Cooperación]</code></li>
+<li><strong>Caplan, Bryan</strong> (2007). <em>The Myth of the Rational Voter: Why Democracies Choose Bad Policies</em>. Princeton University Press. <code>[Nivel 2 | Economía Política]</code></li>
+<li><strong>Achen, Christopher H. &amp; Bartels, Larry M.</strong> (2016). <em>Democracy for Realists: Why Elections Do Not Produce Responsive Government</em>. Princeton University Press. <code>[Nivel 2 | Comportamiento Electoral]</code></li>
+<li><strong>Tetlock, Philip E.</strong> (2005). <em>Expert Political Judgment: How Good Is It? How Can We Know?</em> Princeton University Press. <code>[Nivel 2 | Predicción Política]</code></li>
+<li><strong>Gelman, Andrew</strong> (2009). <em>Red State, Blue State, Rich State, Poor State: Why Americans Vote the Way They Do</em> (Expanded Edition). Princeton University Press. <code>[Nivel 2 | Geografía Electoral]</code></li>
+<li><strong>Wallis, W. D.</strong> (2014). <em>The Mathematics of Elections and Voting</em>. Springer. <code>[Nivel 2 | Sistemas Electorales]</code></li>
+<li><strong>Taagepera, Rein</strong> (2007). <em>Predicting Party Sizes: The Logic of Simple Electoral Systems</em>. Oxford University Press. <code>[Nivel 3 | Leyes Electorales Formales]</code></li>
+<li><strong>Taagepera, Rein</strong> (2008). <em>Making Social Sciences More Scientific: The Need for Predictive Models</em>. Oxford University Press. <code>[Nivel 2 | Epistemología Cuantitativa]</code></li>
+<li><strong>Postman, Neil</strong> (1985). <em>Amusing Ourselves to Death: Public Discourse in the Age of Show Business</em>. Viking. <code>[Nivel 1 | Sociología de Medios]</code></li>
+</ul>
+<hr>
+</section>
+<section id="cliodinámica-macrohistoria-economía-biofísica-e-historia-económica" class="level2">
+<h2 class="anchored" data-anchor-id="cliodinámica-macrohistoria-economía-biofísica-e-historia-económica">6. Cliodinámica, macrohistoria, economía biofísica e historia económica</h2>
+<p>Obras de análisis de gran escala sobre el surgimiento de la prosperidad, los límites energéticos y los ciclos seculares de estabilidad e inestabilidad política.</p>
+<ul>
+<li><strong>Turchin, Peter &amp; Nefedov, Sergey A.</strong> (2009). <em>Secular Cycles</em>. Princeton University Press. <code>[Nivel 3 | Cliodinámica / Demografía Estructural]</code></li>
+<li><strong>Smil, Vaclav</strong> (2017). <em>Energy and Civilization: A History</em>. The MIT Press. <code>[Nivel 2 | Historia Biofísica]</code></li>
+<li><strong>Wrigley, E. A.</strong> (2010). <em>Energy and the English Industrial Revolution</em>. Cambridge University Press. <code>[Nivel 2 | Historia Energética]</code></li>
+<li><strong>Clark, Gregory</strong> (2007). <em>A Farewell to Alms: A Brief Economic History of the World</em>. Princeton University Press. <code>[Nivel 2 | Historia Económica Malthusiana]</code></li>
+<li><strong>Galor, Oded &amp; Katz, Ori</strong> (2022). <em>The Journey of Humanity: The Origins of Wealth and Inequality</em>. Random House. <code>[Nivel 1 | Teoría del Crecimiento Unificado]</code></li>
+<li><strong>Morris, Ian &amp; Scheidel, Walter</strong> (Eds.) (2009). <em>The Dynamics of Ancient Empires: State Power from Assyria to Byzantium</em>. Oxford University Press. <code>[Nivel 2 | Macro-Sociología Histórica]</code></li>
+<li><strong>Morris, Ian</strong> (2014). <em>War! What Is It Good For? Conflict and the Progress of Civilization from Primates to Robots</em>. Farrar, Straus and Giroux. <code>[Nivel 1 | Evolución del Conflicto]</code></li>
+<li><strong>Gat, Azar</strong> (2017). <em>The Causes of War and the Spread of Peace: But Will War Rebound?</em> Oxford University Press. <code>[Nivel 2 | Orígenes de la Guerra]</code></li>
+<li><strong>Bairoch, Paul</strong> (1995). <em>Economics and World History: Myths and Paradoxes</em>. University of Chicago Press. <code>[Nivel 2 | Historia Económica Cuantitativa]</code></li>
+<li><strong>Findlay, Ronald &amp; O’Rourke, Kevin H.</strong> (2007). <em>Power and Plenty: Trade, War, and the World Economy in the Second Millennium</em>. Princeton University Press. <code>[Nivel 2 | Comercio y Poder]</code></li>
+<li><strong>Wickham, Chris</strong> (2005). <em>Framing the Early Middle Ages: Europe and the Mediterranean, 400-800</em>. Oxford University Press. <code>[Nivel 3 | Historia Comparada]</code></li>
+<li><strong>Harris, Bernard et al.</strong> (2011). <em>The Changing Body: Health, Nutrition, and Human Development in the Western World since 1700</em>. Cambridge University Press. <code>[Nivel 2 | Antropometría Histórica]</code></li>
+<li><strong>Seabright, Paul</strong> (2010). <em>The Company of Strangers: A Natural History of Economic Life</em> (Revised Edition). Princeton University Press. <code>[Nivel 1 | Cooperación Económica]</code></li>
+<li><strong>Mesoudi, Alex</strong> (2011). <em>Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences</em>. University of Chicago Press. <code>[Nivel 2 | Transmisión Cultural]</code></li>
+<li><strong>Ritchey, Tom</strong> (2011). <em>Wicked Problems - Social Messes: Decision Support Modelling with Morphological Analysis</em>. Springer. <code>[Nivel 2 | Análisis Morfológico]</code></li>
+</ul>
+<hr>
+</section>
+<section id="ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota" class="level2">
+<h2 class="anchored" data-anchor-id="ciencias-sociales-generativas-simulación-de-agentes-y-ciencia-de-datos-políglota">7. Ciencias sociales generativas, simulación de agentes y ciencia de datos políglota</h2>
+<p>Fuentes técnicas para la simulación desde abajo (<em>bottom-up</em>), la ciencia de datos en R, Python y SQL, y la infraestructura computacional de investigación.</p>
+<ul>
+<li><strong>Epstein, Joshua M.</strong> (2006). <em>Generative Social Science: Studies in Agent-Based Computational Modeling</em>. Princeton University Press. <code>[Nivel 3 | Ciencias Sociales Generativas]</code></li>
+<li><strong>Epstein, Joshua M.</strong> (2014). <em>Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science</em>. Princeton University Press. <code>[Nivel 3 | Simulación Agent_Zero]</code></li>
+<li><strong>Epstein, Joshua M.</strong> (1997). <em>Nonlinear Dynamics, Mathematical Biology, and Social Science</em>. Addison-Wesley / Santa Fe Institute. <code>[Nivel 3 | Sistemas Dinámicos]</code></li>
+<li><strong>Gintis, Herbert; Bowles, Samuel; Boyd, Robert T. &amp; Fehr, Ernst</strong> (Eds.) (2005). <em>Moral Sentiments and Material Interests: The Foundations of Cooperation in Economic Life</em>. The MIT Press. <code>[Nivel 2 | Simulación y Experimentos]</code></li>
+<li><strong>Stachurski, John</strong> (2009). <em>Economic Dynamics: Theory and Computation</em>. The MIT Press. <code>[Nivel 3 | Computación Económica]</code></li>
+<li><strong>Wickham, Hadley</strong> (2016). <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer. <code>[Nivel 1 | Visualización en R]</code></li>
+<li><strong>Matloff, Norman</strong> (2023). <em>The Art of Machine Learning: A Hands-On Guide</em>. No Starch Press. <code>[Nivel 2 | Machine Learning]</code></li>
+<li><strong>Tuckfield, Bradford</strong> (2020). <em>Dive Into Algorithms: A Pythonic Adventure for the Daring</em>. No Starch Press. <code>[Nivel 1 | Algoritmos en Python]</code></li>
+<li><strong>Tuckfield, Bradford</strong> (2023). <em>Dive into Data Science: Use Python to Tackle Your Toughest Questions</em>. No Starch Press. <code>[Nivel 1 | Ciencia de Datos]</code></li>
+<li><strong>Grus, Joel</strong> (2019). <em>Data Science from Scratch: First Principles with Python</em> (2nd Edition). O’Reilly Media. <code>[Nivel 1 | Python desde Cero]</code></li>
+<li><strong>Kopec, David</strong> (2025). <em>Computer Science From Scratch</em>. No Starch Press. <code>[Nivel 1 | Ciencias de la Computación]</code></li>
+<li><strong>Day, Ryan</strong> (2025). <em>Hands-On APIs for AI and Data Science: Python Development</em>. O’Reilly Media. <code>[Nivel 2 | Integración de APIs]</code></li>
+<li><strong>Date, C. J.</strong> (2015). <em>SQL and Relational Theory: How to Write Accurate SQL Code</em> (3rd Edition). O’Reilly Media. <code>[Nivel 2 | Base de Datos SQL]</code></li>
+<li><strong>Kernighan, Brian W. &amp; Pike, Rob</strong> (1999). <em>The Practice of Programming</em>. Addison-Wesley. <code>[Nivel 1 | Práctica de Programación]</code></li>
+<li><strong>Kernighan, Brian W.</strong> (2018). <em>Millions, Billions, Zillions: Defending Yourself in a World of Too Many Numbers</em>. Princeton University Press. <code>[Nivel 1 | Alfabetización Numérica]</code></li>
+<li><strong>Taylor, Dave &amp; Perry, Brandon</strong> (2016). <em>Wicked Cool Shell Scripts</em> (2nd Edition). No Starch Press. <code>[Nivel 1 | Scripting Unix]</code></li>
+<li><strong>Freeman, Michael &amp; Ross, Joel</strong> (2019). <em>Programming Skills for Data Science: Start Writing Code to Wrangle, Analyze, and Visualize Data with R</em>. Addison-Wesley. <code>[Nivel 1 | R para Data Science]</code></li>
+<li><strong>van der Loo, Mark &amp; de Jonge, Edwin</strong> (2018). <em>Statistical Data Cleaning with Applications in R</em>. Wiley. <code>[Nivel 2 | Limpieza de Datos]</code></li>
+<li><strong>Healy, Kieran</strong> (2019). <em>Data Visualization: A Practical Introduction</em>. Princeton University Press. <code>[Nivel 1 | Visualización de Datos]</code></li>
+<li><strong>Allesina, Stefano &amp; Wilmes, Madlen</strong> (2019). <em>Computing Skills for Biologists: A Toolbox</em>. Princeton University Press. <code>[Nivel 1 | Toolbox Computacional]</code></li>
+<li><strong>Raymond, Eric S.</strong> (1999). <em>The Cathedral and the Bazaar: Musings on Linux and Open Source</em>. O’Reilly Media. <code>[Nivel 1 | Filosofía Open Source]</code></li>
+<li><strong>Tufte, Edward R.</strong> (2004). <em>The Cognitive Style of PowerPoint: Pitching Out Corrupts Within</em>. Graphics Press. <code>[Nivel 1 | Comunicación Cifrada]</code></li>
+<li><strong>Firestein, Stuart</strong> (2015). <em>Failure: Why Science Is So Successful</em>. Oxford University Press. <code>[Nivel 1 | Filosofía de la Ciencia]</code></li>
+<li><strong>Murray, Charles</strong> (2003). <em>Human Accomplishment: The Pursuit of Excellence in the Arts and Sciences, 800 B.C. to 1950</em>. HarperCollins. <code>[Nivel 2 | Historia de la Excelencia]</code></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nuevasomosaguas\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

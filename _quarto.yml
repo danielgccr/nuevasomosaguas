@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Nueva Somosaguas"
+  site-url: "https://nuevasomosaguas.org"
+  repo-url: "https://github.com/nuevasomosaguas/nuevasomosaguas.org"
+  navbar:
+    background: "#1a1a1a"
+    foreground: "#f8f9fa"
+    search: true
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Currículo"
+        href: curriculo.qmd
+      - text: "Guía autodidacta"
+        href: guia_autodidacta.qmd
+      - text: "Laboratorios"
+        href: laboratorios.qmd
+      - text: "Política de la IA"
+        href: politica_ia.qmd
+      - text: "Debate público"
+        href: manual_bolsillo.qmd
+      - text: "Biblioteca"
+        href: biblioteca.qmd
+      - text: "Quiénes somos"
+        href: about.qmd
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    mainfont: "Garamond, Georgia, 'Times New Roman', serif"
+    monofont: "'Fira Code', 'Source Code Pro', monospace"
+    fontsize: 1.1em
+    linestretch: 1.6
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-copy: true
+    code-fold: show
+    highlight-style: github
+    html-math-method: mathjax

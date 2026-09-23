@@ -1,0 +1,123 @@
+---
+title: "Nueva Somosaguas"
+subtitle: "Facultad libre de ciencias sociales analíticas y cuantitativas"
+format:
+  html:
+    page-layout: full
+---
+
+```{r}
+#| include: false
+source("refs.R")
+```
+
+::: {.column-screen-inset style="background-color: #f8f9fa; padding: 3rem 2rem; border-bottom: 2px solid #e9ecef; margin-bottom: 2rem;"}
+# La ciencia social fundada en la realidad
+
+> *"Durante décadas, las ciencias humanas han preferido el consuelo de las causas mágicas y el refugio del dogma ideológico antes que el riesgo del rigor empírico. La Nueva Somosaguas nace para restaurar la dignidad intelectual del estudio del hombre y la sociedad mediante la consiliencia de la matemática, la biología evolutiva, la sociología analítica y la computación."*
+:::
+
+## El fin de la especulación de salón
+
+La **Nueva Somosaguas** no es un ajuste cosmético ni una reforma académica de compromiso. Es la refundación integral del pensum sociológico sobre bases cuantitativas y biológicas inexpugnables.
+
+Frente a la tradición que redujo la sociología a una exégesis verbal de textos sagrados o a una defensa apriorística de agendas políticas, nuestra facultad exige la **disciplina intelectual del dato, la inferencia causal por diseño y la verificación formal**.
+
+------------------------------------------------------------------------
+
+## Los cuatro pilares de la consiliencia
+
+```{mermaid}
+%%| label: fig-pilares
+%%| fig-cap: "Los cuatro pilares de la consiliencia y sus referencias fundacionales."
+
+%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 60, "padding": 12, "useMaxWidth": true}}}%%
+flowchart LR
+    NS["LA NUEVA SOMOSAGUAS<br/>Ciencias sociales<br/>analíticas y cuantitativas"]
+
+    NS --> P1["1. Herramientas formales"]
+    NS --> P2["2. La naturaleza humana"]
+    NS --> P3["3. La interacción estratégica"]
+    NS --> P4["4. La síntesis generativa"]
+
+    P1 --> R1["Stat 110 · Blitzstein<br/>Álgebra lineal · Axler<br/>R / Python / SQL"]
+    P2 --> R2["Puntuaciones poligénicas · Plomin<br/>Paleogenómica · Reich<br/>Genética cuantitativa · Falconer"]
+    P3 --> R3["Mecanismos DBO · Hedström<br/>Grafos causales · Pearl<br/>Teoría de juegos · Binmore"]
+    P4 --> R4["Agent_Zero · Epstein<br/>Ciclos seculares · Turchin<br/>Energía y civilización · Smil"]
+
+    classDef raiz fill:#1a1a1a,stroke:#1a1a1a,stroke-width:2px,color:#f8f9fa
+    classDef pilar fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    classDef ref fill:#f5f5ee,stroke:#e0e0d8,stroke-width:1.5px,color:#111111
+
+    class NS raiz
+    class P1,P2,P3,P4 pilar
+    class R1,R2,R3,R4 ref
+```
+
+### 1. Cimientos formales e inferencia rigurosa
+
+El lenguaje de la naturaleza social es matemático. Desde el primer semestre, el estudiante domina la probabilidad bayesiana (*Harvard Stat 110* / *Jaynes*), el álgebra lineal sin coordenadas (*Axler*), el cálculo de variaciones y la infraestructura computacional políglota en **R, Python y SQL**.
+
+### 2. Biología evolutiva y genética cuantitativa
+
+El ser humano no es una *tabla rasa* ni un producto maleable de la construcción discursiva. Incorporamos la arquitectura genómica de rasgos complejos (*Robert Plomin*), la paleogenómica (*David Reich*) y la psicología evolutiva como variables fundamentales para entender la varianza individual y la estratificación social.
+
+### 3. Sociología analítica y mecanismos micro (DBO)
+
+Rechazamos las explicaciones holistas que invocan "estructuras omnipotentes". Cada fenómeno macro-social debe derivarse de la acción de agentes concretos guiados por sus **Deseos, Creencias y Oportunidades (DBO)** (*Peter Hedström*, *Jon Elster*), la teoría de juegos evolutiva (*Ken Binmore*) y los grafos causales dirigidos (*Judea Pearl*).
+
+### 4. Ciencias sociales generativas y macrohistoria
+
+La sociedad se comprende cuando se puede *reconstruir computacionalmente*. Mediante la simulación basada en agentes (*Joshua Epstein*), los modelos dinámicos de ciclos seculares (*Peter Turchin*) y las restricciones biofísicas de conversión energética (*Vaclav Smil*), estudiamos el nacimiento, la cohesión y el colapso de las instituciones.
+
+------------------------------------------------------------------------
+
+## Estructura del dominio
+
+Explore los documentos fundamentales que articulan la facultad:
+
+::::::: grid
+::: {.g-col-12 .g-col-md-6}
+### [📘 Currículo](curriculo.qmd)
+
+Consulte el plan de estudios de 4 años (16 asignaturas) graduado en tres niveles de exigencia analítica: desde la intuición inicial hasta la alta competición matemática.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [🧭 Guía autodidacta](guia_autodidacta.qmd)
+
+La ruta en cuatro fases para recorrer el pensum por cuenta propia: de la terminal y el álgebra a la inferencia causal y la simulación basada en agentes.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [⚗️ Laboratorios](laboratorios.qmd)
+
+Cinco laboratorios ejecutables en R, Python y SQL: sesgo de colisionador, actualización bayesiana, segregación de Schelling, demografía relacional e intervalos por *bootstrap*.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [🤖 Política de la IA](politica_ia.qmd)
+
+Descubra la política de *Exoesqueleto Cognitivo*: el uso obligatorio de la IA para acelerar el código y la revisión adversarial, preservando la *Prueba de la Pizarra*.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [🥊 Manual de bolsillo](manual_bolsillo.qmd)
+
+10 armas epistemológicas para traducir el rigor de Pearl, Smil, Jussim y Binmore al debate público cotidiano con sencillez y precisión.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [📚 Biblioteca de consiliencia](biblioteca.qmd)
+
+El corpus completo de `r n_obras` obras fundacionales, ordenado en `r dominios_txt` dominios y graduado por nivel de exigencia: de la probabilidad de Blitzstein a la cliodinámica de Turchin.
+:::
+:::::::
+
+------------------------------------------------------------------------
+
+## Principio abierto y mérito puro
+
+La **Nueva Somosaguas** cree en la universalidad del saber. La totalidad de nuestra bibliografía, guías docentes, scripts de simulación y entornos RAG están abiertos a cualquier ciudadano que busque instruirse por su cuenta.
+
+Las pruebas de acceso psicométrico (como el test de Raven avanzado) existen únicamente para administrar recursos públicos de laboratorio escasos; el derecho a cultivar una mente analítica, rigurosa y libre de tonterías pertenece a cualquiera con la disciplina suficiente para exigírselo.

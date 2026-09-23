@@ -1,0 +1,150 @@
+---
+title: "Guía para el autodidacta: el camino de la autonomía intelectual"
+subtitle: "Navegar el mar de información sin perecer en la superficie"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+::: {.callout-note appearance="simple"}
+### Advertencia al navegante
+Internet no sufre de escasez de información, sino de **inflación de ruido y dispersión**. Sin un mapa conceptual riguroso, el autodidacta entusiasta corre el riesgo de naufragar en la divulgación superficial, consumiendo docenas de libros populares sin adquirir jamás la capacidad de derivar una sola ecuación, escribir un script de réplica o identificar un sesgo causal. Esta guía proporciona un **camino secuencial, austero y probado** para dominar la ciencia social analítica de forma autónoma.
+:::
+
+---
+
+## Filosofía del aprendizaje autónomo
+
+El autodidacta de la Nueva Somosaguas no busca la acreditación burocrática ni la aprobación de ningún tribunal de oposición. Su meta es la **soberanía cognitiva**: la capacidad de leer la realidad empírica directamente, auditar los datos por sí mismo y construir modelos inexpugnables.
+
+### Los tres principios innegociables del autodidacta
+
+1. **La Regla del "Hands-On" (Sin Código ni Ecuación, No Hay Conocimiento):** Leer sobre una teoría no es aprenderla. Solo has asimilado un concepto cuando eres capaz de simularlo en R/Python, derivar su prueba matemática en papel o escribir una consulta SQL sobre datos reales.
+2. **Secuencia Obligatoria (Cimientos antes que Tejado):** No se lee a Judea Pearl (inferencia causal) sin dominar antes la probabilidad bayesiana; no se aborda la genética cuantitativa de Robert Plomin sin entender la varianza y la covarianza lineal.
+3. **Austeridad de Fuentes (Pocas Obras, Máxima Densidad):** Es infinitamente superior estudiar en profundidad diez manuales de frontera que hojear cien libros de divulgación periodística.
+
+---
+
+## La ruta de aprendizaje en cuatro fases
+
+```{mermaid}
+%%| label: fig-fases
+%%| fig-cap: "Las cuatro fases de la ruta autodidacta."
+
+%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 12, "useMaxWidth": true}}}%%
+flowchart TD
+    F0["Fase 0 · La terminal y la herramienta<br/>Semanas 1-4<br/>Unix shell · Git · Markdown · RStudio/VSCode"]
+    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Axler · R y Python"]
+    F2["Fase 2 · Mecanismos, genética y causalidad<br/>Meses 6-12<br/>Plomin · Reich · Hedström (DBO) · Pearl (DAGs)"]
+    F3["Fase 3 · Alta competición y modelado<br/>Año 2 en adelante<br/>Binmore · Epstein (ABM) · Smil y Turchin"]
+
+    F0 --> F1 --> F2 --> F3
+
+    classDef fase fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class F0,F1,F2,F3 fase
+```
+
+---
+
+## Fase 0: la terminal y el entorno de trabajo (semanas 1-4)
+
+Antes de estudiar la sociedad, el autodidacta debe dominar las herramientas con las que procesará la información. El objetivo de esta fase es erradicar la dependencia de interfaces de usuario pasivas (como Excel o SPSS) y establecer un entorno de desarrollo profesional.
+
+### Lecturas y cursos de trabajo
+
+* **Kernighan & Pike:** *The Practice of Programming*. Aprender la filosofía del código sobrio, modular e inexpugnable.
+* **Dave Taylor & Brandon Perry:** *Wicked Cool Shell Scripts*. Dominar la línea de comandos de Unix/Linux (`bash`, `grep/rg`, `sed`, `awk`).
+* **Harvard CS50 / Programming Historian:** Manejo de control de versiones con Git, GitHub y entorno de publicación en Markdown/Quarto.
+
+### Hito práctico
+Crear un repositorio personal en GitHub, configurar RStudio y VSCode, y redactar la primera nota de estudio completamente en Markdown compilada con Quarto.
+
+---
+
+## Fase 1: el motor cuantitativo (meses 2-5)
+
+Las ciencias sociales analíticas se expresan en el lenguaje de la matemática y la probabilidad. Esta fase construye la infraestructura mental para no volver a temblar ante un sumatorio, una integral o una matriz de covarianza.
+
+### Lecturas y cursos clave
+
+1. **Probabilidad y Estadística:**
+   * **Joseph K. Blitzstein:** *Statistics 110: Probability* (Harvard University - Disponible gratis en YouTube y edX).
+   * **Bradley Efron & Trevor Hastie:** *Computer Age Statistical Inference* (Capítulos 1-5).
+2. **Álgebra Lineal e Intuición Geométrica:**
+   * **Sheldon Axler:** *Linear Algebra Done Right* (Capítulos 1-3).
+   * **3Blue1Brown:** Serie de vídeos *Essence of Linear Algebra* y *Essence of Calculus*.
+3. **Programación Cuantitativa Políglota:**
+   * **Hadley Wickham:** *ggplot2: Elegant Graphics for Data Analysis* (R).
+   * **Joel Grus:** *Data Science from Scratch* (Python).
+
+### Hito práctico
+Escribir un script en R/Python que simule el problema de Monty Hall mediante Monte Carlo (100.000 iteraciones) y calcule la distribución *a posteriori* de un experimento binomial mediante Bayes.
+
+---
+
+## Fase 2: mecanismos, genética y causalidad (meses 6-12)
+
+Con el motor matemático ajustado, el autodidacta entra en el núcleo duro de la ciencia social analítica: la superación de las causas mágicas y el aprendizaje de la inferencia causal por diseño.
+
+### Las tres columnas de la fase 2
+
+#### A. Genética de la conducta y paleogenómica
+* **Robert Plomin:** *Blueprint: How DNA Makes Us Who We Are*. Comprender la heredabilidad ($h^2$) de rasgos complejos y los *polygenic scores*.
+* **David Reich:** *Who We Are and How We Got Here*. Entender cómo el ADN antiguo reescribió la historia de las migraciones humanas.
+
+#### B. Sociología analítica y mecanismos micro
+* **Peter Hedström:** *Dissecting the Social: On the Principles of Analytical Sociology*. Dominar la descomposición DBO (Deseos, Creencias y Oportunidades).
+* **Jon Elster:** *Explaining Social Behavior: More Nuts and Bolts for the Social Sciences*.
+
+#### C. Inferencia causal por diseño
+* **Judea Pearl:** *Causality: Models, Reasoning, and Inference* (o el manual práctico de **Aleksander Molak**: *Causal Inference and Discovery in Python*).
+* **Stephen Morgan & Christopher Winship:** *Counterfactuals and Causal Inference*.
+
+### Hito práctico
+Tomar una base de datos pública (p. ej., el General Social Survey o datos censales), dibujar un Diagrama Acíclico Dirigido (DAG) causal con sus supuestos, identificar las variables colisionadoras y ejecutar una regresión controlada que demuestre la presencia o ausencia de sesgo de selección.
+
+---
+
+## Fase 3: alta competición y modelos propios (año 2 en adelante)
+
+Llegado a este nivel, el autodidacta posee un criterio superior al de la mayoría de los graduados universitarios tradicionales. La tercera fase está dedicada a la integración macrohistórica, la teoría de juegos y la simulación.
+
+### Obras de frontera
+
+* **Teoría de Juegos y Elección Pública:**
+  * **Ken Binmore:** *Playing for Real: A Text on Game Theory*.
+  * **Herbert Gintis:** *The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences*.
+* **Ciencias Sociales Generativas:**
+  * **Joshua M. Epstein:** *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*.
+* **Cliodinámica y macrohistoria biofísica:**
+  * **Peter Turchin & Sergey Nefedov:** *Secular Cycles*.
+  * **Vaclav Smil:** *Energy and Civilization: A History*.
+
+### Hito práctico
+Programar una Simulación Basada en Agentes (ABM) desde cero en Python que modele la emergencia espontánea de cooperación o segregación (tipo Schelling o Axelrod) y publicar el análisis interactivo en la web personal.
+
+---
+
+## El exoesqueleto para el autodidacta: cómo usar la IA
+
+El estudiante autónomo no tiene un profesor particular, pero dispone de una herramienta más potente si sabe utilizarla: un **modelo de lenguaje (LLM) o sistema RAG personalizado**.
+
+::: {.callout-tip}
+### Protocolo de tutoría socrática con IA
+No utilices la IA para que te dé resúmenes de libros o te resuelva los ejercicios directamente. Configura tu sistema con la siguiente instrucción de sistema (*Prompting Socrático*):
+
+> *"Actúa como un profesor de ciencias sociales analíticas riguroso e inflexible. No me des respuestas directas. Cuando te presente un problema de probabilidad, inferencia causal o teoría de juegos, hazme preguntas guía, señala las inconsistencias lógicas de mi razonamiento y pídeme que te muestre la prueba matemática o el script de R/Python correspondiente."*
+:::
+
+---
+
+## Lista de verificación del autodidacta (*self-audit*)
+
+Antes de dar por superado un módulo, compruébate con estas tres preguntas de control:
+
+1. **¿Puedo explicar el concepto en una pizarra sin mirar notas?**
+2. **¿Puedo escribir el código en R o Python que replica el resultado empírico principal?**
+3. **¿Puedo identificar la limitación causal o el supuesto de identificación del modelo?**
+
+Si la respuesta a las tres es afirmativa, has conquistado esa parcela de conocimiento. Si no, vuelve al código y a la ecuación. La belleza del autodidactismo radica en que **el único juez insobornable es la realidad**.

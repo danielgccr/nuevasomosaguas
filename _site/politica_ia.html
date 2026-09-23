@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>El exoesqueleto cognitivo: política de inteligencia artificial – Nueva Somosaguas</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5a3cb9f0c28eb911de556e5303f2638a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3ed9d1fb20842a74a3e4d823837814c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5a3cb9f0c28eb911de556e5303f2638a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Nueva Somosaguas</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./curriculo.html"> 
+<span class="menu-text">Currículo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./guia_autodidacta.html"> 
+<span class="menu-text">Guía autodidacta</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./laboratorios.html"> 
+<span class="menu-text">Laboratorios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./politica_ia.html" aria-current="page"> 
+<span class="menu-text">Política de la IA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./manual_bolsillo.html"> 
+<span class="menu-text">Debate público</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./biblioteca.html"> 
+<span class="menu-text">Biblioteca</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Quiénes somos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#preámbulo-la-paradoja-de-la-herramienta-amplificadora" id="toc-preámbulo-la-paradoja-de-la-herramienta-amplificadora" class="nav-link active" data-scroll-target="#preámbulo-la-paradoja-de-la-herramienta-amplificadora"><span class="header-section-number">1</span> Preámbulo: la paradoja de la herramienta amplificadora</a></li>
+  <li><a href="#el-exoesqueleto-cognitivo-vs.-la-muleta-mental" id="toc-el-exoesqueleto-cognitivo-vs.-la-muleta-mental" class="nav-link" data-scroll-target="#el-exoesqueleto-cognitivo-vs.-la-muleta-mental"><span class="header-section-number">2</span> El exoesqueleto cognitivo vs.&nbsp;la muleta mental</a>
+  <ul class="collapse">
+  <li><a href="#la-muleta-mental-estrictamente-prohibida" id="toc-la-muleta-mental-estrictamente-prohibida" class="nav-link" data-scroll-target="#la-muleta-mental-estrictamente-prohibida"><span class="header-section-number">2.1</span> La muleta mental (estrictamente prohibida)</a></li>
+  <li><a href="#el-exoesqueleto-cognitivo-exigido-y-estimulado" id="toc-el-exoesqueleto-cognitivo-exigido-y-estimulado" class="nav-link" data-scroll-target="#el-exoesqueleto-cognitivo-exigido-y-estimulado"><span class="header-section-number">2.2</span> El exoesqueleto cognitivo (exigido y estimulado)</a></li>
+  </ul></li>
+  <li><a href="#arquitectura-rag-académica-grounding-y-trazabilidad" id="toc-arquitectura-rag-académica-grounding-y-trazabilidad" class="nav-link" data-scroll-target="#arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</a></li>
+  <li><a href="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden" id="toc-protocolo-anti-atrofia-y-evaluación-de-segundo-orden" class="nav-link" data-scroll-target="#protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</a>
+  <ul class="collapse">
+  <li><a href="#la-prueba-de-la-pizarra-blackboard-defence" id="toc-la-prueba-de-la-pizarra-blackboard-defence" class="nav-link" data-scroll-target="#la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> 1. La prueba de la pizarra (<em>Blackboard Defence</em>)</a></li>
+  <li><a href="#uso-adversarial-obligatorio-red-teaming-cognitive" id="toc-uso-adversarial-obligatorio-red-teaming-cognitive" class="nav-link" data-scroll-target="#uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> 2. Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</a></li>
+  <li><a href="#evaluación-de-la-arquitectura-del-prompting-y-auditoría" id="toc-evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="nav-link" data-scroll-target="#evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> 3. Evaluación de la arquitectura del prompting y auditoría</a></li>
+  </ul></li>
+  <li><a href="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia" id="toc-decálogo-del-estudiante-políglota-en-la-era-de-la-ia" class="nav-link" data-scroll-target="#decálogo-del-estudiante-políglota-en-la-era-de-la-ia"><span class="header-section-number">5</span> Decálogo del estudiante políglota en la era de la IA</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">El exoesqueleto cognitivo: política de inteligencia artificial</h1>
+<p class="subtitle lead">Regulación, integración RAG y protocolos anti-atrofia intelectual en la Nueva Somosaguas</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p><em>“La Inteligencia Artificial no es un artefacto mágico ni una amenaza existencial para la educación; es un acelerador de masa crítica. La máquina debe multiplicar la fuerza del atleta intelectual, nunca sustituir sus huesos ni sus músculos.”</em></p>
+</blockquote>
+<hr>
+<section id="preámbulo-la-paradoja-de-la-herramienta-amplificadora" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="preámbulo-la-paradoja-de-la-herramienta-amplificadora"><span class="header-section-number">1</span> Preámbulo: la paradoja de la herramienta amplificadora</h2>
+<p>Al igual que la llegada del cálculo simbólico, los lenguajes de programación de alto nivel o los entornos de simulación computacional, los <strong>modelos de lenguaje a gran escala (LLMs)</strong> y los sistemas de <strong>Generación Aumentada por Recuperación (RAG)</strong> alteran drásticamente el coste marginal de procesar información, escribir código y sintetizar literatura.</p>
+<p>Rechazar la IA en la educación superior por miedo al fraude es un acto de ceguera Luddita que condena al estudiante al anacronismo. Sin embargo, aceptarla como una “muleta” que sustituya el esfuerzo lógico conduce al embrutecimiento sistemático: la atrofia del músculo analítico, la incapacidad para detectar falacias empíricas y la dependencia infantil de la máquina.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>El principio fundamental
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>Nueva Somosaguas</strong> establece una política innegociable de IA basada en el <strong>Principio del Exoesqueleto Cognitivo</strong>: la tecnología es nuestro siervo; el rigor intelectual es nuestro rey.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="el-exoesqueleto-cognitivo-vs.-la-muleta-mental" class="level2 page-columns page-full" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="el-exoesqueleto-cognitivo-vs.-la-muleta-mental"><span class="header-section-number">2</span> El exoesqueleto cognitivo vs.&nbsp;la muleta mental</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><em>“Un exoesqueleto exige un cuerpo fuerte para sostener la estructura; una muleta asume la invalidez del usuario.”</em></p>
+</div></div><p>Para guiar el día a día académico, se establece una distinción clara y operativa entre dos modos de uso de la tecnología:</p>
+<section id="la-muleta-mental-estrictamente-prohibida" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="la-muleta-mental-estrictamente-prohibida"><span class="header-section-number">2.1</span> La muleta mental (estrictamente prohibida)</h3>
+<ul>
+<li>Delegar en la máquina el planteamiento inicial de un problema o la hipótesis de investigación.</li>
+<li>Generar textos académicos vacíos, hinchados de adjetivación burocrática.</li>
+<li>Aceptar respuestas sintéticas o p-valores sin verificación directa sobre los datos primarios.</li>
+<li>Entregar scripts de código en R, Python o SQL que el estudiante no comprende ni sabe derivar desde primeros principios.</li>
+</ul>
+</section>
+<section id="el-exoesqueleto-cognitivo-exigido-y-estimulado" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="el-exoesqueleto-cognitivo-exigido-y-estimulado"><span class="header-section-number">2.2</span> El exoesqueleto cognitivo (exigido y estimulado)</h3>
+<ul>
+<li>Acelerar la carpintería mecánica de la sintaxis (depuración de errores, optimización de algoritmos, refactorización).</li>
+<li>Utilizar la IA como oponente dialéctico para someter a prueba las propias hipótesis (<em>Red Teaming</em>).</li>
+<li>Refinar el estilo de la prosa buscando claridad, concisión y fuerza expresiva.</li>
+<li>Automatizar pruebas de esfuerzo (<em>stress testing</em>) y simulación Monte Carlo sobre modelos teóricos.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>La regla de oro de la cátedra
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Ningún estudiante podrá entregar una sola línea de código, ecuación o argumento generado por IA que no sea capaz de derivar, explicar y defender personalmente en la pizarra sin asistencia tecnológica.</strong></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="arquitectura-rag-académica-grounding-y-trazabilidad" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="arquitectura-rag-académica-grounding-y-trazabilidad"><span class="header-section-number">3</span> Arquitectura RAG académica: grounding y trazabilidad</h2>
+<p>Para evitar que el aprendizaje se degenere en el consumo de alucinaciones plausibles pero falsas, el entorno computacional de la facultad opera sobre un <strong>sistema RAG (Retrieval-Augmented Generation) de frontera</strong>.</p>
+<pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                 CORPUS CERRADO DE CONSILIENCIA                         │
+│   • Plomin, Reich, Pearl, Morgan &amp; Winship, Dunning, Efron, Smil, etc. │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                   MOTOR RAG ACADÉMICO / VECTOR DB                     │
+│   • Búsqueda semántica por pasajes de alta densidad                    │
+│   • Cita obligatoria con índice [i] y trazabilidad a la fuente        │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                  EXOESQUELETO COGNITIVO DEL ALUMNO                     │
+│   • Auditoría activa de errores y detección de alucinaciones           │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+<ol type="1">
+<li><strong>Garantía de Grounding Estricto:</strong> Los entornos RAG institucionales y los tutores locales se alimentan de las 114 fuentes de consiliencia del pensum. Cada afirmación fáctica realizada por el sistema debe ir acompañada de su citación y trazabilidad directa a los textos fuente.</li>
+<li><strong>Auditoría de Alucinaciones como Evaluación:</strong> Parte del adiestramiento avanzado consiste en <strong>identificar activamente los fallos del modelo</strong>: detectar cuándo la IA confunde correlación con causalidad, dónde comete errores en la inducción estadística o cuándo inventa referencias. Encontrar el error de la máquina cuenta como evidencia de alta maestría.</li>
+</ol>
+<hr>
+</section>
+<section id="protocolo-anti-atrofia-y-evaluación-de-segundo-orden" class="level2 page-columns page-full" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="protocolo-anti-atrofia-y-evaluación-de-segundo-orden"><span class="header-section-number">4</span> Protocolo anti-atrofia y evaluación de segundo orden</h2>
+<p>Dado que la IA puede generar resúmenes o scripts de R/Python en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:</p>
+<section id="la-prueba-de-la-pizarra-blackboard-defence" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="la-prueba-de-la-pizarra-blackboard-defence"><span class="header-section-number">4.1</span> 1. La prueba de la pizarra (<em>Blackboard Defence</em>)</h3>
+<p>Cualquier entrega de código o <em>working paper</em> puede ser sometida a un examen oral sorpresa en el que el alumno, frente a la pizarra y sin dispositivos electrónicos, debe:</p>
+<ul>
+<li>Derivar el modelo matemático o econométrico subyacente.</li>
+<li>Recomponer la lógica del script línea por línea.</li>
+<li>Explicar el DAG causal y las restricciones de identificación de su estudio.</li>
+</ul>
+</section>
+<section id="uso-adversarial-obligatorio-red-teaming-cognitive" class="level3 page-columns page-full" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="uso-adversarial-obligatorio-red-teaming-cognitive"><span class="header-section-number">4.2</span> 2. Uso adversarial obligatorio (<em>Red Teaming Cognitive</em>)</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><em>“Para neutralizar el myside bias (Mercier &amp; Sperber), la IA debe actuar como el fiscal más despiadado de tus propias ideas.”</em></p>
+</div></div><p>Para combatir el sesgo de confirmación y la racionalización cómoda, el alumno está obligado a utilizar la IA como un <strong>oponente dialéctico</strong>. El estudiante debe instruir al sistema para que: * Busque fallos de colisionador o variables omitidas en su DAG. * Proponga explicaciones alternativas convincentes basadas en incentivos. * Critique la solidez de los <em>priors</em> seleccionados.</p>
+<p>La memoria de cada trabajo debe incluir el registro del debate adversarial con la máquina y la justificación de cómo el alumno defendió o corrigió su modelo.</p>
+</section>
+<section id="evaluación-de-la-arquitectura-del-prompting-y-auditoría" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="evaluación-de-la-arquitectura-del-prompting-y-auditoría"><span class="header-section-number">4.3</span> 3. Evaluación de la arquitectura del prompting y auditoría</h3>
+<p>Se evalúa la <strong>densidad del planteamiento del problema</strong> realizado por el estudiante: * La precisión analítica del <em>steering prompt</em>. * La relevancia de las restricciones impuestas al modelo. * La corrección rigurosa de los borradores intermedios generados por la máquina.</p>
+<hr>
+</section>
+</section>
+<section id="decálogo-del-estudiante-políglota-en-la-era-de-la-ia" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="decálogo-del-estudiante-políglota-en-la-era-de-la-ia"><span class="header-section-number">5</span> Decálogo del estudiante políglota en la era de la IA</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Principios de conducta intelectual
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Usa la IA para llegar más lejos, no para trabajar menos.</strong> Si la IA te ahorra tres horas de programar sintaxis básica, esas tres horas se invierten en estudiar la teoría de la prueba o profundizar en la evidencia empírica.</li>
+<li><strong>Si no puedes verificarlo, no existe.</strong> Ningún dato, cita o p-valor provisto por un modelo de lenguaje se da por bueno sin contrastación directa con la fuente o el script de réplica.</li>
+<li><strong>El código es el deliverable; la mente es el arquitecto.</strong> La sintaxis pertenece a la máquina, pero la especificación del problema, la intuición causal y la responsabilidad son 100% tuyas.</li>
+<li><strong>Cultiva la prosa limpia y musculosa.</strong> La IA tiende a la adjetivación hinchada y al tono burocrático; tu obligación es podar el texto hasta dejar la prosa sobria, incisiva e inexpugnable.</li>
+<li><strong>No temas discutirle a la máquina.</strong> La IA no posee intuición sociológica ni juicio causal; es un modelo probabilístico de predicción de tokens. Tu labor es ser el juez.</li>
+<li><strong>Entrena con el RAG de la facultad.</strong> La información dispersa en la web está contaminada de sesgos; busca el grounding en las fuentes validadas de la consiliencia.</li>
+<li><strong>Pasa la Prueba de la Pizarra cada día.</strong> Pregúntate en cada línea de código o párrafo: <em>“¿Sabría explicar esto sin pantallas ante un tribunal?”</em>. Si la respuesta es no, vuelve a empezar.</li>
+<li><strong>Sé transparente en el flujo de trabajo.</strong> Documenta qué partes del análisis contaron con asistencia algorítmica y cómo fueron auditadas.</li>
+<li><strong>Usa la IA para buscar tus propios puntos ciegos.</strong> Haz que el modelo adopte la postura del crítico más duro de tu trabajo antes de entregarlo.</li>
+<li><strong>El rigor no se negocia.</strong> La tecnología cambia cada mes; la consistencia lógica, la honestidad intelectual y la búsqueda de la verdad permanecen.</li>
+</ol>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nuevasomosaguas\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

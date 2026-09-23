@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Nueva Somosaguas"
+  subtitle: "Facultad Libre de Ciencias Sociales Analíticas y Cuantitativas"
+  site-url: "https://nuevasomosaguas.org"
+  repo-url: "https://github.com/nuevasomosaguas/nuevasomosaguas.org"
+  navbar:
+    background: "#1a1a1a"
+    foreground: "#f8f9fa"
+    search: true
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Malla Curricular"
+        href: malla_curricular.qmd
+      - text: "Gobierno de la IA"
+        href: gobierno_ia.qmd
+      - text: "Debate Público"
+        href: manual_bolsillo.qmd
+      - text: "Biblioteca"
+        href: biblioteca.qmd
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    mainfont: "Garamond", "Georgia", "Times New Roman", serif
+    monofont: "Fira Code", "Source Code Pro", monospace
+    fontsize: 1.1em
+    linestretch: 1.6
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    number-sections: true
+    code-copy: true
+    code-fold: show
+    highlight-style: github
+    html-math-method: mathjax

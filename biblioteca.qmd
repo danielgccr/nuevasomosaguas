@@ -1,0 +1,179 @@
+---
+title: "Biblioteca de consiliencia"
+subtitle: "El corpus vivo de la Nueva Somosaguas — `r {source('refs.R'); n_obras}` obras fundacionales"
+engine: knitr
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-fold: show
+---
+
+::: {.callout-note}
+## El filtro de consiliencia
+Esta biblioteca reúne la totalidad de las **`r n_obras` fuentes primarias** que constituyen la columna vertebral intelectual de la **Nueva Somosaguas**. Frente al canon impresionista de la sociología tradicional, cada obra aquí incluida cumple estrictamente con el principio de consiliencia de E. O. Wilson: **compatibilidad vertical entre las matemáticas, la biología evolutiva, los micro-mecanismos de decisión y la historia cuantitativa de gran escala**.
+:::
+
+---
+
+## 1. Cimientos formales, probabilidad, álgebra e inferencia estadística
+
+Obras dedicadas al adiestramiento del razonamiento cuantitativo de primer orden, la eliminación de la ilusión estadística y la formalización matemática del azar.
+
+* **Blitzstein, Joseph K. & Hwang, Jessica** (2019). *Introduction to Probability* (Harvard Stat 110). Chapman and Hall/CRC. `[Nivel 1 | Probabilidad]`
+* **Axler, Sheldon** (2024). *Linear Algebra Done Right* (4th Edition). Springer. `[Nivel 1 | Álgebra Lineal]`
+* **Casella, George & Berger, Roger L.** (2024). *Statistical Inference* (2nd Edition). Chapman and Hall/CRC. `[Nivel 2 | Inferencia Formal]`
+* **Efron, Bradley & Hastie, Trevor** (2016). *Computer Age Statistical Inference: Algorithms, Evidence, and Data Science*. Cambridge University Press. `[Nivel 3 | Inferencia Computacional]`
+* **Efron, Bradley** (2026). *To Think Like A Statistician*. Princeton University Press. `[Nivel 2 | Filosofía Estadística]`
+* **Jaynes, Edwin T.** (2003). *Probability Theory: The Logic of Science*. Cambridge University Press. `[Nivel 3 | Bayes/Epistemología]`
+* **Gill, Jeff & Bao, Le** (2024). *Bayesian Social Science Statistics: Volume 1*. Cambridge University Press. `[Nivel 2 | Estadística Bayesiana]`
+* **Gill, Jeff** (2006). *Essential Mathematics for Political and Social Research*. Cambridge University Press. `[Nivel 1 | Matemáticas Fundamentales]`
+* **Hacking, Ian** (2016). *Logic of Statistical Inference*. Cambridge University Press. `[Nivel 2 | Lógica e Inferencia]`
+* **Briggs, William M.** (2016). *Uncertainty: The Soul of Modeling, Probability & Statistics*. Springer. `[Nivel 2 | Modelización]`
+* **Harman, Gilbert & Kulkarni, Sanjeev** (2007). *Reliable Reasoning: Induction and Statistical Learning Theory*. The MIT Press. `[Nivel 2 | Teoria del Aprendizaje]`
+* **Dienes, Zoltan** (2008). *Understanding Psychology as a Science: An Introduction to Scientific and Bayesian Inference*. Palgrave Macmillan. `[Nivel 1 | Método Científico]`
+* **Lockhart, Paul** (2012). *Measurement*. Belknap Press of Harvard University Press. `[Nivel 1 | Intuición Matemática]`
+* **Enderton, Herbert B.** (2001). *A Mathematical Introduction to Logic* (2nd Edition). Academic Press. `[Nivel 2 | Lógica Matemática]`
+* **Monahan, John F.** (2008). *A Primer on Linear Models*. Chapman & Hall/CRC. `[Nivel 2 | Modelos Lineales]`
+* **Sheather, Simon** (2009). *A Modern Approach to Regression with R*. Springer. `[Nivel 1 | Regresión Aplicada]`
+* **Wilcox, Rand** (2011). *Modern Statistics for the Social and Behavioral Sciences: A Practical Introduction*. CRC Press. `[Nivel 2 | Estadística Robusta]`
+* **Kraska-Miller, Maria** (2013). *Nonparametric Statistics for Social and Behavioral Sciences*. CRC Press. `[Nivel 2 | No Paramétrica]`
+* **Pigott, Terri D.** (2012). *Advances in Meta-Analysis*. Springer. `[Nivel 3 | Meta-Análisis]`
+* **Finkelstein, Michael O. & Levin, Bruce** (2015). *Statistics for Lawyers*. Springer. `[Nivel 1 | Aplicación Jurídica]`
+* **O'Brien, Robert M.** (2014). *Age-Period-Cohort Models: Approaches and Analyses with Aggregate Data*. CRC Press. `[Nivel 3 | Demografía APC]`
+
+---
+
+## 2. Biología evolutiva, genética cuantitativa y paleogenómica
+
+Fuentes destinadas a la comprensión de la naturaleza humana biológicamente asentada, la heredabilidad de rasgos complejos, las diferencias individuales y la coevolución genético-cultural.
+
+* **Plomin, Robert** (2018). *Blueprint: How DNA Makes Us Who We Are*. The MIT Press. `[Nivel 2 | Genética Cuantitativa]`
+* **Plomin, Robert & Asbury, Kathryn** (2013). *G is for Genes: The Impact of Genetics on Education and Achievement*. Wiley-Blackwell. `[Nivel 1 | Genética Educativa]`
+* **Falconer, D. S. & Mackay, Trudy F. C.** (1996/2009). *Introduction to Quantitative Genetics* (4th Edition). Pearson. `[Nivel 3 | Genética Matemática]`
+* **Reich, David** (2018). *Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past*. Pantheon Books. `[Nivel 2 | Paleogenómica]`
+* **Cochran, Gregory & Harpending, Henry** (2009). *The 10,000 Year Explosion: How Civilization Accelerated Human Evolution*. Basic Books. `[Nivel 2 | Evolución Reciente]`
+* **Haier, Richard J.** (2017). *The Neuroscience of Intelligence*. Cambridge University Press. `[Nivel 2 | Psicometría/Neurociencia]`
+* **Buss, David M. & Hawley, Patricia H.** (Eds.) (2010). *The Evolution of Personality and Individual Differences*. Oxford University Press. `[Nivel 2 | Psicología Evolutiva]`
+* **Boehm, Christopher** (1999). *Hierarchy in the Forest: The Evolution of Egalitarian Behavior*. Harvard University Press. `[Nivel 2 | Antropología Evolutiva]`
+* **Tuschman, Avi** (2013). *Our Political Nature: The Evolutionary Origins of What Divides Us*. Prometheus Books. `[Nivel 2 | Psicología Política]`
+* **Sesardic, Neven** (2005). *Making Sense of Heritability*. Cambridge University Press. `[Nivel 3 | Filosofía de la Heredabilidad]`
+* **Vanhanen, Tatu** (2012). *Ethnic Conflicts: Their Biological Roots in Ethnic Nepotism*. Ulster Institute for Social Research. `[Nivel 2 | Nepotismo Étnico]`
+* **Frans de Waal** (2016). *Are We Smart Enough to Know How Smart Animals Are?* W. W. Norton & Company. `[Nivel 1 | Etología Comparada]`
+* **Pigliucci, Massimo & Kaplan, Jonathan** (2006). *Making Sense of Evolution: The Conceptual Foundations of Evolutionary Biology*. University of Chicago Press. `[Nivel 3 | Filosofía Biológica]`
+* **Lindeberg, Staffan** (2010). *Food and Western Disease: Health and Nutrition from an Evolutionary Perspective*. Wiley-Blackwell. `[Nivel 1 | Medicina Evolutiva]`
+
+---
+
+## 3. Sociología analítica, inferencia causal y mecanismos micro (DBO)
+
+Cuerpo teórico que desmantela las "causas mágicas" y el holismo estructuralista, reemplazándolos por mecanismos micro-fundamentados de acción individual, diagramas acíclicos dirigidos (DAGs) y experimentos naturales.
+
+* **Hedström, Peter** (2005). *Dissecting the Social: On the Principles of Analytical Sociology*. Cambridge University Press. `[Nivel 2 | Sociología Analítica]`
+* **Elster, Jon** (2015). *Explaining Social Behavior: More Nuts and Bolts for the Social Sciences* (2nd Edition). Cambridge University Press. `[Nivel 2 | Mecanismos DBO]`
+* **Boudon, Raymond** (1974). *The Logic of Sociological Explanation*. Penguin Education. `[Nivel 1 | Individualismo Metodológico]`
+* **Demeulenaere, Pierre** (Ed.) (2011). *Analytical Sociology and Social Mechanisms*. Cambridge University Press. `[Nivel 2 | Mecanismos Sociales]`
+* **Pearl, Judea** (2009). *Causality: Models, Reasoning, and Inference* (2nd Edition). Cambridge University Press. `[Nivel 3 | Inferencia Causal / DAGs]`
+* **Morgan, Stephen L. & Winship, Christopher** (2014). *Counterfactuals and Causal Inference: Models and Principles for Social Research*. Cambridge University Press. `[Nivel 2 | Modelos Contrafactuales]`
+* **Dunning, Thad** (2012). *Natural Experiments in the Social Sciences: A Design-Based Approach*. Cambridge University Press. `[Nivel 2 | Experimentos Naturales]`
+* **Molak, Aleksander & Jaokar, Ajit** (2023). *Causal Inference and Discovery in Python*. Packt Publishing. `[Nivel 2 | Inferencia Causal en Python]`
+* **Mumford, Stephen & Anjum, Rani Lill** (2014). *Causation: A Very Short Introduction*. Oxford University Press. `[Nivel 1 | Metafísica Causal]`
+* **Goldthorpe, John H.** (2001). *Causation, Statistics, and Sociology*. European Sociological Review. `[Nivel 2 | Causalidad Sociológica]`
+* **Ragin, Charles C.** (2008). *Redesigning Social Inquiry: Fuzzy Sets and Beyond*. University of Chicago Press. `[Nivel 3 | Métodos Cualitativo-Comparativos]`
+* **Swedberg, Richard** (2014). *The Art of Social Theory*. Princeton University Press. `[Nivel 1 | Teorización Creativa]`
+* **Swedberg, Richard** (Ed.) (2014). *Theorizing in Social Science: The Context of Discovery*. Stanford Social Sciences. `[Nivel 1 | Contexto de Descubrimiento]`
+
+---
+
+## 4. Teoría de juegos, elección pública, redes y dinámica de la cooperación
+
+Herramientas para modelar la interacción estratégica, los dilemas de acción colectiva, la formación de redes socioeconómicas y la arquitectura de incentivos institucionales.
+
+* **Binmore, Ken** (2007). *Playing for Real: A Text on Game Theory*. Oxford University Press. `[Nivel 2 | Teoría de Juegos Classic]`
+* **Binmore, Ken** (2011). *Evolution and Rationality: Decisions, Cooperation and Strategic Behaviour*. Cambridge University Press. `[Nivel 3 | Juegos Evolutivos]`
+* **Gintis, Herbert** (2017). *The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences* (Revised Edition). Princeton University Press. `[Nivel 3 | Unificación de Ciencias Conductuales]`
+* **Schecter, Stephen & Gintis, Herbert** (2016). *Game Theory in Action: An Introduction to Classical and Evolutionary Models*. Princeton University Press. `[Nivel 2 | Modelos Aplicados]`
+* **Vega-Redondo, Fernando** (2003). *Economics and the Theory of Games*. Cambridge University Press. `[Nivel 3 | Economía Matemática]`
+* **Rodríguez, Abel & Mendes, Bruno** (2018). *Probability, Decisions and Games: A Gentle Introduction using R*. Wiley. `[Nivel 1 | Juegos en R]`
+* **Buchanan, James M. & Tullock, Gordon** (1962/2020). *The Calculus of Consent: Logical Foundations of Constitutional Democracy*. University of Michigan Press. `[Nivel 2 | Elección Pública]`
+* **Olson, Mancur** (1965/2020). *The Logic of Collective Action: Public Goods and the Theory of Groups*. Harvard University Press. `[Nivel 2 | Bienes Públicos]`
+* **Jackson, Matthew O.** (2008). *Social and Economic Networks*. Princeton University Press. `[Nivel 3 | Análisis de Redes]`
+* **Kolaczyk, Eric D. & Csárdi, Gábor** (2014). *Statistical Analysis of Network Data with R*. Springer. `[Nivel 2 | Redes en R]`
+* **Page, Scott E.** (2007). *The Difference: How the Power of Diversity Creates Better Groups, Firms, Schools, and Societies*. Princeton University Press. `[Nivel 1 | Diversidad y Modelos]`
+* **Durlauf, Steven N. & Young, H. Peyton** (Eds.) (2001). *Social Dynamics*. The MIT Press. `[Nivel 3 | Dinámica Social Compleja]`
+
+---
+
+## 5. Psicología cognitiva, antropología de la cultura y economía política
+
+Estudio de los sesgos cognitivos, la evolución de la moral y las religiones, la irracionalidad del votante y las patologías de la elección democrática.
+
+* **Mercier, Hugo & Sperber, Dan** (2017). *The Enigma of Reason: A New Theory of Human Understanding*. Harvard University Press. `[Nivel 2 | Teoría Argumentativa]`
+* **Tomasello, Michael** (2014). *A Natural History of Human Thinking*. Harvard University Press. `[Nivel 2 | Desarrollo Cognitivo]`
+* **Nisbett, Richard E.** (2015). *Mindware: Tools for Smart Thinking*. Farrar, Straus and Giroux. `[Nivel 1 | Herramientas Cognitivas]`
+* **Bloom, Paul** (2016). *Against Empathy: The Case for Rational Compassion*. Ecco. `[Nivel 1 | Ética Rational]`
+* **Boyer, Pascal** (2006). *Tradition as Truth and Communication: A Cognitive Description of Traditional Discourse*. Cambridge University Press. `[Nivel 2 | Antropología Cognitiva]`
+* **Atran, Scott** (2002). *In Gods We Trust: The Evolutionary Landscape of Religion*. Oxford University Press. `[Nivel 2 | Evolución Religiosa]`
+* **Norenzayan, Ara** (2013). *Big Gods: How Religion Transformed Cooperation and Conflict*. Princeton University Press. `[Nivel 2 | Religión y Cooperación]`
+* **Caplan, Bryan** (2007). *The Myth of the Rational Voter: Why Democracies Choose Bad Policies*. Princeton University Press. `[Nivel 2 | Economía Política]`
+* **Achen, Christopher H. & Bartels, Larry M.** (2016). *Democracy for Realists: Why Elections Do Not Produce Responsive Government*. Princeton University Press. `[Nivel 2 | Comportamiento Electoral]`
+* **Tetlock, Philip E.** (2005). *Expert Political Judgment: How Good Is It? How Can We Know?* Princeton University Press. `[Nivel 2 | Predicción Política]`
+* **Gelman, Andrew** (2009). *Red State, Blue State, Rich State, Poor State: Why Americans Vote the Way They Do* (Expanded Edition). Princeton University Press. `[Nivel 2 | Geografía Electoral]`
+* **Wallis, W. D.** (2014). *The Mathematics of Elections and Voting*. Springer. `[Nivel 2 | Sistemas Electorales]`
+* **Taagepera, Rein** (2007). *Predicting Party Sizes: The Logic of Simple Electoral Systems*. Oxford University Press. `[Nivel 3 | Leyes Electorales Formales]`
+* **Taagepera, Rein** (2008). *Making Social Sciences More Scientific: The Need for Predictive Models*. Oxford University Press. `[Nivel 2 | Epistemología Cuantitativa]`
+* **Postman, Neil** (1985). *Amusing Ourselves to Death: Public Discourse in the Age of Show Business*. Viking. `[Nivel 1 | Sociología de Medios]`
+
+---
+
+## 6. Cliodinámica, macrohistoria, economía biofísica e historia económica
+
+Obras de análisis de gran escala sobre el surgimiento de la prosperidad, los límites energéticos y los ciclos seculares de estabilidad e inestabilidad política.
+
+* **Turchin, Peter & Nefedov, Sergey A.** (2009). *Secular Cycles*. Princeton University Press. `[Nivel 3 | Cliodinámica / Demografía Estructural]`
+* **Smil, Vaclav** (2017). *Energy and Civilization: A History*. The MIT Press. `[Nivel 2 | Historia Biofísica]`
+* **Wrigley, E. A.** (2010). *Energy and the English Industrial Revolution*. Cambridge University Press. `[Nivel 2 | Historia Energética]`
+* **Clark, Gregory** (2007). *A Farewell to Alms: A Brief Economic History of the World*. Princeton University Press. `[Nivel 2 | Historia Económica Malthusiana]`
+* **Galor, Oded & Katz, Ori** (2022). *The Journey of Humanity: The Origins of Wealth and Inequality*. Random House. `[Nivel 1 | Teoría del Crecimiento Unificado]`
+* **Morris, Ian & Scheidel, Walter** (Eds.) (2009). *The Dynamics of Ancient Empires: State Power from Assyria to Byzantium*. Oxford University Press. `[Nivel 2 | Macro-Sociología Histórica]`
+* **Morris, Ian** (2014). *War! What Is It Good For? Conflict and the Progress of Civilization from Primates to Robots*. Farrar, Straus and Giroux. `[Nivel 1 | Evolución del Conflicto]`
+* **Gat, Azar** (2017). *The Causes of War and the Spread of Peace: But Will War Rebound?* Oxford University Press. `[Nivel 2 | Orígenes de la Guerra]`
+* **Bairoch, Paul** (1995). *Economics and World History: Myths and Paradoxes*. University of Chicago Press. `[Nivel 2 | Historia Económica Cuantitativa]`
+* **Findlay, Ronald & O'Rourke, Kevin H.** (2007). *Power and Plenty: Trade, War, and the World Economy in the Second Millennium*. Princeton University Press. `[Nivel 2 | Comercio y Poder]`
+* **Wickham, Chris** (2005). *Framing the Early Middle Ages: Europe and the Mediterranean, 400-800*. Oxford University Press. `[Nivel 3 | Historia Comparada]`
+* **Harris, Bernard et al.** (2011). *The Changing Body: Health, Nutrition, and Human Development in the Western World since 1700*. Cambridge University Press. `[Nivel 2 | Antropometría Histórica]`
+* **Seabright, Paul** (2010). *The Company of Strangers: A Natural History of Economic Life* (Revised Edition). Princeton University Press. `[Nivel 1 | Cooperación Económica]`
+* **Mesoudi, Alex** (2011). *Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences*. University of Chicago Press. `[Nivel 2 | Transmisión Cultural]`
+* **Ritchey, Tom** (2011). *Wicked Problems - Social Messes: Decision Support Modelling with Morphological Analysis*. Springer. `[Nivel 2 | Análisis Morfológico]`
+
+---
+
+## 7. Ciencias sociales generativas, simulación de agentes y ciencia de datos políglota
+
+Fuentes técnicas para la simulación desde abajo (*bottom-up*), la ciencia de datos en R, Python y SQL, y la infraestructura computacional de investigación.
+
+* **Epstein, Joshua M.** (2006). *Generative Social Science: Studies in Agent-Based Computational Modeling*. Princeton University Press. `[Nivel 3 | Ciencias Sociales Generativas]`
+* **Epstein, Joshua M.** (2014). *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*. Princeton University Press. `[Nivel 3 | Simulación Agent_Zero]`
+* **Epstein, Joshua M.** (1997). *Nonlinear Dynamics, Mathematical Biology, and Social Science*. Addison-Wesley / Santa Fe Institute. `[Nivel 3 | Sistemas Dinámicos]`
+* **Gintis, Herbert; Bowles, Samuel; Boyd, Robert T. & Fehr, Ernst** (Eds.) (2005). *Moral Sentiments and Material Interests: The Foundations of Cooperation in Economic Life*. The MIT Press. `[Nivel 2 | Simulación y Experimentos]`
+* **Stachurski, John** (2009). *Economic Dynamics: Theory and Computation*. The MIT Press. `[Nivel 3 | Computación Económica]`
+* **Wickham, Hadley** (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer. `[Nivel 1 | Visualización en R]`
+* **Matloff, Norman** (2023). *The Art of Machine Learning: A Hands-On Guide*. No Starch Press. `[Nivel 2 | Machine Learning]`
+* **Tuckfield, Bradford** (2020). *Dive Into Algorithms: A Pythonic Adventure for the Daring*. No Starch Press. `[Nivel 1 | Algoritmos en Python]`
+* **Tuckfield, Bradford** (2023). *Dive into Data Science: Use Python to Tackle Your Toughest Questions*. No Starch Press. `[Nivel 1 | Ciencia de Datos]`
+* **Grus, Joel** (2019). *Data Science from Scratch: First Principles with Python* (2nd Edition). O'Reilly Media. `[Nivel 1 | Python desde Cero]`
+* **Kopec, David** (2025). *Computer Science From Scratch*. No Starch Press. `[Nivel 1 | Ciencias de la Computación]`
+* **Day, Ryan** (2025). *Hands-On APIs for AI and Data Science: Python Development*. O'Reilly Media. `[Nivel 2 | Integración de APIs]`
+* **Date, C. J.** (2015). *SQL and Relational Theory: How to Write Accurate SQL Code* (3rd Edition). O'Reilly Media. `[Nivel 2 | Base de Datos SQL]`
+* **Kernighan, Brian W. & Pike, Rob** (1999). *The Practice of Programming*. Addison-Wesley. `[Nivel 1 | Práctica de Programación]`
+* **Kernighan, Brian W.** (2018). *Millions, Billions, Zillions: Defending Yourself in a World of Too Many Numbers*. Princeton University Press. `[Nivel 1 | Alfabetización Numérica]`
+* **Taylor, Dave & Perry, Brandon** (2016). *Wicked Cool Shell Scripts* (2nd Edition). No Starch Press. `[Nivel 1 | Scripting Unix]`
+* **Freeman, Michael & Ross, Joel** (2019). *Programming Skills for Data Science: Start Writing Code to Wrangle, Analyze, and Visualize Data with R*. Addison-Wesley. `[Nivel 1 | R para Data Science]`
+* **van der Loo, Mark & de Jonge, Edwin** (2018). *Statistical Data Cleaning with Applications in R*. Wiley. `[Nivel 2 | Limpieza de Datos]`
+* **Healy, Kieran** (2019). *Data Visualization: A Practical Introduction*. Princeton University Press. `[Nivel 1 | Visualización de Datos]`
+* **Allesina, Stefano & Wilmes, Madlen** (2019). *Computing Skills for Biologists: A Toolbox*. Princeton University Press. `[Nivel 1 | Toolbox Computacional]`
+* **Raymond, Eric S.** (1999). *The Cathedral and the Bazaar: Musings on Linux and Open Source*. O'Reilly Media. `[Nivel 1 | Filosofía Open Source]`
+* **Tufte, Edward R.** (2004). *The Cognitive Style of PowerPoint: Pitching Out Corrupts Within*. Graphics Press. `[Nivel 1 | Comunicación Cifrada]`
+* **Firestein, Stuart** (2015). *Failure: Why Science Is So Successful*. Oxford University Press. `[Nivel 1 | Filosofía de la Ciencia]`
+* **Murray, Charles** (2003). *Human Accomplishment: The Pursuit of Excellence in the Arts and Sciences, 800 B.C. to 1950*. HarperCollins. `[Nivel 2 | Historia de la Excelencia]`

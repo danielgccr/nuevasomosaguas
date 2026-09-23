@@ -1,0 +1,166 @@
+/* Custom Tufte-style CSS for Nueva Somosaguas (Quarto) */
+
+@import url('https://fonts.googleapis.com/css2?family=ET+Book:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap');
+
+:root {
+  --font-body: 'Newsreader', 'ET Book', Garamond, Georgia, serif;
+  --font-code: 'Fira Code', monospace;
+  --bg-color: #fffff8;
+  --text-color: #111111;
+  --accent-color: #800000; /* Burgundy / Granate académico */
+  --muted-color: #555555;
+  --code-bg: #f5f5ee;
+  --border-color: #e0e0d8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.4rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2.2rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  background-color: rgba(128, 0, 0, 0.08);
+}
+
+/* Code & Pre */
+code, pre {
+  font-family: var(--font-code);
+  font-size: 0.88em;
+}
+
+code {
+  background-color: var(--code-bg);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: var(--code-bg);
+  padding: 1.2rem;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 4px 4px 0;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+/* Tables (Tufte style: no vertical borders, clean horizontal lines) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95em;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  border-bottom: 2px solid var(--text-color);
+  font-weight: 700;
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child td {
+  border-bottom: 2px solid var(--text-color);
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--accent-color);
+  font-style: italic;
+  color: var(--muted-color);
+}
+
+/* Sidenotes / Marginalia (Tufte Style) */
+.aside, .sidenote {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--muted-color);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--border-color);
+}
+
+@media (min-width: 1100px) {
+  .aside, .sidenote {
+    float: right;
+    clear: right;
+    margin-right: -32%;
+    width: 28%;
+    margin-top: 0;
+    border-left: 2px solid var(--accent-color);
+    padding-left: 0.6rem;
+  }
+}
+
+/* Mermaid: scale the diagram to the full text column (mermaid sizes the SVG
+   from its own text measurement; only scale it proportionally, never restyle
+   the fonts, or labels overflow their boxes) */
+.cell-output-display svg[id^="mermaid"] {
+  width: 100%;
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Card headings in the landing grid are links, not prose headings:
+   the Tufte italic on h3 makes them read as emphasis. */
+.grid h3 {
+  font-style: normal;
+}
