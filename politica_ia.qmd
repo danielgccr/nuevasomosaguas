@@ -67,7 +67,7 @@ Para que el estudio no degenere en consumo de alucinaciones plausibles, el entor
 %%| label: fig-rag
 %%| fig-cap: "Arquitectura RAG de la facultad: del corpus cerrado a la auditoría del alumno."
 
-%%{init: {"flowchart": {"nodeSpacing": 30, "rankSpacing": 45, "padding": 28, "useMaxWidth": true}}}%%
+%%{init: {"flowchart": {"nodeSpacing": 30, "rankSpacing": 45, "padding": 28, "wrappingWidth": 460, "useMaxWidth": true}}}%%
 flowchart TD
     C["CORPUS CERRADO DE CONSILIENCIA<br/>Plomin · Reich · Pearl · Morgan y Winship<br/>Dunning · Efron · Smil · etc."]
     M["MOTOR RAG ACADÉMICO / VECTOR DB<br/>Búsqueda semántica por pasajes de alta densidad<br/>Cita obligatoria con índice y trazabilidad a la fuente"]
