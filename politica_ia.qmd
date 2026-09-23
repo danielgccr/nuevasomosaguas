@@ -1,6 +1,6 @@
 ---
-title: "El exoesqueleto cognitivo: política de inteligencia artificial"
-subtitle: "Regulación, integración RAG y protocolos anti-atrofia intelectual en la Nueva Somosaguas"
+title: "Política de inteligencia artificial"
+subtitle: "Doctrina de soberanía intelectual y exoesqueleto cognitivo"
 format:
   html:
     toc: true
@@ -13,63 +13,61 @@ format:
 source("refs.R")
 ```
 
-> *«La Inteligencia Artificial no es un artefacto mágico ni una amenaza existencial para la educación; es un acelerador de masa crítica. La máquina debe multiplicar la fuerza del atleta intelectual, nunca sustituir sus huesos ni sus músculos.»*
+## El fin de la falsa dicotomía: ni prohibición ni capitulación
 
-------------------------------------------------------------------------
+La universidad burocrática oscila entre dos respuestas igualmente estériles ante la inteligencia artificial generativa: la prohibición tecnofóbica, inútil y contraria al progreso instrumental, o la claudicación complaciente que acepta texto sintético mediocre como sucedáneo del pensamiento propio.
 
-## Preámbulo: la paradoja de la herramienta amplificadora
-
-Al igual que la llegada del cálculo simbólico, los lenguajes de programación de alto nivel o los entornos de simulación computacional, los **modelos de lenguaje a gran escala (LLMs)** y los sistemas de **generación aumentada por recuperación (RAG)** alteran drásticamente el coste marginal de procesar información, escribir código y sintetizar literatura.
-
-Rechazar la IA en la educación superior por miedo al fraude es un acto de ceguera ludita que condena al estudiante al anacronismo. Sin embargo, aceptarla como una «muleta» que sustituya el esfuerzo lógico conduce al embrutecimiento sistemático: la atrofia del músculo analítico, la incapacidad para detectar falacias empíricas y la dependencia infantil de la máquina.
+La **Nueva Somosaguas** rechaza ambos extremos. Asume los modelos de lenguaje y los entornos de inferencia local como un **exoesqueleto cognitivo**: una herramienta para reducir a cero el coste temporal de la tarea mecánica —raspado de datos, conversión de formatos, depuración sintáctica— y desplazar el esfuerzo intelectual hacia donde la máquina es ciega: la identificación causal, la formulación de hipótesis generativas y el rigor matemático.
 
 ::: callout-important
-### El principio fundamental
-
-La **Nueva Somosaguas** establece una política innegociable de IA basada en el **principio del exoesqueleto cognitivo**: la tecnología es nuestro siervo; el rigor intelectual es nuestro rey.
+La tecnología es el siervo; el rigor intelectual es el criterio. Ningún estudiante entrega una línea de código, una ecuación o un argumento generado por una máquina que no sepa derivar, explicar y defender por sí mismo ante la pizarra.
 :::
 
-------------------------------------------------------------------------
+---
 
-## El exoesqueleto cognitivo vs. la muleta mental
+## Los cuatro principios operativos
 
-::: column-margin
-*«Un exoesqueleto exige un cuerpo fuerte para sostener la estructura; una muleta asume la invalidez del usuario.»*
-:::
+### El principio socrático: prohibición de respuestas cerradas
 
-Para guiar el día a día académico, se establece una distinción clara y operativa entre dos modos de uso de la tecnología:
+La infraestructura de cómputo y los agentes RAG institucionales están gobernados por directivas que emulan la pedagogía del *CS50 Duck*. El modelo tiene vetado resolver ejercicios, redactar memorandos evaluables o entregar derivaciones acabadas. Su función es actuar como interlocutor dialéctico: señalar contradicciones en las premisas del alumno, cuestionar la completitud de los supuestos, advertir de complejidades algorítmicas ineficientes —un $O(n^2)$ donde cabía un $O(n \log n)$— y conducir mediante preguntas hacia la deducción autónoma.
 
-### La muleta mental (estrictamente prohibida)
+De ahí se sigue una obligación, no solo un permiso: el estudiante debe usar el modelo **contra** su propio trabajo. Instruirlo para que busque colisionadores o variables omitidas en su DAG, proponga explicaciones alternativas basadas en incentivos y critique la elección de *priors*. La memoria de cada trabajo incluye el registro de ese debate adversarial y la justificación de cómo se defendió o se corrigió el modelo.
 
-- Delegar en la máquina el planteamiento inicial de un problema o la hipótesis de investigación.
-- Generar textos académicos vacíos, hinchados de adjetivación burocrática.
-- Aceptar respuestas sintéticas o p-valores sin verificación directa sobre los datos primarios.
-- Entregar scripts de código en Julia, R o SQL que el estudiante no comprende ni sabe derivar desde primeros principios.
+### Asimetría epistemológica: asociación frente a causalidad
 
-### El exoesqueleto cognitivo (exigido y estimulado)
+Todo estudiante debe asimilar un límite computacional inviolable. Los modelos de lenguaje son optimizadores autorregresivos de patrones estadísticos en espacios latentes continuos: manejan asociaciones, no estructuras generativas. No poseen noción intrínseca de intervención, y por tanto no operan el $do$-cálculo aunque sepan describirlo con fluidez.
 
-- Acelerar la carpintería mecánica de la sintaxis (depuración de errores, optimización de algoritmos, refactorización).
-- Utilizar la IA como oponente dialéctico para someter a prueba las propias hipótesis (*Red Teaming*).
-- Refinar el estilo de la prosa buscando claridad, concisión y fuerza expresiva.
-- Automatizar pruebas de esfuerzo (*stress testing*) y simulación Monte Carlo sobre modelos teóricos.
+* **Prohibición de delegación causal.** Ninguna IA decide si un conjunto de variables satisface el criterio de la puerta trasera, ni si un estimador sufre sesgo de colisionador. El grafo acíclico dirigido y la justificación teórica del mecanismo DBO son concebidos y defendidos por el investigador humano, sin excepción.
+* **Temperatura cero en consulta.** Las consultas analíticas sobre el canon y los repositorios institucionales se ejecutan con muestreo determinista ($T = 0$), para erradicar el relleno retórico y la fabulación estocástica.
 
-::: callout-warning
-### La regla de oro de la cátedra
+### Transparencia y trazabilidad del código
 
-**Ningún estudiante podrá entregar una sola línea de código, ecuación o argumento generado por IA que no sea capaz de derivar, explicar y defender personalmente en la pizarra sin asistencia tecnológica.**
-:::
+Se permite y se fomenta el uso de asistentes de código para agilizar la escritura en Julia, SQL o consola de Unix. Rige a cambio la **regla de autoría responsable**: el estudiante responde de cada byte entregado, y desconocer la lógica de una función generada por una máquina se califica como incompetencia técnica, no como descuido.
 
-------------------------------------------------------------------------
+En términos operativos, toda función de origen algorítmico entra en el repositorio acompañada de tres cosas:
 
-## Arquitectura RAG académica: grounding y trazabilidad
+1. **Traza del *prompt*.** La instrucción que la generó, literal, en el historial del repositorio.
+2. **Semilla declarada.** Cualquier rutina estocástica fija su semilla y la documenta, de modo que el resultado sea reproducible byte a byte.
+3. **Prueba de regresión escrita por el estudiante.** Un test unitario ejecutable desde la línea de comandos, redactado por la persona y no por el modelo: es la evidencia de que comprende qué debe devolver la función y en qué condiciones falla.
 
-Para evitar que el aprendizaje se degenere en el consumo de alucinaciones plausibles pero falsas, el entorno computacional de la facultad opera sobre un **sistema RAG (Retrieval-Augmented Generation) de frontera**.
+### La prueba de la pizarra y la terminal abierta
+
+La prosa genérica y las soluciones de manual son simulables por cualquier modelo de frontera, de modo que el examen tradicional en papel queda suprimido. La acreditación se blinda con dos instancias inmunes al fraude algorítmico.
+
+1. **Examen clínico a terminal abierta.** Pruebas cronometradas con acceso irrestricto a internet, a entornos de IA y a documentación técnica. No se prohíbe la máquina: se asume su uso. Se entregan microdatos censales o administrativos en bruto y se exige formular el modelo, depurar anomalías y extraer estimaciones bajo una presión de tiempo que solo resiste quien domina el instrumental. La IA agiliza la fontanería de datos; no decide nada de lo que se evalúa.
+2. **Prueba de la pizarra (*Blackboard Defence*).** Ninguna calificación es firme hasta que el estudiante se enfrenta a la tiza y al tribunal. De viva voz y a mano alzada debe derivar los autovalores de su matriz demográfica, justificar la función de verosimilitud de su modelo o responder a objeciones metodológicas sin pantallas de por medio. Si no deduce el mecanismo que su script ejecutó, la prueba se declara nula.
+
+---
+
+## La arquitectura RAG y el *grounding*
+
+Para que el estudio no degenere en consumo de alucinaciones plausibles, el entorno de la facultad opera sobre un sistema de **generación aumentada por recuperación** anclado a un corpus cerrado.
 
 ```{mermaid}
 %%| label: fig-rag
 %%| fig-cap: "Arquitectura RAG de la facultad: del corpus cerrado a la auditoría del alumno."
 
-%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 14, "useMaxWidth": true}}}%%
+%%{init: {"flowchart": {"nodeSpacing": 30, "rankSpacing": 45, "padding": 14, "useMaxWidth": true}}}%%
 flowchart TD
     C["CORPUS CERRADO DE CONSILIENCIA<br/>Plomin · Reich · Pearl · Morgan y Winship<br/>Dunning · Efron · Smil · etc."]
     M["MOTOR RAG ACADÉMICO / VECTOR DB<br/>Búsqueda semántica por pasajes de alta densidad<br/>Cita obligatoria con índice y trazabilidad a la fuente"]
@@ -86,60 +84,12 @@ flowchart TD
     class E alumno
 ```
 
-1.  **Garantía de grounding estricto:** Los entornos RAG institucionales y los tutores locales se alimentan de las `r n_obras` fuentes de consiliencia del pensum, más las obras que se vayan incorporando y que superen rigurosos estándares de calidad. Cada afirmación fáctica realizada por el sistema debe ir acompañada de su citación y trazabilidad directa a los textos fuente.
-2.  **Auditoría de alucinaciones como evaluación:** Parte del adiestramiento avanzado consiste en **identificar activamente los fallos del modelo**: detectar cuándo la IA confunde correlación con causalidad, dónde comete errores en la inducción estadística o cuándo inventa referencias. Encontrar el error de la máquina cuenta como evidencia de alta maestría.
+1. **Grounding estricto.** Los entornos RAG institucionales y los tutores locales se alimentan de las `r n_obras` fuentes del pensum, más las que se incorporen superando los mismos estándares. Cada afirmación fáctica del sistema va acompañada de su cita y de la trazabilidad directa al texto fuente.
+2. **Auditoría de alucinaciones como evaluación.** Parte del adiestramiento avanzado consiste en localizar los fallos del modelo: dónde confunde correlación con causalidad, dónde yerra en la inducción estadística, cuándo inventa una referencia. Encontrar el error de la máquina cuenta como evidencia de dominio.
 
-------------------------------------------------------------------------
+---
 
-## Protocolo anti-atrofia y evaluación de segundo orden
+## Gobernanza del cómputo y privacidad de los datos
 
-Dado que la IA puede generar resúmenes o scripts de Julia o R en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:
-
-### La prueba de la pizarra (*Blackboard Defence*)
-
-Cualquier entrega de código o *working paper* puede ser sometida a un examen oral sorpresa en el que el alumno, frente a la pizarra y sin dispositivos electrónicos, debe:
-
-- Derivar el modelo matemático o econométrico subyacente.
-- Recomponer la lógica del script línea por línea.
-- Explicar el DAG causal y las restricciones de identificación de su estudio.
-
-### Uso adversarial obligatorio (*Red Teaming Cognitive*)
-
-::: column-margin
-*«Para neutralizar el myside bias (Mercier & Sperber), la IA debe actuar como el fiscal más despiadado de tus propias ideas.»*
-:::
-
-Para combatir el sesgo de confirmación y la racionalización cómoda, el alumno está obligado a utilizar la IA como un **oponente dialéctico**. El estudiante debe instruir al sistema para que:
-
-- Busque fallos de colisionador o variables omitidas en su DAG.
-- Proponga explicaciones alternativas convincentes basadas en incentivos.
-- Critique la solidez de los *priors* seleccionados.
-
-La memoria de cada trabajo debe incluir el registro del debate adversarial con la máquina y la justificación de cómo el alumno defendió o corrigió su modelo.
-
-### Evaluación de la arquitectura del prompting y auditoría
-
-Se evalúa la **densidad del planteamiento del problema** realizado por el estudiante:
-
-- La precisión analítica del *steering prompt*.
-- La relevancia de las restricciones impuestas al modelo.
-- La corrección rigurosa de los borradores intermedios generados por la máquina.
-
-------------------------------------------------------------------------
-
-## Decálogo del estudiante políglota en la era de la IA
-
-::: callout-note
-### Principios de conducta intelectual
-
-1.  **Usa la IA para llegar más lejos, no para trabajar menos.** Si la IA te ahorra tres horas de programar sintaxis básica, esas tres horas se invierten en estudiar la teoría de la prueba o profundizar en la evidencia empírica.
-2.  **Si no puedes verificarlo, no existe.** Ningún dato, cita o p-valor provisto por un modelo de lenguaje se da por bueno sin contrastación directa con la fuente o el script de réplica.
-3.  **El código es el deliverable; la mente es el arquitecto.** La sintaxis pertenece a la máquina, pero la especificación del problema, la intuición causal y la responsabilidad son 100% tuyas.
-4.  **Cultiva la prosa limpia y musculosa.** La IA tiende a la adjetivación hinchada y al tono burocrático; tu obligación es podar el texto hasta dejar la prosa sobria, incisiva e inexpugnable.
-5.  **No temas discutirle a la máquina.** La IA no posee intuición sociológica ni juicio causal; es un modelo probabilístico de predicción de tokens. Tu labor es ser el juez.
-6.  **Entrena con el RAG de la facultad.** La información dispersa en la web está contaminada de sesgos; busca el grounding en las fuentes validadas de la consiliencia.
-7.  **Pasa la prueba de la pizarra cada día.** Pregúntate en cada línea de código o párrafo: *«¿Sabría explicar esto sin pantallas ante un tribunal?»*. Si la respuesta es no, vuelve a empezar.
-8.  **Sé transparente en el flujo de trabajo.** Documenta qué partes del análisis contaron con asistencia algorítmica y cómo fueron auditadas.
-9.  **Usa la IA para buscar tus propios puntos ciegos.** Haz que el modelo adopte la postura del crítico más duro de tu trabajo antes de entregarlo.
-10. **El rigor no se negocia.** La tecnología cambia cada mes; la consistencia lógica, la honestidad intelectual y la búsqueda de la verdad permanecen.
-:::
+* **Procesamiento en local.** Los análisis con microdatos censales anonimizados o registros sensibles se ejecutan exclusivamente en los servidores GPU del campus, sobre modelos abiertos cuantizados, sin enviar tráfico a intermediarios comerciales.
+* **Minería de textos para investigación.** La indexación de literatura técnica para los sistemas RAG institucionales se ampara en el derecho de cita y en las excepciones de minería de textos y datos con fines de investigación científica del marco legal vigente.
