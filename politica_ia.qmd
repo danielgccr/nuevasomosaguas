@@ -44,7 +44,7 @@ Para guiar el día a día académico, se establece una distinción clara y opera
 - Delegar en la máquina el planteamiento inicial de un problema o la hipótesis de investigación.
 - Generar textos académicos vacíos, hinchados de adjetivación burocrática.
 - Aceptar respuestas sintéticas o p-valores sin verificación directa sobre los datos primarios.
-- Entregar scripts de código en R, Python o SQL que el estudiante no comprende ni sabe derivar desde primeros principios.
+- Entregar scripts de código en Julia, R o SQL que el estudiante no comprende ni sabe derivar desde primeros principios.
 
 ### El exoesqueleto cognitivo (exigido y estimulado)
 
@@ -93,7 +93,7 @@ flowchart TD
 
 ## Protocolo anti-atrofia y evaluación de segundo orden
 
-Dado que la IA puede generar resúmenes o scripts de R/Python en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:
+Dado que la IA puede generar resúmenes o scripts de Julia o R en segundos, los métodos tradicionales de evaluación (trabajos finales de revisión o exámenes de memorización) quedan obsoletos. La evaluación se reestructura bajo tres pilares:
 
 ### La prueba de la pizarra (*Blackboard Defence*)
 

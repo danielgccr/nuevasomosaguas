@@ -8,7 +8,7 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-**Propósito institucional:** El bootcamp de verano es la rampa de acceso obligatoria de 12 semanas (julio a septiembre) diseñada para eliminar la asimetría matemática de origen, erradicar el pánico al lenguaje formal y garantizar que todo alumno se maneje con soltura en R, Python, SQL y la terminal de Unix antes de comenzar el primer semestre del grado.
+**Propósito institucional:** El bootcamp de verano es la rampa de acceso obligatoria de 12 semanas (julio a septiembre) diseñada para eliminar la asimetría matemática de origen, erradicar el pánico al lenguaje formal y garantizar que todo alumno se maneje con soltura en Julia, R, SQL y la terminal de Unix antes de comenzar el primer semestre del grado.
 :::
 
 ## 1. Filosofía: cero tolerancia a la asimetría de origen
@@ -25,13 +25,13 @@ El bootcamp no compite con la carrera en profundidad: compite contra la parális
 
 ### Las tres funciones del verano
 
-* **Inoculación y desmitificación:** el objetivo no es que el estudiante derive teoremas, sino que pierda el pánico al lenguaje formal. Doce semanas de exposición a la terminal, a las matrices, a los *priors* bayesianos y a los scripts de R y Python bastan para sustituir el «no entiendo nada y me aterra» por un «sé qué es esto, sé dónde buscarlo y la sintaxis no me intimida».
+* **Inoculación y desmitificación:** el objetivo no es que el estudiante derive teoremas, sino que pierda el pánico al lenguaje formal. Doce semanas de exposición a la terminal, a las matrices, a los *priors* bayesianos y a los scripts de Julia y R bastan para sustituir el «no entiendo nada y me aterra» por un «sé qué es esto, sé dónde buscarlo y la sintaxis no me intimida».
 * **Calibración del *prior*:** el bootcamp recorre en miniatura los cuatro pilares de la facultad, de modo que al empezar el curso el estudiante ya sabe dónde encaja cada pieza. El álgebra lineal deja de ser un castigo aislado y pasa a ser el motor que explica los componentes principales en la genética de Plomin o los grafos causales de Pearl.
 * **Filtro de autoselección imparcial:** es la prueba de esfuerzo más limpia que existe. Doce semanas a 25-30 horas semanales muestran sin adornos cómo es la ciencia social cuantitativa; a quien le repelen la consola y las matemáticas, la autoselección le ahorra años de frustración en una disciplina que no le conviene.
 
 ### Profundidad: prueba de concepto frente a mecánica de precisión
 
-| Dimensión | Bootcamp de verano (12 semanas) | Grado de 4 años (16 asignaturas) |
+| Dimensión | Bootcamp de verano (12 semanas) | Grado de 4 años (19 asignaturas) |
 |:---|:---|:---|
 | **Enfoque** | Intuición y *proof of concept*. | Derivación y réplica estricta. |
 | **Matemáticas** | Comprensión geométrica (3Blue1Brown, Strang) y uso de librerías. | Demostración formal desde primeros principios (Axler, Casella & Berger). |
@@ -140,7 +140,7 @@ flowchart TB
 #### Semana 12: proyecto integrador de réplica y prueba de la pizarra
 * **Objetivo:** Ejecutar un proyecto completo de réplica empírica sobre un artículo científico de alta competición.
 * **Entregable:**
-  1. Repositorio en GitHub con código políglota verificado (R, Python, SQL).
+  1. Repositorio en GitHub con código políglota verificado (Julia, R, SQL).
   2. Documento reproducible en Quarto con gráficos en estilo Edward Tufte.
   3. **Prueba de la pizarra (*Blackboard Defence*):** Examen oral individual donde el estudiante deriva en la pizarra el modelo matemático subyacente y responde a preguntas del tribunal sin ayuda tecnológica.
 

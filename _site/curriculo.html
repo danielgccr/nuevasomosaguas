@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -318,32 +347,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#estructura-general-y-niveles-de-exigencia" id="toc-estructura-general-y-niveles-de-exigencia" class="nav-link active" data-scroll-target="#estructura-general-y-niveles-de-exigencia">Estructura general y niveles de exigencia</a></li>
-  <li><a href="#nivel-1-intuición-y-código-año-1" id="toc-nivel-1-intuición-y-código-año-1" class="nav-link" data-scroll-target="#nivel-1-intuición-y-código-año-1">Nivel 1: intuición y código (año 1)</a>
+  <li><a href="#principios-rectores-de-la-reforma" id="toc-principios-rectores-de-la-reforma" class="nav-link active" data-scroll-target="#principios-rectores-de-la-reforma">1. Principios rectores de la reforma</a>
   <ul class="collapse">
-  <li><a href="#álgebra-lineal-y-probabilidad-para-ciencias-sociales" id="toc-álgebra-lineal-y-probabilidad-para-ciencias-sociales" class="nav-link" data-scroll-target="#álgebra-lineal-y-probabilidad-para-ciencias-sociales">101. Álgebra lineal y probabilidad para ciencias sociales</a></li>
-  <li><a href="#cálculo-y-modelos-dinámicos" id="toc-cálculo-y-modelos-dinámicos" class="nav-link" data-scroll-target="#cálculo-y-modelos-dinámicos">102. Cálculo y modelos dinámicos</a></li>
-  <li><a href="#demografía-matemáticamente-fundamentada" id="toc-demografía-matemáticamente-fundamentada" class="nav-link" data-scroll-target="#demografía-matemáticamente-fundamentada">103. Demografía matemáticamente fundamentada</a></li>
-  <li><a href="#programación-políglota-y-gestión-de-datos" id="toc-programación-políglota-y-gestión-de-datos" class="nav-link" data-scroll-target="#programación-políglota-y-gestión-de-datos">104. Programación políglota y gestión de datos</a></li>
+  <li><a href="#julia-como-entorno-nuclear" id="toc-julia-como-entorno-nuclear" class="nav-link" data-scroll-target="#julia-como-entorno-nuclear">1. Julia como entorno nuclear</a></li>
+  <li><a href="#puente-matricial-explícito" id="toc-puente-matricial-explícito" class="nav-link" data-scroll-target="#puente-matricial-explícito">2. Puente matricial explícito</a></li>
+  <li><a href="#desacople-entre-mecanismo-e-identificación" id="toc-desacople-entre-mecanismo-e-identificación" class="nav-link" data-scroll-target="#desacople-entre-mecanismo-e-identificación">3. Desacople entre mecanismo e identificación</a></li>
+  <li><a href="#poda-del-canon" id="toc-poda-del-canon" class="nav-link" data-scroll-target="#poda-del-canon">4. Poda del canon</a></li>
   </ul></li>
-  <li><a href="#nivel-2-formalización-e-instituciones-años-2-y-3" id="toc-nivel-2-formalización-e-instituciones-años-2-y-3" class="nav-link" data-scroll-target="#nivel-2-formalización-e-instituciones-años-2-y-3">Nivel 2: formalización e instituciones (años 2 y 3)</a>
+  <li><a href="#estructura-curricular" id="toc-estructura-curricular" class="nav-link" data-scroll-target="#estructura-curricular">2. Estructura curricular</a>
   <ul class="collapse">
-  <li><a href="#antropología-evolutiva-y-psicología-cognitiva" id="toc-antropología-evolutiva-y-psicología-cognitiva" class="nav-link" data-scroll-target="#antropología-evolutiva-y-psicología-cognitiva">201. Antropología evolutiva y psicología cognitiva</a></li>
-  <li><a href="#genética-cuantitativa-y-paleogenómica" id="toc-genética-cuantitativa-y-paleogenómica" class="nav-link" data-scroll-target="#genética-cuantitativa-y-paleogenómica">202. Genética cuantitativa y paleogenómica</a></li>
-  <li><a href="#sociología-analítica-y-mecanismos-micro-dbo" id="toc-sociología-analítica-y-mecanismos-micro-dbo" class="nav-link" data-scroll-target="#sociología-analítica-y-mecanismos-micro-dbo">203. Sociología analítica y mecanismos micro (DBO)</a></li>
-  <li><a href="#teoría-de-juegos-y-elección-pública" id="toc-teoría-de-juegos-y-elección-pública" class="nav-link" data-scroll-target="#teoría-de-juegos-y-elección-pública">204. Teoría de juegos y elección pública</a></li>
-  <li><a href="#análisis-de-redes-sociales-y-dinámicas-populares" id="toc-análisis-de-redes-sociales-y-dinámicas-populares" class="nav-link" data-scroll-target="#análisis-de-redes-sociales-y-dinámicas-populares">301. Análisis de redes sociales y dinámicas populares</a></li>
-  <li><a href="#econometría-aplicada-y-análisis-de-supervivencia" id="toc-econometría-aplicada-y-análisis-de-supervivencia" class="nav-link" data-scroll-target="#econometría-aplicada-y-análisis-de-supervivencia">302. Econometría aplicada y análisis de supervivencia</a></li>
-  <li><a href="#inferencia-causal-por-diseño" id="toc-inferencia-causal-por-diseño" class="nav-link" data-scroll-target="#inferencia-causal-por-diseño">303. Inferencia causal por diseño</a></li>
-  <li><a href="#economía-política-y-comportamiento-electoral" id="toc-economía-política-y-comportamiento-electoral" class="nav-link" data-scroll-target="#economía-política-y-comportamiento-electoral">304. Economía política y comportamiento electoral</a></li>
+  <li><a href="#primer-año-fundamentos-formales-y-restricciones-materiales" id="toc-primer-año-fundamentos-formales-y-restricciones-materiales" class="nav-link" data-scroll-target="#primer-año-fundamentos-formales-y-restricciones-materiales">Primer año: fundamentos formales y restricciones materiales</a></li>
+  <li><a href="#segundo-año-microfundamentos-biología-y-diseño-causal" id="toc-segundo-año-microfundamentos-biología-y-diseño-causal" class="nav-link" data-scroll-target="#segundo-año-microfundamentos-biología-y-diseño-causal">Segundo año: microfundamentos, biología y diseño causal</a></li>
+  <li><a href="#tercer-año-interacción-estratégica-redes-y-dinámica-macro" id="toc-tercer-año-interacción-estratégica-redes-y-dinámica-macro" class="nav-link" data-scroll-target="#tercer-año-interacción-estratégica-redes-y-dinámica-macro">Tercer año: interacción estratégica, redes y dinámica macro</a></li>
+  <li><a href="#cuarto-año-síntesis-estructural-y-validación-empírica" id="toc-cuarto-año-síntesis-estructural-y-validación-empírica" class="nav-link" data-scroll-target="#cuarto-año-síntesis-estructural-y-validación-empírica">Cuarto año: síntesis estructural y validación empírica</a></li>
   </ul></li>
-  <li><a href="#nivel-3-alta-competición-y-modelos-causales-año-4" id="toc-nivel-3-alta-competición-y-modelos-causales-año-4" class="nav-link" data-scroll-target="#nivel-3-alta-competición-y-modelos-causales-año-4">Nivel 3: alta competición y modelos causales (año 4)</a>
-  <ul class="collapse">
-  <li><a href="#inferencia-en-la-era-computacional" id="toc-inferencia-en-la-era-computacional" class="nav-link" data-scroll-target="#inferencia-en-la-era-computacional">401. Inferencia en la era computacional</a></li>
-  <li><a href="#ciencias-sociales-generativas-y-simulación-de-agentes" id="toc-ciencias-sociales-generativas-y-simulación-de-agentes" class="nav-link" data-scroll-target="#ciencias-sociales-generativas-y-simulación-de-agentes">402. Ciencias sociales generativas y simulación de agentes</a></li>
-  <li><a href="#cliodinámica-e-historia-económica-cuantitativa" id="toc-cliodinámica-e-historia-económica-cuantitativa" class="nav-link" data-scroll-target="#cliodinámica-e-historia-económica-cuantitativa">403. Cliodinámica e historia económica cuantitativa</a></li>
-  <li><a href="#termodinámica-social-y-macroeconomía-biofísica" id="toc-termodinámica-social-y-macroeconomía-biofísica" class="nav-link" data-scroll-target="#termodinámica-social-y-macroeconomía-biofísica">404. Termodinámica social y macroeconomía biofísica</a></li>
-  </ul></li>
+  <li><a href="#estándares-de-entrega-y-evaluación" id="toc-estándares-de-entrega-y-evaluación" class="nav-link" data-scroll-target="#estándares-de-entrega-y-evaluación">3. Estándares de entrega y evaluación</a></li>
   </ul>
 </nav>
     </div>
@@ -354,7 +372,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Currículo</h1>
-<p class="subtitle lead">Estructura de 4 años y 16 asignaturas del grado en ciencias sociales analíticas y cuantitativas</p>
+<p class="subtitle lead">Estructura de 4 años y 19 asignaturas del grado en ciencias sociales analíticas y cuantitativas</p>
 </div>
 
 
@@ -372,271 +390,233 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="lead">
-<p>El plan de estudios de la <strong>Nueva Somosaguas</strong> está diseñado como una catedral analítica de cuatro años (16 asignaturas). Huye deliberadamente de la fragmentación de optativas superficiales para ofrecer una progresión metódica y rigurosa en <strong>tres niveles de graduación analítica</strong>.</p>
+<p>El plan de estudios de la <strong>Nueva Somosaguas</strong> no es una antología de deseos bibliográficos, sino un itinerario técnico cerrado. Cada asignatura se articula en torno a <strong>modelos formales y derivaciones explícitas</strong>: si un modelo no se programa o no se deriva en la pizarra, no entra en el temario.</p>
 </div>
 <hr>
-<section id="estructura-general-y-niveles-de-exigencia" class="level2">
-<h2 class="anchored" data-anchor-id="estructura-general-y-niveles-de-exigencia">Estructura general y niveles de exigencia</h2>
-<p>Cada asignatura es de carácter cuatrimestral (4 asignaturas por curso), acoplando la teoría formal a la práctica directa en la terminal de comandos mediante <strong>R, Python y SQL</strong>.</p>
+<section id="principios-rectores-de-la-reforma" class="level2">
+<h2 class="anchored" data-anchor-id="principios-rectores-de-la-reforma">1. Principios rectores de la reforma</h2>
+<section id="julia-como-entorno-nuclear" class="level3">
+<h3 class="anchored" data-anchor-id="julia-como-entorno-nuclear">1. Julia como entorno nuclear</h3>
+<p>El llamado <em>two-language problem</em> —prototipar en un lenguaje cómodo y reescribir en otro rápido— se resuelve eliminándolo del primer año en lugar de enseñarlo como si fuera inevitable. <strong>Julia</strong> es el lenguaje vehicular para cálculo numérico, álgebra computacional, modelos basados en agentes y ecuaciones diferenciales estocásticas. <strong>R</strong> se conserva como herramienta de biblioteca, no como entorno general: econometría aplicada tabular, bioestadística y psicometría empírica.</p>
+</section>
+<section id="puente-matricial-explícito" class="level3">
+<h3 class="anchored" data-anchor-id="puente-matricial-explícito">2. Puente matricial explícito</h3>
+<p>El álgebra lineal se enseña con determinantes y matrices, no sin ellos. Frente al enfoque puramente abstracto de Axler, el grado adopta un binomio aplicado —Strang, o Boyd y Vandenberghe— que conecta los operadores lineales con la descomposición QR, los valores singulares, las matrices de Leslie y el análisis de Markov multivariante. El estudiante debe poder pasar del operador al código sin un salto de fe.</p>
+</section>
+<section id="desacople-entre-mecanismo-e-identificación" class="level3">
+<h3 class="anchored" data-anchor-id="desacople-entre-mecanismo-e-identificación">3. Desacople entre mecanismo e identificación</h3>
+<p>Se separan con nitidez dos cosas que la sociología cuantitativa suele mezclar:</p>
+<ul>
+<li><strong>Mecanismo generativo:</strong> los microfundamentos discretos DBO de Hedström, la teoría de juegos y la dinámica de réplica. Explican <em>cómo</em> se produce un fenómeno.</li>
+<li><strong>Identificación y diseño causal:</strong> grafos acíclicos dirigidos, criterio de la puerta trasera, variables instrumentales y estimadores cuasi-experimentales. Establecen <em>si</em> la relación estimada es la que se cree.</li>
+</ul>
+<p>Una teoría del mecanismo no identifica un efecto, y un diseño de identificación no explica nada por sí solo. Confundirlos produce literatura convincente y falsa.</p>
+</section>
+<section id="poda-del-canon" class="level3">
+<h3 class="anchored" data-anchor-id="poda-del-canon">4. Poda del canon</h3>
+<p>Una asignatura, un texto matriz y un cuaderno computacional reproducible. Se elimina la acumulación bibliográfica decorativa: diez manuales por asignatura garantizan que no se lea ninguno. El entregable de cada materia es un documento que compila desde la terminal, no una lista de lecturas.</p>
+<hr>
+</section>
+</section>
+<section id="estructura-curricular" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-curricular">2. Estructura curricular</h2>
+<p>Cinco asignaturas por curso en los tres primeros años y cuatro en el último, tesis incluida.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Nivel</th>
-<th style="text-align: left;">Denominación</th>
-<th style="text-align: left;">Cursos</th>
+<th style="text-align: left;">Curso</th>
+<th style="text-align: left;">Eje</th>
 <th style="text-align: left;">Enfoque central</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Nivel 1</strong></td>
-<td style="text-align: left;"><em>Intuición y código</em></td>
-<td style="text-align: left;">Año 1</td>
-<td style="text-align: left;">Cimientos matemáticos, probabilidad, demografía matricial y programación básica.</td>
+<td style="text-align: left;"><strong>Primer año</strong></td>
+<td style="text-align: left;"><em>Fundamentos formales y restricciones materiales</em></td>
+<td style="text-align: left;">Cálculo, álgebra computacional, probabilidad axiomática, demografía formal y estructuras de datos.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Nivel 2</strong></td>
-<td style="text-align: left;"><em>Formalización e instituciones</em></td>
-<td style="text-align: left;">Años 2 y 3</td>
-<td style="text-align: left;">Biología evolutiva, genética cuantitativa, micro-mecanismos causales, redes y teoría de juegos.</td>
+<td style="text-align: left;"><strong>Segundo año</strong></td>
+<td style="text-align: left;"><em>Microfundamentos, biología y diseño causal</em></td>
+<td style="text-align: left;">Genética cuantitativa, mecanismos DBO, teoría de juegos, inferencia causal y variables latentes.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Nivel 3</strong></td>
-<td style="text-align: left;"><em>Alta competición y modelos causales</em></td>
-<td style="text-align: left;">Año 4</td>
-<td style="text-align: left;">Inferencia computacional moderna, simulación generativa, cliodinámica y termodinámica social.</td>
+<td style="text-align: left;"><strong>Tercer año</strong></td>
+<td style="text-align: left;"><em>Interacción estratégica, redes y dinámica macro</em></td>
+<td style="text-align: left;">Redes, modelos de agentes, computación bayesiana, elección pública y transición demográfica.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Cuarto año</strong></td>
+<td style="text-align: left;"><em>Síntesis estructural y validación empírica</em></td>
+<td style="text-align: left;">Cliodinámica, evaluación de políticas, cómputo de alto rendimiento y tesis.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-</section>
-<section id="nivel-1-intuición-y-código-año-1" class="level2">
-<h2 class="anchored" data-anchor-id="nivel-1-intuición-y-código-año-1">Nivel 1: intuición y código (año 1)</h2>
-<p>En el primer año se desintoxica al estudiante del lenguaje vago y la sociología contemplativa, dotándole de las herramientas matemáticas y computacionales indispensables.</p>
-<section id="álgebra-lineal-y-probabilidad-para-ciencias-sociales" class="level3">
-<h3 class="anchored" data-anchor-id="álgebra-lineal-y-probabilidad-para-ciencias-sociales">101. Álgebra lineal y probabilidad para ciencias sociales</h3>
+<section id="primer-año-fundamentos-formales-y-restricciones-materiales" class="level3">
+<h3 class="anchored" data-anchor-id="primer-año-fundamentos-formales-y-restricciones-materiales">Primer año: fundamentos formales y restricciones materiales</h3>
+<section id="cálculo-multivariante-y-optimización-estocástica" class="level4">
+<h4 class="anchored" data-anchor-id="cálculo-multivariante-y-optimización-estocástica">1.1. Cálculo multivariante y optimización estocástica</h4>
 <ul>
-<li><strong>Objetivo:</strong> Dominar el espacio vectorial y el cálculo de probabilidades sin caer en recetas de cocina estadística.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Joseph K. Blitzstein &amp; Jessica Hwang — <em>Introduction to Probability (Harvard Stat 110)</em>.</li>
-<li>Sheldon Axler — <em>Linear Algebra Done Right</em>.</li>
-<li>Paul Lockhart — <em>Measurement</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Vectores, matrices de covarianza y simulación Monte Carlo en <strong>R</strong>.</li>
+<li><strong>Contenidos:</strong> espacios euclídeos, gradientes, multiplicadores de Lagrange, optimización estática y dinámica.</li>
+<li><strong>Texto matriz:</strong> Carl P. Simon &amp; Lawrence Blume — <em>Mathematics for Economists</em>.</li>
 </ul>
 </section>
-<section id="cálculo-y-modelos-dinámicos" class="level3">
-<h3 class="anchored" data-anchor-id="cálculo-y-modelos-dinámicos">102. Cálculo y modelos dinámicos</h3>
+<section id="álgebra-lineal-computacional" class="level4">
+<h4 class="anchored" data-anchor-id="álgebra-lineal-computacional">1.2. Álgebra lineal computacional</h4>
 <ul>
-<li><strong>Objetivo:</strong> Comprender las tasas de cambio, la optimización y las ecuaciones diferenciales aplicadas a la evolución de poblaciones.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>3Blue1Brown — <em>The Essence of Calculus</em>.</li>
-<li>Gilbert Strang — <em>Calculus</em> (MIT OpenCourseWare).</li>
-<li>Joshua Epstein — <em>Nonlinear Dynamics, Mathematical Biology, and Social Science</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Integración numérica y sistemas dinámicos continuos en <strong>Python (SciPy)</strong>.</li>
+<li><strong>Contenidos:</strong> espacios vectoriales, proyecciones ortogonales, descomposiciones matriciales (LU, QR, SVD), autovalores y matrices de Markov aplicadas a transiciones sociales.</li>
+<li><strong>Texto matriz:</strong> Gilbert Strang — <em>Linear Algebra and Its Applications</em>, con implementación en Julia.</li>
 </ul>
 </section>
-<section id="demografía-matemáticamente-fundamentada" class="level3">
-<h3 class="anchored" data-anchor-id="demografía-matemáticamente-fundamentada">103. Demografía matemáticamente fundamentada</h3>
+<section id="probabilidad-axiomática-y-teoría-de-la-información" class="level4">
+<h4 class="anchored" data-anchor-id="probabilidad-axiomática-y-teoría-de-la-información">1.3. Probabilidad axiomática y teoría de la información</h4>
 <ul>
-<li><strong>Objetivo:</strong> Analizar las estructuras de población, tablas de vida, mortalidad y fecundidad como la restricción biológica primaria.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Samuel H. Preston, Patrick Heuveline &amp; Michel Guillot — <em>Demography: Measuring and Modeling Population Processes</em>.</li>
-<li>Nathan Keyfitz &amp; Hal Caswell — <em>Applied Mathematical Demography</em>.</li>
-<li>Kenneth W. Wachter — <em>Essential Demographic Methods</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Tablas de vida, proyecciones de matriz de Leslie y momentum demográfico en <strong>R</strong>.</li>
+<li><strong>Contenidos:</strong> espacios de probabilidad, variables aleatorias discretas y continuas, distribuciones conjuntas, entropía de Shannon e información mutua.</li>
+<li><strong>Texto matriz:</strong> Joseph K. Blitzstein &amp; Jessica Hwang — <em>Introduction to Probability</em>.</li>
 </ul>
 </section>
-<section id="programación-políglota-y-gestión-de-datos" class="level3">
-<h3 class="anchored" data-anchor-id="programación-políglota-y-gestión-de-datos">104. Programación políglota y gestión de datos</h3>
+<section id="demografía-formal-y-modelos-poblacionales" class="level4">
+<h4 class="anchored" data-anchor-id="demografía-formal-y-modelos-poblacionales">1.4. Demografía formal y modelos poblacionales</h4>
 <ul>
-<li><strong>Objetivo:</strong> Manejar entornos de desarrollo profesional, filtrado, limpieza y estructuración relacional de bases de datos masivas.</li>
-<li><strong>Bibliografía principal:</strong>
+<li><strong>Contenidos:</strong> ecuación de Euler-Lotka, tablas de vida, matrices de proyección de Leslie, modelos de población estable y descomposición de tasas.</li>
+<li><strong>Textos matriz:</strong> Samuel H. Preston, Patrick Heuveline &amp; Michel Guillot — <em>Demography</em>; Kenneth W. Wachter — <em>Essential Demographic Methods</em>.</li>
+</ul>
+</section>
+<section id="computación-científica-y-estructuras-de-datos" class="level4">
+<h4 class="anchored" data-anchor-id="computación-científica-y-estructuras-de-datos">1.5. Computación científica y estructuras de datos</h4>
 <ul>
-<li>William Shotts — <em>The Linux Command Line: A Complete Introduction</em>.</li>
-<li>Hadley Wickham — <em>ggplot2: Elegant Graphics for Data Analysis</em>.</li>
-<li>Joel Grus — <em>Data Science from Scratch</em>.</li>
-<li>C. J. Date — <em>SQL and Relational Theory</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Pipeline completo de extracción, transformación y carga (ETL) en <strong>SQL y Python/Pandas</strong>.</li>
+<li><strong>Contenidos:</strong> arquitectura de computadores, complejidad temporal y espacial (<span class="math inline">\(O(n)\)</span>), algoritmos de búsqueda y ordenación, y programación científica en Julia.</li>
+<li><strong>Texto matriz:</strong> Brian W. Kernighan &amp; Rob Pike — <em>The Practice of Programming</em>.</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="nivel-2-formalización-e-instituciones-años-2-y-3" class="level2">
-<h2 class="anchored" data-anchor-id="nivel-2-formalización-e-instituciones-años-2-y-3">Nivel 2: formalización e instituciones (años 2 y 3)</h2>
-<p>Se introducen los mecanismos biológicos, psicológicos e interaccionistas que condicionan la conducta humana y la formación de normas.</p>
-<section id="antropología-evolutiva-y-psicología-cognitiva" class="level3">
-<h3 class="anchored" data-anchor-id="antropología-evolutiva-y-psicología-cognitiva">201. Antropología evolutiva y psicología cognitiva</h3>
+<section id="segundo-año-microfundamentos-biología-y-diseño-causal" class="level3">
+<h3 class="anchored" data-anchor-id="segundo-año-microfundamentos-biología-y-diseño-causal">Segundo año: microfundamentos, biología y diseño causal</h3>
+<section id="genética-cuantitativa-y-arquitectura-biológica" class="level4">
+<h4 class="anchored" data-anchor-id="genética-cuantitativa-y-arquitectura-biológica">2.1. Genética cuantitativa y arquitectura biológica</h4>
 <ul>
-<li><strong>Objetivo:</strong> Entender la mente humana no como una <em>tabula rasa</em>, sino como un órgano evolucionado para la cooperación y la competencia tribal.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Hugo Mercier &amp; Dan Sperber — <em>The Enigma of Reason</em>.</li>
-<li>Michael Tomasello — <em>A Natural History of Human Thinking</em>.</li>
-<li>Frans de Waal — <em>Are We Smart Enough to Know How Smart Animals Are?</em>.</li>
-</ul></li>
+<li><strong>Contenidos:</strong> modelos infinitesimales, heredabilidad en sentido estricto (<span class="math inline">\(h^2\)</span>), descomposición de varianza fenotípica, puntuaciones poligénicas y sesgos por correlación e interacción gen-ambiente (<span class="math inline">\(G \times E\)</span>).</li>
+<li><strong>Textos matriz:</strong> D. S. Falconer &amp; Trudy F. C. Mackay — <em>Introduction to Quantitative Genetics</em>; Robert Plomin — <em>Blueprint</em>.</li>
 </ul>
 </section>
-<section id="genética-cuantitativa-y-paleogenómica" class="level3">
-<h3 class="anchored" data-anchor-id="genética-cuantitativa-y-paleogenómica">202. Genética cuantitativa y paleogenómica</h3>
+<section id="sociología-analítica-y-mecanismos-generativos" class="level4">
+<h4 class="anchored" data-anchor-id="sociología-analítica-y-mecanismos-generativos">2.2. Sociología analítica y mecanismos generativos</h4>
 <ul>
-<li><strong>Objetivo:</strong> Estudiar la heredabilidad de rasgos complejos, puntuaciones poligénicas (<em>polygenic scores</em>) y la historia de las migraciones humanas.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Robert Plomin — <em>Blueprint: How DNA Makes Us Who We Are</em>.</li>
-<li>David Reich — <em>Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past</em>.</li>
-<li>D. S. Falconer &amp; Trudy F. C. Mackay — <em>Introduction to Quantitative Genetics</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Estimación de heredabilidad y cálculo de puntuaciones poligénicas en <strong>R</strong>.</li>
+<li><strong>Contenidos:</strong> individualismo metodológico estructural, esquema de Deseos, Creencias y Oportunidades (DBO), racionalidad acotada y transiciones micro-macro.</li>
+<li><strong>Textos matriz:</strong> Peter Hedström — <em>Dissecting the Social</em>; Jon Elster — <em>Explaining Social Behavior</em>.</li>
 </ul>
 </section>
-<section id="sociología-analítica-y-mecanismos-micro-dbo" class="level3">
-<h3 class="anchored" data-anchor-id="sociología-analítica-y-mecanismos-micro-dbo">203. Sociología analítica y mecanismos micro (DBO)</h3>
+<section id="teoría-de-juegos-y-comportamiento-estratégico" class="level4">
+<h4 class="anchored" data-anchor-id="teoría-de-juegos-y-comportamiento-estratégico">2.3. Teoría de juegos y comportamiento estratégico</h4>
 <ul>
-<li><strong>Objetivo:</strong> Descomponer los fenómenos macro en acciones individuales mediadas por Deseos, Creencias y Oportunidades.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Peter Hedström — <em>Dissecting the Social: On the Principles of Analytical Sociology</em>.</li>
-<li>Jon Elster — <em>Explaining Social Behavior: More Nuts and Bolts for the Social Sciences</em>.</li>
-<li>Raymond Boudon — <em>The Logic of Sociological Explanation</em>.</li>
-</ul></li>
+<li><strong>Contenidos:</strong> juegos estáticos y dinámicos con información completa e incompleta, equilibrios de Nash, juegos repetidos, equilibrios evolutivamente estables y dinámica de réplica.</li>
+<li><strong>Textos matriz:</strong> Robert Gibbons — <em>Game Theory for Applied Economists</em>; Ken Binmore — <em>Game Theory: A Very Short Introduction</em>.</li>
 </ul>
 </section>
-<section id="teoría-de-juegos-y-elección-pública" class="level3">
-<h3 class="anchored" data-anchor-id="teoría-de-juegos-y-elección-pública">204. Teoría de juegos y elección pública</h3>
+<section id="inferencia-causal-y-econometría-estructural" class="level4">
+<h4 class="anchored" data-anchor-id="inferencia-causal-y-econometría-estructural">2.4. Inferencia causal y econometría estructural</h4>
 <ul>
-<li><strong>Objetivo:</strong> Formalizar la interacción estratégica, los equilibrios de Nash y el colapso de los bienes públicos.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Ken Binmore — <em>Playing for Real: A Text on Game Theory</em>.</li>
-<li>Herbert Gintis — <em>The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences</em>.</li>
-<li>James M. Buchanan &amp; Gordon Tullock — <em>The Calculus of Consent</em>.</li>
-<li>Mancur Olson — <em>The Logic of Collective Action</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Simulación de dilemas del prisionero repetidos y torneos de estrategias en <strong>Python</strong>.</li>
+<li><strong>Contenidos:</strong> modelo de resultados potenciales de Rubin, identificación no paramétrica con grafos acíclicos dirigidos, regresión discontinua, variables instrumentales y diferencias en diferencias.</li>
+<li><strong>Textos matriz:</strong> Judea Pearl, Madelyn Glymour &amp; Nicholas P. Jewell — <em>Causal Inference in Statistics</em>; Joshua D. Angrist &amp; Jörn-Steffen Pischke — <em>Mostly Harmless Econometrics</em>.</li>
 </ul>
 </section>
-<section id="análisis-de-redes-sociales-y-dinámicas-populares" class="level3">
-<h3 class="anchored" data-anchor-id="análisis-de-redes-sociales-y-dinámicas-populares">301. Análisis de redes sociales y dinámicas populares</h3>
+<section id="psicometría-y-modelización-de-variables-latentes" class="level4">
+<h4 class="anchored" data-anchor-id="psicometría-y-modelización-de-variables-latentes">2.5. Psicometría y modelización de variables latentes</h4>
 <ul>
-<li><strong>Objetivo:</strong> Mapear la topología de la interacción humana, los fenómenos de pequeña escala (<em>small-world</em>) y la difusión de información.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Matthew O. Jackson — <em>Social and Economic Networks</em>.</li>
-<li>Eric D. Kolaczyk &amp; Gábor Csárdi — <em>Statistical Analysis of Network Data with R</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Algoritmos de centralidad, detección de comunidades y gráficos de red con <strong>igraph en R</strong>.</li>
-</ul>
-</section>
-<section id="econometría-aplicada-y-análisis-de-supervivencia" class="level3">
-<h3 class="anchored" data-anchor-id="econometría-aplicada-y-análisis-de-supervivencia">302. Econometría aplicada y análisis de supervivencia</h3>
-<ul>
-<li><strong>Objetivo:</strong> Evaluar datos de panel, series temporales y tiempos de espera hasta eventos de interés social o biológico.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Angus Deaton — <em>The Analysis of Household Surveys</em>.</li>
-<li>Damodar Gujarati — <em>Econometrics by Example</em>.</li>
-<li>Robert M. O’Brien — <em>Age-Period-Cohort Models</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Estimadores Kaplan-Meier, modelos de riesgos proporcionales de Cox y análisis APC en <strong>R</strong>.</li>
-</ul>
-</section>
-<section id="inferencia-causal-por-diseño" class="level3">
-<h3 class="anchored" data-anchor-id="inferencia-causal-por-diseño">303. Inferencia causal por diseño</h3>
-<ul>
-<li><strong>Objetivo:</strong> Identificar relaciones causales mediante Grafos Acíclicos Dirigidos (DAGs) y experimentos naturales.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Judea Pearl — <em>Causality: Models, Reasoning, and Inference</em>.</li>
-<li>Stephen L. Morgan &amp; Christopher Winship — <em>Counterfactuals and Causal Inference</em>.</li>
-<li>Thad Dunning — <em>Natural Experiments in the Social Sciences</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Construcción de DAGs, ajuste del criterio de la puerta trasera y variables instrumentales en <strong>Python (DoWhy/CausalPy)</strong>.</li>
-</ul>
-</section>
-<section id="economía-política-y-comportamiento-electoral" class="level3">
-<h3 class="anchored" data-anchor-id="economía-política-y-comportamiento-electoral">304. Economía política y comportamiento electoral</h3>
-<ul>
-<li><strong>Objetivo:</strong> Analizar las fallas del mercado político, la irracionalidad del votante y la estabilidad de las democracias reales.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Bryan Caplan — <em>The Myth of the Rational Voter</em>.</li>
-<li>Christopher H. Achen &amp; Larry M. Bartels — <em>Democracy for Realists</em>.</li>
-<li>Andrew Gelman — <em>Red State, Blue State, Rich State, Poor State</em>.</li>
-<li>Philip E. Tetlock — <em>Expert Political Judgment</em>.</li>
-</ul></li>
+<li><strong>Contenidos:</strong> teoría clásica de los tests, análisis factorial exploratorio y confirmatorio, factor general (<span class="math inline">\(g\)</span>), curvas características del ítem y matrices de covarianza de rasgos cognitivos y de personalidad.</li>
+<li><strong>Texto matriz:</strong> A. Alexander Beaujean — <em>Latent Variable Modeling with R</em>.</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="nivel-3-alta-competición-y-modelos-causales-año-4" class="level2">
-<h2 class="anchored" data-anchor-id="nivel-3-alta-competición-y-modelos-causales-año-4">Nivel 3: alta competición y modelos causales (año 4)</h2>
-<p>El último año capacita al estudiante para ejecutar investigación generativa y macrohistórica al nivel de las mejores instituciones internacionales.</p>
-<section id="inferencia-en-la-era-computacional" class="level3">
-<h3 class="anchored" data-anchor-id="inferencia-en-la-era-computacional">401. Inferencia en la era computacional</h3>
+<section id="tercer-año-interacción-estratégica-redes-y-dinámica-macro" class="level3">
+<h3 class="anchored" data-anchor-id="tercer-año-interacción-estratégica-redes-y-dinámica-macro">Tercer año: interacción estratégica, redes y dinámica macro</h3>
+<section id="teoría-de-redes-sociales-y-difusión" class="level4">
+<h4 class="anchored" data-anchor-id="teoría-de-redes-sociales-y-difusión">3.1. Teoría de redes sociales y difusión</h4>
 <ul>
-<li><strong>Objetivo:</strong> Dominar el <em>bootstrap</em>, el Bayes Empírico, la contracción de James-Stein y el control de la tasa de falso descubrimiento (FDR).</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Bradley Efron &amp; Trevor Hastie — <em>Computer Age Statistical Inference</em>.</li>
-<li>Jeff Gill &amp; Le Bao — <em>Bayesian Social Science Statistics</em>.</li>
-<li>Richard McElreath — <em>Statistical Rethinking</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Muestreo MCMC con <strong>Stan/PyMC</strong> e intervalos BCa por <em>bootstrap</em> en <strong>R</strong>.</li>
+<li><strong>Contenidos:</strong> topología de grafos, medidas de centralidad, modelos de homofilia, umbrales de difusión de Granovetter y juegos sobre redes.</li>
+<li><strong>Texto matriz:</strong> Matthew O. Jackson — <em>Social and Economic Networks</em>.</li>
 </ul>
 </section>
-<section id="ciencias-sociales-generativas-y-simulación-de-agentes" class="level3">
-<h3 class="anchored" data-anchor-id="ciencias-sociales-generativas-y-simulación-de-agentes">402. Ciencias sociales generativas y simulación de agentes</h3>
+<section id="modelos-basados-en-agentes-y-sistemas-complejos" class="level4">
+<h4 class="anchored" data-anchor-id="modelos-basados-en-agentes-y-sistemas-complejos">3.2. Modelos basados en agentes y sistemas complejos</h4>
 <ul>
-<li><strong>Objetivo:</strong> Reconstruir la emergencia de patrones sociales macro desde la interacción computacional bottom-up.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Joshua Epstein — <em>Generative Social Science</em>.</li>
-<li>Joshua Epstein — <em>Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Programación de modelos de agentes (segregación de Schelling, dinámicas epidémicas y conflicto) en <strong>Python (Mesa)</strong>.</li>
+<li><strong>Contenidos:</strong> autómatas celulares, segregación espacial de Schelling, modelos generativos <em>Agent_Zero</em> y calibración de dinámicas emergentes.</li>
+<li><strong>Textos matriz:</strong> Joshua Epstein — <em>Generative Social Science</em>; Steven F. Railsback &amp; Volker Grimm — <em>Agent-Based and Individual-Based Modeling</em>.</li>
 </ul>
 </section>
-<section id="cliodinámica-e-historia-económica-cuantitativa" class="level3">
-<h3 class="anchored" data-anchor-id="cliodinámica-e-historia-económica-cuantitativa">403. Cliodinámica e historia económica cuantitativa</h3>
+<section id="inferencia-bayesiana-y-computación-mcmc" class="level4">
+<h4 class="anchored" data-anchor-id="inferencia-bayesiana-y-computación-mcmc">3.3. Inferencia bayesiana y computación MCMC</h4>
 <ul>
-<li><strong>Objetivo:</strong> Modelar los ciclos seculares de estabilidad/colapso y la evolución de la riqueza a escala milenaria.</li>
-<li><strong>Bibliografía principal:</strong>
-<ul>
-<li>Peter Turchin &amp; Sergey A. Nefedov — <em>Secular Cycles</em>.</li>
-<li>Gregory Clark — <em>A Farewell to Alms</em>.</li>
-<li>Oded Galor — <em>The Journey of Humanity</em>.</li>
-<li>Joel Mokyr — <em>A Culture of Growth</em>.</li>
-</ul></li>
+<li><strong>Contenidos:</strong> teorema de Bayes sobre distribuciones continuas, <em>priors</em> conjugados y no informativos, Metropolis-Hastings y muestreo de Gibbs para modelos jerárquicos.</li>
+<li><strong>Texto matriz:</strong> Richard McElreath — <em>Statistical Rethinking</em>, implementado con Turing.jl o Stan.</li>
 </ul>
 </section>
-<section id="termodinámica-social-y-macroeconomía-biofísica" class="level3">
-<h3 class="anchored" data-anchor-id="termodinámica-social-y-macroeconomía-biofísica">404. Termodinámica social y macroeconomía biofísica</h3>
+<section id="teoría-de-la-elección-pública-e-instituciones" class="level4">
+<h4 class="anchored" data-anchor-id="teoría-de-la-elección-pública-e-instituciones">3.4. Teoría de la elección pública e instituciones</h4>
 <ul>
-<li><strong>Objetivo:</strong> Integrar las restricciones físicas de conversión energética en el análisis de las estructuras políticas y urbanas.</li>
-<li><strong>Bibliografía principal:</strong>
+<li><strong>Contenidos:</strong> agregación de preferencias, teorema de imposibilidad de Arrow, modelos del votante mediano, búsqueda de rentas y fallos del Estado.</li>
+<li><strong>Textos matriz:</strong> James M. Buchanan &amp; Gordon Tullock — <em>The Calculus of Consent</em>; Dennis C. Mueller — <em>Public Choice III</em>.</li>
+</ul>
+</section>
+<section id="transición-demográfica-y-macroeconomía-malthusiana" class="level4">
+<h4 class="anchored" data-anchor-id="transición-demográfica-y-macroeconomía-malthusiana">3.5. Transición demográfica y macroeconomía malthusiana</h4>
 <ul>
-<li>Vaclav Smil — <em>Energy and Civilization: A History</em>.</li>
-<li>E. A. Wrigley — <em>Energy and the English Industrial Revolution</em>.</li>
-<li>Ian Morris — <em>War! What Is It Good For?</em>.</li>
-</ul></li>
-<li><strong>Laboratorio:</strong> Modelización de flujos de potencia, EROEI y capacidades de carga territoriales en <strong>Python/R</strong>.</li>
+<li><strong>Contenidos:</strong> límites malthusianos, trampas de subsistencia, la Gran Divergencia y modelos unificados de crecimiento.</li>
+<li><strong>Textos matriz:</strong> Oded Galor — <em>Unified Growth Theory</em>; Gregory Clark — <em>A Farewell to Alms</em>.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="cuarto-año-síntesis-estructural-y-validación-empírica" class="level3">
+<h3 class="anchored" data-anchor-id="cuarto-año-síntesis-estructural-y-validación-empírica">Cuarto año: síntesis estructural y validación empírica</h3>
+<section id="cliodinámica-y-sistemas-dinámicos-históricos" class="level4">
+<h4 class="anchored" data-anchor-id="cliodinámica-y-sistemas-dinámicos-históricos">4.1. Cliodinámica y sistemas dinámicos históricos</h4>
+<ul>
+<li><strong>Contenidos:</strong> ecuaciones diferenciales no lineales acopladas, ciclos sociopolíticos seculares, sobreproducción de élites y calibración paramétrica con series históricas.</li>
+<li><strong>Textos matriz:</strong> Peter Turchin &amp; Sergey A. Nefedov — <em>Secular Cycles</em>; Steven H. Strogatz — <em>Nonlinear Dynamics and Chaos</em>.</li>
+</ul>
+</section>
+<section id="evaluación-cuantitativa-de-políticas-públicas" class="level4">
+<h4 class="anchored" data-anchor-id="evaluación-cuantitativa-de-políticas-públicas">4.2. Evaluación cuantitativa de políticas públicas</h4>
+<ul>
+<li><strong>Contenidos:</strong> análisis coste-beneficio, microdatos censales y de registros administrativos, paneles longitudinales y auditoría de intervenciones estatales.</li>
+<li><strong>Práctica:</strong> replicación empírica de políticas laborales, de vivienda y de transferencias asistenciales.</li>
+</ul>
+</section>
+<section id="computación-de-alto-rendimiento-y-modelado-distribuido" class="level4">
+<h4 class="anchored" data-anchor-id="computación-de-alto-rendimiento-y-modelado-distribuido">4.3. Computación de alto rendimiento y modelado distribuido</h4>
+<ul>
+<li><strong>Contenidos:</strong> paralelización en clústeres de cómputo, optimización de memoria en simulaciones a gran escala y canalizaciones reproducibles con control de versiones.</li>
+<li><strong>Práctica:</strong> modelado generativo de poblaciones sintéticas completas.</li>
+</ul>
+</section>
+<section id="tesis-de-grado" class="level4">
+<h4 class="anchored" data-anchor-id="tesis-de-grado">4.4. Tesis de grado</h4>
+<ul>
+<li><strong>Contenidos:</strong> desarrollo de un modelo analítico original o replicación destructiva de un resultado de la literatura empírica.</li>
+<li><strong>Requisitos:</strong> código fuente en repositorio público, datos abiertos y memoria en Typst o Quarto que compile de forma determinista desde la terminal.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="estándares-de-entrega-y-evaluación" class="level2">
+<h2 class="anchored" data-anchor-id="estándares-de-entrega-y-evaluación">3. Estándares de entrega y evaluación</h2>
+<ul>
+<li><strong>Sin procesadores de texto comerciales.</strong> Ningún trabajo ni examen se entrega en formatos binarios cerrados. Todo entregable es un repositorio reproducible o un documento compilado con lenguajes de marcado tipográfico: Typst o Markdown ejecutable con Quarto.</li>
+<li><strong>Determinismo y reproducibilidad.</strong> Las estimaciones, descomposiciones matriciales y tablas de coeficientes no se copian a mano: se evalúan como salida del propio código, con la semilla pseudoaleatoria fijada. Un documento que no compile limpio en el entorno de pruebas se califica como nulo.</li>
+<li><strong>Defensa oral con memorando denso.</strong> Rige la regla de Tufte: nada de diapositivas con viñetas inconexas. Se presenta un memorando analítico de dos a cuatro páginas con las derivaciones formales y gráficos vectoriales densos, y a continuación se responde en la pizarra.</li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

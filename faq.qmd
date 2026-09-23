@@ -35,7 +35,7 @@ El saber no se privatiza tras un peaje corporativo o una prueba eliminatoria. La
 Si no accedes al grupo de investigación de élite (*Somosaguas Fellow*):
 
 * Mantienes tu matrícula en el grado oficial y cursas la titulación con normalidad.
-* Dispones del **100% del material en abierto**: temarios, scripts de R y Python, guías docentes, bases de datos y el corpus de fuentes. Puedes conectar todo el repositorio a tu cuenta de Google/LLM institucional para disponer de un tutor RAG personalizado a coste cero y estudiar a tu propio ritmo.
+* Dispones del **100% del material en abierto**: temarios, scripts de Julia, R y Python, guías docentes, bases de datos y el corpus de fuentes. Puedes conectar todo el repositorio a tu cuenta de Google/LLM institucional para disponer de un tutor RAG personalizado a coste cero y estudiar a tu propio ritmo.
 
 ------------------------------------------------------------------------
 
@@ -84,7 +84,7 @@ Mediante el principio innegociable de **máxima honestidad intelectual e invaria
 
 La IA solo vuelve obsoleto al estudiante que actúa como una grabadora pasiva de contenidos. En la facultad aplicamos el **principio del exoesqueleto cognitivo**:
 
-* La IA acelera la carpintería sintáctica (R, Python, SQL) y ayuda a explorar hipótesis adversarias (*Red Teaming*).
+* La IA acelera la carpintería sintáctica (Julia, R, SQL) y ayuda a explorar hipótesis adversarias (*Red Teaming*).
 * Sin embargo, la atrofia se combate mediante la **prueba de la pizarra (*Blackboard Defence*)**: exámenes orales en los que el alumno debe derivar los modelos a mano alzada y explicar cada línea de código sin pantallas de por medio. La máquina es el siervo; la mente humana es el arquitecto.
 
 ------------------------------------------------------------------------
@@ -93,7 +93,7 @@ La IA solo vuelve obsoleto al estudiante que actúa como una grabadora pasiva de
 
 Frente al graduado tradicional en ciencias humanas —frecuentemente abocado a la precariedad por carecer de habilidades cuantitativas auditables—, el egresado de este programa posee un perfil de **altísima demanda en el mercado global**:
 
-* **Data Science & ML Engineering:** Dominio políglota de Python, R, SQL, modelos bayesianos y redes.
+* **Data Science & ML Engineering:** Dominio políglota de Julia, Python, R y SQL, modelos bayesianos y redes.
 * **Causal Inference & Policy Evaluation:** Capacidad para diseñar experimentos naturales, A/B testing avanzado e inferencia causal por DAGs en grandes tecnológicas, consultoría estratégica y think tanks.
 * **Análisis demográfico y prospectiva:** Dominio de modelos matriciales de población, cliodinámica y análisis biofísico/energético para gestión pública y fondos de inversión.
 * **Investigación académica de frontera:** Preparación directa para ingresar en los programas de doctorado cuantitativo más exigentes del mundo (Chicago, Harvard, MIT, LSE).
@@ -107,4 +107,4 @@ Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este si
 1. Empieza por la terminal Bash y el manual de Allesina & Wilmes (*Computing Skills for Biologists*).
 2. Domina la probabilidad con *Harvard Stat 110* y el álgebra lineal con *Axler*.
 3. Desglosa los textos fundamentales de Plomin (*Blueprint*), Pearl (*Causality*) y Hedström (*Dissecting the Social*).
-4. Configura tu LLM local con el protocolo socrático que proporcionamos y ejecuta los laboratorios prácticos en R y Python.
+4. Configura tu LLM local con el protocolo socrático que proporcionamos y ejecuta los laboratorios prácticos en Julia, R y Python.

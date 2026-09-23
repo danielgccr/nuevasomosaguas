@@ -20,7 +20,7 @@ El autodidacta de la Nueva Somosaguas no busca la acreditación burocrática ni 
 
 ### Los tres principios innegociables del autodidacta
 
-1. **La regla del «Hands-On» (sin código ni ecuación, no hay conocimiento):** Leer sobre una teoría no es aprenderla. Solo has asimilado un concepto cuando eres capaz de simularlo en R/Python, derivar su prueba matemática en papel o escribir una consulta SQL sobre datos reales.
+1. **La regla del «Hands-On» (sin código ni ecuación, no hay conocimiento):** Leer sobre una teoría no es aprenderla. Solo has asimilado un concepto cuando eres capaz de simularlo en Julia o R, derivar su prueba matemática en papel o escribir una consulta SQL sobre datos reales.
 2. **Secuencia obligatoria (cimientos antes que tejado):** No se lee a Judea Pearl (inferencia causal) sin dominar antes la probabilidad bayesiana; no se aborda la genética cuantitativa de Robert Plomin sin entender la varianza y la covarianza lineal.
 3. **Austeridad de fuentes (pocas obras, máxima densidad):** Es infinitamente superior estudiar en profundidad diez manuales de frontera que hojear cien libros de divulgación periodística.
 
@@ -35,7 +35,7 @@ El autodidacta de la Nueva Somosaguas no busca la acreditación burocrática ni 
 %%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 12, "useMaxWidth": true}}}%%
 flowchart TD
     F0["Fase 0 · La terminal y la herramienta<br/>Semanas 1-4<br/>Unix shell · Git · Markdown · RStudio/VSCode"]
-    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Axler · Strang · R y Python"]
+    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Axler · Strang · Julia y R"]
     F2["Fase 2 · Mecanismos, genética y causalidad<br/>Meses 6-12<br/>Plomin · Reich · Hedström (DBO) · Pearl (DAGs)"]
     F3["Fase 3 · Alta competición y modelado<br/>Año 2 en adelante<br/>Binmore · Joshua Epstein (ABM) · Smil y Turchin"]
 
@@ -81,7 +81,7 @@ Las ciencias sociales analíticas se expresan en el lenguaje de la matemática y
    * **Joel Grus:** *Data Science from Scratch* (Python).
 
 ### Hito práctico
-Escribir un script en R/Python que simule el problema de Monty Hall mediante Monte Carlo (100.000 iteraciones) y calcule la distribución *a posteriori* de un experimento binomial mediante Bayes.
+Escribir un script en Julia o R que simule el problema de Monty Hall mediante Monte Carlo (100.000 iteraciones) y calcule la distribución *a posteriori* de un experimento binomial mediante Bayes.
 
 ---
 
@@ -136,7 +136,7 @@ El estudiante autónomo no tiene un profesor particular, pero dispone de una her
 ### Protocolo de tutoría socrática con IA
 No utilices la IA para que te dé resúmenes de libros o te resuelva los ejercicios directamente. Configura tu sistema con la siguiente instrucción de sistema (*prompting socrático*):
 
-> *«Actúa como un profesor de ciencias sociales analíticas riguroso e inflexible. No me des respuestas directas. Cuando te presente un problema de probabilidad, inferencia causal o teoría de juegos, hazme preguntas guía, señala las inconsistencias lógicas de mi razonamiento y pídeme que te muestre la prueba matemática o el script de R/Python correspondiente.»*
+> *«Actúa como un profesor de ciencias sociales analíticas riguroso e inflexible. No me des respuestas directas. Cuando te presente un problema de probabilidad, inferencia causal o teoría de juegos, hazme preguntas guía, señala las inconsistencias lógicas de mi razonamiento y pídeme que te muestre la prueba matemática o el script de Julia o R correspondiente.»*
 :::
 
 ---
