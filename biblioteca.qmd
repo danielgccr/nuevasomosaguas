@@ -34,6 +34,7 @@ Obras dedicadas al adiestramiento del razonamiento cuantitativo de primer orden,
 * **Gill, Jeff & Bao, Le** (2024). *Bayesian Social Science Statistics: Volume 1*. Cambridge University Press. `[Nivel 2 | Estadística Bayesiana]`
 * **Gill, Jeff** (2006). *Essential Mathematics for Political and Social Research*. Cambridge University Press. `[Nivel 1 | Matemáticas Fundamentales]`
 * **Hacking, Ian** (2016). *Logic of Statistical Inference*. Cambridge University Press. `[Nivel 2 | Lógica e Inferencia]`
+* **Popper, Karl R.** (1959/2002). *The Logic of Scientific Discovery*. Routledge. `[Nivel 2 | Demarcación Científica]`
 * **Briggs, William M.** (2016). *Uncertainty: The Soul of Modeling, Probability & Statistics*. Springer. `[Nivel 2 | Modelización]`
 * **Harman, Gilbert & Kulkarni, Sanjeev** (2007). *Reliable Reasoning: Induction and Statistical Learning Theory*. The MIT Press. `[Nivel 2 | Teoría del Aprendizaje]`
 * **Dienes, Zoltan** (2008). *Understanding Psychology as a Science: An Introduction to Scientific and Bayesian Inference*. Palgrave Macmillan. `[Nivel 1 | Método Científico]`
@@ -82,6 +83,7 @@ Cuerpo teórico que desmantela las «causas mágicas» y el holismo estructurali
 * **Pearl, Judea; Glymour, Madelyn & Jewell, Nicholas P.** (2016). *Causal Inference in Statistics: A Primer*. Wiley. `[Nivel 1 | Inferencia Causal Introductoria]`
 * **Angrist, Joshua D. & Pischke, Jörn-Steffen** (2009). *Mostly Harmless Econometrics: An Empiricist's Companion*. Princeton University Press. `[Nivel 2 | Econometría Cuasi-Experimental]`
 * **Morgan, Stephen L. & Winship, Christopher** (2014). *Counterfactuals and Causal Inference: Models and Principles for Social Research*. Cambridge University Press. `[Nivel 2 | Modelos Contrafactuales]`
+* **Imbens, Guido W. & Rubin, Donald B.** (2015). *Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction*. Cambridge University Press. `[Nivel 3 | Resultados Potenciales]`
 * **Dunning, Thad** (2012). *Natural Experiments in the Social Sciences: A Design-Based Approach*. Cambridge University Press. `[Nivel 2 | Experimentos Naturales]`
 * **Molak, Aleksander & Jaokar, Ajit** (2023). *Causal Inference and Discovery in Python*. Packt Publishing. `[Nivel 2 | Inferencia Causal en Python]`
 * **Mumford, Stephen & Anjum, Rani Lill** (2014). *Causation: A Very Short Introduction*. Oxford University Press. `[Nivel 1 | Metafísica Causal]`
@@ -120,6 +122,7 @@ Estudio de los sesgos cognitivos, la evolución de la moral y las religiones, la
 
 * **Mercier, Hugo & Sperber, Dan** (2017). *The Enigma of Reason: A New Theory of Human Understanding*. Harvard University Press. `[Nivel 2 | Teoría Argumentativa]`
 * **Tomasello, Michael** (2014). *A Natural History of Human Thinking*. Harvard University Press. `[Nivel 2 | Desarrollo Cognitivo]`
+* **Jussim, Lee** (2012). *Social Perception and Social Reality: Why Accuracy Dominates Bias and Self-Fulfilling Prophecy*. Oxford University Press. `[Nivel 2 | Precisión de la Percepción]`
 * **Nisbett, Richard E.** (2015). *Mindware: Tools for Smart Thinking*. Farrar, Straus and Giroux. `[Nivel 1 | Herramientas Cognitivas]`
 * **Bloom, Paul** (2016). *Against Empathy: The Case for Rational Compassion*. Ecco. `[Nivel 1 | Ética Racional]`
 * **Beaujean, A. Alexander** (2014). *Latent Variable Modeling with R: Structural Equation Modeling with the sem Package*. Routledge. `[Nivel 2 | Psicometría]`
