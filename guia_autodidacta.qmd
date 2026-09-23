@@ -1,6 +1,6 @@
 ---
-title: "Guía para el autodidacta: el camino de la autonomía intelectual"
-subtitle: "Navegar el mar de información sin perecer en la superficie"
+title: "Guía autodidacta"
+subtitle: "La carrera en solitario: cuatro hitos, presupuesto real de horas y un proyecto auditable en cada uno"
 format:
   html:
     toc: true
@@ -8,145 +8,108 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-### Advertencia al navegante
-Internet no sufre de escasez de información, sino de **inflación de ruido y dispersión**. Sin un mapa conceptual riguroso, el autodidacta entusiasta corre el riesgo de naufragar en la divulgación superficial, consumiendo docenas de libros populares sin adquirir jamás la capacidad de derivar una sola ecuación, escribir un script de réplica o identificar un sesgo causal. Esta guía proporciona un **camino secuencial, austero y probado** para dominar la ciencia social analítica de forma autónoma.
+Esta guía no es una lista de lecturas. Una lista de lecturas no distingue entre haber leído un manual y saber usarlo, y esa confusión es el modo habitual de fracasar estudiando solo. Lo que sigue es un itinerario con **presupuesto de horas declarado** y un **proyecto de verificación al final de cada hito**: se avanza por haber superado una auditoría reproducible, no por haber terminado un libro.
 :::
 
 ---
 
-## Filosofía del aprendizaje autónomo
+## 1. Los tres principios de la formación en solitario
 
-El autodidacta de la Nueva Somosaguas no busca la acreditación burocrática ni la aprobación de ningún tribunal de oposición. Su meta es la **soberanía cognitiva**: la capacidad de leer la realidad empírica directamente, auditar los datos por sí mismo y construir modelos inexpugnables.
+Estudiar este plan sin pisar un aula exige más disciplina que cursarlo, no menos: nadie corrige, nadie pregunta y nadie detecta el autoengaño. El itinerario se rige por tres restricciones.
 
-### Los tres principios innegociables del autodidacta
+* **La regla del compilador.** Ningún concepto se da por aprendido si no se traduce a una función ejecutable o a una deducción formal escrita en texto plano (Typst o Quarto). Subrayar no cuenta; compilar, sí.
+* **Un solo entorno a la vez.** Se elimina la alternancia temprana de lenguajes. Toda la primera mitad de la ruta se cursa sobre **Julia y la consola de Unix**. Aprender dos ecosistemas de paquetería, dos sintaxis de indexación y dos modelos mentales de datos duplica la fricción técnica justo cuando el esfuerzo debería ir al concepto matemático.
+* **Proyectos de control.** No se pasa de hito por haber cerrado un libro, sino por superar la auditoría de un problema empírico con microdatos reales. Si el script no corre o los autovalores divergen, el hito no está terminado, por muchos capítulos que se hayan leído.
 
-1. **La regla del «Hands-On» (sin código ni ecuación, no hay conocimiento):** Leer sobre una teoría no es aprenderla. Solo has asimilado un concepto cuando eres capaz de simularlo en Julia o R, derivar su prueba matemática en papel o escribir una consulta SQL sobre datos reales.
-2. **Secuencia obligatoria (cimientos antes que tejado):** No se lee a Judea Pearl (inferencia causal) sin dominar antes la probabilidad bayesiana; no se aborda la genética cuantitativa de Robert Plomin sin entender la varianza y la covarianza lineal.
-3. **Austeridad de fuentes (pocas obras, máxima densidad):** Es infinitamente superior estudiar en profundidad diez manuales de frontera que hojear cien libros de divulgación periodística.
+### El presupuesto real de horas
+
+Conviene decirlo sin adornos, porque es donde se rompen la mayoría de los intentos. El itinerario completo suma unas **2.600 horas netas de concentración profunda**. A un ritmo sostenible de 15 a 20 horas semanales —el máximo realista para quien además trabaja ocho horas al día—, eso son **entre dos años y medio y tres años y medio**.
+
+Presentar estas fases como etapas ligeras que se despachan en unos meses induce exactamente la lectura superficial que la guía pretende combatir: hojear el manual, subrayar dos teoremas, creerlos asimilados y pasar al siguiente volumen.
 
 ---
 
-## La ruta de aprendizaje en cuatro fases
+## 2. El itinerario cuantitativo: cuatro hitos de ejecución
 
 ```{mermaid}
-%%| label: fig-fases
-%%| fig-cap: "Las cuatro fases de la ruta autodidacta."
+%%| label: fig-hitos
+%%| fig-cap: "Los cuatro hitos, con su presupuesto de horas netas."
 
-%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 45, "padding": 12, "useMaxWidth": true}}}%%
-flowchart TD
-    F0["Fase 0 · La terminal y la herramienta<br/>Semanas 1-4<br/>Unix shell · Git · Markdown · RStudio/VSCode"]
-    F1["Fase 1 · El motor cuantitativo<br/>Meses 2-5<br/>Harvard Stat 110 · Strang · Simon y Blume · Julia"]
-    F2["Fase 2 · Mecanismos, genética y causalidad<br/>Meses 6-12<br/>Plomin · Reich · Hedström (DBO) · Pearl (DAGs)"]
-    F3["Fase 3 · Alta competición y modelado<br/>Año 2 en adelante<br/>Binmore · Joshua Epstein (ABM) · Smil y Turchin"]
+%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 12, "useMaxWidth": true}}}%%
+flowchart TB
+    H1["Hito I · ~800 h<br/>El andamiaje formal<br/>Álgebra · Probabilidad · Demografía"]
+    H2["Hito II · ~700 h<br/>Restricciones biológicas e identificación causal<br/>Genética cuantitativa · DAGs · Etología"]
+    H3["Hito III · ~600 h<br/>Mecanismos micro y teoría estratégica<br/>DBO · Juegos · Redes"]
+    H4["Hito IV · ~500 h<br/>Dinámicas macro y cliodinámica<br/>Crecimiento unificado · Ciclos · Elección pública"]
 
-    F0 --> F1 --> F2 --> F3
+    H1 --> H2 --> H3 --> H4
 
-    classDef fase fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
-    class F0,F1,F2,F3 fase
+    classDef hito fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class H1,H2,H3,H4 hito
 ```
 
----
+### Hito I: el andamiaje formal (~800 horas netas)
 
-## Fase 0: la terminal y el entorno de trabajo (semanas 1-4)
+**Meta:** sustituir la lógica verbal por la geometría matricial, la probabilidad y la contabilidad poblacional.
 
-Antes de estudiar la sociedad, el autodidacta debe dominar las herramientas con las que procesará la información. El objetivo de esta fase es erradicar la dependencia de interfaces de usuario pasivas (como Excel o SPSS) y establecer un entorno de desarrollo profesional.
+* **Álgebra lineal computacional:** espacios vectoriales, proyecciones ortogonales y descomposiciones espectrales (SVD, QR). *Texto:* Gilbert Strang — *Linear Algebra and Its Applications*.
+* **Probabilidad axiomática:** variables discretas y continuas, momentos, condicionamiento y teorema de Bayes. *Texto:* Joseph K. Blitzstein & Jessica Hwang — *Introduction to Probability*.
+* **Demografía matemática:** ecuación de Euler-Lotka, tablas de mortalidad y matrices de proyección de Leslie. *Texto:* Kenneth W. Wachter — *Essential Demographic Methods*.
+* **El entorno, en paralelo:** consola de Unix, `git` y Julia desde el primer día. *Textos:* William Shotts — *The Linux Command Line*; Brian W. Kernighan & Rob Pike — *The Practice of Programming*.
 
-### Lecturas y cursos de trabajo
+::: {.callout-important}
+**Gate de validación I.** Descargar microdatos censales o de mortalidad en bruto, construir el ciclo de vida actuarial completo desde primeros principios y calcular la tasa intrínseca de crecimiento $r$, con un script auditable y un informe reproducible en Typst.
+:::
 
-* **William Shotts:** *The Linux Command Line*. Conquistar la consola desde cero: navegación por el sistema de archivos, flujos de texto (`stdin`, `stdout`, `stderr`), tuberías, redirecciones, permisos y procesos. La rampa de entrada innegociable, antes de escribir una sola línea de R o Python.
-* **Dave Taylor & Brandon Perry:** *Wicked Cool Shell Scripts*. Pasar de recorrer la máquina a automatizarla: utilidades propias en `bash`, limpieza por lotes con `grep`, `sed` y `awk`, y encadenamiento de herramientas pequeñas en *pipelines* reproducibles.
-* **Kernighan & Pike:** *The Practice of Programming*. Aprender la filosofía del código sobrio, modular e inexpugnable.
-* **Harvard CS50 / Programming Historian:** Manejo de control de versiones con Git, GitHub y entorno de publicación en Markdown/Quarto.
+### Hito II: restricciones biológicas e identificación causal (~700 horas netas)
 
-### Hito práctico
-Crear un repositorio personal en GitHub, configurar RStudio y VSCode, y redactar la primera nota de estudio completamente en Markdown compilada con Quarto.
+**Meta:** purgar el supuesto de la *tabula rasa* y separar formalmente la correlación de la causa.
 
----
+* **Genética cuantitativa:** descomposición de la varianza fenotípica ($h^2$), modelo infinitesimal y control por correlación e interacción gen-ambiente ($G \times E$). *Texto:* D. S. Falconer & Trudy F. C. Mackay — *Introduction to Quantitative Genetics*.
+* **Inferencia causal estructural:** criterio de la puerta trasera, grafos acíclicos dirigidos y resultados potenciales. *Textos:* Judea Pearl, Madelyn Glymour & Nicholas P. Jewell — *Causal Inference in Statistics*; Joshua D. Angrist & Jörn-Steffen Pischke — *Mostly Harmless Econometrics*.
+* **Psicología evolutiva y etología:** regla de Hamilton, reciprocidad y jerarquías adaptativas. *Textos:* Christopher Boehm — *Hierarchy in the Forest*; Robert Plomin — *Blueprint*.
 
-## Fase 1: el motor cuantitativo (meses 2-5)
+::: {.callout-important}
+**Gate de validación II.** Replicar un artículo empírico controvertido sobre movilidad social, aislando la estructura de confusión con un DAG explícito y corrigiendo el sesgo de selección con microdatos de panel.
+:::
 
-Las ciencias sociales analíticas se expresan en el lenguaje de la matemática y la probabilidad. Esta fase construye la infraestructura mental para no volver a temblar ante un sumatorio, una integral o una matriz de covarianza.
+### Hito III: mecanismos micro y teoría estratégica (~600 horas netas)
 
-### Lecturas y cursos clave
+**Meta:** modelar la interacción de agentes discretos sin recurrir a entidades holistas.
 
-1. **Probabilidad y estadística:**
-   * **Joseph K. Blitzstein:** *Statistics 110: Probability* (Harvard University - Disponible gratis en YouTube y edX).
-   * **Bradley Efron & Trevor Hastie:** *Computer Age Statistical Inference* (Capítulos 1-5).
-2. **Álgebra lineal, cálculo e intuición geométrica:**
-   * **Gilbert Strang:** *Linear Algebra and Its Applications*. El álgebra con determinantes y matrices, que es la que conecta con la descomposición QR, los valores singulares y las matrices de Leslie.
-   * **3Blue1Brown:** Serie de vídeos *Essence of Linear Algebra* y *Essence of Calculus*.
-   * **Gilbert Strang:** *Calculus* (MIT OpenCourseWare). El puente formal entre la intuición geométrica del vídeo y las ecuaciones diferenciales del modelado: derivadas e integrales como operadores del cambio, no como catálogo de trucos algebraicos.
-3. **Programación cuantitativa políglota:**
-   * **Hadley Wickham:** *ggplot2: Elegant Graphics for Data Analysis* (R).
-   * **Joel Grus:** *Data Science from Scratch* (Python).
+* **Sociología analítica (DBO):** deseos, creencias y oportunidades como motores generativos de regularidades macro. *Textos:* Peter Hedström — *Dissecting the Social*; Jon Elster — *Explaining Social Behavior*.
+* **Teoría de juegos estratégica y evolutiva:** equilibrios de Nash, juegos repetidos, dinámica de réplica y normas sociales. *Texto:* Robert Gibbons — *Game Theory for Applied Economists*.
+* **Teoría de redes sociales:** homofilia, centralidad, difusión y modelos de umbrales. *Texto:* Matthew O. Jackson — *Social and Economic Networks*.
 
-### Hito práctico
-Escribir un script en Julia o R que simule el problema de Monty Hall mediante Monte Carlo (100.000 iteraciones) y calcule la distribución *a posteriori* de un experimento binomial mediante Bayes.
+::: {.callout-important}
+**Gate de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas.
+:::
 
----
+### Hito IV: dinámicas macro y cliodinámica (~500 horas netas)
 
-## Fase 2: mecanismos, genética y causalidad (meses 6-12)
+**Meta:** integrar la historia económica cuantitativa, las restricciones energéticas y los sistemas dinámicos.
 
-Con el motor matemático ajustado, el autodidacta entra en el núcleo duro de la ciencia social analítica: la superación de las causas mágicas y el aprendizaje de la inferencia causal por diseño.
+* **Trampa malthusiana y crecimiento unificado:** la Gran Divergencia y la salida del régimen de subsistencia. *Textos:* Oded Galor — *Unified Growth Theory*; Gregory Clark — *A Farewell to Alms*.
+* **Sistemas dinámicos y cliodinámica:** ecuaciones diferenciales no lineales, sobreproducción de élites y ciclos seculares. *Textos:* Peter Turchin & Sergey A. Nefedov — *Secular Cycles*; Steven H. Strogatz — *Nonlinear Dynamics and Chaos*.
+* **Elección pública:** búsqueda de rentas e incentivos del decisor burocrático. *Texto:* James M. Buchanan & Gordon Tullock — *The Calculus of Consent*.
 
-### Las tres columnas de la fase 2
-
-#### A. Genética de la conducta y paleogenómica
-* **Robert Plomin:** *Blueprint: How DNA Makes Us Who We Are*. Comprender la heredabilidad ($h^2$) de rasgos complejos y los *polygenic scores*.
-* **David Reich:** *Who We Are and How We Got Here*. Entender cómo el ADN antiguo reescribió la historia de las migraciones humanas.
-
-#### B. Sociología analítica y mecanismos micro
-* **Peter Hedström:** *Dissecting the Social: On the Principles of Analytical Sociology*. Dominar la descomposición DBO (Deseos, Creencias y Oportunidades).
-* **Jon Elster:** *Explaining Social Behavior: More Nuts and Bolts for the Social Sciences*.
-
-#### C. Inferencia causal por diseño
-* **Judea Pearl:** *Causality: Models, Reasoning, and Inference* (o el manual práctico de **Aleksander Molak**: *Causal Inference and Discovery in Python*).
-* **Stephen Morgan & Christopher Winship:** *Counterfactuals and Causal Inference*.
-
-### Hito práctico
-Tomar una base de datos pública (p. ej., el General Social Survey o datos censales), dibujar un Diagrama Acíclico Dirigido (DAG) causal con sus supuestos, identificar las variables colisionadoras y ejecutar una regresión controlada que demuestre la presencia o ausencia de sesgo de selección.
-
----
-
-## Fase 3: alta competición y modelos propios (año 2 en adelante)
-
-Llegado a este nivel, el autodidacta posee un criterio superior al de la mayoría de los graduados universitarios tradicionales. La tercera fase está dedicada a la integración macrohistórica, la teoría de juegos y la simulación.
-
-### Obras de frontera
-
-* **Teoría de juegos y elección pública:**
-  * **Ken Binmore:** *Playing for Real: A Text on Game Theory*.
-  * **Herbert Gintis:** *The Bounds of Reason: Game Theory and the Unification of the Behavioral Sciences*.
-* **Ciencias sociales generativas:**
-  * **Joshua Epstein:** *Agent_Zero: Toward Neurocognitive Foundations for Generative Social Science*.
-* **Cliodinámica y macrohistoria biofísica:**
-  * **Peter Turchin & Sergey Nefedov:** *Secular Cycles*.
-  * **Vaclav Smil:** *Energy and Civilization: A History*.
-
-### Hito práctico
-Programar una Simulación Basada en Agentes (ABM) desde cero en Python que modele la emergencia espontánea de cooperación o segregación (tipo Schelling o Axelrod) y publicar el análisis interactivo en la web personal.
-
----
-
-## El exoesqueleto para el autodidacta: cómo usar la IA
-
-El estudiante autónomo no tiene un profesor particular, pero dispone de una herramienta más potente si sabe utilizarla: un **modelo de lenguaje (LLM) o sistema RAG personalizado**.
-
-::: {.callout-tip}
-### Protocolo de tutoría socrática con IA
-No utilices la IA para que te dé resúmenes de libros o te resuelva los ejercicios directamente. Configura tu sistema con la siguiente instrucción de sistema (*prompting socrático*):
-
-> *«Actúa como un profesor de ciencias sociales analíticas riguroso e inflexible. No me des respuestas directas. Cuando te presente un problema de probabilidad, inferencia causal o teoría de juegos, hazme preguntas guía, señala las inconsistencias lógicas de mi razonamiento y pídeme que te muestre la prueba matemática o el script de Julia o R correspondiente.»*
+::: {.callout-important}
+**Gate de validación IV, la tesis autodidacta.** Publicar un repositorio con un modelo dinámico calibrado sobre series históricas, auditado de punta a punta y documentado en texto plano.
 :::
 
 ---
 
-## Lista de verificación del autodidacta (*self-audit*)
+## 3. El modelo de lenguaje como claustro socrático
 
-Antes de dar por superado un módulo, compruébate con estas tres preguntas de control:
+El mayor riesgo de estudiar solo no es la falta de libros: es el atasco. Bloquearse dos semanas en una derivación o en una matriz de covarianza y abandonar por frustración acaba con más itinerarios que la dificultad del material.
 
-1. **¿Puedo explicar el concepto en una pizarra sin mirar notas?**
-2. **¿Puedo escribir el código en R o Python que replica el resultado empírico principal?**
-3. **¿Puedo identificar la limitación causal o el supuesto de identificación del modelo?**
+El autodidacta no usa la IA para generar código a ciegas ni para producir resúmenes que le eximan de leer. La usa como tutor permanente en la terminal:
 
-Si la respuesta a las tres es afirmativa, has conquistado esa parcela de conocimiento. Si no, vuelve al código y a la ecuación. La belleza del autodidactismo radica en que **el único juez insobornable es la realidad**.
+* **Exigencia de mecanismos.** Obligar al modelo a aislar el espacio de estados y los supuestos de identificación *antes* de abrir un texto denso.
+* **Auditoría de código.** Depurar cuellos de botella de memoria o explicar fallos de convergencia en optimizaciones matriciales.
+* **Interrogatorio clínico.** Pedirle que examine al estudiante sobre los supuestos de un teorema o las debilidades de un grafo causal antes de dar por cerrada la sesión.
+
+::: {.callout-tip}
+### Instrucción de sistema
+> *«Actúa como un profesor de ciencias sociales analíticas riguroso e inflexible. No me des respuestas directas. Cuando te presente un problema de probabilidad, inferencia causal o teoría de juegos, hazme preguntas guía, señala las inconsistencias lógicas de mi razonamiento y pídeme que te muestre la prueba matemática o el script de Julia correspondiente.»*
+:::

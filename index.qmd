@@ -92,7 +92,7 @@ Doce semanas de nivelación antes del primer curso, en tres fases: geometría ma
 ::: {.g-col-12 .g-col-md-6}
 ### [Guía autodidacta](guia_autodidacta.qmd)
 
-La ruta en cuatro fases para recorrer el pensum por cuenta propia: de la terminal y el álgebra a la inferencia causal y la simulación basada en agentes.
+Cuatro hitos para recorrer el pensum en solitario, con su presupuesto de horas declarado y un proyecto auditable con microdatos reales al final de cada uno.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

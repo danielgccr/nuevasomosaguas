@@ -102,9 +102,11 @@ Frente al graduado tradicional en ciencias humanas —frecuentemente abocado a l
 
 ### 9. Deseo estudiar por mi cuenta sin matricularme en la universidad, ¿por dónde empiezo?
 
-Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este sitio web. Sigue el camino trazado en cuatro fases:
+Dirígete a la sección [**Guía autodidacta**](guia_autodidacta.qmd) de este sitio web. El itinerario son cuatro hitos, cada uno con su presupuesto de horas y su proyecto de verificación:
 
-1. Empieza por la terminal Bash y el manual de Allesina & Wilmes (*Computing Skills for Biologists*).
-2. Domina la probabilidad con *Harvard Stat 110* y el álgebra lineal con *Strang*.
-3. Desglosa los textos fundamentales de Plomin (*Blueprint*), Pearl (*Causality*) y Hedström (*Dissecting the Social*).
-4. Configura tu LLM local con el protocolo socrático que proporcionamos y ejecuta los laboratorios prácticos en Julia, R y Python.
+1. **El andamiaje formal** (~800 h): álgebra lineal con *Strang*, probabilidad con *Harvard Stat 110* y demografía con Wachter, sobre Julia y la consola de Unix.
+2. **Restricciones biológicas e identificación causal** (~700 h): Falconer y Mackay, Pearl y Angrist y Pischke.
+3. **Mecanismos micro y teoría estratégica** (~600 h): Hedström, Gibbons y Jackson.
+4. **Dinámicas macro y cliodinámica** (~500 h): Galor, Turchin y Buchanan y Tullock.
+
+Son unas 2.600 horas netas en total: entre dos años y medio y tres y medio a 15-20 horas semanales. La guía declara ese presupuesto por delante para que nadie confunda el ritmo real con el de un curso de verano.
