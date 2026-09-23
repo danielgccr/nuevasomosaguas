@@ -254,4 +254,4 @@ print(ci_gini)
 
 Los scripts presentados aquí forman parte del libro de laboratorios ejecutables del grado. Todos los cuadernos de Jupyter, archivos `.Rmd` y esquemas SQL están disponibles en nuestro repositorio oficial:
 
-**[github.com/nuevasomosaguas/laboratorios-cuantitativos](https://github.com/nuevasomosaguas)**
+**[github.com/danielgccr/nuevasomosaguas](https://github.com/danielgccr/nuevasomosaguas)**

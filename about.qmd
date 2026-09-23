@@ -41,4 +41,4 @@ Quien traiga la disciplina, encontrará aquí el itinerario completo: el [currí
 
 ## Contacto
 
-Correcciones, refutaciones y colaboraciones son bienvenidas en el [repositorio del proyecto](https://github.com/nuevasomosaguas/nuevasomosaguas.org). Las erratas metodológicas se agradecen especialmente.
+Correcciones, refutaciones y colaboraciones son bienvenidas en el [repositorio del proyecto](https://github.com/danielgccr/nuevasomosaguas). Las erratas metodológicas se agradecen especialmente.

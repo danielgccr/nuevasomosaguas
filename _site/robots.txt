@@ -1,1 +1,1 @@
-Sitemap: https://nuevasomosaguas.org/sitemap.xml
+Sitemap: https://danielgccr.github.io/nuevasomosaguas/sitemap.xml

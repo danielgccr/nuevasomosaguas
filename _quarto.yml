@@ -20,8 +20,8 @@ language:
 
 website:
   title: "Nueva Somosaguas"
-  site-url: "https://nuevasomosaguas.org"
-  repo-url: "https://github.com/nuevasomosaguas/nuevasomosaguas.org"
+  site-url: "https://danielgccr.github.io/nuevasomosaguas"
+  repo-url: "https://github.com/danielgccr/nuevasomosaguas"
   navbar:
     background: "#1a1a1a"
     foreground: "#f8f9fa"
