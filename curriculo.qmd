@@ -96,7 +96,7 @@ Cinco asignaturas por curso, tesis incluida.
 
 #### 2.5. Psicometría y modelización de variables latentes
 * **Contenidos:** teoría clásica de los tests, análisis factorial exploratorio y confirmatorio, factor general ($g$), curvas características del ítem y matrices de covarianza de rasgos cognitivos y de personalidad.
-* **Texto matriz:** A. Alexander Beaujean — *Latent Variable Modeling with R*.
+* **Texto matriz:** A. Alexander Beaujean — *Latent Variable Modeling Using R*.
 
 ---
 

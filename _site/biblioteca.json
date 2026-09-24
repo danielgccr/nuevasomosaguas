@@ -1,0 +1,3226 @@
+[
+  {
+    "ISBN": "9780262350594",
+    "author": [
+      {
+        "family": "Plomin",
+        "given": "Robert"
+      }
+    ],
+    "id": "plomin2018blueprint",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Blueprint: How DNA makes us who we are",
+    "title-short": "Blueprint",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1002/9781118482766",
+    "author": [
+      {
+        "family": "Plomin",
+        "given": "Robert"
+      },
+      {
+        "family": "Asbury",
+        "given": "Kathryn"
+      }
+    ],
+    "id": "plomin2013g",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "publisher": "Wiley-Blackwell",
+    "title": "G is for genes: The impact of genetics on education and achievement",
+    "title-short": "G is for genes",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Falconer",
+        "given": "D. S."
+      },
+      {
+        "family": "Mackay",
+        "given": "Trudy F. C."
+      }
+    ],
+    "edition": "4th",
+    "id": "falconer2009introduction",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "original-date": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "publisher": "Pearson",
+    "title": "Introduction to quantitative genetics",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781101870327",
+    "author": [
+      {
+        "family": "Reich",
+        "given": "David"
+      }
+    ],
+    "id": "reich2018who",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Pantheon Books",
+    "title": "Who we are and how we got here: Ancient DNA and the new science of the human past",
+    "title-short": "Who we are and how we got here",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780465002214",
+    "author": [
+      {
+        "family": "Cochran",
+        "given": "Gregory"
+      },
+      {
+        "family": "Harpending",
+        "given": "Henry"
+      }
+    ],
+    "id": "cochran200910",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Basic Books",
+    "title": "The 10,000 year explosion: How civilization accelerated human evolution",
+    "title-short": "The 10,000 year explosion",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/9781316105771",
+    "author": [
+      {
+        "family": "Haier",
+        "given": "Richard J."
+      }
+    ],
+    "id": "haier2017neuroscience",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "The neuroscience of intelligence",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780195372090.001.0001",
+    "editor": [
+      {
+        "family": "Buss",
+        "given": "David M."
+      },
+      {
+        "family": "Hawley",
+        "given": "Patricia H."
+      }
+    ],
+    "id": "buss2010evolution",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "The evolution of personality and individual differences",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4159/9780674028449",
+    "author": [
+      {
+        "family": "Boehm",
+        "given": "Christopher"
+      }
+    ],
+    "id": "boehm1999hierarchy",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "publisher": "Harvard University Press",
+    "title": "Hierarchy in the forest: The evolution of egalitarian behavior",
+    "title-short": "Hierarchy in the forest",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781616148232",
+    "author": [
+      {
+        "family": "Tuschman",
+        "given": "Avi"
+      }
+    ],
+    "id": "tuschman2013our",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "publisher": "Prometheus Books",
+    "title": "Our political nature: The evolutionary origins of what divides us",
+    "title-short": "Our political nature",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511487378",
+    "author": [
+      {
+        "family": "Sesardic",
+        "given": "Neven"
+      }
+    ],
+    "id": "sesardic2005making",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Making sense of heritability",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Vanhanen",
+        "given": "Tatu"
+      }
+    ],
+    "id": "vanhanen2012ethnic",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Ulster Institute for Social Research",
+    "title": "Ethnic conflicts: Their biological roots in ethnic nepotism",
+    "title-short": "Ethnic conflicts",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780393246186",
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Waal",
+        "given": "Frans"
+      }
+    ],
+    "id": "dewaal2016are",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "W. W. Norton & Company",
+    "title": "Are we smart enough to know how smart animals are?",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7208/chicago/9780226668352.001.0001",
+    "author": [
+      {
+        "family": "Pigliucci",
+        "given": "Massimo"
+      },
+      {
+        "family": "Kaplan",
+        "given": "Jonathan"
+      }
+    ],
+    "id": "pigliucci2006making",
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "publisher": "University of Chicago Press",
+    "title": "Making sense of evolution: The conceptual foundations of evolutionary biology",
+    "title-short": "Making sense of evolution",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1002/9781444317176",
+    "author": [
+      {
+        "family": "Lindeberg",
+        "given": "Staffan"
+      }
+    ],
+    "id": "lindeberg2010food",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "publisher": "Wiley-Blackwell",
+    "title": "Food and Western disease: Health and nutrition from an evolutionary perspective",
+    "title-short": "Food and Western disease",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4159/9780674977860",
+    "author": [
+      {
+        "family": "Mercier",
+        "given": "Hugo"
+      },
+      {
+        "family": "Sperber",
+        "given": "Dan"
+      }
+    ],
+    "id": "mercier2017enigma",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "Harvard University Press",
+    "title": "The enigma of reason: A new theory of human understanding",
+    "title-short": "The enigma of reason",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4159/9780674726369",
+    "author": [
+      {
+        "family": "Tomasello",
+        "given": "Michael"
+      }
+    ],
+    "id": "tomasello2014natural",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Harvard University Press",
+    "title": "A natural history of human thinking",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780195366600.001.0001",
+    "author": [
+      {
+        "family": "Jussim",
+        "given": "Lee"
+      }
+    ],
+    "id": "jussim2012social",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Social perception and social reality: Why accuracy dominates bias and self-fulfilling prophecy",
+    "title-short": "Social perception and social reality",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780374710675",
+    "author": [
+      {
+        "family": "Nisbett",
+        "given": "Richard E."
+      }
+    ],
+    "id": "nisbett2015mindware",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Farrar, Straus and Giroux",
+    "title": "Mindware: Tools for smart thinking",
+    "title-short": "Mindware",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780062339331",
+    "author": [
+      {
+        "family": "Bloom",
+        "given": "Paul"
+      }
+    ],
+    "id": "bloom2016against",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Ecco",
+    "title": "Against empathy: The case for rational compassion",
+    "title-short": "Against empathy",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4324/9781315869780",
+    "author": [
+      {
+        "family": "Beaujean",
+        "given": "A. Alexander"
+      }
+    ],
+    "id": "beaujean2014latent",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Routledge",
+    "title": "Latent variable modeling using R: A step-by-step guide",
+    "title-short": "Latent variable modeling using R",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780521024662",
+    "author": [
+      {
+        "family": "Boyer",
+        "given": "Pascal"
+      }
+    ],
+    "id": "boyer2006tradition",
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Tradition as truth and communication: A cognitive description of traditional discourse",
+    "title-short": "Tradition as truth and communication",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781280845116",
+    "author": [
+      {
+        "family": "Atran",
+        "given": "Scott"
+      }
+    ],
+    "id": "atran2002gods",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "In gods we trust: The evolutionary landscape of religion",
+    "title-short": "In gods we trust",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400848324",
+    "author": [
+      {
+        "family": "Norenzayan",
+        "given": "Ara"
+      }
+    ],
+    "id": "norenzayan2013big",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Big gods: How religion transformed cooperation and conflict",
+    "title-short": "Big gods",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511488801",
+    "author": [
+      {
+        "family": "Hedström",
+        "given": "Peter"
+      }
+    ],
+    "id": "hedstrom2005dissecting",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Dissecting the social: On the principles of analytical sociology",
+    "title-short": "Dissecting the social",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781107763111",
+    "author": [
+      {
+        "family": "Elster",
+        "given": "Jon"
+      }
+    ],
+    "edition": "2nd",
+    "id": "elster2015explaining",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Explaining social behavior: More nuts and bolts for the social sciences",
+    "title-short": "Explaining social behavior",
+    "type": "book"
+  },
+  {
+    "ISBN": "0140809937",
+    "author": [
+      {
+        "family": "Boudon",
+        "given": "Raymond"
+      }
+    ],
+    "id": "boudon1974logic",
+    "issued": {
+      "date-parts": [
+        [
+          1974
+        ]
+      ]
+    },
+    "publisher": "Penguin Education",
+    "title": "The logic of sociological explanation",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511921315",
+    "editor": [
+      {
+        "family": "Demeulenaere",
+        "given": "Pierre"
+      }
+    ],
+    "id": "demeulenaere2011analytical",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Analytical sociology and social mechanisms",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7208/chicago/9780226702797.001.0001",
+    "author": [
+      {
+        "family": "Ragin",
+        "given": "Charles C."
+      }
+    ],
+    "id": "ragin2008redesigning",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "University of Chicago Press",
+    "title": "Redesigning social inquiry: Fuzzy sets and beyond",
+    "title-short": "Redesigning social inquiry",
+    "type": "book"
+  },
+  {
+    "DOI": "10.23943/princeton/9780691155227.001.0001",
+    "author": [
+      {
+        "family": "Swedberg",
+        "given": "Richard"
+      }
+    ],
+    "id": "swedberg2014art",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "The art of social theory",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9780804791199",
+    "editor": [
+      {
+        "family": "Swedberg",
+        "given": "Richard"
+      }
+    ],
+    "id": "swedberg2014theorizing",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Stanford Social Sciences",
+    "title": "Theorizing in social science: The context of discovery",
+    "title-short": "Theorizing in social science",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780195300574.001.0001",
+    "author": [
+      {
+        "family": "Binmore",
+        "given": "Ken"
+      }
+    ],
+    "id": "binmore2007playing",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Playing for real: A text on game theory",
+    "title-short": "Playing for real",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511792601",
+    "editor": [
+      {
+        "family": "Okasha",
+        "given": "Samir"
+      },
+      {
+        "family": "Binmore",
+        "given": "Ken"
+      }
+    ],
+    "id": "binmore2011evolution",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Evolution and rationality: Decisions, cooperation and strategic behaviour",
+    "title-short": "Evolution and rationality",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/actrade/9780199218462.001.0001",
+    "author": [
+      {
+        "family": "Binmore",
+        "given": "Ken"
+      }
+    ],
+    "id": "binmore2007game",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Game theory: A very short introduction",
+    "title-short": "Game theory",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400835881",
+    "author": [
+      {
+        "family": "Gibbons",
+        "given": "Robert"
+      }
+    ],
+    "id": "gibbons1992game",
+    "issued": {
+      "date-parts": [
+        [
+          1992
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Game theory for applied economists",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Gintis",
+        "given": "Herbert"
+      }
+    ],
+    "edition": "Revised",
+    "id": "gintis2017bounds",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "The bounds of reason: Game theory and the unification of the behavioral sciences",
+    "title-short": "The bounds of reason",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400880881",
+    "author": [
+      {
+        "family": "Schecter",
+        "given": "Stephen"
+      },
+      {
+        "family": "Gintis",
+        "given": "Herbert"
+      }
+    ],
+    "id": "schecter2016game",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Game theory in action: An introduction to classical and evolutionary models",
+    "title-short": "Game theory in action",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511753954",
+    "author": [
+      {
+        "family": "Vega-Redondo",
+        "given": "Fernando"
+      }
+    ],
+    "id": "vegaredondo2003economics",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Economics and the theory of games",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1002/9781119302643",
+    "author": [
+      {
+        "family": "Rodríguez",
+        "given": "Abel"
+      },
+      {
+        "family": "Mendes",
+        "given": "Bruno"
+      }
+    ],
+    "id": "rodriguez2018probability",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Wiley",
+    "title": "Probability, decisions and games: A gentle introduction using R",
+    "title-short": "Probability, decisions and games",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Buchanan",
+        "given": "James M."
+      },
+      {
+        "family": "Tullock",
+        "given": "Gordon"
+      }
+    ],
+    "id": "buchanan2020calculus",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "original-date": {
+      "date-parts": [
+        [
+          1962
+        ]
+      ]
+    },
+    "publisher": "University of Michigan Press",
+    "title": "The calculus of consent: Logical foundations of constitutional democracy",
+    "title-short": "The calculus of consent",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511813771",
+    "author": [
+      {
+        "family": "Mueller",
+        "given": "Dennis C."
+      }
+    ],
+    "id": "mueller2003public",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Public choice III",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Olson",
+        "given": "Mancur"
+      }
+    ],
+    "id": "olson2020logic",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "original-date": {
+      "date-parts": [
+        [
+          1965
+        ]
+      ]
+    },
+    "publisher": "Harvard University Press",
+    "title": "The logic of collective action: Public goods and the theory of groups",
+    "title-short": "The logic of collective action",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400828821",
+    "author": [
+      {
+        "family": "Caplan",
+        "given": "Bryan"
+      }
+    ],
+    "id": "caplan2007myth",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "The myth of the rational voter: Why democracies choose bad policies",
+    "title-short": "The myth of the rational voter",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400882731",
+    "author": [
+      {
+        "family": "Achen",
+        "given": "Christopher H."
+      },
+      {
+        "family": "Bartels",
+        "given": "Larry M."
+      }
+    ],
+    "id": "achen2016democracy",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Democracy for realists: Why elections do not produce responsive government",
+    "title-short": "Democracy for realists",
+    "type": "book"
+  },
+  {
+    "ISBN": "0691123020",
+    "author": [
+      {
+        "family": "Tetlock",
+        "given": "Philip E."
+      }
+    ],
+    "id": "tetlock2005expert",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Expert political judgment: How good is it? How can we know?",
+    "title-short": "Expert political judgment",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400832118",
+    "author": [
+      {
+        "family": "Gelman",
+        "given": "Andrew"
+      }
+    ],
+    "edition": "Expanded",
+    "id": "gelman2009red",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Red state, blue state, rich state, poor state: Why Americans vote the way they do",
+    "title-short": "Red state, blue state, rich state, poor state",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-3-319-09810-4",
+    "author": [
+      {
+        "family": "Wallis",
+        "given": "W. D."
+      }
+    ],
+    "id": "wallis2014mathematics",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "The mathematics of elections and voting",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780199287741.001.0001",
+    "author": [
+      {
+        "family": "Taagepera",
+        "given": "Rein"
+      }
+    ],
+    "id": "taagepera2007predicting",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Predicting party sizes: The logic of simple electoral systems",
+    "title-short": "Predicting party sizes",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780199534661.001.0001",
+    "author": [
+      {
+        "family": "Taagepera",
+        "given": "Rein"
+      }
+    ],
+    "id": "taagepera2008making",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Making social sciences more scientific: The need for predictive models",
+    "title-short": "Making social sciences more scientific",
+    "type": "book"
+  },
+  {
+    "ISBN": "0670804541",
+    "author": [
+      {
+        "family": "Postman",
+        "given": "Neil"
+      }
+    ],
+    "id": "postman1985amusing",
+    "issued": {
+      "date-parts": [
+        [
+          1985
+        ]
+      ]
+    },
+    "publisher": "Viking",
+    "title": "Amusing ourselves to death: Public discourse in the age of show business",
+    "title-short": "Amusing ourselves to death",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780393057010",
+    "author": [
+      {
+        "family": "Schelling",
+        "given": "Thomas C."
+      }
+    ],
+    "id": "schelling1978micromotives",
+    "issued": {
+      "date-parts": [
+        [
+          1978
+        ]
+      ]
+    },
+    "publisher": "W. W. Norton",
+    "title": "Micromotives and macrobehavior",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400833993",
+    "author": [
+      {
+        "family": "Jackson",
+        "given": "Matthew O."
+      }
+    ],
+    "id": "jackson2008social",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Social and economic networks",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-1-4939-0983-4",
+    "author": [
+      {
+        "family": "Kolaczyk",
+        "given": "Eric D."
+      },
+      {
+        "family": "Csárdi",
+        "given": "Gábor"
+      }
+    ],
+    "id": "kolaczyk2014statistical",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Statistical analysis of network data with R",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400830282",
+    "author": [
+      {
+        "family": "Page",
+        "given": "Scott E."
+      }
+    ],
+    "id": "page2007difference",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "The difference: How the power of diversity creates better groups, firms, schools, and societies",
+    "title-short": "The difference",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7551/mitpress/6294.001.0001",
+    "editor": [
+      {
+        "family": "Durlauf",
+        "given": "Steven N."
+      },
+      {
+        "family": "Young",
+        "given": "H. Peyton"
+      }
+    ],
+    "id": "durlauf2001social",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Social dynamics",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400830688",
+    "author": [
+      {
+        "family": "Turchin",
+        "given": "Peter"
+      },
+      {
+        "family": "Nefedov",
+        "given": "Sergey A."
+      }
+    ],
+    "id": "turchin2009secular",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Secular cycles",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7551/mitpress/9780262035774.001.0001",
+    "author": [
+      {
+        "family": "Smil",
+        "given": "Vaclav"
+      }
+    ],
+    "id": "smil2017energy",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Energy and civilization: A history",
+    "title-short": "Energy and civilization",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511779619",
+    "author": [
+      {
+        "family": "Wrigley",
+        "given": "E. A."
+      }
+    ],
+    "id": "wrigley2010energy",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Energy and the English Industrial Revolution",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400827817",
+    "author": [
+      {
+        "family": "Clark",
+        "given": "Gregory"
+      }
+    ],
+    "id": "clark2007farewell",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "A farewell to alms: A brief economic history of the world",
+    "title-short": "A farewell to alms",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Galor",
+        "given": "Oded"
+      },
+      {
+        "family": "Katz",
+        "given": "Ori"
+      }
+    ],
+    "id": "galor2022journey",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "publisher": "Random House",
+    "title": "The journey of humanity: The origins of wealth and inequality",
+    "title-short": "The journey of humanity",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400838868",
+    "author": [
+      {
+        "family": "Galor",
+        "given": "Oded"
+      }
+    ],
+    "id": "galor2011unified",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Unified growth theory",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/oso/9780195371581.001.0001",
+    "editor": [
+      {
+        "family": "Morris",
+        "given": "Ian"
+      },
+      {
+        "family": "Scheidel",
+        "given": "Walter"
+      }
+    ],
+    "id": "morris2009dynamics",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "The dynamics of ancient empires: State power from Assyria to Byzantium",
+    "title-short": "The dynamics of ancient empires",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780374286002",
+    "author": [
+      {
+        "family": "Morris",
+        "given": "Ian"
+      }
+    ],
+    "id": "morris2014war",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Farrar, Straus and Giroux",
+    "title": "War! What is it good for? Conflict and the progress of civilization from primates to robots",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780198795025",
+    "author": [
+      {
+        "family": "Gat",
+        "given": "Azar"
+      }
+    ],
+    "id": "gat2017causes",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "The causes of war and the spread of peace: But will war rebound?",
+    "title-short": "The causes of war and the spread of peace",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780226034638",
+    "author": [
+      {
+        "family": "Bairoch",
+        "given": "Paul"
+      }
+    ],
+    "id": "bairoch1995economics",
+    "issued": {
+      "date-parts": [
+        [
+          1995
+        ]
+      ]
+    },
+    "publisher": "University of Chicago Press",
+    "title": "Economics and world history: Myths and paradoxes",
+    "title-short": "Economics and world history",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400831883",
+    "author": [
+      {
+        "family": "Findlay",
+        "given": "Ronald"
+      },
+      {
+        "family": "O’Rourke",
+        "given": "Kevin H."
+      }
+    ],
+    "id": "findlay2007power",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Power and plenty: Trade, war, and the world economy in the second millennium",
+    "title-short": "Power and plenty",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/acprof:oso/9780199264490.001.0001",
+    "author": [
+      {
+        "family": "Wickham",
+        "given": "Chris"
+      }
+    ],
+    "id": "wickham2005framing",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Framing the early Middle Ages: Europe and the Mediterranean, 400-800",
+    "title-short": "Framing the early Middle Ages",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511975912",
+    "author": [
+      {
+        "family": "Harris",
+        "given": "Bernard"
+      },
+      {
+        "literal": "others"
+      }
+    ],
+    "id": "harris2011changing",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "The changing body: Health, nutrition, and human development in the Western world since 1700",
+    "title-short": "The changing body",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400834785",
+    "author": [
+      {
+        "family": "Seabright",
+        "given": "Paul"
+      }
+    ],
+    "edition": "Revised",
+    "id": "seabright2010company",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "The company of strangers: A natural history of economic life",
+    "title-short": "The company of strangers",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7208/chicago/9780226520452.001.0001",
+    "author": [
+      {
+        "family": "Mesoudi",
+        "given": "Alex"
+      }
+    ],
+    "id": "mesoudi2011cultural",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "University of Chicago Press",
+    "title": "Cultural evolution: How Darwinian theory can explain human culture and synthesize the social sciences",
+    "title-short": "Cultural evolution",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-3-642-19653-9",
+    "author": [
+      {
+        "family": "Ritchey",
+        "given": "Tom"
+      }
+    ],
+    "id": "ritchey2011wicked",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Wicked problems - social messes: Decision support modelling with morphological analysis",
+    "title-short": "Wicked problems - social messes",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780691125473",
+    "author": [
+      {
+        "family": "Epstein",
+        "given": "Joshua M."
+      }
+    ],
+    "id": "epstein2006generative",
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Generative social science: Studies in agent-based computational modeling",
+    "title-short": "Generative social science",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1353/book.36715",
+    "author": [
+      {
+        "family": "Epstein",
+        "given": "Joshua M."
+      }
+    ],
+    "id": "epstein2014agentzero",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Agent_Zero: Toward neurocognitive foundations for generative social science",
+    "title-short": "Agent_Zero",
+    "type": "book"
+  },
+  {
+    "ISBN": "0201959895",
+    "author": [
+      {
+        "family": "Epstein",
+        "given": "Joshua M."
+      }
+    ],
+    "id": "epstein1997nonlinear",
+    "issued": {
+      "date-parts": [
+        [
+          1997
+        ]
+      ]
+    },
+    "publisher": "Addison-Wesley / Santa Fe Institute",
+    "title": "Nonlinear dynamics, mathematical biology, and social science",
+    "type": "book"
+  },
+  {
+    "DOI": "10.2307/jj.28274141",
+    "author": [
+      {
+        "family": "Railsback",
+        "given": "Steven F."
+      },
+      {
+        "family": "Grimm",
+        "given": "Volker"
+      }
+    ],
+    "edition": "2nd",
+    "id": "railsback2019agent",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Agent-based and individual-based modeling: A practical introduction",
+    "title-short": "Agent-based and individual-based modeling",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780691224152",
+    "author": [
+      {
+        "family": "Smaldino",
+        "given": "Paul E."
+      }
+    ],
+    "id": "smaldino2023modeling",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Modeling social behavior: Mathematical and agent-based models of social dynamics and cultural evolution",
+    "title-short": "Modeling social behavior",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780813349107",
+    "author": [
+      {
+        "family": "Strogatz",
+        "given": "Steven H."
+      }
+    ],
+    "edition": "2nd",
+    "id": "strogatz2015nonlinear",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Westview Press",
+    "title": "Nonlinear dynamics and chaos",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7551/mitpress/4771.001.0001",
+    "editor": [
+      {
+        "family": "Gintis",
+        "given": "Herbert"
+      },
+      {
+        "family": "Bowles",
+        "given": "Samuel"
+      },
+      {
+        "family": "Boyd",
+        "given": "Robert T."
+      },
+      {
+        "family": "Fehr",
+        "given": "Ernst"
+      }
+    ],
+    "id": "gintis2005moral",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Moral sentiments and material interests: The foundations of cooperation in economic life",
+    "title-short": "Moral sentiments and material interests",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780262257572",
+    "author": [
+      {
+        "family": "Stachurski",
+        "given": "John"
+      }
+    ],
+    "id": "stachurski2009economic",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Economic dynamics: Theory and computation",
+    "title-short": "Economic dynamics",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Preston",
+        "given": "Samuel H."
+      },
+      {
+        "family": "Heuveline",
+        "given": "Patrick"
+      },
+      {
+        "family": "Guillot",
+        "given": "Michel"
+      }
+    ],
+    "id": "preston2001demography",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "publisher": "Blackwell",
+    "title": "Demography: Measuring and modeling population processes",
+    "title-short": "Demography",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Keyfitz",
+        "given": "Nathan"
+      },
+      {
+        "family": "Caswell",
+        "given": "Hal"
+      }
+    ],
+    "edition": "3rd",
+    "id": "keyfitz2005applied",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Applied mathematical demography",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4159/9780674369757",
+    "author": [
+      {
+        "family": "Wachter",
+        "given": "Kenneth W."
+      }
+    ],
+    "id": "wachter2014essential",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Harvard University Press",
+    "title": "Essential demographic methods",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1201/9780429428357",
+    "author": [
+      {
+        "family": "Blitzstein",
+        "given": "Joseph K."
+      },
+      {
+        "family": "Hwang",
+        "given": "Jessica"
+      }
+    ],
+    "id": "blitzstein2019introduction",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "note": "Harvard Stat 110",
+    "publisher": "Chapman and Hall/CRC",
+    "title": "Introduction to probability",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-3-031-41026-0",
+    "author": [
+      {
+        "family": "Axler",
+        "given": "Sheldon"
+      }
+    ],
+    "edition": "4th",
+    "id": "axler2024linear",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Linear algebra done right",
+    "type": "book"
+  },
+  {
+    "ISBN": "0393957330",
+    "author": [
+      {
+        "family": "Simon",
+        "given": "Carl P."
+      },
+      {
+        "family": "Blume",
+        "given": "Lawrence"
+      }
+    ],
+    "id": "simon1994mathematics",
+    "issued": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "publisher": "W. W. Norton",
+    "title": "Mathematics for economists",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/9781108583664",
+    "author": [
+      {
+        "family": "Boyd",
+        "given": "Stephen"
+      },
+      {
+        "family": "Vandenberghe",
+        "given": "Lieven"
+      }
+    ],
+    "id": "boyd2018introduction",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Introduction to applied linear algebra: Vectors, matrices, and least squares",
+    "title-short": "Introduction to applied linear algebra",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1201/9781003456285",
+    "author": [
+      {
+        "family": "Casella",
+        "given": "George"
+      },
+      {
+        "family": "Berger",
+        "given": "Roger L."
+      }
+    ],
+    "edition": "2nd",
+    "id": "casella2024statistical",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "publisher": "Chapman and Hall/CRC",
+    "title": "Statistical inference",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781316576533",
+    "author": [
+      {
+        "family": "Efron",
+        "given": "Bradley"
+      },
+      {
+        "family": "Hastie",
+        "given": "Trevor"
+      }
+    ],
+    "id": "efron2016computer",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Computer age statistical inference: Algorithms, evidence, and data science",
+    "title-short": "Computer age statistical inference",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9780691245843",
+    "author": [
+      {
+        "family": "Efron",
+        "given": "Bradley"
+      }
+    ],
+    "id": "efron2026to",
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "To think like a statistician",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511790423",
+    "author": [
+      {
+        "family": "Jaynes",
+        "given": "Edwin T."
+      }
+    ],
+    "id": "jaynes2003probability",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Probability theory: The logic of science",
+    "title-short": "Probability theory",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/9781009341189",
+    "author": [
+      {
+        "family": "Gill",
+        "given": "Jeff"
+      },
+      {
+        "family": "Bao",
+        "given": "Le"
+      }
+    ],
+    "id": "gill2024bayesian",
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Bayesian social science statistics: Volume 1",
+    "title-short": "Bayesian social science statistics",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511606656",
+    "author": [
+      {
+        "family": "Gill",
+        "given": "Jeff"
+      }
+    ],
+    "id": "gill2006essential",
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Essential mathematics for political and social research",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781316534960",
+    "author": [
+      {
+        "family": "Hacking",
+        "given": "Ian"
+      }
+    ],
+    "id": "hacking2016logic",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Logic of statistical inference",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780415278447",
+    "author": [
+      {
+        "family": "Popper",
+        "given": "Karl R."
+      }
+    ],
+    "id": "popper2002logic",
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
+    "original-date": {
+      "date-parts": [
+        [
+          1959
+        ]
+      ]
+    },
+    "publisher": "Routledge",
+    "title": "The logic of scientific discovery",
+    "type": "book"
+  },
+  {
+    "ISBN": "9783319397559",
+    "author": [
+      {
+        "family": "Briggs",
+        "given": "William M."
+      }
+    ],
+    "id": "briggs2016uncertainty",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Uncertainty: The soul of modeling, probability & statistics",
+    "title-short": "Uncertainty",
+    "type": "book"
+  },
+  {
+    "DOI": "10.7551/mitpress/5876.001.0001",
+    "author": [
+      {
+        "family": "Harman",
+        "given": "Gilbert"
+      },
+      {
+        "family": "Kulkarni",
+        "given": "Sanjeev"
+      }
+    ],
+    "id": "harman2007reliable",
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "publisher": "The MIT Press",
+    "title": "Reliable reasoning: Induction and statistical learning theory",
+    "title-short": "Reliable reasoning",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780230543210",
+    "author": [
+      {
+        "family": "Dienes",
+        "given": "Zoltan"
+      }
+    ],
+    "id": "dienes2008understanding",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "Palgrave Macmillan",
+    "title": "Understanding psychology as a science: An introduction to scientific and Bayesian inference",
+    "title-short": "Understanding psychology as a science",
+    "type": "book"
+  },
+  {
+    "DOI": "10.4159/harvard.9780674067349",
+    "author": [
+      {
+        "family": "Lockhart",
+        "given": "Paul"
+      }
+    ],
+    "id": "lockhart2012measurement",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Belknap Press of Harvard University Press",
+    "title": "Measurement",
+    "type": "book"
+  },
+  {
+    "ISBN": "0122384520",
+    "author": [
+      {
+        "family": "Enderton",
+        "given": "Herbert B."
+      }
+    ],
+    "edition": "2nd",
+    "id": "enderton2001mathematical",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "publisher": "Academic Press",
+    "title": "A mathematical introduction to logic",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1201/b11551",
+    "author": [
+      {
+        "family": "Monahan",
+        "given": "John F."
+      }
+    ],
+    "id": "monahan2008primer",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "publisher": "Chapman & Hall/CRC",
+    "title": "A primer on linear models",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-0-387-09608-7",
+    "author": [
+      {
+        "family": "Sheather",
+        "given": "Simon"
+      }
+    ],
+    "id": "sheather2009modern",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "A modern approach to regression with R",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Wilcox",
+        "given": "Rand"
+      }
+    ],
+    "id": "wilcox2011modern",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "CRC Press",
+    "title": "Modern statistics for the social and behavioral sciences: A practical introduction",
+    "title-short": "Modern statistics for the social and behavioral sciences",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1201/b16188",
+    "author": [
+      {
+        "family": "Kraska-Miller",
+        "given": "Maria"
+      }
+    ],
+    "id": "kraskamiller2013nonparametric",
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "publisher": "CRC Press",
+    "title": "Nonparametric statistics for social and behavioral sciences",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-1-4614-2278-5",
+    "author": [
+      {
+        "family": "Pigott",
+        "given": "Terri D."
+      }
+    ],
+    "id": "pigott2012advances",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Advances in meta-analysis",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1007/978-1-4419-5985-0",
+    "author": [
+      {
+        "family": "Finkelstein",
+        "given": "Michael O."
+      },
+      {
+        "family": "Levin",
+        "given": "Bruce"
+      }
+    ],
+    "id": "finkelstein2015statistics",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "Statistics for lawyers",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "O’Brien",
+        "given": "Robert M."
+      }
+    ],
+    "id": "obrien2014age",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "CRC Press",
+    "title": "Age-period-cohort models: Approaches and analyses with aggregate data",
+    "title-short": "Age-period-cohort models",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9780511803161",
+    "author": [
+      {
+        "family": "Pearl",
+        "given": "Judea"
+      }
+    ],
+    "edition": "2nd",
+    "id": "pearl2009causality",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Causality: Models, reasoning, and inference",
+    "title-short": "Causality",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781119187011",
+    "author": [
+      {
+        "family": "Pearl",
+        "given": "Judea"
+      },
+      {
+        "family": "Glymour",
+        "given": "Madelyn"
+      },
+      {
+        "family": "Jewell",
+        "given": "Nicholas P."
+      }
+    ],
+    "id": "pearl2016causal",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Wiley",
+    "title": "Causal inference in statistics: A primer",
+    "title-short": "Causal inference in statistics",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9781400829828",
+    "author": [
+      {
+        "family": "Angrist",
+        "given": "Joshua D."
+      },
+      {
+        "family": "Pischke",
+        "given": "Jörn-Steffen"
+      }
+    ],
+    "id": "angrist2009mostly",
+    "issued": {
+      "date-parts": [
+        [
+          2009
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Mostly harmless econometrics: An empiricist’s companion",
+    "title-short": "Mostly harmless econometrics",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781107587991",
+    "author": [
+      {
+        "family": "Morgan",
+        "given": "Stephen L."
+      },
+      {
+        "family": "Winship",
+        "given": "Christopher"
+      }
+    ],
+    "id": "morgan2014counterfactuals",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Counterfactuals and causal inference: Models and principles for social research",
+    "title-short": "Counterfactuals and causal inference",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781139025751",
+    "author": [
+      {
+        "family": "Imbens",
+        "given": "Guido W."
+      },
+      {
+        "family": "Rubin",
+        "given": "Donald B."
+      }
+    ],
+    "id": "imbens2015causal",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Causal inference for statistics, social, and biomedical sciences: An introduction",
+    "title-short": "Causal inference for statistics, social, and biomedical sciences",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1017/cbo9781139084444",
+    "author": [
+      {
+        "family": "Dunning",
+        "given": "Thad"
+      }
+    ],
+    "id": "dunning2012natural",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Cambridge University Press",
+    "title": "Natural experiments in the social sciences: A design-based approach",
+    "title-short": "Natural experiments in the social sciences",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Salganik",
+        "given": "Matthew J."
+      }
+    ],
+    "id": "salganik2018bit",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Bit by bit: Social research in the digital age",
+    "title-short": "Bit by bit",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780691207544",
+    "author": [
+      {
+        "family": "Grimmer",
+        "given": "Justin"
+      },
+      {
+        "family": "Roberts",
+        "given": "Margaret E."
+      },
+      {
+        "family": "Stewart",
+        "given": "Brandon M."
+      }
+    ],
+    "id": "grimmer2022text",
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Text as data: A new framework for machine learning and the social sciences",
+    "title-short": "Text as data",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781804612989",
+    "author": [
+      {
+        "family": "Molak",
+        "given": "Aleksander"
+      },
+      {
+        "family": "Jaokar",
+        "given": "Ajit"
+      }
+    ],
+    "id": "molak2023causal",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "publisher": "Packt Publishing",
+    "title": "Causal inference and discovery in Python",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1093/actrade/9780199684434.001.0001",
+    "author": [
+      {
+        "family": "Mumford",
+        "given": "Stephen"
+      },
+      {
+        "family": "Anjum",
+        "given": "Rani Lill"
+      }
+    ],
+    "id": "mumford2014causation",
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Causation: A very short introduction",
+    "title-short": "Causation",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1086/225469",
+    "author": [
+      {
+        "family": "Granovetter",
+        "given": "Mark S."
+      }
+    ],
+    "container-title": "American Journal of Sociology",
+    "id": "granovetter1973strength",
+    "issue": "6",
+    "issued": {
+      "date-parts": [
+        [
+          1973
+        ]
+      ]
+    },
+    "title": "The strength of weak ties",
+    "type": "article-journal",
+    "volume": "78"
+  },
+  {
+    "DOI": "10.1086/226707",
+    "author": [
+      {
+        "family": "Granovetter",
+        "given": "Mark"
+      }
+    ],
+    "container-title": "American Journal of Sociology",
+    "id": "granovetter1978threshold",
+    "issue": "6",
+    "issued": {
+      "date-parts": [
+        [
+          1978
+        ]
+      ]
+    },
+    "title": "Threshold models of collective behavior",
+    "type": "article-journal",
+    "volume": "83"
+  },
+  {
+    "DOI": "10.1038/30918",
+    "author": [
+      {
+        "family": "Watts",
+        "given": "Duncan J."
+      },
+      {
+        "family": "Strogatz",
+        "given": "Steven H."
+      }
+    ],
+    "container-title": "Nature",
+    "id": "watts1998collective",
+    "issued": {
+      "date-parts": [
+        [
+          1998
+        ]
+      ]
+    },
+    "title": "Collective dynamics of «small-world» networks",
+    "type": "article-journal",
+    "volume": "393"
+  },
+  {
+    "author": [
+      {
+        "family": "Hamilton",
+        "given": "W. D."
+      }
+    ],
+    "container-title": "Journal of Theoretical Biology",
+    "id": "hamilton1964genetical",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          1964
+        ]
+      ]
+    },
+    "title": "The genetical evolution of social behaviour",
+    "type": "article-journal",
+    "volume": "7"
+  },
+  {
+    "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
+    "author": [
+      {
+        "family": "Shannon",
+        "given": "Claude E."
+      }
+    ],
+    "container-title": "Bell System Technical Journal",
+    "id": "shannon1948mathematical",
+    "issued": {
+      "date-parts": [
+        [
+          1948
+        ]
+      ]
+    },
+    "title": "A mathematical theory of communication",
+    "type": "article-journal",
+    "volume": "27"
+  },
+  {
+    "DOI": "10.1093/esr/17.1.1",
+    "author": [
+      {
+        "family": "Goldthorpe",
+        "given": "John H."
+      }
+    ],
+    "container-title": "European Sociological Review",
+    "id": "goldthorpe2001causation",
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "title": "Causation, statistics, and sociology",
+    "type": "article-journal"
+  },
+  {
+    "ISBN": "9780961408824",
+    "author": [
+      {
+        "family": "Strang",
+        "given": "Gilbert"
+      }
+    ],
+    "id": "strang1991calculus",
+    "issued": {
+      "date-parts": [
+        [
+          1991
+        ]
+      ]
+    },
+    "note": "MIT OpenCourseWare",
+    "publisher": "Wellesley-Cambridge Press",
+    "title": "Calculus",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Strang",
+        "given": "Gilbert"
+      }
+    ],
+    "edition": "4th",
+    "id": "strang2005linear",
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "Cengage",
+    "title": "Linear algebra and its applications",
+    "type": "book"
+  },
+  {
+    "ISBN": "9783319242774",
+    "author": [
+      {
+        "family": "Wickham",
+        "given": "Hadley"
+      }
+    ],
+    "id": "wickham2016ggplot2",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Springer",
+    "title": "ggplot2: Elegant graphics for data analysis",
+    "title-short": "ggplot2",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Matloff",
+        "given": "Norman"
+      }
+    ],
+    "id": "matloff2023art",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "The art of machine learning: A hands-on guide",
+    "title-short": "The art of machine learning",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Jurafsky",
+        "given": "Daniel"
+      },
+      {
+        "family": "Martin",
+        "given": "James H."
+      }
+    ],
+    "id": "jurafsky2025speech",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "note": "3rd Edition draft",
+    "publisher": "Stanford University",
+    "title": "Speech and language processing",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Tuckfield",
+        "given": "Bradford"
+      }
+    ],
+    "id": "tuckfield2020dive",
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "Dive into algorithms: A Pythonic adventure for the daring",
+    "title-short": "Dive into algorithms",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Tuckfield",
+        "given": "Bradford"
+      }
+    ],
+    "id": "tuckfield2023dive",
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "Dive into data science: Use Python to tackle your toughest questions",
+    "title-short": "Dive into data science",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781492041139",
+    "author": [
+      {
+        "family": "Grus",
+        "given": "Joel"
+      }
+    ],
+    "edition": "2nd",
+    "id": "grus2019data",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "O’Reilly Media",
+    "title": "Data science from scratch: First principles with Python",
+    "title-short": "Data science from scratch",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781492045038",
+    "author": [
+      {
+        "family": "Lauwens",
+        "given": "Ben"
+      },
+      {
+        "family": "Downey",
+        "given": "Allen B."
+      }
+    ],
+    "id": "lauwens2019think",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "O’Reilly Media",
+    "title": "Think Julia: How to think like a computer scientist",
+    "title-short": "Think Julia",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781718504301",
+    "author": [
+      {
+        "family": "Kopec",
+        "given": "David"
+      }
+    ],
+    "id": "kopec2025computer",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "Computer science from scratch",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Day",
+        "given": "Ryan"
+      }
+    ],
+    "id": "day2025hands",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "publisher": "O’Reilly Media",
+    "title": "Hands-on APIs for AI and data science: Python development",
+    "title-short": "Hands-on APIs for AI and data science",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Date",
+        "given": "C. J."
+      }
+    ],
+    "edition": "3rd",
+    "id": "date2015sql",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "O’Reilly Media",
+    "title": "SQL and relational theory: How to write accurate SQL code",
+    "title-short": "SQL and relational theory",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Kernighan",
+        "given": "Brian W."
+      },
+      {
+        "family": "Pike",
+        "given": "Rob"
+      }
+    ],
+    "id": "kernighan1999practice",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "publisher": "Addison-Wesley",
+    "title": "The practice of programming",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9780691190136",
+    "author": [
+      {
+        "family": "Kernighan",
+        "given": "Brian W."
+      }
+    ],
+    "id": "kernighan2018millions",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Millions, billions, zillions: Defending yourself in a world of too many numbers",
+    "title-short": "Millions, billions, zillions",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781593279523",
+    "author": [
+      {
+        "family": "Shotts",
+        "given": "William"
+      }
+    ],
+    "edition": "2nd",
+    "id": "shotts2019linux",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "The Linux command line: A complete introduction",
+    "title-short": "The Linux command line",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Taylor",
+        "given": "Dave"
+      },
+      {
+        "family": "Perry",
+        "given": "Brandon"
+      }
+    ],
+    "edition": "2nd",
+    "id": "taylor2016wicked",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "No Starch Press",
+    "title": "Wicked cool shell scripts",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Freeman",
+        "given": "Michael"
+      },
+      {
+        "family": "Ross",
+        "given": "Joel"
+      }
+    ],
+    "id": "freeman2019programming",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "Addison-Wesley",
+    "title": "Programming skills for data science: Start writing code to wrangle, analyze, and visualize data with R",
+    "title-short": "Programming skills for data science",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1002/9781118897126",
+    "author": [
+      {
+        "dropping-particle": "van der",
+        "family": "Loo",
+        "given": "Mark"
+      },
+      {
+        "dropping-particle": "de",
+        "family": "Jonge",
+        "given": "Edwin"
+      }
+    ],
+    "id": "vanderloo2018statistical",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Wiley",
+    "title": "Statistical data cleaning with applications in R",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Healy",
+        "given": "Kieran"
+      }
+    ],
+    "id": "healy2019data",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Data visualization: A practical introduction",
+    "title-short": "Data visualization",
+    "type": "book"
+  },
+  {
+    "DOI": "10.1515/9780691183961",
+    "author": [
+      {
+        "family": "Allesina",
+        "given": "Stefano"
+      },
+      {
+        "family": "Wilmes",
+        "given": "Madlen"
+      }
+    ],
+    "id": "allesina2019computing",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "publisher": "Princeton University Press",
+    "title": "Computing skills for biologists: A toolbox",
+    "title-short": "Computing skills for biologists",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781565928756",
+    "author": [
+      {
+        "family": "Raymond",
+        "given": "Eric S."
+      }
+    ],
+    "id": "raymond1999cathedral",
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "publisher": "O’Reilly Media",
+    "title": "The cathedral and the bazaar: Musings on Linux and open source",
+    "title-short": "The cathedral and the bazaar",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Tufte",
+        "given": "Edward R."
+      }
+    ],
+    "id": "tufte2004cognitive",
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    },
+    "publisher": "Graphics Press",
+    "title": "The cognitive style of PowerPoint: Pitching out corrupts within",
+    "title-short": "The cognitive style of PowerPoint",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Firestein",
+        "given": "Stuart"
+      }
+    ],
+    "id": "firestein2015failure",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Oxford University Press",
+    "title": "Failure: Why science is so successful",
+    "title-short": "Failure",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780060192471",
+    "author": [
+      {
+        "family": "Murray",
+        "given": "Charles"
+      }
+    ],
+    "id": "murray2003human",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "publisher": "HarperCollins",
+    "title": "Human accomplishment: The pursuit of excellence in the arts and sciences, 800 B.C. to 1950",
+    "title-short": "Human accomplishment",
+    "type": "book"
+  }
+]

@@ -62,16 +62,17 @@ nuevasomosaguas/
 ├── laboratorios.qmd        Cinco laboratorios ejecutables en Julia y SQL
 ├── politica_ia.qmd         Política de inteligencia artificial: los cuatro principios
 ├── manual_bolsillo.qmd     Diez reglas para el debate cotidiano
-├── biblioteca.qmd          141 obras en 4 estratos causales y una frontera de artículos
+├── biblioteca.qmd          El corpus en 4 estratos causales, una frontera de artículos y un núcleo de cómputo
+├── biblioteca.bib          Fuente única del corpus: fichas, niveles, DOI e ISBN
 ├── faq.qmd                 Preguntas frecuentes
 ├── about.qmd               Declaración institucional
-├── refs.R                  Recuento único de la biblioteca, leído por las páginas
+├── refs.R                  Lee biblioteca.bib: recuento y listas de la biblioteca
 ├── _quarto.yml             Configuración del sitio, menú e idioma
 ├── styles.css              Estilos: tipografía, medida de 80ch y ajustes de Mermaid
 └── .github/workflows/      Compilación y publicación en GitHub Pages
 ```
 
-El recuento de obras no se escribe a mano en ningún sitio: `refs.R` lo deriva de `biblioteca.qmd` y las páginas que lo citan lo leen de ahí.
+La bibliografía vive en `biblioteca.bib`, que es a la vez la descarga para el lector y la fuente de la página: `refs.R` lo lee para componer las listas y el recuento que citan las demás páginas, y cada render deriva de él la versión en CSL-JSON. Incorporar o retirar una obra es editar ese archivo, y el historial de Git registra qué entró, qué salió y cuándo.
 
 ---
 
