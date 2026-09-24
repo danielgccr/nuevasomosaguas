@@ -61,13 +61,19 @@ ficha <- function(o) {
            if (campo("volume") != "") paste0(" ", o[["volume"]]),
            if (campo("number") != "") paste0("(", o[["number"]], ")"))
   } else llano(o[["publisher"]])
-  linea <- sprintf("* %s (%s). *%s*%s%s%s. `[Nivel %s | %s]`",
+  # The DOI resolves to the work itself; the ISBN, to the libraries that hold it.
+  enlace <- if (campo("doi") != "") {
+    sprintf(". [doi:%s](https://doi.org/%s)", o[["doi"]], o[["doi"]])
+  } else if (campo("isbn") != "") {
+    sprintf(". [ISBN %s](https://search.worldcat.org/isbn/%s)", o[["isbn"]], o[["isbn"]])
+  } else ""
+  linea <- sprintf("* %s (%s). *%s*%s%s%s%s. `[Nivel %s | %s]`",
                    nombres,
                    paste(c(if (campo("origdate") != "") o[["origdate"]], o[["year"]]), collapse = "/"),
                    titulo,
                    if (parentesis != "") paste0(" (", parentesis, ")") else "",
                    if (parentesis == "" && grepl("[?!]$", titulo)) " " else ". ",
-                   pie, o[["nivel"]], o[["descriptor"]])
+                   pie, enlace, o[["nivel"]], o[["descriptor"]])
   rotulos <- c(mecanismo = "Mecanismo", aparato = "Aparato formal", funcion = "Función en el RAG")
   presentes <- intersect(names(rotulos), names(o))
   c(linea, sprintf("  * *%s:* %s", rotulos[presentes], unlist(o[presentes])))
