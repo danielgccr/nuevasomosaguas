@@ -43,6 +43,8 @@ website:
         href: guia_autodidacta.qmd
       - text: "Laboratorios"
         href: laboratorios.qmd
+      - text: "Entorno"
+        href: entorno.qmd
       - text: "Política de inteligencia artificial"
         href: politica_ia.qmd
       - text: "Debate público"

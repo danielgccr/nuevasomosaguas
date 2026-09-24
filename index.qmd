@@ -80,7 +80,7 @@ La sociedad se comprende cuando se puede *reconstruir computacionalmente*. Media
 Explore los documentos fundamentales que articulan la facultad:
 
 :::::::::: grid
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-md-12}
 ### [Currículo](curriculo.qmd)
 
 Consulte el plan de estudios de 4 años (20 asignaturas): de los fundamentos formales y la demografía matricial al diseño causal, los modelos de agentes y la cliodinámica, con Julia como entorno nuclear.
@@ -102,6 +102,12 @@ Cuatro hitos para recorrer el pensum en solitario, con su presupuesto de horas d
 ### [Laboratorios](laboratorios.qmd)
 
 Cinco laboratorios ejecutables en Julia y SQL, sin librerías de caja negra: paradoja de Berkson, actualización conjugada, segregación de Schelling, tabla de mortalidad e intervalos por *bootstrap*.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### [Entorno de trabajo](entorno.qmd)
+
+La terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

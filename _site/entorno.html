@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Facultad libre y de código abierto que refunda la sociología sobre las matemáticas, la demografía formal, la genética cuantitativa, la inferencia causal y la computación reproducible.">
+<meta name="description" content="La infraestructura computacional de la facultad: la terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.">
 
-<title>Nueva Somosaguas</title>
+<title>Entorno de trabajo – Nueva Somosaguas</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,12 +119,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Nueva Somosaguas – Facultad libre de ciencias sociales analíticas y cuantitativas">
-<meta property="og:description" content="Facultad libre y de código abierto que refunda la sociología sobre las matemáticas, la demografía formal, la genética cuantitativa, la inferencia causal y la computación reproducible.">
+<meta property="og:title" content="Entorno de trabajo – Nueva Somosaguas">
+<meta property="og:description" content="La infraestructura computacional de la facultad: la terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.">
 <meta property="og:site_name" content="Nueva Somosaguas">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:title" content="Nueva Somosaguas – Facultad libre de ciencias sociales analíticas y cuantitativas">
-<meta name="twitter:description" content="Facultad libre y de código abierto que refunda la sociología sobre las matemáticas, la demografía formal, la genética cuantitativa, la inferencia causal y la computación reproducible.">
+<meta name="twitter:title" content="Entorno de trabajo – Nueva Somosaguas">
+<meta name="twitter:description" content="La infraestructura computacional de la facultad: la terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -273,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
@@ -293,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Laboratorios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./entorno.html"> 
+    <a class="nav-link active" href="./entorno.html" aria-current="page"> 
 <span class="menu-text">Entorno</span></a>
   </li>  
   <li class="nav-item">
@@ -333,17 +368,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#la-ciencia-social-fundada-en-la-realidad" id="toc-la-ciencia-social-fundada-en-la-realidad" class="nav-link active" data-scroll-target="#la-ciencia-social-fundada-en-la-realidad">La ciencia social fundada en la realidad</a></li>
-  <li><a href="#el-fin-de-la-especulación-de-salón" id="toc-el-fin-de-la-especulación-de-salón" class="nav-link" data-scroll-target="#el-fin-de-la-especulación-de-salón">El fin de la especulación de salón</a></li>
-  <li><a href="#los-cuatro-pilares-de-la-consiliencia" id="toc-los-cuatro-pilares-de-la-consiliencia" class="nav-link" data-scroll-target="#los-cuatro-pilares-de-la-consiliencia">Los cuatro pilares de la consiliencia</a>
+  <li><a href="#la-fricción-cero-el-semestre-perdido" id="toc-la-fricción-cero-el-semestre-perdido" class="nav-link active" data-scroll-target="#la-fricción-cero-el-semestre-perdido">La fricción cero: el «semestre perdido»</a></li>
+  <li><a href="#módulo-i-la-cuartilla-de-la-terminal" id="toc-módulo-i-la-cuartilla-de-la-terminal" class="nav-link" data-scroll-target="#módulo-i-la-cuartilla-de-la-terminal">Módulo I: la cuartilla de la terminal</a>
   <ul class="collapse">
-  <li><a href="#cimientos-formales-e-inferencia-rigurosa" id="toc-cimientos-formales-e-inferencia-rigurosa" class="nav-link" data-scroll-target="#cimientos-formales-e-inferencia-rigurosa">1. Cimientos formales e inferencia rigurosa</a></li>
-  <li><a href="#biología-evolutiva-y-genética-cuantitativa" id="toc-biología-evolutiva-y-genética-cuantitativa" class="nav-link" data-scroll-target="#biología-evolutiva-y-genética-cuantitativa">2. Biología evolutiva y genética cuantitativa</a></li>
-  <li><a href="#sociología-analítica-y-mecanismos-micro-dbo" id="toc-sociología-analítica-y-mecanismos-micro-dbo" class="nav-link" data-scroll-target="#sociología-analítica-y-mecanismos-micro-dbo">3. Sociología analítica y mecanismos micro (DBO)</a></li>
-  <li><a href="#ciencias-sociales-generativas-y-macrohistoria" id="toc-ciencias-sociales-generativas-y-macrohistoria" class="nav-link" data-scroll-target="#ciencias-sociales-generativas-y-macrohistoria">4. Ciencias sociales generativas y macrohistoria</a></li>
+  <li><a href="#la-hoja-de-referencia-esencial" id="toc-la-hoja-de-referencia-esencial" class="nav-link" data-scroll-target="#la-hoja-de-referencia-esencial">La hoja de referencia esencial</a></li>
+  <li><a href="#el-poder-de-las-tuberías" id="toc-el-poder-de-las-tuberías" class="nav-link" data-scroll-target="#el-poder-de-las-tuberías">El poder de las tuberías</a></li>
   </ul></li>
-  <li><a href="#estructura-del-dominio" id="toc-estructura-del-dominio" class="nav-link" data-scroll-target="#estructura-del-dominio">Estructura del dominio</a></li>
-  <li><a href="#principio-abierto-y-mérito-puro" id="toc-principio-abierto-y-mérito-puro" class="nav-link" data-scroll-target="#principio-abierto-y-mérito-puro">Principio abierto y mérito puro</a></li>
+  <li><a href="#módulo-ii-entornos-reproducibles-y-distribución" id="toc-módulo-ii-entornos-reproducibles-y-distribución" class="nav-link" data-scroll-target="#módulo-ii-entornos-reproducibles-y-distribución">Módulo II: entornos reproducibles y distribución</a></li>
+  <li><a href="#módulo-iii-editores-cuadernos-reactivos-y-dependencias" id="toc-módulo-iii-editores-cuadernos-reactivos-y-dependencias" class="nav-link" data-scroll-target="#módulo-iii-editores-cuadernos-reactivos-y-dependencias">Módulo III: editores, cuadernos reactivos y dependencias</a>
+  <ul class="collapse">
+  <li><a href="#entornos-de-desarrollo" id="toc-entornos-de-desarrollo" class="nav-link" data-scroll-target="#entornos-de-desarrollo">Entornos de desarrollo</a></li>
+  <li><a href="#control-riguroso-de-dependencias" id="toc-control-riguroso-de-dependencias" class="nav-link" data-scroll-target="#control-riguroso-de-dependencias">Control riguroso de dependencias</a></li>
+  </ul></li>
+  <li><a href="#módulo-iv-el-estándar-tipográfico-y-gráfico" id="toc-módulo-iv-el-estándar-tipográfico-y-gráfico" class="nav-link" data-scroll-target="#módulo-iv-el-estándar-tipográfico-y-gráfico">Módulo IV: el estándar tipográfico y gráfico</a>
+  <ul class="collapse">
+  <li><a href="#reglas-invariantes-de-maquetación-gráfica" id="toc-reglas-invariantes-de-maquetación-gráfica" class="nav-link" data-scroll-target="#reglas-invariantes-de-maquetación-gráfica">Reglas invariantes de maquetación gráfica</a></li>
+  </ul></li>
+  <li><a href="#verificación-del-entorno" id="toc-verificación-del-entorno" class="nav-link" data-scroll-target="#verificación-del-entorno">Verificación del entorno</a></li>
   </ul>
 </nav>
     </div>
@@ -353,13 +394,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nueva Somosaguas</h1>
-<p class="subtitle lead">Facultad libre de ciencias sociales analíticas y cuantitativas</p>
+<h1 class="title">Entorno de trabajo</h1>
+<p class="subtitle lead">El «semestre perdido»: terminal, entornos reproducibles y un estándar gráfico común</p>
 </div>
 
 <div>
   <div class="description">
-    Facultad libre y de código abierto que refunda la sociología sobre las matemáticas, la demografía formal, la genética cuantitativa, la inferencia causal y la computación reproducible.
+    La infraestructura computacional de la facultad: la terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.
   </div>
 </div>
 
@@ -376,122 +417,180 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="la-ciencia-social-fundada-en-la-realidad" class="level1 hero">
-<h1>La ciencia social fundada en la realidad</h1>
-<blockquote class="blockquote">
-<p><em>«Durante décadas, la academia dominante abjuró del método formal para dividirse entre la exégesis doctrinaria y el ajuste estadístico ciego. La Nueva Somosaguas recupera el estudio del hombre y la sociedad mediante la integración rigurosa de las matemáticas, la demografía formal, la genética cuantitativa, la sociología analítica y la computación reproducible.»</em></p>
-</blockquote>
-</section>
-<section id="el-fin-de-la-especulación-de-salón" class="level2">
-<h2 class="anchored" data-anchor-id="el-fin-de-la-especulación-de-salón">El fin de la especulación de salón</h2>
-<p>La <strong>Nueva Somosaguas</strong> no es un ajuste cosmético ni una reforma académica de compromiso. Es una sociología que sustituye el arbitrio discursivo por las matemáticas y el contraste empírico de la biología.</p>
-<p>Frente a la tradición que redujo la sociología a una exégesis verbal de textos sagrados o a una defensa apriorística de agendas políticas, nuestra facultad exige la <strong>disciplina intelectual del dato, la inferencia causal por diseño y la verificación formal</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>En las ciencias sociales convencionales, el estudiante pierde semanas luchando contra instalaciones defectuosas, rutas mal configuradas, dependencias rotas y gráficos con estética de hoja de cálculo de los noventa. En la <strong>Nueva Somosaguas</strong>, la infraestructura computacional no es un obstáculo secundario, sino la <strong>tubería transparente</strong> que lleva sin fricción del concepto matemático a su ejecución reproducible en la terminal.</p>
+</div>
+</div>
+</div>
+<hr>
+<section id="la-fricción-cero-el-semestre-perdido" class="level2">
+<h2 class="anchored" data-anchor-id="la-fricción-cero-el-semestre-perdido">La fricción cero: el «semestre perdido»</h2>
+<p>El módulo de infraestructura adapta a la ciencia social analítica el espíritu de <em>The Missing Semester of Your CS Education</em>, el curso del MIT sobre las herramientas que ninguna asignatura enseña y que todas dan por sabidas.</p>
+<p>El objetivo es doble:</p>
+<ol type="1">
+<li><strong>Erradicar el abandono por fallo técnico.</strong> Muchos autodidactas no abandonan por la dificultad del cálculo multivariante o de la econometría causal, sino por la frustración de una instalación fallida. Cada obstáculo en la primera hora de estudio es un filtro de selección que ahuyenta talento sin medirlo.</li>
+<li><strong>Garantizar la reproducibilidad a largo plazo.</strong> Un laboratorio entregado en 2026 debe volver a ejecutarse en 2036 con resultados idénticos. Para eso cada proyecto congela sus dependencias exactas y cada imagen de contenedor queda archivada con su versión: ninguna actualización de paquetes ni del sistema operativo puede alterar en silencio un resultado numérico o un gráfico.</li>
+</ol>
 <hr>
 </section>
-<section id="los-cuatro-pilares-de-la-consiliencia" class="level2">
-<h2 class="anchored" data-anchor-id="los-cuatro-pilares-de-la-consiliencia">Los cuatro pilares de la consiliencia</h2>
+<section id="módulo-i-la-cuartilla-de-la-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="módulo-i-la-cuartilla-de-la-terminal">Módulo I: la cuartilla de la terminal</h2>
+<p>El primer paso de la emancipación intelectual es abandonar las interfaces pasivas —los menús de SPSS o de Excel— y dominar la línea de comandos de Unix (<code>bash</code> o <code>zsh</code>).</p>
+<section id="la-hoja-de-referencia-esencial" class="level3">
+<h3 class="anchored" data-anchor-id="la-hoja-de-referencia-esencial">La hoja de referencia esencial</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Comando</th>
+<th style="text-align: left;">Función analítica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>cd</code>, <code>ls -la</code>, <code>pwd</code></td>
+<td style="text-align: left;">Navegar por el sistema de archivos y examinar permisos, tamaños y fechas.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>less</code>, <code>head</code>, <code>tail</code></td>
+<td style="text-align: left;">Inspeccionar archivos de datos de varios gigas sin cargarlos enteros en memoria.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>grep</code> / <code>rg</code> (ripgrep)</td>
+<td style="text-align: left;">Buscar patrones en miles de archivos en segundos.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>find</code> / <code>fd</code></td>
+<td style="text-align: left;">Localizar archivos por nombre, extensión, fecha o permisos.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>sed</code>, <code>awk</code></td>
+<td style="text-align: left;">Transformar y filtrar flujos de texto dentro de una tubería.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>xargs</code>, GNU <code>parallel</code></td>
+<td style="text-align: left;">Repartir una misma tarea entre todos los núcleos de la CPU.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>curl</code>, <code>wget</code></td>
+<td style="text-align: left;">Descargar microdatos directamente de servidores y repositorios abiertos.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="el-poder-de-las-tuberías" class="level3">
+<h3 class="anchored" data-anchor-id="el-poder-de-las-tuberías">El poder de las tuberías</h3>
+<p>Toda la filosofía de Unix descansa en componer programas pequeños que hacen una sola cosa bien y se comunican mediante texto plano:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Defunciones de menores de cinco años por causa, de la más a la menos frecuente.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Columnas: 3 = edad, 4 = causa; la primera fila es la cabecera.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">','</span> <span class="st">'NR &gt; 1 &amp;&amp; $3 &lt; 5 {print $4}'</span> defunciones.csv <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> <span class="at">-c</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-nr</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cuatro programas, una línea y ningún archivo intermedio. El <code>awk -F','</code> ingenuo sirve para un CSV sin comas dentro de los campos; para uno entrecomillado, la herramienta es <code>xsv</code>, DuckDB o SQLite.</p>
+<hr>
+</section>
+</section>
+<section id="módulo-ii-entornos-reproducibles-y-distribución" class="level2">
+<h2 class="anchored" data-anchor-id="módulo-ii-entornos-reproducibles-y-distribución">Módulo II: entornos reproducibles y distribución</h2>
+<p>Para que todos los alumnos trabajen sobre exactamente la misma base, sea cual sea su sistema operativo, la facultad ofrece tres puertas de entrada escalonadas. Las tres arrancan la misma imagen de software.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-pilares" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-niveles" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pilares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-pilares">%%{init: {"flowchart": {"htmlLabels": false, "nodeSpacing": 30, "rankSpacing": 60, "padding": 28, "wrappingWidth": 460, "useMaxWidth": true}}}%%
-flowchart LR
-    NS["LA NUEVA SOMOSAGUAS&lt;br/&gt;Ciencias sociales&lt;br/&gt;analíticas y cuantitativas"]
+<pre class="mermaid mermaid-js" data-label="fig-niveles">%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 28, "wrappingWidth": 460, "useMaxWidth": true}}}%%
+flowchart TB
+    N1["Nivel 1 · Navegador&lt;br/&gt;GitHub Codespaces: probar sin instalar nada"]
+    N2["Nivel 2 · Contenedor&lt;br/&gt;Devcontainer sobre Debian estable, integrado en VS Code"]
+    N3["Nivel 3 · Instalación nativa&lt;br/&gt;USB arrancable o Debian cifrado con LUKS"]
 
-    NS --&gt; P1["1. Herramientas formales"]
-    NS --&gt; P2["2. La naturaleza humana"]
-    NS --&gt; P3["3. La interacción estratégica"]
-    NS --&gt; P4["4. La síntesis generativa"]
+    N1 --&gt; N2 --&gt; N3
 
-    P1 --&gt; R1["Stat 110 · Blitzstein&lt;br/&gt;Álgebra lineal · Strang&lt;br/&gt;Julia / R / SQL"]
-    P2 --&gt; R2["Puntuaciones poligénicas · Plomin&lt;br/&gt;Paleogenómica · Reich&lt;br/&gt;Genética cuantitativa · Falconer"]
-    P3 --&gt; R3["Mecanismos DBO · Hedström&lt;br/&gt;Grafos causales · Pearl&lt;br/&gt;Teoría de juegos · Binmore"]
-    P4 --&gt; R4["Agent_Zero · Joshua Epstein&lt;br/&gt;Ciclos seculares · Turchin&lt;br/&gt;Energía y civilización · Smil"]
-
-    classDef raiz fill:#3a3a30,stroke:#57564a,stroke-width:2px,color:#f8f9fa
-    classDef pilar fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
-    classDef ref fill:#d8d5c8,stroke:#9b9887,stroke-width:1.5px,color:#111111
-
-    class NS raiz
-    class P1,P2,P3,P4 pilar
-    class R1,R2,R3,R4 ref
+    classDef nivel fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class N1,N2,N3 nivel
 </pre>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pilares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Los cuatro pilares de la consiliencia y sus referencias fundacionales.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-niveles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Las tres puertas de entrada al entorno, de menor a mayor compromiso.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<section id="cimientos-formales-e-inferencia-rigurosa" class="level3">
-<h3 class="anchored" data-anchor-id="cimientos-formales-e-inferencia-rigurosa">1. Cimientos formales e inferencia rigurosa</h3>
-<p>El lenguaje de la naturaleza social es matemático. Desde el primer semestre, el estudiante domina la probabilidad bayesiana (<em>Harvard Stat 110</em> / <em>Jaynes</em>), el álgebra lineal matricial y sus descomposiciones (<em>Strang</em>), el cálculo de variaciones y la infraestructura computacional políglota en <strong>Julia, R y SQL</strong>.</p>
+<ol type="1">
+<li><strong>Probar en el navegador (TODO).</strong> Con GitHub Codespaces, el estudiante dispone del entorno completo en unos minutos, sin instalar nada en su máquina.</li>
+<li><strong>Devcontainer (TODO).</strong> Una imagen ligera sobre Debian estable que VS Code abre como si fuera local, aislada del resto del sistema.</li>
+<li><strong>USB arrancable e instalación nativa.</strong> Una imagen ISO con todo el software del pensum, para probarla en vivo o instalarla (TODO). En la facultad presencial, los portátiles asignados llevan Debian con <strong>cifrado de disco completo (LUKS) por omisión</strong>: si un equipo se pierde, los microdatos censales que contiene —anonimizados, pero sensibles— siguen protegidos, como exige el RGPD.</li>
+</ol>
+<hr>
 </section>
-<section id="biología-evolutiva-y-genética-cuantitativa" class="level3">
-<h3 class="anchored" data-anchor-id="biología-evolutiva-y-genética-cuantitativa">2. Biología evolutiva y genética cuantitativa</h3>
-<p>El ser humano no es una <em>tabla rasa</em> ni un constructo discursivo maleable. Integramos la arquitectura genómica poligénica, la paleogenómica poblacional y las restricciones de la biología evolutiva como parámetros estructurales indispensables para modelar la varianza fenotípica individual y purgar los sesgos de autoselección en el análisis de la desigualdad.</p>
+<section id="módulo-iii-editores-cuadernos-reactivos-y-dependencias" class="level2">
+<h2 class="anchored" data-anchor-id="módulo-iii-editores-cuadernos-reactivos-y-dependencias">Módulo III: editores, cuadernos reactivos y dependencias</h2>
+<section id="entornos-de-desarrollo" class="level3">
+<h3 class="anchored" data-anchor-id="entornos-de-desarrollo">Entornos de desarrollo</h3>
+<ul>
+<li><strong>VS Code con sus extensiones oficiales.</strong> Configurado de fábrica para <strong>Julia</strong>, <strong>R</strong>, <strong>Quarto</strong> y <strong>Typst</strong>, con formateo automático de código e integración con Git.</li>
+<li><strong>Pluto.jl, cuadernos reactivos.</strong> En Jupyter, ejecutar las celdas en desorden deja estados ocultos: el cuaderno muestra resultados que su propio código ya no produce. Pluto.jl lo impide: cambiar un parámetro en una celda vuelve a ejecutar automáticamente todas las que dependen de ella, según el grafo de dependencias entre celdas, de modo que lo que se ve coincide siempre con lo que el código calcula. Además, cada cuaderno guarda dentro de sí las versiones exactas de sus paquetes. Es el entorno natural para experimentar con autómatas celulares como el modelo de segregación de Schelling.</li>
+</ul>
 </section>
-<section id="sociología-analítica-y-mecanismos-micro-dbo" class="level3">
-<h3 class="anchored" data-anchor-id="sociología-analítica-y-mecanismos-micro-dbo">3. Sociología analítica y mecanismos micro (DBO)</h3>
-<p>Rechazamos las explicaciones holistas que atribuyen causalidad a entidades abstractas o totalidades colectivas. Todo patrón macro-social debe derivarse de mecanismos generativos discretos fundamentados en Deseos, Creencias y Oportunidades (esquema DBO), formalizarse mediante teoría de juegos evolutiva y contrastarse empíricamente asegurando la identificación causal mediante modelos gráficos dirigidos (DAGs).</p>
-</section>
-<section id="ciencias-sociales-generativas-y-macrohistoria" class="level3">
-<h3 class="anchored" data-anchor-id="ciencias-sociales-generativas-y-macrohistoria">4. Ciencias sociales generativas y macrohistoria</h3>
-<p>La sociedad se comprende cuando se puede <em>reconstruir computacionalmente</em>. Mediante la simulación basada en agentes (<em>Joshua Epstein</em>), los modelos dinámicos de ciclos seculares (<em>Peter Turchin</em>) y las restricciones biofísicas de conversión energética (<em>Vaclav Smil</em>), estudiamos el nacimiento, la cohesión y el colapso de las instituciones.</p>
+<section id="control-riguroso-de-dependencias" class="level3">
+<h3 class="anchored" data-anchor-id="control-riguroso-de-dependencias">Control riguroso de dependencias</h3>
+<p>Cada asignatura es un proyecto de Julia con dos archivos. <code>Project.toml</code> declara qué paquetes se usan y qué versiones son compatibles:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[deps]</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">CSV</span> <span class="op">=</span> <span class="st">"336ed68f-0bac-5ca0-87d4-7b16caf5d00b"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">CairoMakie</span> <span class="op">=</span> <span class="st">"13f3f980-e62b-5c42-98c6-ff1f3baf88f0"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">DataFrames</span> <span class="op">=</span> <span class="st">"a93c6f00-e57d-5684-b7b6-d8193f3e46c0"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">[compat]</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">julia</span> <span class="op">=</span> <span class="st">"1.12"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="dt">CSV</span> <span class="op">=</span> <span class="st">"1"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="dt">CairoMakie</span> <span class="op">=</span> <span class="st">"0.15"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="dt">DataFrames</span> <span class="op">=</span> <span class="st">"1.8"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>Manifest.toml</code>, que Julia genera solo, fija la versión exacta de cada paquete y de cada dependencia indirecta. Es el que <strong>congela</strong> el entorno: ambos se versionan en Git, y <code>Pkg.instantiate()</code> reconstruye en cualquier máquina el mismo árbol de paquetes, versión por versión.</p>
+<p>Las imágenes de contenedor se etiquetan por versión de calendario (<code>2026.1</code>, <code>2026.2</code>), y <strong>GitHub Actions</strong> ejecuta de principio a fin todos los cuadernos de laboratorio antes de publicar cada nueva imagen (TODO).</p>
 <hr>
 </section>
 </section>
-<section id="estructura-del-dominio" class="level2">
-<h2 class="anchored" data-anchor-id="estructura-del-dominio">Estructura del dominio</h2>
-<p>Explore los documentos fundamentales que articulan la facultad:</p>
-<div class="grid">
-<section id="currículo" class="level3 g-col-12 g-col-md-12">
-<h3 class="anchored" data-anchor-id="currículo"><a href="./curriculo.html">Currículo</a></h3>
-<p>Consulte el plan de estudios de 4 años (20 asignaturas): de los fundamentos formales y la demografía matricial al diseño causal, los modelos de agentes y la cliodinámica, con Julia como entorno nuclear.</p>
-</section>
-<section id="bootcamp-de-verano" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="bootcamp-de-verano"><a href="./bootcamp.html">Bootcamp de verano</a></h3>
-<p>Doce semanas de nivelación antes del primer curso, en tres fases: geometría matricial y consola de Unix, cálculo multivariante y probabilidad axiomática, y replicación demográfica en Julia.</p>
-</section>
-<section id="guía-autodidacta" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="guía-autodidacta"><a href="./guia_autodidacta.html">Guía autodidacta</a></h3>
-<p>Cuatro hitos para recorrer el pensum en solitario, con su presupuesto de horas declarado y un proyecto auditable con microdatos reales al final de cada uno.</p>
-</section>
-<section id="laboratorios" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="laboratorios"><a href="./laboratorios.html">Laboratorios</a></h3>
-<p>Cinco laboratorios ejecutables en Julia y SQL, sin librerías de caja negra: paradoja de Berkson, actualización conjugada, segregación de Schelling, tabla de mortalidad e intervalos por <em>bootstrap</em>.</p>
-</section>
-<section id="entorno-de-trabajo" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="entorno-de-trabajo"><a href="./entorno.html">Entorno de trabajo</a></h3>
-<p>La terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto.</p>
-</section>
-<section id="política-de-inteligencia-artificial" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="política-de-inteligencia-artificial"><a href="./politica_ia.html">Política de inteligencia artificial</a></h3>
-<p>El <em>exoesqueleto cognitivo</em>: exámenes a terminal abierta donde se asume el uso de la IA, trazabilidad del <em>prompt</em> y la semilla, y la prohibición de delegarle la identificación causal.</p>
-</section>
-<section id="manual-de-bolsillo" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="manual-de-bolsillo"><a href="./manual_bolsillo.html">Manual de bolsillo</a></h3>
-<p>Diez herramientas para desarmar la retórica blanda sin recurrir al tecnicismo: cuándo aparece la falacia, la pregunta que la parte en dos y el andamiaje teórico al pie.</p>
-</section>
-<section id="biblioteca" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="biblioteca"><a href="./biblioteca.html">Biblioteca</a></h3>
-<p>El corpus completo de 149 obras, ordenado no por rótulos de facultad sino por función causal en cuatro estratos, con ficha técnica del mecanismo que aísla cada obra vertebral.</p>
-</section>
-<section id="preguntas-frecuentes" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="preguntas-frecuentes"><a href="./faq.html">Preguntas frecuentes</a></h3>
-<p>Nueve respuestas sobre el reduccionismo biológico, la neutralidad axiológica, el lugar que conserva lo cualitativo, la criba de acceso, la elección de Julia y las salidas del grado.</p>
-</section>
-</div>
+<section id="módulo-iv-el-estándar-tipográfico-y-gráfico" class="level2">
+<h2 class="anchored" data-anchor-id="módulo-iv-el-estándar-tipográfico-y-gráfico">Módulo IV: el estándar tipográfico y gráfico</h2>
+<p>Un informe formal o una figura científica no puede parecer un producto improvisado. <strong>El gráfico debe mantener el mismo rigor y la misma familia tipográfica que el texto que lo acompaña.</strong></p>
+<section id="reglas-invariantes-de-maquetación-gráfica" class="level3">
+<h3 class="anchored" data-anchor-id="reglas-invariantes-de-maquetación-gráfica">Reglas invariantes de maquetación gráfica</h3>
+<ol type="1">
+<li><strong>Destierro del fondo gris y de las rejillas pesadas.</strong> Se prohíbe el fondo gris que <code>ggplot2</code> aplica por defecto (<code>theme_grey()</code>) y cualquier malla que compita con los datos. El fondo es blanco (<code>#ffffff</code>) o del tono exacto del papel.</li>
+<li><strong>Una sola tipografía.</strong> Los ejes, leyendas y anotaciones de los gráficos en <code>ggplot2</code> (R) o <code>Makie.jl</code> (Julia) usan la misma tipografía que el documento: <em>EB Garamond</em> o <em>Linux Libertine</em>.</li>
+<li><strong>Etiquetado directo.</strong> Se eliminan las grandes cajas de leyenda a la derecha, que obligan al ojo a ir y volver; las etiquetas se colocan sobre las propias series o, si no caben, en una leyenda mínima encima del gráfico.</li>
+<li><strong>Plantillas unificadas.</strong> Los informes se compilan con la plantilla oficial en <strong>Typst</strong> (<code>somosaguas-report</code>) o en <strong>Quarto</strong> (<code>somosaguas-theme</code>) (TODO).</li>
+</ol>
 <hr>
 </section>
-<section id="principio-abierto-y-mérito-puro" class="level2">
-<h2 class="anchored" data-anchor-id="principio-abierto-y-mérito-puro">Principio abierto y mérito puro</h2>
-<p>La <strong>Nueva Somosaguas</strong> cree en la universalidad del saber. La totalidad de nuestra bibliografía, guías docentes, scripts de simulación y entornos RAG están abiertos a cualquier ciudadano que busque instruirse por su cuenta.</p>
-<p>Las pruebas de acceso psicométrico (como el test de Raven avanzado) existen únicamente para administrar recursos públicos de laboratorio escasos; el derecho a cultivar una mente analítica, rigurosa y libre de tonterías pertenece a cualquiera con la disciplina suficiente para exigírselo.</p>
+</section>
+<section id="verificación-del-entorno" class="level2">
+<h2 class="anchored" data-anchor-id="verificación-del-entorno">Verificación del entorno</h2>
+<p>Cualquier estudiante o autodidacta puede comprobar su sistema guardando este script como <code>check_env.sh</code> y ejecutando <code>bash check_env.sh</code>. Termina con error si falta alguna herramienta, así que sirve también como primer paso de una integración continua.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check_env.sh — auditoría del entorno de la Nueva Somosaguas</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="va">falta</span><span class="op">=</span>0</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> herramienta <span class="kw">in</span> julia R sqlite3 git quarto typst<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Que responda a --version, no solo que exista: un shim de juliaup o mise</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># sin versión seleccionada está en el PATH, pero no ejecuta nada.</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">version</span><span class="op">=</span><span class="va">$(</span><span class="st">"</span><span class="va">$herramienta</span><span class="st">"</span> <span class="at">--version</span> <span class="dv">2</span><span class="op">&gt;</span>/dev/null<span class="va">)</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[OK]    </span><span class="va">$herramienta</span><span class="st">: </span><span class="va">${version</span><span class="op">%%</span><span class="st">$'</span><span class="dt">\n</span><span class="st">'</span><span class="pp">*</span><span class="va">}</span><span class="st">"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"[FALTA] </span><span class="va">$herramienta</span><span class="st">"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="va">falta</span><span class="op">=</span>1</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span> <span class="st">"</span><span class="va">$falta</span><span class="st">"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>

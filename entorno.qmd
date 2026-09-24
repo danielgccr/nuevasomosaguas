@@ -1,0 +1,147 @@
+---
+title: "Entorno de trabajo"
+subtitle: "El «semestre perdido»: terminal, entornos reproducibles y un estándar gráfico común"
+description: "La infraestructura computacional de la facultad: la terminal de Unix, entornos congelados con Julia, tres puertas de entrada sin instalación y un estándar gráfico que iguala la figura al texto."
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+::: {.callout-note appearance="simple"}
+En las ciencias sociales convencionales, el estudiante pierde semanas luchando contra instalaciones defectuosas, rutas mal configuradas, dependencias rotas y gráficos con estética de hoja de cálculo de los noventa. En la **Nueva Somosaguas**, la infraestructura computacional no es un obstáculo secundario, sino la **tubería transparente** que lleva sin fricción del concepto matemático a su ejecución reproducible en la terminal.
+:::
+
+---
+
+## La fricción cero: el «semestre perdido»
+
+El módulo de infraestructura adapta a la ciencia social analítica el espíritu de *The Missing Semester of Your CS Education*, el curso del MIT sobre las herramientas que ninguna asignatura enseña y que todas dan por sabidas.
+
+El objetivo es doble:
+
+1. **Erradicar el abandono por fallo técnico.** Muchos autodidactas no abandonan por la dificultad del cálculo multivariante o de la econometría causal, sino por la frustración de una instalación fallida. Cada obstáculo en la primera hora de estudio es un filtro de selección que ahuyenta talento sin medirlo.
+2. **Garantizar la reproducibilidad a largo plazo.** Un laboratorio entregado en 2026 debe volver a ejecutarse en 2036 con resultados idénticos. Para eso cada proyecto congela sus dependencias exactas y cada imagen de contenedor queda archivada con su versión: ninguna actualización de paquetes ni del sistema operativo puede alterar en silencio un resultado numérico o un gráfico.
+
+---
+
+## Módulo I: la cuartilla de la terminal
+
+El primer paso de la emancipación intelectual es abandonar las interfaces pasivas —los menús de SPSS o de Excel— y dominar la línea de comandos de Unix (`bash` o `zsh`).
+
+### La hoja de referencia esencial
+
+| Comando | Función analítica |
+| :--- | :--- |
+| `cd`, `ls -la`, `pwd` | Navegar por el sistema de archivos y examinar permisos, tamaños y fechas. |
+| `less`, `head`, `tail` | Inspeccionar archivos de datos de varios gigas sin cargarlos enteros en memoria. |
+| `grep` / `rg` (ripgrep) | Buscar patrones en miles de archivos en segundos. |
+| `find` / `fd` | Localizar archivos por nombre, extensión, fecha o permisos. |
+| `sed`, `awk` | Transformar y filtrar flujos de texto dentro de una tubería. |
+| `xargs`, GNU `parallel` | Repartir una misma tarea entre todos los núcleos de la CPU. |
+| `curl`, `wget` | Descargar microdatos directamente de servidores y repositorios abiertos. |
+
+### El poder de las tuberías
+
+Toda la filosofía de Unix descansa en componer programas pequeños que hacen una sola cosa bien y se comunican mediante texto plano:
+
+```bash
+# Defunciones de menores de cinco años por causa, de la más a la menos frecuente.
+# Columnas: 3 = edad, 4 = causa; la primera fila es la cabecera.
+awk -F',' 'NR > 1 && $3 < 5 {print $4}' defunciones.csv | sort | uniq -c | sort -nr
+```
+
+Cuatro programas, una línea y ningún archivo intermedio. El `awk -F','` ingenuo sirve para un CSV sin comas dentro de los campos; para uno entrecomillado, la herramienta es `xsv`, DuckDB o SQLite.
+
+---
+
+## Módulo II: entornos reproducibles y distribución
+
+Para que todos los alumnos trabajen sobre exactamente la misma base, sea cual sea su sistema operativo, la facultad ofrece tres puertas de entrada escalonadas. Las tres arrancan la misma imagen de software.
+
+```{mermaid}
+%%| label: fig-niveles
+%%| fig-cap: "Las tres puertas de entrada al entorno, de menor a mayor compromiso."
+
+%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 42, "padding": 28, "wrappingWidth": 460, "useMaxWidth": true}}}%%
+flowchart TB
+    N1["Nivel 1 · Navegador<br/>GitHub Codespaces: probar sin instalar nada"]
+    N2["Nivel 2 · Contenedor<br/>Devcontainer sobre Debian estable, integrado en VS Code"]
+    N3["Nivel 3 · Instalación nativa<br/>USB arrancable o Debian cifrado con LUKS"]
+
+    N1 --> N2 --> N3
+
+    classDef nivel fill:#800000,stroke:#800000,stroke-width:2px,color:#fffff8
+    class N1,N2,N3 nivel
+```
+
+1. **Probar en el navegador (TODO).** Con GitHub Codespaces, el estudiante dispone del entorno completo en unos minutos, sin instalar nada en su máquina.
+2. **Devcontainer (TODO).** Una imagen ligera sobre Debian estable que VS Code abre como si fuera local, aislada del resto del sistema.
+3. **USB arrancable e instalación nativa.** Una imagen ISO con todo el software del pensum, para probarla en vivo o instalarla (TODO). En la facultad presencial, los portátiles asignados llevan Debian con **cifrado de disco completo (LUKS) por omisión**: si un equipo se pierde, los microdatos censales que contiene —anonimizados, pero sensibles— siguen protegidos, como exige el RGPD.
+
+---
+
+## Módulo III: editores, cuadernos reactivos y dependencias
+
+### Entornos de desarrollo
+
+* **VS Code con sus extensiones oficiales.** Configurado de fábrica para **Julia**, **R**, **Quarto** y **Typst**, con formateo automático de código e integración con Git.
+* **Pluto.jl, cuadernos reactivos.** En Jupyter, ejecutar las celdas en desorden deja estados ocultos: el cuaderno muestra resultados que su propio código ya no produce. Pluto.jl lo impide: cambiar un parámetro en una celda vuelve a ejecutar automáticamente todas las que dependen de ella, según el grafo de dependencias entre celdas, de modo que lo que se ve coincide siempre con lo que el código calcula. Además, cada cuaderno guarda dentro de sí las versiones exactas de sus paquetes. Es el entorno natural para experimentar con autómatas celulares como el modelo de segregación de Schelling.
+
+### Control riguroso de dependencias
+
+Cada asignatura es un proyecto de Julia con dos archivos. `Project.toml` declara qué paquetes se usan y qué versiones son compatibles:
+
+```toml
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+
+[compat]
+julia = "1.12"
+CSV = "1"
+CairoMakie = "0.15"
+DataFrames = "1.8"
+```
+
+`Manifest.toml`, que Julia genera solo, fija la versión exacta de cada paquete y de cada dependencia indirecta. Es el que **congela** el entorno: ambos se versionan en Git, y `Pkg.instantiate()` reconstruye en cualquier máquina el mismo árbol de paquetes, versión por versión.
+
+Las imágenes de contenedor se etiquetan por versión de calendario (`2026.1`, `2026.2`), y **GitHub Actions** ejecuta de principio a fin todos los cuadernos de laboratorio antes de publicar cada nueva imagen (TODO).
+
+---
+
+## Módulo IV: el estándar tipográfico y gráfico
+
+Un informe formal o una figura científica no puede parecer un producto improvisado. **El gráfico debe mantener el mismo rigor y la misma familia tipográfica que el texto que lo acompaña.**
+
+### Reglas invariantes de maquetación gráfica
+
+1. **Destierro del fondo gris y de las rejillas pesadas.** Se prohíbe el fondo gris que `ggplot2` aplica por defecto (`theme_grey()`) y cualquier malla que compita con los datos. El fondo es blanco (`#ffffff`) o del tono exacto del papel.
+2. **Una sola tipografía.** Los ejes, leyendas y anotaciones de los gráficos en `ggplot2` (R) o `Makie.jl` (Julia) usan la misma tipografía que el documento: *EB Garamond* o *Linux Libertine*.
+3. **Etiquetado directo.** Se eliminan las grandes cajas de leyenda a la derecha, que obligan al ojo a ir y volver; las etiquetas se colocan sobre las propias series o, si no caben, en una leyenda mínima encima del gráfico.
+4. **Plantillas unificadas.** Los informes se compilan con la plantilla oficial en **Typst** (`somosaguas-report`) o en **Quarto** (`somosaguas-theme`) (TODO).
+
+---
+
+## Verificación del entorno
+
+Cualquier estudiante o autodidacta puede comprobar su sistema guardando este script como `check_env.sh` y ejecutando `bash check_env.sh`. Termina con error si falta alguna herramienta, así que sirve también como primer paso de una integración continua.
+
+```bash
+#!/usr/bin/env bash
+# check_env.sh — auditoría del entorno de la Nueva Somosaguas
+
+falta=0
+for herramienta in julia R sqlite3 git quarto typst; do
+  # Que responda a --version, no solo que exista: un shim de juliaup o mise
+  # sin versión seleccionada está en el PATH, pero no ejecuta nada.
+  if version=$("$herramienta" --version 2>/dev/null); then
+    echo "[OK]    $herramienta: ${version%%$'\n'*}"
+  else
+    echo "[FALTA] $herramienta"
+    falta=1
+  fi
+done
+exit "$falta"
+```
