@@ -131,7 +131,8 @@ Cinco asignaturas por curso en los tres primeros años y cuatro en el último, t
 * **Textos matriz:** Peter Turchin & Sergey A. Nefedov — *Secular Cycles*; Steven H. Strogatz — *Nonlinear Dynamics and Chaos*.
 
 #### 4.2. Evaluación cuantitativa de políticas públicas
-* **Contenidos:** análisis coste-beneficio, microdatos censales y de registros administrativos, paneles longitudinales y auditoría de intervenciones estatales.
+* **Contenidos:** análisis coste-beneficio, microdatos censales y de registros administrativos, trazas digitales, paneles longitudinales, experimentos de campo y auditoría de intervenciones estatales.
+* **Texto matriz:** Matthew J. Salganik — *Bit by Bit: Social Research in the Digital Age*.
 * **Práctica:** replicación empírica de políticas laborales, de vivienda y de transferencias asistenciales.
 
 #### 4.3. Computación de alto rendimiento y modelado distribuido

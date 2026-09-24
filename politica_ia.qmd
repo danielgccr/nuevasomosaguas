@@ -93,4 +93,5 @@ flowchart TD
 ## Gobernanza del cómputo y privacidad de los datos
 
 * **Procesamiento en local.** Los análisis con microdatos censales anonimizados o registros sensibles se ejecutan exclusivamente en los servidores GPU del campus, sobre modelos abiertos cuantizados, sin enviar tráfico a intermediarios comerciales.
+* **Ética de la investigación con trazas digitales.** Los proyectos que observan conducta en plataformas o experimentan sobre usuarios se evalúan con los cuatro principios de Salganik en *Bit by Bit*: respeto por las personas, beneficencia, justicia y respeto por la ley y el interés público. Se razona desde los principios, no desde una lista de comprobación, porque la investigación digital plantea casos que ninguna norma previó.
 * **Minería de textos para investigación.** La indexación de literatura técnica para los sistemas RAG institucionales se ampara en el derecho de cita y en las excepciones de minería de textos y datos con fines de investigación científica del marco legal vigente.

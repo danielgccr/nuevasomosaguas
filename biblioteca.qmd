@@ -220,6 +220,10 @@ El estándar de comprobación: probabilidad axiomática, identificación causal,
 * **Morgan, Stephen L. & Winship, Christopher** (2014). *Counterfactuals and Causal Inference: Models and Principles for Social Research*. Cambridge University Press. `[Nivel 2 | Modelos Contrafactuales]`
 * **Imbens, Guido W. & Rubin, Donald B.** (2015). *Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction*. Cambridge University Press. `[Nivel 3 | Resultados Potenciales]`
 * **Dunning, Thad** (2012). *Natural Experiments in the Social Sciences: A Design-Based Approach*. Cambridge University Press. `[Nivel 2 | Experimentos Naturales]`
+* **Salganik, Matthew J.** (2018). *Bit by Bit: Social Research in the Digital Age*. Princeton University Press. `[Nivel 2 | Ciencias Sociales Computacionales]`
+  * *Mecanismo:* Cuatro vías de producción del dato: observar trazas digitales, preguntar con encuestas corregidas, experimentar en el campo y colaborar a escala masiva.
+  * *Aparato formal:* Post-estratificación multinivel (MRP) sobre muestras no probabilísticas, experimentos de campo en plataformas digitales y el tratamiento de la deriva, la incompletitud y los sesgos de representación de las trazas.
+  * *Función en el RAG:* Control de la fase previa a la inferencia: cómo se captura el dato y qué sesgo arrastra antes de estimar nada.
 * **Molak, Aleksander & Jaokar, Ajit** (2023). *Causal Inference and Discovery in Python*. Packt Publishing. `[Nivel 2 | Inferencia Causal en Python]`
 * **Mumford, Stephen & Anjum, Rani Lill** (2014). *Causation: A Very Short Introduction*. Oxford University Press. `[Nivel 1 | Metafísica Causal]`
 
