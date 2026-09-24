@@ -30,7 +30,24 @@ Presentar estas fases como etapas ligeras que se despachan en unos meses induce 
 
 ---
 
-## 2. El itinerario cuantitativo: cuatro hitos de ejecución
+## 2. Infraestructura mental: oficio e higiene cognitiva
+
+Esas 2.600 horas no se reúnen acumulando conocimiento técnico, sino sosteniendo durante años sesiones largas de esfuerzo intelectual de alta intensidad. En un entorno saturado de estímulos superficiales, atención fragmentada y gratificación inmediata, el trabajo analítico de primer orden es ante todo un problema de oficio y de disciplina de la atención, y se entrena con el mismo rigor que el álgebra.
+
+### La logística de la concentración
+
+* **Trabajo profundo.** El valor de la atención ininterrumpida y cómo organizarla: bloques largos de enfoque sin interrupciones, la fragmentación digital fuera de la jornada y el trabajo superficial (*shallow work*) reducido al mínimo. Newport sitúa en unas cuatro horas diarias el techo del trabajo profundo sostenible, el mismo orden de magnitud que las 15 a 20 horas semanales del presupuesto. *Texto:* Cal Newport — *Deep Work*.
+* **Capital de carrera.** El desmontaje del consejo de «sigue tu pasión»: la mentalidad del artesano (*craftsman mindset*), que pregunta qué puede ofrecer, frente a la mentalidad de la pasión, que pregunta qué le ofrece el trabajo, y la acumulación de capital de carrera mediante práctica deliberada. *Texto:* Cal Newport — *So Good They Can't Ignore You*.
+
+### Ética del oficio científico y pensamiento independiente
+
+* **La elección del problema.** Qué separa a quienes producen trabajo científico de primer orden de quienes se limitan a engrosar el currículum: el coraje intelectual y la elección deliberada de problemas importantes. *Texto:* Richard W. Hamming — *You and Your Research*, conferencia de 1986 recogida como capítulo final de *The Art of Doing Science and Engineering*.
+* **Artesanía y herejía.** El código como oficio de artesano, la creación de valor y la costumbre de preguntarse qué no se puede decir en voz alta, para pensarlo con libertad fuera del consenso ideológico del momento. *Texto:* Paul Graham — *Hackers & Painters*.
+* **La lectura como resistencia.** La degradación del discurso público cuando se somete a la lógica del entretenimiento. Postman escribía sobre la televisión, pero su diagnóstico explica por qué la lectura analítica sostenida y el trabajo en la consola, que no ofrecen recompensa inmediata, son hoy una elección consciente contra la atrofia intelectual. *Texto:* Neil Postman — *Amusing Ourselves to Death*.
+
+---
+
+## 3. El itinerario cuantitativo: cuatro hitos de ejecución
 
 ```{mermaid}
 %%| label: fig-hitos
@@ -84,7 +101,7 @@ flowchart TB
 * **Modelado formal y basado en agentes:** traducir una conjetura verbal sobre contagio, polarización, segregación o normas a un sistema de ecuaciones y a una simulación, y contrastar lo que cada uno predice. Es la puerta de entrada al proyecto de validación. *Texto:* Paul E. Smaldino — *Modeling Social Behavior*.
 
 ::: {.callout-important}
-**Fase de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas.
+**Fase de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas. Con el método de Smaldino, formular antes la versión analítica del mismo mecanismo y contrastar su predicción con la de la simulación: la discrepancia entre ambas forma parte del informe.
 :::
 
 ### Hito IV: dinámicas macro y cliodinámica (~500 horas netas)
@@ -101,7 +118,7 @@ flowchart TB
 
 ---
 
-## 3. El modelo de lenguaje como claustro socrático
+## 4. El modelo de lenguaje como claustro socrático
 
 El mayor riesgo de estudiar solo no es la falta de libros: es el atasco. Bloquearse dos semanas en una derivación o en una matriz de covarianza y abandonar por frustración acaba con más itinerarios que la dificultad del material.
 

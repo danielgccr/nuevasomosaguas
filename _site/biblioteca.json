@@ -3023,6 +3023,89 @@
     "type": "book"
   },
   {
+    "ISBN": "9781455586691",
+    "author": [
+      {
+        "family": "Newport",
+        "given": "Cal"
+      }
+    ],
+    "id": "newport2016deep",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Grand Central Publishing",
+    "title": "Deep work: Rules for focused success in a distracted world",
+    "title-short": "Deep work",
+    "type": "book"
+  },
+  {
+    "ISBN": "9781455509126",
+    "author": [
+      {
+        "family": "Newport",
+        "given": "Cal"
+      }
+    ],
+    "id": "newport2012sogood",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Grand Central Publishing",
+    "title": "So good they can’t ignore you: Why skills trump passion in the quest for work you love",
+    "title-short": "So good they can’t ignore you",
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Hamming",
+        "given": "Richard W."
+      }
+    ],
+    "id": "hamming1997art",
+    "issued": {
+      "date-parts": [
+        [
+          1997
+        ]
+      ]
+    },
+    "publisher": "Gordon and Breach",
+    "title": "The art of doing science and engineering: Learning to learn",
+    "title-short": "The art of doing science and engineering",
+    "type": "book"
+  },
+  {
+    "ISBN": "9780596006624",
+    "author": [
+      {
+        "family": "Graham",
+        "given": "Paul"
+      }
+    ],
+    "id": "graham2004hackers",
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    },
+    "publisher": "O’Reilly",
+    "title": "Hackers & painters: Big ideas from the computer age",
+    "title-short": "Hackers & painters",
+    "type": "book"
+  },
+  {
     "author": [
       {
         "family": "Taylor",
