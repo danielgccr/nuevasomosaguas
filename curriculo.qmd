@@ -107,8 +107,8 @@ Cinco asignaturas por curso en los tres primeros años y cuatro en el último, t
 * **Texto matriz:** Matthew O. Jackson — *Social and Economic Networks*.
 
 #### 3.2. Modelos basados en agentes y sistemas complejos
-* **Contenidos:** autómatas celulares, segregación espacial de Schelling, modelos generativos *Agent_Zero* y calibración de dinámicas emergentes.
-* **Textos matriz:** Joshua Epstein — *Generative Social Science*; Steven F. Railsback & Volker Grimm — *Agent-Based and Individual-Based Modeling*.
+* **Contenidos:** autómatas celulares, segregación espacial de Schelling, contagio y polarización, modelos de ecuaciones frente a modelos de agentes, modelos generativos *Agent_Zero* y calibración de dinámicas emergentes.
+* **Textos matriz:** Joshua Epstein — *Generative Social Science*; Paul E. Smaldino — *Modeling Social Behavior*; Steven F. Railsback & Volker Grimm — *Agent-Based and Individual-Based Modeling*.
 
 #### 3.3. Inferencia bayesiana y computación MCMC
 * **Contenidos:** teorema de Bayes sobre distribuciones continuas, *priors* conjugados y no informativos, Metropolis-Hastings y muestreo de Gibbs para modelos jerárquicos.

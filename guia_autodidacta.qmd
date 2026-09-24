@@ -81,6 +81,7 @@ flowchart TB
 * **Sociología analítica (DBO):** deseos, creencias y oportunidades como motores generativos de regularidades macro. *Textos:* Peter Hedström — *Dissecting the Social*; Jon Elster — *Explaining Social Behavior*.
 * **Teoría de juegos estratégica y evolutiva:** equilibrios de Nash, juegos repetidos, dinámica de réplica y normas sociales. *Texto:* Robert Gibbons — *Game Theory for Applied Economists*.
 * **Teoría de redes sociales:** homofilia, centralidad, difusión y modelos de umbrales. *Texto:* Matthew O. Jackson — *Social and Economic Networks*.
+* **Modelado formal y basado en agentes:** traducir una conjetura verbal sobre contagio, polarización, segregación o normas a un sistema de ecuaciones y a una simulación, y contrastar lo que cada uno predice. Es la puerta de entrada al proyecto de validación. *Texto:* Paul E. Smaldino — *Modeling Social Behavior*.
 
 ::: {.callout-important}
 **Fase de validación III.** Programar en la terminal una simulación de agentes que reproduzca la emergencia de una norma cooperativa o de un patrón de segregación espacial a partir de reglas individuales microscópicas.

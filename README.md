@@ -43,7 +43,7 @@ El criterio de admisión de cualquier contenido es el mismo en todo el sitio: si
    * Teoría de juegos y acción colectiva (Gibbons, Binmore, Olson).
 
 4. **Síntesis generativa y macrohistoria biofísica**
-   * Modelos basados en agentes (Joshua Epstein, Schelling, Railsback y Grimm).
+   * Modelos basados en agentes (Joshua Epstein, Schelling, Smaldino, Railsback y Grimm).
    * Cliodinámica y sobreproducción de élites (Turchin y Nefedov).
    * Historia económica cuantitativa y contabilidad biofísica (Smil, Wrigley, Galor, Clark).
 
