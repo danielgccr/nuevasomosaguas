@@ -1,7 +1,7 @@
 ---
 title: "Currículo"
-subtitle: "Estructura de 4 años y 19 asignaturas del grado en ciencias sociales analíticas y cuantitativas"
-description: "Cuatro años y 19 asignaturas con Julia como entorno nuclear: un texto matriz y un cuaderno reproducible por materia, y el mecanismo separado de la identificación causal."
+subtitle: "Estructura de 4 años y 20 asignaturas del grado en ciencias sociales analíticas y cuantitativas"
+description: "Cuatro años y 20 asignaturas con Julia como entorno nuclear: un texto matriz y un cuaderno reproducible por materia, y el mecanismo separado de la identificación causal."
 format:
   html:
     toc: true
@@ -41,14 +41,14 @@ Una asignatura, un texto matriz y un cuaderno computacional reproducible. Se eli
 
 ## 2. Estructura curricular
 
-Cinco asignaturas por curso en los tres primeros años y cuatro en el último, tesis incluida.
+Cinco asignaturas por curso, tesis incluida.
 
 | Curso | Eje | Enfoque central |
 |:---|:---|:---|
 | **Primer año** | *Fundamentos formales y restricciones materiales* | Cálculo, álgebra computacional, probabilidad axiomática, demografía formal y estructuras de datos. |
 | **Segundo año** | *Microfundamentos, biología y diseño causal* | Genética cuantitativa, mecanismos DBO, teoría de juegos, inferencia causal y variables latentes. |
 | **Tercer año** | *Interacción estratégica, redes y dinámica macro* | Redes, modelos de agentes, computación bayesiana, elección pública y transición demográfica. |
-| **Cuarto año** | *Síntesis estructural y validación empírica* | Cliodinámica, evaluación de políticas, cómputo de alto rendimiento y tesis. |
+| **Cuarto año** | *Síntesis estructural y validación empírica* | Cliodinámica, evaluación de políticas, cómputo de alto rendimiento, texto como dato y tesis. |
 
 ---
 
@@ -139,7 +139,12 @@ Cinco asignaturas por curso en los tres primeros años y cuatro en el último, t
 * **Contenidos:** paralelización en clústeres de cómputo, optimización de memoria en simulaciones a gran escala y canalizaciones reproducibles con control de versiones.
 * **Práctica:** modelado generativo de poblaciones sintéticas completas.
 
-#### 4.4. Tesis de grado
+#### 4.4. Texto como dato y procesamiento del lenguaje
+* **Contenidos:** tokenización y modelos de lenguaje probabilísticos, *embeddings* y arquitectura *Transformer*, modelos estructurales de temas y el texto como tratamiento, resultado o confusor en un diseño causal.
+* **Textos matriz:** Justin Grimmer, Margaret E. Roberts & Brandon M. Stewart — *Text as Data*; Daniel Jurafsky & James H. Martin — *Speech and Language Processing*.
+* **Práctica:** medición validada frente a codificación humana sobre un archivo legislativo o notarial completo.
+
+#### 4.5. Tesis de grado
 * **Contenidos:** desarrollo de un modelo analítico original o replicación destructiva de un resultado de la literatura empírica.
 * **Requisitos:** código fuente en repositorio público, datos abiertos y memoria en Typst o Quarto que compile de forma determinista desde la terminal.
 

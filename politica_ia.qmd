@@ -36,7 +36,7 @@ De ahí se sigue una obligación, no solo un permiso: el estudiante debe usar el
 
 ### Asimetría epistemológica: asociación frente a causalidad
 
-Todo estudiante debe asimilar un límite computacional inviolable. Los modelos de lenguaje son optimizadores autorregresivos de patrones estadísticos en espacios latentes continuos: manejan asociaciones, no estructuras generativas. No poseen noción intrínseca de intervención, y por tanto no operan el $do$-cálculo aunque sepan describirlo con fluidez.
+Todo estudiante debe asimilar un límite computacional inviolable. Los modelos de lenguaje son optimizadores autorregresivos de patrones estadísticos en espacios latentes continuos: manejan asociaciones, no estructuras generativas. No poseen noción intrínseca de intervención, y por tanto no operan el $do$-cálculo aunque sepan describirlo con fluidez. Ese límite no se acepta de oídas: en la asignatura 4.4 el estudiante deriva la autoatención con Jurafsky y Martin y comprueba que en ella no hay ningún operador de intervención.
 
 * **Prohibición de delegación causal.** Ninguna IA decide si un conjunto de variables satisface el criterio de la puerta trasera, ni si un estimador sufre sesgo de colisionador. El grafo acíclico dirigido y la justificación teórica del mecanismo DBO son concebidos y defendidos por el investigador humano, sin excepción.
 * **Temperatura cero en consulta.** Las consultas analíticas sobre el canon y los repositorios institucionales se ejecutan con muestreo determinista ($T = 0$), para erradicar el relleno retórico y la fabulación estocástica.

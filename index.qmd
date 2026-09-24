@@ -78,7 +78,7 @@ Explore los documentos fundamentales que articulan la facultad:
 ::: {.g-col-12 .g-col-md-6}
 ### [Currículo](curriculo.qmd)
 
-Consulte el plan de estudios de 4 años (19 asignaturas): de los fundamentos formales y la demografía matricial al diseño causal, los modelos de agentes y la cliodinámica, con Julia como entorno nuclear.
+Consulte el plan de estudios de 4 años (20 asignaturas): de los fundamentos formales y la demografía matricial al diseño causal, los modelos de agentes y la cliodinámica, con Julia como entorno nuclear.
 :::
 
 ::: {.g-col-12 .g-col-md-6}

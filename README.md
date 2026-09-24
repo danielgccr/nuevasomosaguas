@@ -18,7 +18,7 @@
 
 La **Nueva Somosaguas** es una facultad libre de ciencias sociales analíticas y cuantitativas: un plan de estudios completo, abierto y publicado en código, construido sobre el principio de **consiliencia** de E. O. Wilson —la compatibilidad vertical entre las matemáticas, la biología evolutiva, los micro-mecanismos de decisión y la historia cuantitativa de gran escala.
 
-No es un borrador pedagógico. Son **cuatro cursos y 19 asignaturas**, con un texto matriz y un cuaderno reproducible por asignatura, más un bootcamp propedéutico de doce semanas y un itinerario autodidacta con presupuesto de horas declarado.
+No es un borrador pedagógico. Son **cuatro cursos y 20 asignaturas**, con un texto matriz y un cuaderno reproducible por asignatura, más un bootcamp propedéutico de doce semanas y un itinerario autodidacta con presupuesto de horas declarado.
 
 El criterio de admisión de cualquier contenido es el mismo en todo el sitio: si un modelo no se deriva en la pizarra y no compila en la terminal, no entra.
 
@@ -56,7 +56,7 @@ El sitio se compila con **Quarto** y una hoja de estilos propia de inspiración 
 ```text
 nuevasomosaguas/
 ├── index.qmd               Portada: los cuatro pilares y el mapa del dominio
-├── curriculo.qmd           Plan de estudios: 4 cursos, 19 asignaturas
+├── curriculo.qmd           Plan de estudios: 4 cursos, 20 asignaturas
 ├── bootcamp.qmd            Bootcamp propedéutico: 3 fases, 12 semanas
 ├── guia_autodidacta.qmd    Itinerario en solitario: 4 hitos con gates de validación
 ├── laboratorios.qmd        Cinco laboratorios ejecutables en Julia y SQL

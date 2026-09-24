@@ -224,6 +224,10 @@ El estándar de comprobación: probabilidad axiomática, identificación causal,
   * *Mecanismo:* Cuatro vías de producción del dato: observar trazas digitales, preguntar con encuestas corregidas, experimentar en el campo y colaborar a escala masiva.
   * *Aparato formal:* Post-estratificación multinivel (MRP) sobre muestras no probabilísticas, experimentos de campo en plataformas digitales y el tratamiento de la deriva, la incompletitud y los sesgos de representación de las trazas.
   * *Función en el RAG:* Control de la fase previa a la inferencia: cómo se captura el dato y qué sesgo arrastra antes de estimar nada.
+* **Grimmer, Justin; Roberts, Margaret E. & Stewart, Brandon M.** (2022). *Text as Data: A New Framework for Machine Learning and the Social Sciences*. Princeton University Press. `[Nivel 2 | Texto como Dato]`
+  * *Mecanismo:* El texto como medida, tratamiento, resultado o confusor dentro de un diseño de identificación, con el descubrimiento separado de la medición y de la inferencia.
+  * *Aparato formal:* Bolsa de palabras e incrustaciones vectoriales, modelo estructural de temas (STM) con covariables en el *prior* y validación de cada medida frente a codificación humana.
+  * *Función en el RAG:* Impide que un agrupamiento no supervisado pase por prueba de una hipótesis.
 * **Molak, Aleksander & Jaokar, Ajit** (2023). *Causal Inference and Discovery in Python*. Packt Publishing. `[Nivel 2 | Inferencia Causal en Python]`
 * **Mumford, Stephen & Anjum, Rani Lill** (2014). *Causation: A Very Short Introduction*. Oxford University Press. `[Nivel 1 | Metafísica Causal]`
 
@@ -258,6 +262,10 @@ Los manuales de taller: cómo hablar con la máquina sin intermediarios ni inter
   * *Función en el RAG:* Puente entre el operador lineal y su implementación en Julia.
 * **Wickham, Hadley** (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer. `[Nivel 1 | Visualización en R]`
 * **Matloff, Norman** (2023). *The Art of Machine Learning: A Hands-On Guide*. No Starch Press. `[Nivel 2 | Machine Learning]`
+* **Jurafsky, Daniel & Martin, James H.** (2025). *Speech and Language Processing* (3rd Edition draft). Stanford University. `[Nivel 3 | Procesamiento del Lenguaje]`
+  * *Mecanismo:* De los modelos de n-gramas y las cadenas de Markov ocultas a los *embeddings* contextuales y la arquitectura *Transformer*: cómo representa y predice el lenguaje una máquina.
+  * *Aparato formal:* Modelos de lenguaje probabilísticos con suavizado, geometría de espacios vectoriales densos y autoatención, $\mathrm{softmax}(QK^\top/\sqrt{d_k})\,V$.
+  * *Función en el RAG:* Conocer por dentro el modelo que la facultad usa como exoesqueleto, y por qué asocia pero no interviene.
 * **Tuckfield, Bradford** (2020). *Dive Into Algorithms: A Pythonic Adventure for the Daring*. No Starch Press. `[Nivel 1 | Algoritmos en Python]`
 * **Tuckfield, Bradford** (2023). *Dive into Data Science: Use Python to Tackle Your Toughest Questions*. No Starch Press. `[Nivel 1 | Ciencia de Datos]`
 * **Grus, Joel** (2019). *Data Science from Scratch: First Principles with Python* (2nd Edition). O'Reilly Media. `[Nivel 1 | Python desde Cero]`

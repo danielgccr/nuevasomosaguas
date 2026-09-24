@@ -34,7 +34,7 @@ Lo que el verano entrega es **amplitud estratégica**; la **profundidad operativ
 
 ### Profundidad: prueba de concepto frente a mecánica de precisión
 
-| Dimensión | Bootcamp (12 semanas) | Grado de 4 años (19 asignaturas) |
+| Dimensión | Bootcamp (12 semanas) | Grado de 4 años (20 asignaturas) |
 |:---|:---|:---|
 | **Enfoque** | Nivelación y fluidez operativa. | Derivación y réplica estricta. |
 | **Matemáticas** | Álgebra matricial, cálculo multivariante y probabilidad axiomática. | Optimización estocástica, teoría de la información y variables latentes. |
