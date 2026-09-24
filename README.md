@@ -117,4 +117,4 @@ Cada empuje a `master` compila y publica en GitHub Pages mediante el flujo de tr
 
 ## Autoría
 
-Diseño y dirección pedagógica de un científico de datos e investigador independiente. Las correcciones, refutaciones y erratas metodológicas se agradecen en el propio repositorio.
+Diseño y dirección pedagógica de un científico de datos. Las correcciones, refutaciones y erratas metodológicas se agradecen en el propio repositorio.
